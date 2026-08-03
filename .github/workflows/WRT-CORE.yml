@@ -77,7 +77,7 @@ jobs:
           sudo -E apt -yqq autoremove --purge
           sudo -E apt -yqq autoclean
           sudo -E apt -yqq clean
-          sudo -E apt -yqq install dos2unix libfuse-dev
+          sudo -E apt -yqq install dos2unix libfuse-dev clang llvm lld
           sudo bash -c 'bash <(curl -sL https://build-scripts.immortalwrt.org/init_build_environment.sh)'
           sudo -E systemctl daemon-reload
           sudo -E timedatectl set-timezone "Asia/Shanghai"
@@ -95,6 +95,7 @@ jobs:
           echo "WRT_WIFI=wifi-yes" >> $GITHUB_ENV
           echo "WRT_KVER=none" >> $GITHUB_ENV
           echo "WRT_LIST=none" >> $GITHUB_ENV
+          echo "GOPROXY=https://proxy.golang.org,direct" >> $GITHUB_ENV
 
       - name: Clone Code
         run: |
@@ -186,9 +187,69 @@ jobs:
       - name: Compile Firmware
         if: env.WRT_TEST != 'true'
         run: |
+          set -o pipefail
           cd ./wrt/
+          export GOPROXY=https://proxy.golang.org,direct
+          make -j$(nproc) || make -j1 V=s 2>&1 | tee /tmp/build_verbose.log
 
-          make -j$(nproc) || make -j1 V=s
+      - name: Collect and Commit Build Failure Logs
+        if: failure()
+        run: |
+          echo "========================================================="
+          echo "=== BUILD FAILURE DETECTED: COLLECTING FAILURE LOGS ==="
+          echo "========================================================="
+          
+          LOG_DIR="$GITHUB_WORKSPACE/logs/build_failures"
+          mkdir -p "$LOG_DIR"
+          
+          TIMESTAMP=$(TZ=UTC-8 date +"%Y-%m-%d_%H-%M-%S")
+          LOG_FILE="$LOG_DIR/failure_${WRT_NAME:-BUILD}_${TIMESTAMP}.log"
+          
+          echo "Build Failure Diagnostic Report - $TIMESTAMP" > "$LOG_FILE"
+          echo "Target Config: ${WRT_CONFIG:-UNKNOWN}" >> "$LOG_FILE"
+          echo "Commit SHA: $GITHUB_SHA" >> "$LOG_FILE"
+          echo "=========================================================" >> "$LOG_FILE"
+          echo "" >> "$LOG_FILE"
+          
+          if [ -f "/tmp/build_verbose.log" ]; then
+            echo "--- VERBOSE SINGLE-THREADED BUILD OUTPUT (LAST 500 LINES) ---" >> "$LOG_FILE"
+            tail -n 500 /tmp/build_verbose.log >> "$LOG_FILE" 2>/dev/null || true
+            echo "" >> "$LOG_FILE"
+          fi
+
+          if [ -d "./wrt/logs" ]; then
+            echo "--- OPENWRT BUILD LOGS ---" >> "$LOG_FILE"
+            find ./wrt/logs -type f -exec echo "=== Log: {} ===" \; -exec cat {} \; >> "$LOG_FILE" 2>/dev/null || true
+          fi
+
+          if [ -d "./wrt/build_dir" ]; then
+            echo "--- RECENT ERROR LOGS IN BUILD DIR ---" >> "$LOG_FILE"
+            find ./wrt/build_dir -type f \( -name "*.log" -o -name "compile.log" -o -name "configure.log" \) 2>/dev/null | tail -n 20 | while read -r F; do
+              echo "=== File: $F ===" >> "$LOG_FILE"
+              tail -n 100 "$F" >> "$LOG_FILE" 2>/dev/null || true
+            done
+          fi
+          
+          echo "--> Cleaning up failure logs older than 7 days..."
+          find "$LOG_DIR" -type f -mtime +7 -delete 2>/dev/null || true
+          
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add -f "$LOG_DIR"
+          git diff --quiet && git diff --staged --quiet || (
+            git commit -m "ci(logs): save build failure log for ${WRT_NAME:-BUILD} [$TIMESTAMP]" && \
+            git stash -u 2>/dev/null || true && \
+            for i in 1 2 3; do
+              git pull --rebase origin main && git push origin main && break || sleep 2
+            done
+          )
+
+      - name: Upload Build Failure Log Artifact
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-failure-log-${{ env.WRT_NAME }}-${{ env.WRT_DATE }}
+          path: logs/build_failures/
 
       - name: Machine Information
         run: |

@@ -256,3 +256,30 @@ if [ -f "$RUST_FILE" ]; then
 		echo "rust fix failed; continuing!"
 	fi
 fi
+
+#修复dae的apk-tools打包版本与源码文件名解耦 (防止404报错)
+DAE_MAKEFILE="$(find "$PKG_PATH" -maxdepth 3 -type f -wholename '*/luci-app-dae/Makefile' -print -quit 2>/dev/null)"
+if [ -f "$DAE_MAKEFILE" ]; then
+	echo " "
+	if grep -q "0\.4\.0rc1" "$DAE_MAKEFILE"; then
+		sed -i 's/PKG_SOURCE:=.*/PKG_SOURCE:=dae-0.4.0rc1.zip/g' "$DAE_MAKEFILE" 2>/dev/null || true
+		sed -i '/PKG_VERSION:=/a PKG_SOURCE:=dae-0.4.0rc1.zip' "$DAE_MAKEFILE" 2>/dev/null || true
+	fi
+	sed -i -E 's/PKG_VERSION:=([0-9\.]+)rc([0-9]+)/PKG_VERSION:=\1_rc\2/g' "$DAE_MAKEFILE"
+	echo "dae apk-tools version decoupling applied!"
+fi
+
+#修复avahi缺失libdaemon导致的编译报错 (强制切换为nodbus稳定变体)
+AVAHI_MAKEFILE="$(find "$FEEDS_PACKAGES" -maxdepth 3 -type f -wholename '*/avahi/Makefile' -print -quit 2>/dev/null)"
+if [ -f "$AVAHI_MAKEFILE" ]; then
+	echo " "
+	sed -i 's/DEFAULT_VARIANT:=dbus/DEFAULT_VARIANT:=nodbus/g' "$AVAHI_MAKEFILE"
+	sed -i '/Package\/avahi-nodbus-daemon/,/endef/s/VARIANT:=dbus/VARIANT:=nodbus/' "$AVAHI_MAKEFILE"
+	sed -i '/Package\/libavahi-nodbus-support/,/endef/s/VARIANT:=dbus/VARIANT:=nodbus/' "$AVAHI_MAKEFILE"
+	sed -i '/BuildPackage,libavahi-dbus-support/d' "$AVAHI_MAKEFILE"
+	sed -i '/BuildPackage,avahi-dbus-daemon/d' "$AVAHI_MAKEFILE"
+	sed -i '/BuildPackage,libavahi-client/d' "$AVAHI_MAKEFILE"
+	sed -i '/BuildPackage,avahi-utils/d' "$AVAHI_MAKEFILE"
+	echo "avahi nodbus variant fix applied!"
+fi
+
