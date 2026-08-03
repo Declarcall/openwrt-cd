@@ -257,17 +257,6 @@ if [ -f "$RUST_FILE" ]; then
 	fi
 fi
 
-#修复dae的apk-tools打包版本与源码文件名解耦 (防止404报错)
-DAE_MAKEFILE="$(find "$PKG_PATH" -maxdepth 3 -type f -wholename '*/luci-app-dae/Makefile' -print -quit 2>/dev/null)"
-if [ -f "$DAE_MAKEFILE" ]; then
-	echo " "
-	if grep -q "0\.4\.0rc1" "$DAE_MAKEFILE"; then
-		sed -i 's/PKG_SOURCE:=.*/PKG_SOURCE:=dae-0.4.0rc1.zip/g' "$DAE_MAKEFILE" 2>/dev/null || true
-		sed -i '/PKG_VERSION:=/a PKG_SOURCE:=dae-0.4.0rc1.zip' "$DAE_MAKEFILE" 2>/dev/null || true
-	fi
-	sed -i -E 's/PKG_VERSION:=([0-9\.]+)rc([0-9]+)/PKG_VERSION:=\1_rc\2/g' "$DAE_MAKEFILE"
-	echo "dae apk-tools version decoupling applied!"
-fi
 
 #修复avahi缺失libdaemon导致的编译报错 (强制切换为nodbus稳定变体)
 AVAHI_MAKEFILE="$(find "$FEEDS_PACKAGES" -maxdepth 3 -type f -wholename '*/avahi/Makefile' -print -quit 2>/dev/null)"
