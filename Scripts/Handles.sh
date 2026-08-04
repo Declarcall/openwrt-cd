@@ -258,17 +258,5 @@ if [ -f "$RUST_FILE" ]; then
 fi
 
 
-#修复avahi缺失libdaemon导致的编译报错 (强制切换为nodbus稳定变体)
-AVAHI_MAKEFILE="$(find "$FEEDS_PACKAGES" -maxdepth 3 -type f -wholename '*/avahi/Makefile' -print -quit 2>/dev/null)"
-if [ -f "$AVAHI_MAKEFILE" ]; then
-	echo " "
-	sed -i 's/DEFAULT_VARIANT:=dbus/DEFAULT_VARIANT:=nodbus/g' "$AVAHI_MAKEFILE"
-	sed -i '/Package\/avahi-nodbus-daemon/,/endef/s/VARIANT:=dbus/VARIANT:=nodbus/' "$AVAHI_MAKEFILE"
-	sed -i '/Package\/libavahi-nodbus-support/,/endef/s/VARIANT:=dbus/VARIANT:=nodbus/' "$AVAHI_MAKEFILE"
-	sed -i '/BuildPackage,libavahi-dbus-support/d' "$AVAHI_MAKEFILE"
-	sed -i '/BuildPackage,avahi-dbus-daemon/d' "$AVAHI_MAKEFILE"
-	sed -i '/BuildPackage,libavahi-client/d' "$AVAHI_MAKEFILE"
-	sed -i '/BuildPackage,avahi-utils/d' "$AVAHI_MAKEFILE"
-	echo "avahi nodbus variant fix applied!"
-fi
+
 

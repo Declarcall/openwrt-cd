@@ -25,18 +25,10 @@ CONFIG_PACKAGE_luci-app-partexp=y
 CONFIG_PACKAGE_luci-app-samba4=y
 CONFIG_PACKAGE_luci-app-upnp=y
 CONFIG_PACKAGE_luci-app-wolultra=y
-#删除与替换冲突包 (dnsmasq-full 替换基础 dnsmasq，Avahi 锁定 nodbus 变体)
+#删除与替换冲突包 (dnsmasq-full 替换基础 dnsmasq)
 CONFIG_PACKAGE_dnsmasq-full=y
 CONFIG_PACKAGE_dnsmasq_full_dhcpv6=y
 CONFIG_PACKAGE_dnsmasq=n
-CONFIG_PACKAGE_avahi-dbus-daemon=n
-CONFIG_PACKAGE_avahi-nodbus-daemon=y
-CONFIG_PACKAGE_libavahi-dbus-support=n
-CONFIG_PACKAGE_libavahi-nodbus-support=y
-CONFIG_PACKAGE_libavahi-client=n
-CONFIG_PACKAGE_avahi-daemon=n
-CONFIG_PACKAGE_umdns=y
-CONFIG_SAMBA4_SERVER_AVAHI=n
 CONFIG_PACKAGE_luci-app-attendedsysupgrade=n
 CONFIG_PACKAGE_luci-app-wol=n
 #参数调整
