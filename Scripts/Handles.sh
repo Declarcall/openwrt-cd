@@ -258,5 +258,23 @@ if [ -f "$RUST_FILE" ]; then
 fi
 
 
-
+#预获取dae的PKG_SOURCE_VERSION (从Shell阶段发起网络请求，避免make解析阶段$(shell)不稳定)
+DAE_PKG_MAKEFILE="$(find "$PKG_PATH" -maxdepth 3 -type f -wholename '*/dae/Makefile' -not -path '*/luci-app-dae/*' -print -quit 2>/dev/null)"
+if [ -f "$DAE_PKG_MAKEFILE" ] && grep -q "PLACEHOLDER_DAE_VERSION" "$DAE_PKG_MAKEFILE"; then
+	DAE_GIT_URL=$(grep -oP 'PKG_SOURCE_URL:=\K.*' "$DAE_PKG_MAKEFILE")
+	DAE_GIT_BRANCH=$(grep -oP 'GIT_BRANCH:=\K.*' "$DAE_PKG_MAKEFILE")
+	DAE_VERSION=""
+	for i in 1 2 3; do
+		DAE_VERSION=$(git ls-remote "$DAE_GIT_URL" "$DAE_GIT_BRANCH" 2>/dev/null | cut -c1-7)
+		[ -n "$DAE_VERSION" ] && break
+		echo "dae git ls-remote attempt $i failed, retrying in 3s..."
+		sleep 3
+	done
+	if [ -n "$DAE_VERSION" ]; then
+		sed -i "s/PLACEHOLDER_DAE_VERSION/$DAE_VERSION/g" "$DAE_PKG_MAKEFILE"
+		echo "dae PKG_SOURCE_VERSION set to: $DAE_VERSION"
+	else
+		echo "WARNING: failed to fetch dae version after 3 retries!"
+	fi
+fi
 

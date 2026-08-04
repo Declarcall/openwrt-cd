@@ -132,6 +132,7 @@ UPDATE_VERSION() {
 rm -rf ../feeds/luci/applications/luci-app-dae* 2>/dev/null || true
 rm -rf ../feeds/packages/net/{v2ray-geodata,dae*} 2>/dev/null || true
 
+cp -rf $GITHUB_WORKSPACE/package/dae ./ 2>/dev/null || true
 cp -rf $GITHUB_WORKSPACE/package/v2ray-geodata ./ 2>/dev/null || true
 
 #引入私有扩展脚本
