@@ -1,0 +1,2528 @@
+Build Failure Diagnostic Report - 2026-08-04_13-29-12
+Target Config: IPQ60XX-WIFI-YES
+Commit SHA: a54149c46f1071a6e7b1e700061d34f2508dfec7
+=========================================================
+
+--- VERBOSE SINGLE-THREADED BUILD OUTPUT (LAST 500 LINES) ---
+CONFIG_GOLANG_MOD_CACHE_WORLD_READABLE="" GO_BUILD_CACHE_DIR="/mnt/build_wrt/tmp/go-build" GO_MOD_CACHE_DIR="/mnt/build_wrt/dl/go-mod-cache" GO_MOD_ARGS="-modcacherw" /usr/bin/env bash /mnt/build_wrt/feeds/packages/lang/golang//golang-build.sh cache_cleanup
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/.built
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box
+/mnt/build_wrt/scripts/ipkg-remove sing-box /mnt/build_wrt/bin/packages/aarch64_cortex-a53/base/sing-box-1.14.0_beta5-r1.apk
+removed '/mnt/build_wrt/bin/packages/aarch64_cortex-a53/base/sing-box-1.14.0_beta5-r1.apk'
+mkdir -p /mnt/build_wrt/bin/targets/qualcommax/ipq60xx/packages /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/pkginfo
+CONFIG_GOLANG_MOD_CACHE_WORLD_READABLE="" GO_BUILD_CACHE_DIR="/mnt/build_wrt/tmp/go-build" GO_MOD_CACHE_DIR="/mnt/build_wrt/dl/go-mod-cache" GO_MOD_ARGS="-modcacherw" PATH=/mnt/build_wrt/staging_dir/hostpkg/lib/go-1.26/bin:/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/bin:/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/bin:/mnt/build_wrt/staging_dir/host/bin:/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/bin:/mnt/build_wrt/staging_dir/host/bin:/mnt/build_wrt/staging_dir/host/bin:/snap/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin GO_PKG="github.com/sagernet/sing-box" GO_INSTALL_EXTRA="" GO_INSTALL_ALL="" GO_SOURCE_ONLY="" GO_BUILD_PKG="github.com/sagernet/sing-box/cmd/sing-box" GO_EXCLUDES="" GO_GO_GENERATE="" GO_INSTALL_BIN_PATH="/usr/bin" BUILD_DIR="/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5" GO_BUILD_DIR="/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/.go_work/build" GO_BUILD_BIN_DIR="/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/.go_work/build/bin/linux_arm64" GO_BUILD_DEPENDS_PATH="/usr/share/gocode" GO_BUILD_DEPENDS_SRC="/mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/usr/share/gocode/src" /usr/bin/env bash /mnt/build_wrt/feeds/packages/lang/golang/golang-build.sh install_bin "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box"
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box/etc/sing-box
+install -m0644 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/release/config/config.json /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box/etc/sing-box
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box/etc/config/
+install -m0600 ./files/sing-box.conf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box/etc/config/sing-box
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box/etc/init.d/
+install -m0755 ./files/sing-box.init /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box/etc/init.d/sing-box
+find /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box -name '.svn' -o -name '.#*' -o -name '*~'| xargs -r rm -rf
+export CROSS="aarch64-openwrt-linux-musl-"  NO_RENAME=1 ; NM="aarch64-openwrt-linux-musl-nm" STRIP="aarch64-openwrt-linux-musl-strip --strip-all" STRIP_KMOD="/mnt/build_wrt/scripts/strip-kmod.sh" PATCHELF="/mnt/build_wrt/staging_dir/host/bin/patchelf" /mnt/build_wrt/scripts/rstrip.sh /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box
+rstrip.sh: /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box/usr/bin/sing-box: executable
+install -d -m0755 /mnt/build_wrt/bin/packages/aarch64_cortex-a53/base
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/apk-aarch64_cortex-a53/sing-box/
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box/lib/apk/packages/
+(cd /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/apk-aarch64_cortex-a53/sing-box; echo "$V_Package_sing_box_conffiles" > conffiles; )
+( echo "#!/bin/sh"; echo "[ \"\${IPKG_NO_SCRIPT}\" = \"1\" ] && exit 0"; echo "[ -s "\${IPKG_INSTROOT}/lib/functions.sh" ] || exit 0"; echo ". \${IPKG_INSTROOT}/lib/functions.sh"; echo 'export root="${IPKG_INSTROOT}"'; echo 'export pkgname="sing-box"'; echo "add_group_and_user"; echo "default_postinst"; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/apk-aarch64_cortex-a53/sing-box/postinst-pkg ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/apk-aarch64_cortex-a53/sing-box/postinst-pkg"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/apk-aarch64_cortex-a53/sing-box/post-install;
+( echo "#!/bin/sh"; echo 'export PKG_UPGRADE=1'; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/apk-aarch64_cortex-a53/sing-box/post-install ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/apk-aarch64_cortex-a53/sing-box/post-install"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/apk-aarch64_cortex-a53/sing-box/post-upgrade;
+( echo "#!/bin/sh"; echo "[ -s "\${IPKG_INSTROOT}/lib/functions.sh" ] || exit 0"; echo ". \${IPKG_INSTROOT}/lib/functions.sh"; echo 'export root="${IPKG_INSTROOT}"'; echo 'export pkgname="sing-box"'; echo "default_prerm"; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/apk-aarch64_cortex-a53/sing-box/prerm-pkg ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/apk-aarch64_cortex-a53/sing-box/prerm-pkg"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/apk-aarch64_cortex-a53/sing-box/pre-deinstall;
+[ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/apk-aarch64_cortex-a53/sing-box/postrm ] || sed -zi 's/^\s*#!/#!/' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/apk-aarch64_cortex-a53/sing-box/postrm";
+if [ -n "sing-box=5566:sing-box=5566" ]; then echo sing-box=5566:sing-box=5566 > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box/lib/apk/packages/sing-box.rusers; fi;
+if [ -n "" ]; then echo  > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box/lib/apk/packages/sing-box.alternatives; fi;
+(cd /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box && find . -type f,l -printf "/%P\n" | sort > /mnt/build_wrt/tmp/sing-box.list && mv /mnt/build_wrt/tmp/sing-box.list /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box/lib/apk/packages/sing-box.list)
+# Move conffiles to IDIR and build conffiles_static with csums
+if [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/apk-aarch64_cortex-a53/sing-box/conffiles ]; then mv -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/apk-aarch64_cortex-a53/sing-box/conffiles /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box/lib/apk/packages/sing-box.conffiles; for file in $(cat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box/lib/apk/packages/sing-box.conffiles); do [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box/$file ] || continue; csum=$(/mnt/build_wrt/staging_dir/host/bin/mkhash sha256 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box/$file); echo $file $csum >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box/lib/apk/packages/sing-box.conffiles_static; done; fi
+# Some package (base-files) manually append stuff to conffiles
+# Append stuff from it and delete the CONTROL directory since everything else should be migrated
+if [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box/CONTROL/conffiles ]; then echo $(IDIR_sing-box)/CONTROL/conffiles >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box/lib/apk/packages/sing-box.conffiles; for file in $(cat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box/CONTROL/conffiles); do [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box/$file ] || continue; csum=$(/mnt/build_wrt/staging_dir/host/bin/mkhash sha256 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box/$file); echo $file $csum >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box/lib/apk/packages/sing-box.conffiles_static; done; rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box/CONTROL/conffiles; fi
+if [ -z "$(ls -A /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box/CONTROL 2>/dev/null)" ]; then rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box/CONTROL; else echo "CONTROL directory /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box/CONTROL is not empty! This is not right and should be checked!" >&2; exit 1; fi
+SOURCE_DATE_EPOCH=0 /mnt/build_wrt/staging_dir/host/bin/fakeroot /mnt/build_wrt/staging_dir/host/bin/apk mkpkg --info "name:sing-box" --info "version:1.14.0_beta5-r1" --info "tags:openwrt:section=net openwrt:cpe=cpe:/a:sagernet:sing-box" --info "description:Sing-box is a universal proxy platform which supports hysteria, SOCKS, Shadowsocks, ShadowTLS, Tor, trojan, VLess, VMess, WireGuard and so on." --info "arch:aarch64_cortex-a53" --info "license:GPL-3.0-or-later" --info "origin:feeds/base/packages/sing-box" --info "url:https://sing-box.sagernet.org/" --info "maintainer:Tianling Shen <cnsztl@immortalwrt.org>" --info "provides:sing-box-any" --info "provider-priority:100" --script "post-install:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/apk-aarch64_cortex-a53/sing-box/post-install" --script "post-upgrade:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/apk-aarch64_cortex-a53/sing-box/post-upgrade" --script "pre-deinstall:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/apk-aarch64_cortex-a53/sing-box/pre-deinstall" --info "depends:libc ca-bundle kmod-inet-diag kmod-netlink-diag kmod-tun" --files "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/ipkg-aarch64_cortex-a53/sing-box" --sign /mnt/build_wrt/private-key.pem --output "/mnt/build_wrt/bin/packages/aarch64_cortex-a53/base/sing-box-1.14.0_beta5-r1.apk"
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/.pkgdir/sing-box.installed /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/.pkgdir/sing-box
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/.pkgdir/sing-box
+CONFIG_GOLANG_MOD_CACHE_WORLD_READABLE="" GO_BUILD_CACHE_DIR="/mnt/build_wrt/tmp/go-build" GO_MOD_CACHE_DIR="/mnt/build_wrt/dl/go-mod-cache" GO_MOD_ARGS="-modcacherw" PATH=/mnt/build_wrt/staging_dir/hostpkg/lib/go-1.26/bin:/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/bin:/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/bin:/mnt/build_wrt/staging_dir/host/bin:/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/bin:/mnt/build_wrt/staging_dir/host/bin:/mnt/build_wrt/staging_dir/host/bin:/snap/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin GO_PKG="github.com/sagernet/sing-box" GO_INSTALL_EXTRA="" GO_INSTALL_ALL="" GO_SOURCE_ONLY="" GO_BUILD_PKG="github.com/sagernet/sing-box/cmd/sing-box" GO_EXCLUDES="" GO_GO_GENERATE="" GO_INSTALL_BIN_PATH="/usr/bin" BUILD_DIR="/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5" GO_BUILD_DIR="/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/.go_work/build" GO_BUILD_BIN_DIR="/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/.go_work/build/bin/linux_arm64" GO_BUILD_DEPENDS_PATH="/usr/share/gocode" GO_BUILD_DEPENDS_SRC="/mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/usr/share/gocode/src" /usr/bin/env bash /mnt/build_wrt/feeds/packages/lang/golang/golang-build.sh install_bin "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/.pkgdir/sing-box"
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/.pkgdir/sing-box/etc/sing-box
+install -m0644 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/release/config/config.json /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/.pkgdir/sing-box/etc/sing-box
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/.pkgdir/sing-box/etc/config/
+install -m0600 ./files/sing-box.conf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/.pkgdir/sing-box/etc/config/sing-box
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/.pkgdir/sing-box/etc/init.d/
+install -m0755 ./files/sing-box.init /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/.pkgdir/sing-box/etc/init.d/sing-box
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/.pkgdir/sing-box.installed
+mkdir -p /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp
+SHELL= flock /mnt/build_wrt/tmp/.root-copy.flock -c 'cp -fpR /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/.pkgdir/sing-box/. /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/'
+touch /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp/.sing-box_installed
+echo "sing-box" >> /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/pkginfo/sing-box.full.install
+rm -rf /mnt/build_wrt/tmp/stage-sing-box
+mkdir -p /mnt/build_wrt/tmp/stage-sing-box/host /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/packages
+CONFIG_GOLANG_MOD_CACHE_WORLD_READABLE="" GO_BUILD_CACHE_DIR="/mnt/build_wrt/tmp/go-build" GO_MOD_CACHE_DIR="/mnt/build_wrt/dl/go-mod-cache" GO_MOD_ARGS="-modcacherw" PATH=/mnt/build_wrt/staging_dir/hostpkg/lib/go-1.26/bin:/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/bin:/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/bin:/mnt/build_wrt/staging_dir/host/bin:/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/bin:/mnt/build_wrt/staging_dir/host/bin:/mnt/build_wrt/staging_dir/host/bin:/snap/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin GO_PKG="github.com/sagernet/sing-box" GO_INSTALL_EXTRA="" GO_INSTALL_ALL="" GO_SOURCE_ONLY="" GO_BUILD_PKG="github.com/sagernet/sing-box/cmd/sing-box" GO_EXCLUDES="" GO_GO_GENERATE="" GO_INSTALL_BIN_PATH="/usr/bin" BUILD_DIR="/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5" GO_BUILD_DIR="/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/.go_work/build" GO_BUILD_BIN_DIR="/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/sing-box-1.14.0-beta.5/.go_work/build/bin/linux_arm64" GO_BUILD_DEPENDS_PATH="/usr/share/gocode" GO_BUILD_DEPENDS_SRC="/mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/usr/share/gocode/src" /usr/bin/env bash /mnt/build_wrt/feeds/packages/lang/golang/golang-build.sh install_src "/mnt/build_wrt/tmp/stage-sing-box"
+find /mnt/build_wrt/tmp/stage-sing-box -name '*.la' | xargs -r rm -f; 
+if [ -f /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/packages/sing-box.full.list ]; then /mnt/build_wrt/scripts/clean-package.sh "/mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/packages/sing-box.full.list" "/mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl"; fi
+if [ -d /mnt/build_wrt/tmp/stage-sing-box ]; then (cd /mnt/build_wrt/tmp/stage-sing-box; find ./ > /mnt/build_wrt/tmp/stage-sing-box.files); 	SHELL= flock /mnt/build_wrt/tmp/.staging-dir.flock -c ' mv /mnt/build_wrt/tmp/stage-sing-box.files /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/packages/sing-box.full.list && cp -fpR /mnt/build_wrt/tmp/stage-sing-box/* /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/; '; fi
+rm -rf /mnt/build_wrt/tmp/stage-sing-box
+touch /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/stamp/.sing-box.full_installed
+make[3]: Leaving directory '/mnt/build_wrt/package/packages/sing-box'
+time: package/packages/sing-box/full/compile#8.72#2.23#10.43
+make[3]: Entering directory '/mnt/build_wrt/package/packages/luci-app-homeproxy'
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/.built
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/.built_check
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/.built
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-app-homeproxy
+/mnt/build_wrt/scripts/ipkg-remove luci-app-homeproxy /mnt/build_wrt/bin/packages/aarch64_cortex-a53/base/luci-app-homeproxy-20260802-r2.apk
+removed '/mnt/build_wrt/bin/packages/aarch64_cortex-a53/base/luci-app-homeproxy-20260802-r2.apk'
+mkdir -p /mnt/build_wrt/bin/targets/qualcommax/ipq60xx/packages /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-app-homeproxy /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/pkginfo
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-app-homeproxy/www
+cp -pR /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/htdocs/* /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-app-homeproxy/www/
+find /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-app-homeproxy/www/ -type f -name '*.js' | while read src; do if jsmin < "$src" > "$src.o"; then mv "$src.o" "$src"; fi; done
+find /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-app-homeproxy/www/ -type f -name '*.css' | while read src; do if csstidy "$src" --template=highest --remove_last_semicolon=true "$src.o"; then mv "$src.o" "$src"; fi; done
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-app-homeproxy/
+cp -pR /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/root/* /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-app-homeproxy/
+find /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-app-homeproxy -name '.svn' -o -name '.#*' -o -name '*~'| xargs -r rm -rf
+export CROSS="aarch64-openwrt-linux-musl-"  NO_RENAME=1 ; NM="aarch64-openwrt-linux-musl-nm" STRIP="/mnt/build_wrt/staging_dir/host/bin/sstrip -z" STRIP_KMOD="/mnt/build_wrt/scripts/strip-kmod.sh" PATCHELF="/mnt/build_wrt/staging_dir/host/bin/patchelf" /mnt/build_wrt/scripts/rstrip.sh /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-app-homeproxy
+install -d -m0755 /mnt/build_wrt/bin/packages/aarch64_cortex-a53/base
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-app-homeproxy/
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-app-homeproxy/lib/apk/packages/
+(cd /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-app-homeproxy; echo "$V_Package_luci_app_homeproxy_conffiles" > conffiles;  echo "$V_Package_luci_app_homeproxy_postinst" > postinst-pkg; chmod 0755 postinst-pkg;)
+( echo "#!/bin/sh"; echo "[ \"\${IPKG_NO_SCRIPT}\" = \"1\" ] && exit 0"; echo "[ -s "\${IPKG_INSTROOT}/lib/functions.sh" ] || exit 0"; echo ". \${IPKG_INSTROOT}/lib/functions.sh"; echo 'export root="${IPKG_INSTROOT}"'; echo 'export pkgname="luci-app-homeproxy"'; echo "add_group_and_user"; echo "default_postinst"; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-app-homeproxy/postinst-pkg ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-app-homeproxy/postinst-pkg"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-app-homeproxy/post-install;
+( echo "#!/bin/sh"; echo 'export PKG_UPGRADE=1'; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-app-homeproxy/post-install ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-app-homeproxy/post-install"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-app-homeproxy/post-upgrade;
+( echo "#!/bin/sh"; echo "[ -s "\${IPKG_INSTROOT}/lib/functions.sh" ] || exit 0"; echo ". \${IPKG_INSTROOT}/lib/functions.sh"; echo 'export root="${IPKG_INSTROOT}"'; echo 'export pkgname="luci-app-homeproxy"'; echo "default_prerm"; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-app-homeproxy/prerm-pkg ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-app-homeproxy/prerm-pkg"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-app-homeproxy/pre-deinstall;
+[ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-app-homeproxy/postrm ] || sed -zi 's/^\s*#!/#!/' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-app-homeproxy/postrm";
+if [ -n "" ]; then echo  > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-app-homeproxy/lib/apk/packages/luci-app-homeproxy.rusers; fi;
+if [ -n "" ]; then echo  > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-app-homeproxy/lib/apk/packages/luci-app-homeproxy.alternatives; fi;
+(cd /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-app-homeproxy && find . -type f,l -printf "/%P\n" | sort > /mnt/build_wrt/tmp/luci-app-homeproxy.list && mv /mnt/build_wrt/tmp/luci-app-homeproxy.list /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-app-homeproxy/lib/apk/packages/luci-app-homeproxy.list)
+# Move conffiles to IDIR and build conffiles_static with csums
+if [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-app-homeproxy/conffiles ]; then mv -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-app-homeproxy/conffiles /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-app-homeproxy/lib/apk/packages/luci-app-homeproxy.conffiles; for file in $(cat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-app-homeproxy/lib/apk/packages/luci-app-homeproxy.conffiles); do [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-app-homeproxy/$file ] || continue; csum=$(/mnt/build_wrt/staging_dir/host/bin/mkhash sha256 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-app-homeproxy/$file); echo $file $csum >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-app-homeproxy/lib/apk/packages/luci-app-homeproxy.conffiles_static; done; fi
+# Some package (base-files) manually append stuff to conffiles
+# Append stuff from it and delete the CONTROL directory since everything else should be migrated
+if [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-app-homeproxy/CONTROL/conffiles ]; then echo $(IDIR_luci-app-homeproxy)/CONTROL/conffiles >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-app-homeproxy/lib/apk/packages/luci-app-homeproxy.conffiles; for file in $(cat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-app-homeproxy/CONTROL/conffiles); do [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-app-homeproxy/$file ] || continue; csum=$(/mnt/build_wrt/staging_dir/host/bin/mkhash sha256 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-app-homeproxy/$file); echo $file $csum >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-app-homeproxy/lib/apk/packages/luci-app-homeproxy.conffiles_static; done; rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-app-homeproxy/CONTROL/conffiles; fi
+if [ -z "$(ls -A /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-app-homeproxy/CONTROL 2>/dev/null)" ]; then rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-app-homeproxy/CONTROL; else echo "CONTROL directory /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-app-homeproxy/CONTROL is not empty! This is not right and should be checked!" >&2; exit 1; fi
+SOURCE_DATE_EPOCH=0 /mnt/build_wrt/staging_dir/host/bin/fakeroot /mnt/build_wrt/staging_dir/host/bin/apk mkpkg --info "name:luci-app-homeproxy" --info "version:20260802-r2" --info "tags:openwrt:section=luci" --info "description:The modern ImmortalWrt proxy platform for ARM64/AMD64 — AI Edition" --info "arch:noarch" --info "license:" --info "origin:feeds/base/packages/luci-app-homeproxy" --info "url:https://github.com/openwrt/luci" --info "maintainer:OpenWrt LuCI community" --info "provides:luci-app-homeproxy-any"  --script "post-install:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-app-homeproxy/post-install" --script "post-upgrade:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-app-homeproxy/post-upgrade" --script "pre-deinstall:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-app-homeproxy/pre-deinstall" --info "depends:sing-box>=1.14.0_alpha1 libc firewall4 ip-full kmod-tun kmod-nft-tproxy curl unzip ucode-mod-digest" --files "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-app-homeproxy" --sign /mnt/build_wrt/private-key.pem --output "/mnt/build_wrt/bin/packages/aarch64_cortex-a53/base/luci-app-homeproxy-20260802-r2.apk"
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-i18n-homeproxy-zh-cn
+/mnt/build_wrt/scripts/ipkg-remove luci-i18n-homeproxy-zh-cn /mnt/build_wrt/bin/packages/aarch64_cortex-a53/base/luci-i18n-homeproxy-zh-cn-20260802-r2.apk
+removed '/mnt/build_wrt/bin/packages/aarch64_cortex-a53/base/luci-i18n-homeproxy-zh-cn-20260802-r2.apk'
+mkdir -p /mnt/build_wrt/bin/targets/qualcommax/ipq60xx/packages /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-i18n-homeproxy-zh-cn /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/pkginfo
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-i18n-homeproxy-zh-cn/etc/uci-defaults
+echo "uci set luci.languages.zh_cn='简体中文 (Simplified Chinese)'; uci commit luci" > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-i18n-homeproxy-zh-cn/etc/uci-defaults/luci-i18n-homeproxy-zh-cn
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-i18n-homeproxy-zh-cn/usr/lib/lua/luci/i18n
+po2lmo /mnt/build_wrt/package/packages/luci-app-homeproxy/po/zh_Hans/homeproxy.po /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-i18n-homeproxy-zh-cn/usr/lib/lua/luci/i18n/homeproxy.zh-cn.lmo;
+find /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-i18n-homeproxy-zh-cn -name '.svn' -o -name '.#*' -o -name '*~'| xargs -r rm -rf
+export CROSS="aarch64-openwrt-linux-musl-"  NO_RENAME=1 ; NM="aarch64-openwrt-linux-musl-nm" STRIP="/mnt/build_wrt/staging_dir/host/bin/sstrip -z" STRIP_KMOD="/mnt/build_wrt/scripts/strip-kmod.sh" PATCHELF="/mnt/build_wrt/staging_dir/host/bin/patchelf" /mnt/build_wrt/scripts/rstrip.sh /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-i18n-homeproxy-zh-cn
+install -d -m0755 /mnt/build_wrt/bin/packages/aarch64_cortex-a53/base
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-i18n-homeproxy-zh-cn/
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-i18n-homeproxy-zh-cn/lib/apk/packages/
+(cd /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-i18n-homeproxy-zh-cn; )
+( echo "#!/bin/sh"; echo "[ \"\${IPKG_NO_SCRIPT}\" = \"1\" ] && exit 0"; echo "[ -s "\${IPKG_INSTROOT}/lib/functions.sh" ] || exit 0"; echo ". \${IPKG_INSTROOT}/lib/functions.sh"; echo 'export root="${IPKG_INSTROOT}"'; echo 'export pkgname="luci-i18n-homeproxy-zh-cn"'; echo "add_group_and_user"; echo "default_postinst"; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-i18n-homeproxy-zh-cn/postinst-pkg ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-i18n-homeproxy-zh-cn/postinst-pkg"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-i18n-homeproxy-zh-cn/post-install;
+( echo "#!/bin/sh"; echo 'export PKG_UPGRADE=1'; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-i18n-homeproxy-zh-cn/post-install ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-i18n-homeproxy-zh-cn/post-install"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-i18n-homeproxy-zh-cn/post-upgrade;
+( echo "#!/bin/sh"; echo "[ -s "\${IPKG_INSTROOT}/lib/functions.sh" ] || exit 0"; echo ". \${IPKG_INSTROOT}/lib/functions.sh"; echo 'export root="${IPKG_INSTROOT}"'; echo 'export pkgname="luci-i18n-homeproxy-zh-cn"'; echo "default_prerm"; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-i18n-homeproxy-zh-cn/prerm-pkg ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-i18n-homeproxy-zh-cn/prerm-pkg"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-i18n-homeproxy-zh-cn/pre-deinstall;
+[ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-i18n-homeproxy-zh-cn/postrm ] || sed -zi 's/^\s*#!/#!/' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-i18n-homeproxy-zh-cn/postrm";
+if [ -n "" ]; then echo  > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-i18n-homeproxy-zh-cn/lib/apk/packages/luci-i18n-homeproxy-zh-cn.rusers; fi;
+if [ -n "" ]; then echo  > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-i18n-homeproxy-zh-cn/lib/apk/packages/luci-i18n-homeproxy-zh-cn.alternatives; fi;
+(cd /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-i18n-homeproxy-zh-cn && find . -type f,l -printf "/%P\n" | sort > /mnt/build_wrt/tmp/luci-i18n-homeproxy-zh-cn.list && mv /mnt/build_wrt/tmp/luci-i18n-homeproxy-zh-cn.list /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-i18n-homeproxy-zh-cn/lib/apk/packages/luci-i18n-homeproxy-zh-cn.list)
+# Move conffiles to IDIR and build conffiles_static with csums
+if [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-i18n-homeproxy-zh-cn/conffiles ]; then mv -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-i18n-homeproxy-zh-cn/conffiles /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-i18n-homeproxy-zh-cn/lib/apk/packages/luci-i18n-homeproxy-zh-cn.conffiles; for file in $(cat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-i18n-homeproxy-zh-cn/lib/apk/packages/luci-i18n-homeproxy-zh-cn.conffiles); do [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-i18n-homeproxy-zh-cn/$file ] || continue; csum=$(/mnt/build_wrt/staging_dir/host/bin/mkhash sha256 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-i18n-homeproxy-zh-cn/$file); echo $file $csum >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-i18n-homeproxy-zh-cn/lib/apk/packages/luci-i18n-homeproxy-zh-cn.conffiles_static; done; fi
+# Some package (base-files) manually append stuff to conffiles
+# Append stuff from it and delete the CONTROL directory since everything else should be migrated
+if [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-i18n-homeproxy-zh-cn/CONTROL/conffiles ]; then echo $(IDIR_luci-i18n-homeproxy-zh-cn)/CONTROL/conffiles >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-i18n-homeproxy-zh-cn/lib/apk/packages/luci-i18n-homeproxy-zh-cn.conffiles; for file in $(cat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-i18n-homeproxy-zh-cn/CONTROL/conffiles); do [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-i18n-homeproxy-zh-cn/$file ] || continue; csum=$(/mnt/build_wrt/staging_dir/host/bin/mkhash sha256 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-i18n-homeproxy-zh-cn/$file); echo $file $csum >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-i18n-homeproxy-zh-cn/lib/apk/packages/luci-i18n-homeproxy-zh-cn.conffiles_static; done; rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-i18n-homeproxy-zh-cn/CONTROL/conffiles; fi
+if [ -z "$(ls -A /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-i18n-homeproxy-zh-cn/CONTROL 2>/dev/null)" ]; then rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-i18n-homeproxy-zh-cn/CONTROL; else echo "CONTROL directory /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-i18n-homeproxy-zh-cn/CONTROL is not empty! This is not right and should be checked!" >&2; exit 1; fi
+SOURCE_DATE_EPOCH=0 /mnt/build_wrt/staging_dir/host/bin/fakeroot /mnt/build_wrt/staging_dir/host/bin/apk mkpkg --info "name:luci-i18n-homeproxy-zh-cn" --info "version:20260802-r2" --info "tags:openwrt:section=luci" --info "description:Translation for luci-app-homeproxy - 简体中文 (Simplified Chinese)" --info "arch:noarch" --info "license:" --info "origin:feeds/base/packages/luci-app-homeproxy" --info "url:" --info "maintainer:" --info "provides:luci-i18n-homeproxy-zh-cn-any"  --script "post-install:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-i18n-homeproxy-zh-cn/post-install" --script "post-upgrade:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-i18n-homeproxy-zh-cn/post-upgrade" --script "pre-deinstall:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/apk-all/luci-i18n-homeproxy-zh-cn/pre-deinstall" --info "depends:libc luci-app-homeproxy" --files "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/ipkg-all/luci-i18n-homeproxy-zh-cn" --sign /mnt/build_wrt/private-key.pem --output "/mnt/build_wrt/bin/packages/aarch64_cortex-a53/base/luci-i18n-homeproxy-zh-cn-20260802-r2.apk"
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/.pkgdir/luci-app-homeproxy.installed /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/.pkgdir/luci-app-homeproxy
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/.pkgdir/luci-app-homeproxy
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/.pkgdir/luci-app-homeproxy/www
+cp -pR /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/htdocs/* /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/.pkgdir/luci-app-homeproxy/www/
+find /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/.pkgdir/luci-app-homeproxy/www/ -type f -name '*.js' | while read src; do if jsmin < "$src" > "$src.o"; then mv "$src.o" "$src"; fi; done
+find /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/.pkgdir/luci-app-homeproxy/www/ -type f -name '*.css' | while read src; do if csstidy "$src" --template=highest --remove_last_semicolon=true "$src.o"; then mv "$src.o" "$src"; fi; done
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/.pkgdir/luci-app-homeproxy/
+cp -pR /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/root/* /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/.pkgdir/luci-app-homeproxy/
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/.pkgdir/luci-app-homeproxy.installed
+mkdir -p /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp
+SHELL= flock /mnt/build_wrt/tmp/.root-copy.flock -c 'cp -fpR /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/.pkgdir/luci-app-homeproxy/. /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/'
+touch /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp/.luci-app-homeproxy_installed
+echo "luci-app-homeproxy" >> /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/pkginfo/luci-app-homeproxy.default.install
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/.pkgdir/luci-i18n-homeproxy-zh-cn.installed /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/.pkgdir/luci-i18n-homeproxy-zh-cn
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/.pkgdir/luci-i18n-homeproxy-zh-cn
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/.pkgdir/luci-i18n-homeproxy-zh-cn/etc/uci-defaults
+echo "uci set luci.languages.zh_cn='简体中文 (Simplified Chinese)'; uci commit luci" > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/.pkgdir/luci-i18n-homeproxy-zh-cn/etc/uci-defaults/luci-i18n-homeproxy-zh-cn
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/.pkgdir/luci-i18n-homeproxy-zh-cn/usr/lib/lua/luci/i18n
+po2lmo /mnt/build_wrt/package/packages/luci-app-homeproxy/po/zh_Hans/homeproxy.po /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/.pkgdir/luci-i18n-homeproxy-zh-cn/usr/lib/lua/luci/i18n/homeproxy.zh-cn.lmo;
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/.pkgdir/luci-i18n-homeproxy-zh-cn.installed
+mkdir -p /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp
+SHELL= flock /mnt/build_wrt/tmp/.root-copy.flock -c 'cp -fpR /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-homeproxy/.pkgdir/luci-i18n-homeproxy-zh-cn/. /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/'
+touch /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp/.luci-i18n-homeproxy-zh-cn_installed
+echo "luci-i18n-homeproxy-zh-cn" >> /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/pkginfo/luci-app-homeproxy.default.install
+make[3]: Leaving directory '/mnt/build_wrt/package/packages/luci-app-homeproxy'
+time: package/packages/luci-app-homeproxy/compile#0.71#0.63#1.34
+make[3]: Entering directory '/mnt/build_wrt/package/packages/luci-app-wolultra'
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/.built
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/.built_check
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/.built
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-app-wolultra
+/mnt/build_wrt/scripts/ipkg-remove luci-app-wolultra /mnt/build_wrt/bin/packages/aarch64_cortex-a53/base/luci-app-wolultra-20260802-r1.apk
+removed '/mnt/build_wrt/bin/packages/aarch64_cortex-a53/base/luci-app-wolultra-20260802-r1.apk'
+mkdir -p /mnt/build_wrt/bin/targets/qualcommax/ipq60xx/packages /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-app-wolultra /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/pkginfo
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-app-wolultra/www
+cp -pR /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/htdocs/* /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-app-wolultra/www/
+find /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-app-wolultra/www/ -type f -name '*.js' | while read src; do if jsmin < "$src" > "$src.o"; then mv "$src.o" "$src"; fi; done
+find /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-app-wolultra/www/ -type f -name '*.css' | while read src; do if csstidy "$src" --template=highest --remove_last_semicolon=true "$src.o"; then mv "$src.o" "$src"; fi; done
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-app-wolultra/
+cp -pR /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/root/* /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-app-wolultra/
+find /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-app-wolultra -name '.svn' -o -name '.#*' -o -name '*~'| xargs -r rm -rf
+export CROSS="aarch64-openwrt-linux-musl-"  NO_RENAME=1 ; NM="aarch64-openwrt-linux-musl-nm" STRIP="/mnt/build_wrt/staging_dir/host/bin/sstrip -z" STRIP_KMOD="/mnt/build_wrt/scripts/strip-kmod.sh" PATCHELF="/mnt/build_wrt/staging_dir/host/bin/patchelf" /mnt/build_wrt/scripts/rstrip.sh /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-app-wolultra
+install -d -m0755 /mnt/build_wrt/bin/packages/aarch64_cortex-a53/base
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-app-wolultra/
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-app-wolultra/lib/apk/packages/
+(cd /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-app-wolultra; echo "$V_Package_luci_app_wolultra_conffiles" > conffiles;  echo "$V_Package_luci_app_wolultra_postinst" > postinst-pkg; chmod 0755 postinst-pkg;)
+( echo "#!/bin/sh"; echo "[ \"\${IPKG_NO_SCRIPT}\" = \"1\" ] && exit 0"; echo "[ -s "\${IPKG_INSTROOT}/lib/functions.sh" ] || exit 0"; echo ". \${IPKG_INSTROOT}/lib/functions.sh"; echo 'export root="${IPKG_INSTROOT}"'; echo 'export pkgname="luci-app-wolultra"'; echo "add_group_and_user"; echo "default_postinst"; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-app-wolultra/postinst-pkg ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-app-wolultra/postinst-pkg"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-app-wolultra/post-install;
+( echo "#!/bin/sh"; echo 'export PKG_UPGRADE=1'; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-app-wolultra/post-install ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-app-wolultra/post-install"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-app-wolultra/post-upgrade;
+( echo "#!/bin/sh"; echo "[ -s "\${IPKG_INSTROOT}/lib/functions.sh" ] || exit 0"; echo ". \${IPKG_INSTROOT}/lib/functions.sh"; echo 'export root="${IPKG_INSTROOT}"'; echo 'export pkgname="luci-app-wolultra"'; echo "default_prerm"; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-app-wolultra/prerm-pkg ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-app-wolultra/prerm-pkg"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-app-wolultra/pre-deinstall;
+[ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-app-wolultra/postrm ] || sed -zi 's/^\s*#!/#!/' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-app-wolultra/postrm";
+if [ -n "" ]; then echo  > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-app-wolultra/lib/apk/packages/luci-app-wolultra.rusers; fi;
+if [ -n "" ]; then echo  > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-app-wolultra/lib/apk/packages/luci-app-wolultra.alternatives; fi;
+(cd /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-app-wolultra && find . -type f,l -printf "/%P\n" | sort > /mnt/build_wrt/tmp/luci-app-wolultra.list && mv /mnt/build_wrt/tmp/luci-app-wolultra.list /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-app-wolultra/lib/apk/packages/luci-app-wolultra.list)
+# Move conffiles to IDIR and build conffiles_static with csums
+if [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-app-wolultra/conffiles ]; then mv -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-app-wolultra/conffiles /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-app-wolultra/lib/apk/packages/luci-app-wolultra.conffiles; for file in $(cat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-app-wolultra/lib/apk/packages/luci-app-wolultra.conffiles); do [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-app-wolultra/$file ] || continue; csum=$(/mnt/build_wrt/staging_dir/host/bin/mkhash sha256 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-app-wolultra/$file); echo $file $csum >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-app-wolultra/lib/apk/packages/luci-app-wolultra.conffiles_static; done; fi
+# Some package (base-files) manually append stuff to conffiles
+# Append stuff from it and delete the CONTROL directory since everything else should be migrated
+if [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-app-wolultra/CONTROL/conffiles ]; then echo $(IDIR_luci-app-wolultra)/CONTROL/conffiles >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-app-wolultra/lib/apk/packages/luci-app-wolultra.conffiles; for file in $(cat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-app-wolultra/CONTROL/conffiles); do [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-app-wolultra/$file ] || continue; csum=$(/mnt/build_wrt/staging_dir/host/bin/mkhash sha256 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-app-wolultra/$file); echo $file $csum >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-app-wolultra/lib/apk/packages/luci-app-wolultra.conffiles_static; done; rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-app-wolultra/CONTROL/conffiles; fi
+if [ -z "$(ls -A /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-app-wolultra/CONTROL 2>/dev/null)" ]; then rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-app-wolultra/CONTROL; else echo "CONTROL directory /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-app-wolultra/CONTROL is not empty! This is not right and should be checked!" >&2; exit 1; fi
+SOURCE_DATE_EPOCH=0 /mnt/build_wrt/staging_dir/host/bin/fakeroot /mnt/build_wrt/staging_dir/host/bin/apk mkpkg --info "name:luci-app-wolultra" --info "version:20260802-r1" --info "tags:openwrt:section=luci" --info "description:LuCI support for WOL Ultra" --info "arch:noarch" --info "license:" --info "origin:feeds/base/packages/luci-app-wolultra" --info "url:https://github.com/openwrt/luci" --info "maintainer:OpenWrt LuCI community" --info "provides:luci-app-wolultra-any"  --script "post-install:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-app-wolultra/post-install" --script "post-upgrade:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-app-wolultra/post-upgrade" --script "pre-deinstall:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-app-wolultra/pre-deinstall" --info "depends:libc luci-base etherwake" --files "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-app-wolultra" --sign /mnt/build_wrt/private-key.pem --output "/mnt/build_wrt/bin/packages/aarch64_cortex-a53/base/luci-app-wolultra-20260802-r1.apk"
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-i18n-wolultra-zh-cn
+/mnt/build_wrt/scripts/ipkg-remove luci-i18n-wolultra-zh-cn /mnt/build_wrt/bin/packages/aarch64_cortex-a53/base/luci-i18n-wolultra-zh-cn-20260802-r1.apk
+removed '/mnt/build_wrt/bin/packages/aarch64_cortex-a53/base/luci-i18n-wolultra-zh-cn-20260802-r1.apk'
+mkdir -p /mnt/build_wrt/bin/targets/qualcommax/ipq60xx/packages /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-i18n-wolultra-zh-cn /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/pkginfo
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-i18n-wolultra-zh-cn/etc/uci-defaults
+echo "uci set luci.languages.zh_cn='简体中文 (Simplified Chinese)'; uci commit luci" > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-i18n-wolultra-zh-cn/etc/uci-defaults/luci-i18n-wolultra-zh-cn
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-i18n-wolultra-zh-cn/usr/lib/lua/luci/i18n
+po2lmo /mnt/build_wrt/package/packages/luci-app-wolultra/po/zh_Hans/wolultra.po /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-i18n-wolultra-zh-cn/usr/lib/lua/luci/i18n/wolultra.zh-cn.lmo;
+find /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-i18n-wolultra-zh-cn -name '.svn' -o -name '.#*' -o -name '*~'| xargs -r rm -rf
+export CROSS="aarch64-openwrt-linux-musl-"  NO_RENAME=1 ; NM="aarch64-openwrt-linux-musl-nm" STRIP="/mnt/build_wrt/staging_dir/host/bin/sstrip -z" STRIP_KMOD="/mnt/build_wrt/scripts/strip-kmod.sh" PATCHELF="/mnt/build_wrt/staging_dir/host/bin/patchelf" /mnt/build_wrt/scripts/rstrip.sh /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-i18n-wolultra-zh-cn
+install -d -m0755 /mnt/build_wrt/bin/packages/aarch64_cortex-a53/base
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-i18n-wolultra-zh-cn/
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-i18n-wolultra-zh-cn/lib/apk/packages/
+(cd /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-i18n-wolultra-zh-cn; )
+( echo "#!/bin/sh"; echo "[ \"\${IPKG_NO_SCRIPT}\" = \"1\" ] && exit 0"; echo "[ -s "\${IPKG_INSTROOT}/lib/functions.sh" ] || exit 0"; echo ". \${IPKG_INSTROOT}/lib/functions.sh"; echo 'export root="${IPKG_INSTROOT}"'; echo 'export pkgname="luci-i18n-wolultra-zh-cn"'; echo "add_group_and_user"; echo "default_postinst"; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-i18n-wolultra-zh-cn/postinst-pkg ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-i18n-wolultra-zh-cn/postinst-pkg"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-i18n-wolultra-zh-cn/post-install;
+( echo "#!/bin/sh"; echo 'export PKG_UPGRADE=1'; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-i18n-wolultra-zh-cn/post-install ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-i18n-wolultra-zh-cn/post-install"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-i18n-wolultra-zh-cn/post-upgrade;
+( echo "#!/bin/sh"; echo "[ -s "\${IPKG_INSTROOT}/lib/functions.sh" ] || exit 0"; echo ". \${IPKG_INSTROOT}/lib/functions.sh"; echo 'export root="${IPKG_INSTROOT}"'; echo 'export pkgname="luci-i18n-wolultra-zh-cn"'; echo "default_prerm"; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-i18n-wolultra-zh-cn/prerm-pkg ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-i18n-wolultra-zh-cn/prerm-pkg"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-i18n-wolultra-zh-cn/pre-deinstall;
+[ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-i18n-wolultra-zh-cn/postrm ] || sed -zi 's/^\s*#!/#!/' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-i18n-wolultra-zh-cn/postrm";
+if [ -n "" ]; then echo  > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-i18n-wolultra-zh-cn/lib/apk/packages/luci-i18n-wolultra-zh-cn.rusers; fi;
+if [ -n "" ]; then echo  > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-i18n-wolultra-zh-cn/lib/apk/packages/luci-i18n-wolultra-zh-cn.alternatives; fi;
+(cd /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-i18n-wolultra-zh-cn && find . -type f,l -printf "/%P\n" | sort > /mnt/build_wrt/tmp/luci-i18n-wolultra-zh-cn.list && mv /mnt/build_wrt/tmp/luci-i18n-wolultra-zh-cn.list /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-i18n-wolultra-zh-cn/lib/apk/packages/luci-i18n-wolultra-zh-cn.list)
+# Move conffiles to IDIR and build conffiles_static with csums
+if [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-i18n-wolultra-zh-cn/conffiles ]; then mv -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-i18n-wolultra-zh-cn/conffiles /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-i18n-wolultra-zh-cn/lib/apk/packages/luci-i18n-wolultra-zh-cn.conffiles; for file in $(cat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-i18n-wolultra-zh-cn/lib/apk/packages/luci-i18n-wolultra-zh-cn.conffiles); do [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-i18n-wolultra-zh-cn/$file ] || continue; csum=$(/mnt/build_wrt/staging_dir/host/bin/mkhash sha256 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-i18n-wolultra-zh-cn/$file); echo $file $csum >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-i18n-wolultra-zh-cn/lib/apk/packages/luci-i18n-wolultra-zh-cn.conffiles_static; done; fi
+# Some package (base-files) manually append stuff to conffiles
+# Append stuff from it and delete the CONTROL directory since everything else should be migrated
+if [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-i18n-wolultra-zh-cn/CONTROL/conffiles ]; then echo $(IDIR_luci-i18n-wolultra-zh-cn)/CONTROL/conffiles >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-i18n-wolultra-zh-cn/lib/apk/packages/luci-i18n-wolultra-zh-cn.conffiles; for file in $(cat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-i18n-wolultra-zh-cn/CONTROL/conffiles); do [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-i18n-wolultra-zh-cn/$file ] || continue; csum=$(/mnt/build_wrt/staging_dir/host/bin/mkhash sha256 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-i18n-wolultra-zh-cn/$file); echo $file $csum >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-i18n-wolultra-zh-cn/lib/apk/packages/luci-i18n-wolultra-zh-cn.conffiles_static; done; rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-i18n-wolultra-zh-cn/CONTROL/conffiles; fi
+if [ -z "$(ls -A /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-i18n-wolultra-zh-cn/CONTROL 2>/dev/null)" ]; then rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-i18n-wolultra-zh-cn/CONTROL; else echo "CONTROL directory /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-i18n-wolultra-zh-cn/CONTROL is not empty! This is not right and should be checked!" >&2; exit 1; fi
+SOURCE_DATE_EPOCH=0 /mnt/build_wrt/staging_dir/host/bin/fakeroot /mnt/build_wrt/staging_dir/host/bin/apk mkpkg --info "name:luci-i18n-wolultra-zh-cn" --info "version:20260802-r1" --info "tags:openwrt:section=luci" --info "description:Translation for luci-app-wolultra - 简体中文 (Simplified Chinese)" --info "arch:noarch" --info "license:" --info "origin:feeds/base/packages/luci-app-wolultra" --info "url:" --info "maintainer:" --info "provides:luci-i18n-wolultra-zh-cn-any"  --script "post-install:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-i18n-wolultra-zh-cn/post-install" --script "post-upgrade:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-i18n-wolultra-zh-cn/post-upgrade" --script "pre-deinstall:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/apk-all/luci-i18n-wolultra-zh-cn/pre-deinstall" --info "depends:libc luci-app-wolultra" --files "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/ipkg-all/luci-i18n-wolultra-zh-cn" --sign /mnt/build_wrt/private-key.pem --output "/mnt/build_wrt/bin/packages/aarch64_cortex-a53/base/luci-i18n-wolultra-zh-cn-20260802-r1.apk"
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/.pkgdir/luci-app-wolultra.installed /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/.pkgdir/luci-app-wolultra
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/.pkgdir/luci-app-wolultra
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/.pkgdir/luci-app-wolultra/www
+cp -pR /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/htdocs/* /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/.pkgdir/luci-app-wolultra/www/
+find /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/.pkgdir/luci-app-wolultra/www/ -type f -name '*.js' | while read src; do if jsmin < "$src" > "$src.o"; then mv "$src.o" "$src"; fi; done
+find /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/.pkgdir/luci-app-wolultra/www/ -type f -name '*.css' | while read src; do if csstidy "$src" --template=highest --remove_last_semicolon=true "$src.o"; then mv "$src.o" "$src"; fi; done
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/.pkgdir/luci-app-wolultra/
+cp -pR /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/root/* /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/.pkgdir/luci-app-wolultra/
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/.pkgdir/luci-app-wolultra.installed
+mkdir -p /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp
+SHELL= flock /mnt/build_wrt/tmp/.root-copy.flock -c 'cp -fpR /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/.pkgdir/luci-app-wolultra/. /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/'
+touch /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp/.luci-app-wolultra_installed
+echo "luci-app-wolultra" >> /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/pkginfo/luci-app-wolultra.default.install
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/.pkgdir/luci-i18n-wolultra-zh-cn.installed /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/.pkgdir/luci-i18n-wolultra-zh-cn
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/.pkgdir/luci-i18n-wolultra-zh-cn
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/.pkgdir/luci-i18n-wolultra-zh-cn/etc/uci-defaults
+echo "uci set luci.languages.zh_cn='简体中文 (Simplified Chinese)'; uci commit luci" > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/.pkgdir/luci-i18n-wolultra-zh-cn/etc/uci-defaults/luci-i18n-wolultra-zh-cn
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/.pkgdir/luci-i18n-wolultra-zh-cn/usr/lib/lua/luci/i18n
+po2lmo /mnt/build_wrt/package/packages/luci-app-wolultra/po/zh_Hans/wolultra.po /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/.pkgdir/luci-i18n-wolultra-zh-cn/usr/lib/lua/luci/i18n/wolultra.zh-cn.lmo;
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/.pkgdir/luci-i18n-wolultra-zh-cn.installed
+mkdir -p /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp
+SHELL= flock /mnt/build_wrt/tmp/.root-copy.flock -c 'cp -fpR /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/luci-app-wolultra/.pkgdir/luci-i18n-wolultra-zh-cn/. /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/'
+touch /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp/.luci-i18n-wolultra-zh-cn_installed
+echo "luci-i18n-wolultra-zh-cn" >> /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/pkginfo/luci-app-wolultra.default.install
+make[3]: Leaving directory '/mnt/build_wrt/package/packages/luci-app-wolultra'
+time: package/packages/luci-app-wolultra/compile#0.20#0.37#0.54
+make[3]: Entering directory '/mnt/build_wrt/package/qca-nss/nss-eip-firmware'
+mkdir -p /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp
+SHELL= flock /mnt/build_wrt/tmp/.root-copy.flock -c 'cp -fpR /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/nss-eip-firmware-2.5.7/.pkgdir/nss-eip-firmware/. /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/'
+touch /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp/.nss-eip-firmware_installed
+echo "nss-eip-firmware" >> /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/pkginfo/nss-eip-firmware.default.install
+make[3]: Leaving directory '/mnt/build_wrt/package/qca-nss/nss-eip-firmware'
+time: package/qca-nss/nss-eip-firmware/compile#0.58#0.17#0.73
+make[3]: Entering directory '/mnt/build_wrt/package/qca-nss/qca-nss-crypto'
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/.built
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/.built_check
+make -C /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.39 KCFLAGS="-fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl=target-aarch64_cortex-a53_musl -fno-caller-saves " KAFLAGS="-fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl=target-aarch64_cortex-a53_musl" HOSTCFLAGS="-O2 -I/mnt/build_wrt/staging_dir/host/include -I/mnt/build_wrt/staging_dir/hostpkg/include -I/mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/host/include -Wall -Wmissing-prototypes -Wstrict-prototypes" CROSS_COMPILE="aarch64-openwrt-linux-musl-" ARCH="arm64" KBUILD_HAVE_NLS=no KBUILD_BUILD_USER="" KBUILD_BUILD_HOST="" KBUILD_BUILD_TIMESTAMP="Thu Jul 23 04:04:25 2026" KBUILD_BUILD_VERSION="0" KBUILD_HOSTLDFLAGS="-L/mnt/build_wrt/staging_dir/host/lib" CONFIG_SHELL="bash" V=''  cmd_syscalls= KBUILD_EXTRA_SYMBOLS="/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/symvers/fibocom-qmi-wwan.symvers /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/symvers/fullconenat-nft.symvers /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/symvers/gpio-button-hotplug.symvers /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/symvers/mac80211.symvers /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/symvers/mtd-rw.symvers /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/symvers/nat46.symvers /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/symvers/ovpn-backports.symvers /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/symvers/qca-nss-clients.symvers /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/symvers/qca-nss-crypto.symvers /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/symvers/qca-nss-dp.symvers /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/symvers/qca-nss-drv.symvers /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/symvers/qca-nss-ecm.symvers /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/symvers/qca-ssdk.symvers /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/symvers/quectel-qmi-wwan.symvers" CC="ccache aarch64-openwrt-linux-musl-gcc" KERNELRELEASE=6.18.39  M="/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9" EXTRA_CFLAGS="-DCONFIG_NSS_DEBUG_LEVEL=4 -I/mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/usr/include/qca-nss-crypto -I/mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/usr/include/qca-nss-drv -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/v2.0/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/v2.0/src" NSS_CRYPTO_DIR=v2.0 SoC=ipq60xx modules
+make[4]: Entering directory '/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.39'
+make[5]: Entering directory '/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9'
+  CC [M]  v2.0/src/nss_crypto_ctrl.o
+  CC [M]  v2.0/src/nss_crypto_debugfs.o
+  CC [M]  v2.0/src/nss_crypto_transform.o
+  CC [M]  v2.0/src/hal/ipq60xx/nss_crypto_eip197.o
+  CC [M]  v2.0/src/hal/ipq60xx/nss_crypto_hw.o
+  CC [M]  v2.0/src/hal/ipq60xx/nss_crypto_eip197_init.o
+  LD [M]  v2.0/src/qca-nss-crypto.o
+  CC [M]  v2.0/tool/nss_crypto_bench.o
+  LD [M]  v2.0/tool/qca-nss-crypto-tool.o
+  MODPOST Module.symvers
+  LD [M]  v2.0/src/qca-nss-crypto.ko
+  LD [M]  v2.0/tool/qca-nss-crypto-tool.ko
+make[5]: Leaving directory '/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9'
+make[4]: Leaving directory '/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.39'
+for subdir in .; do realdir=$(readlink -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9); grep -F /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/$subdir/Module.symvers >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/Module.symvers.tmp; [ "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9" = "$realdir" ] || grep -F $realdir /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/$subdir/Module.symvers >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/Module.symvers.tmp; [ -s "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/Module.symvers.tmp" ] || [ "6.18" = "6.18" ] && sed 's/\.o$//' /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/$subdir/modules.order | grep -Ff - /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/$subdir/Module.symvers >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/Module.symvers.tmp; done; sort -u /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/Module.symvers.tmp > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/Module.symvers; mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/symvers; mv /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/Module.symvers /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/symvers/qca-nss-crypto.symvers
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/.built
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/ipkg-aarch64_cortex-a53/kmod-qca-nss-crypto
+/mnt/build_wrt/scripts/ipkg-remove kmod-qca-nss-crypto /mnt/build_wrt/bin/targets/qualcommax/ipq60xx/packages/kmod-qca-nss-crypto-6.18.39.13.1.2024.09.16~60e27b9-r1.apk
+removed '/mnt/build_wrt/bin/targets/qualcommax/ipq60xx/packages/kmod-qca-nss-crypto-6.18.39.13.1.2024.09.16~60e27b9-r1.apk'
+mkdir -p /mnt/build_wrt/bin/targets/qualcommax/ipq60xx/packages /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/ipkg-aarch64_cortex-a53/kmod-qca-nss-crypto /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/pkginfo
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/ipkg-aarch64_cortex-a53/kmod-qca-nss-crypto/etc/modules.d; ( echo "qca-nss-crypto"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/ipkg-aarch64_cortex-a53/kmod-qca-nss-crypto/etc/modules.d/33-qca-nss-crypto; 
+find /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/ipkg-aarch64_cortex-a53/kmod-qca-nss-crypto -name '.svn' -o -name '.#*' -o -name '*~'| xargs -r rm -rf
+export CROSS="aarch64-openwrt-linux-musl-"  NO_RENAME=1 ; NM="aarch64-openwrt-linux-musl-nm" STRIP="/mnt/build_wrt/staging_dir/host/bin/sstrip -z" STRIP_KMOD="/mnt/build_wrt/scripts/strip-kmod.sh" PATCHELF="/mnt/build_wrt/staging_dir/host/bin/patchelf" /mnt/build_wrt/scripts/rstrip.sh /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/ipkg-aarch64_cortex-a53/kmod-qca-nss-crypto
+rstrip.sh: /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/ipkg-aarch64_cortex-a53/kmod-qca-nss-crypto/lib/modules/6.18.39/qca-nss-crypto.ko: relocatable
+rstrip.sh: /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/ipkg-aarch64_cortex-a53/kmod-qca-nss-crypto/lib/modules/6.18.39/qca-nss-crypto-tool.ko: relocatable
+install -d -m0755 /mnt/build_wrt/bin/targets/qualcommax/ipq60xx/packages
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/apk-aarch64_cortex-a53/kmod-qca-nss-crypto/
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/ipkg-aarch64_cortex-a53/kmod-qca-nss-crypto/lib/apk/packages/
+(cd /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/apk-aarch64_cortex-a53/kmod-qca-nss-crypto; )
+( echo "#!/bin/sh"; echo "[ \"\${IPKG_NO_SCRIPT}\" = \"1\" ] && exit 0"; echo "[ -s "\${IPKG_INSTROOT}/lib/functions.sh" ] || exit 0"; echo ". \${IPKG_INSTROOT}/lib/functions.sh"; echo 'export root="${IPKG_INSTROOT}"'; echo 'export pkgname="kmod-qca-nss-crypto"'; echo "add_group_and_user"; echo "default_postinst"; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/apk-aarch64_cortex-a53/kmod-qca-nss-crypto/postinst-pkg ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/apk-aarch64_cortex-a53/kmod-qca-nss-crypto/postinst-pkg"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/apk-aarch64_cortex-a53/kmod-qca-nss-crypto/post-install;
+( echo "#!/bin/sh"; echo 'export PKG_UPGRADE=1'; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/apk-aarch64_cortex-a53/kmod-qca-nss-crypto/post-install ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/apk-aarch64_cortex-a53/kmod-qca-nss-crypto/post-install"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/apk-aarch64_cortex-a53/kmod-qca-nss-crypto/post-upgrade;
+( echo "#!/bin/sh"; echo "[ -s "\${IPKG_INSTROOT}/lib/functions.sh" ] || exit 0"; echo ". \${IPKG_INSTROOT}/lib/functions.sh"; echo 'export root="${IPKG_INSTROOT}"'; echo 'export pkgname="kmod-qca-nss-crypto"'; echo "default_prerm"; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/apk-aarch64_cortex-a53/kmod-qca-nss-crypto/prerm-pkg ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/apk-aarch64_cortex-a53/kmod-qca-nss-crypto/prerm-pkg"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/apk-aarch64_cortex-a53/kmod-qca-nss-crypto/pre-deinstall;
+[ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/apk-aarch64_cortex-a53/kmod-qca-nss-crypto/postrm ] || sed -zi 's/^\s*#!/#!/' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/apk-aarch64_cortex-a53/kmod-qca-nss-crypto/postrm";
+if [ -n "" ]; then echo  > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/ipkg-aarch64_cortex-a53/kmod-qca-nss-crypto/lib/apk/packages/kmod-qca-nss-crypto.rusers; fi;
+if [ -n "" ]; then echo  > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/ipkg-aarch64_cortex-a53/kmod-qca-nss-crypto/lib/apk/packages/kmod-qca-nss-crypto.alternatives; fi;
+(cd /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/ipkg-aarch64_cortex-a53/kmod-qca-nss-crypto && find . -type f,l -printf "/%P\n" | sort > /mnt/build_wrt/tmp/kmod-qca-nss-crypto.list && mv /mnt/build_wrt/tmp/kmod-qca-nss-crypto.list /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/ipkg-aarch64_cortex-a53/kmod-qca-nss-crypto/lib/apk/packages/kmod-qca-nss-crypto.list)
+# Move conffiles to IDIR and build conffiles_static with csums
+if [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/apk-aarch64_cortex-a53/kmod-qca-nss-crypto/conffiles ]; then mv -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/apk-aarch64_cortex-a53/kmod-qca-nss-crypto/conffiles /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/ipkg-aarch64_cortex-a53/kmod-qca-nss-crypto/lib/apk/packages/kmod-qca-nss-crypto.conffiles; for file in $(cat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/ipkg-aarch64_cortex-a53/kmod-qca-nss-crypto/lib/apk/packages/kmod-qca-nss-crypto.conffiles); do [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/ipkg-aarch64_cortex-a53/kmod-qca-nss-crypto/$file ] || continue; csum=$(/mnt/build_wrt/staging_dir/host/bin/mkhash sha256 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/ipkg-aarch64_cortex-a53/kmod-qca-nss-crypto/$file); echo $file $csum >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/ipkg-aarch64_cortex-a53/kmod-qca-nss-crypto/lib/apk/packages/kmod-qca-nss-crypto.conffiles_static; done; fi
+# Some package (base-files) manually append stuff to conffiles
+# Append stuff from it and delete the CONTROL directory since everything else should be migrated
+if [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/ipkg-aarch64_cortex-a53/kmod-qca-nss-crypto/CONTROL/conffiles ]; then echo $(IDIR_kmod-qca-nss-crypto)/CONTROL/conffiles >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/ipkg-aarch64_cortex-a53/kmod-qca-nss-crypto/lib/apk/packages/kmod-qca-nss-crypto.conffiles; for file in $(cat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/ipkg-aarch64_cortex-a53/kmod-qca-nss-crypto/CONTROL/conffiles); do [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/ipkg-aarch64_cortex-a53/kmod-qca-nss-crypto/$file ] || continue; csum=$(/mnt/build_wrt/staging_dir/host/bin/mkhash sha256 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/ipkg-aarch64_cortex-a53/kmod-qca-nss-crypto/$file); echo $file $csum >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/ipkg-aarch64_cortex-a53/kmod-qca-nss-crypto/lib/apk/packages/kmod-qca-nss-crypto.conffiles_static; done; rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/ipkg-aarch64_cortex-a53/kmod-qca-nss-crypto/CONTROL/conffiles; fi
+if [ -z "$(ls -A /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/ipkg-aarch64_cortex-a53/kmod-qca-nss-crypto/CONTROL 2>/dev/null)" ]; then rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/ipkg-aarch64_cortex-a53/kmod-qca-nss-crypto/CONTROL; else echo "CONTROL directory /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/ipkg-aarch64_cortex-a53/kmod-qca-nss-crypto/CONTROL is not empty! This is not right and should be checked!" >&2; exit 1; fi
+SOURCE_DATE_EPOCH=0 /mnt/build_wrt/staging_dir/host/bin/fakeroot /mnt/build_wrt/staging_dir/host/bin/apk mkpkg --info "name:kmod-qca-nss-crypto" --info "version:6.18.39.13.1.2024.09.16~60e27b9-r1" --info "tags:openwrt:section=kernel" --info "description:This package contains a NSS crypto driver for QCA chipset" --info "arch:aarch64_cortex-a53" --info "license:" --info "origin:feeds/base/qca-nss/qca-nss-crypto" --info "url:" --info "maintainer:" --info "provides:kmod-qca-nss-crypto-any"  --script "post-install:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/apk-aarch64_cortex-a53/kmod-qca-nss-crypto/post-install" --script "post-upgrade:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/apk-aarch64_cortex-a53/kmod-qca-nss-crypto/post-upgrade" --script "pre-deinstall:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/apk-aarch64_cortex-a53/kmod-qca-nss-crypto/pre-deinstall" --info "depends:kernel=6.18.39~ac7ed71b0e073954793e4b21cce15b42-r1 kmod-qca-nss-drv nss-eip-firmware" --files "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/ipkg-aarch64_cortex-a53/kmod-qca-nss-crypto" --sign /mnt/build_wrt/private-key.pem --output "/mnt/build_wrt/bin/targets/qualcommax/ipq60xx/packages/kmod-qca-nss-crypto-6.18.39.13.1.2024.09.16~60e27b9-r1.apk"
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/.pkgdir/kmod-qca-nss-crypto.installed /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/.pkgdir/kmod-qca-nss-crypto
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/.pkgdir/kmod-qca-nss-crypto
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/.pkgdir/kmod-qca-nss-crypto/etc/modules.d; ( echo "qca-nss-crypto"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/.pkgdir/kmod-qca-nss-crypto/etc/modules.d/33-qca-nss-crypto; 
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/.pkgdir/kmod-qca-nss-crypto.installed
+mkdir -p /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp
+SHELL= flock /mnt/build_wrt/tmp/.root-copy.flock -c 'cp -fpR /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/.pkgdir/kmod-qca-nss-crypto/. /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/'
+touch /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp/.kmod-qca-nss-crypto_installed
+echo "kmod-qca-nss-crypto" >> /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/pkginfo/qca-nss-crypto.default.install
+rm -rf /mnt/build_wrt/tmp/stage-qca-nss-crypto
+mkdir -p /mnt/build_wrt/tmp/stage-qca-nss-crypto/host /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/packages
+install -d -m0755 /mnt/build_wrt/tmp/stage-qca-nss-crypto/usr/include/qca-nss-crypto
+cp -fpR /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-crypto-13.1.2024.09.16~60e27b9/v2.0/include/* /mnt/build_wrt/tmp/stage-qca-nss-crypto/usr/include/qca-nss-crypto
+find /mnt/build_wrt/tmp/stage-qca-nss-crypto -name '*.la' | xargs -r rm -f; 
+if [ -f /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/packages/qca-nss-crypto.list ]; then /mnt/build_wrt/scripts/clean-package.sh "/mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/packages/qca-nss-crypto.list" "/mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl"; fi
+if [ -d /mnt/build_wrt/tmp/stage-qca-nss-crypto ]; then (cd /mnt/build_wrt/tmp/stage-qca-nss-crypto; find ./ > /mnt/build_wrt/tmp/stage-qca-nss-crypto.files); 	SHELL= flock /mnt/build_wrt/tmp/.staging-dir.flock -c ' mv /mnt/build_wrt/tmp/stage-qca-nss-crypto.files /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/packages/qca-nss-crypto.list && cp -fpR /mnt/build_wrt/tmp/stage-qca-nss-crypto/* /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/; '; fi
+rm -rf /mnt/build_wrt/tmp/stage-qca-nss-crypto
+touch /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/stamp/.qca-nss-crypto_installed
+make[3]: Leaving directory '/mnt/build_wrt/package/qca-nss/qca-nss-crypto'
+time: package/qca-nss/qca-nss-crypto/compile#9.45#1.82#11.25
+make[3]: Entering directory '/mnt/build_wrt/package/qca-nss/qca-nss-ecm'
+mkdir -p /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp
+SHELL= flock /mnt/build_wrt/tmp/.root-copy.flock -c 'cp -fpR /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/qca-nss-ecm-13.1.2026.04.03~8c7355b/.pkgdir/kmod-qca-nss-ecm/. /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/'
+touch /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp/.kmod-qca-nss-ecm_installed
+echo "kmod-qca-nss-ecm" >> /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/pkginfo/qca-nss-ecm.default.install
+make[3]: Leaving directory '/mnt/build_wrt/package/qca-nss/qca-nss-ecm'
+time: package/qca-nss/qca-nss-ecm/compile#0.10#0.13#0.22
+make[3]: Entering directory '/mnt/build_wrt/package/system/apk'
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/.built
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/.built_check
+VERSION=3.0.5 MAKEFLAGS="" /mnt/build_wrt/staging_dir/host/bin/ninja  -j1 -C /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/openwrt-build 
+ninja: Entering directory `/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/openwrt-build'
+[1/3] Compiling C object src/libapk.a.p/crypto_openssl.c.o
+[2/3] Linking static target src/libapk.a
+[3/3] Linking target src/apk
+DESTDIR="/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install" MAKEFLAGS="" /mnt/build_wrt/staging_dir/host/bin/ninja  -j1 -C /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/openwrt-build install
+ninja: Entering directory `/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/openwrt-build'
+[0/1] Installing files.
+Installing src/_apk to /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install/usr/share/bash-completion/completions
+Installing src/libapk.a to /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install/usr/lib
+Installing src/apk to /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install/usr/bin
+Installing /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/src/adb.h to /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install/usr/include/apk
+Installing /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/src/apk_atom.h to /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install/usr/include/apk
+Installing /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/src/apk_balloc.h to /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install/usr/include/apk
+Installing /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/src/apk_blob.h to /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install/usr/include/apk
+Installing /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/src/apk_context.h to /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install/usr/include/apk
+Installing /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/src/apk_crypto.h to /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install/usr/include/apk
+Installing /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/src/apk_ctype.h to /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install/usr/include/apk
+Installing /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/src/apk_database.h to /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install/usr/include/apk
+Installing /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/src/apk_defines.h to /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install/usr/include/apk
+Installing /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/src/apk_extract.h to /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install/usr/include/apk
+Installing /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/src/apk_fs.h to /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install/usr/include/apk
+Installing /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/src/apk_hash.h to /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install/usr/include/apk
+Installing /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/src/apk_io.h to /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install/usr/include/apk
+Installing /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/src/apk_package.h to /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install/usr/include/apk
+Installing /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/src/apk_pathbuilder.h to /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install/usr/include/apk
+Installing /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/src/apk_print.h to /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install/usr/include/apk
+Installing /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/src/apk_provider_data.h to /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install/usr/include/apk
+Installing /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/src/apk_query.h to /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install/usr/include/apk
+Installing /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/src/apk_repoparser.h to /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install/usr/include/apk
+Installing /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/src/apk_serialize.h to /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install/usr/include/apk
+Installing /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/src/apk_solver_data.h to /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install/usr/include/apk
+Installing /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/src/apk_solver.h to /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install/usr/include/apk
+Installing /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/src/apk_tar.h to /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install/usr/include/apk
+Installing /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/src/apk_trust.h to /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install/usr/include/apk
+Installing /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/src/apk_version.h to /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install/usr/include/apk
+Installing /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/openwrt-build/meson-private/apk.pc to /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install/usr/lib/pkgconfig
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/.built
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-aarch64_cortex-a53/apk-openssl
+/mnt/build_wrt/scripts/ipkg-remove apk-openssl /mnt/build_wrt/bin/packages/aarch64_cortex-a53/base/apk-openssl-3.0.5-r3.apk
+removed '/mnt/build_wrt/bin/packages/aarch64_cortex-a53/base/apk-openssl-3.0.5-r3.apk'
+mkdir -p /mnt/build_wrt/bin/targets/qualcommax/ipq60xx/packages /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-aarch64_cortex-a53/apk-openssl /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/pkginfo
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-aarch64_cortex-a53/apk-openssl/lib/apk/db
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-aarch64_cortex-a53/apk-openssl/usr/bin
+install -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install/usr/bin/apk /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-aarch64_cortex-a53/apk-openssl/usr/bin/apk
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-aarch64_cortex-a53/apk-openssl/etc/apk/repositories.d
+install -m0644 ./files/customfeeds.list /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-aarch64_cortex-a53/apk-openssl/etc/apk/repositories.d/customfeeds.list
+find /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-aarch64_cortex-a53/apk-openssl -name '.svn' -o -name '.#*' -o -name '*~'| xargs -r rm -rf
+export CROSS="aarch64-openwrt-linux-musl-"  NO_RENAME=1 ; NM="aarch64-openwrt-linux-musl-nm" STRIP="/mnt/build_wrt/staging_dir/host/bin/sstrip -z" STRIP_KMOD="/mnt/build_wrt/scripts/strip-kmod.sh" PATCHELF="/mnt/build_wrt/staging_dir/host/bin/patchelf" /mnt/build_wrt/scripts/rstrip.sh /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-aarch64_cortex-a53/apk-openssl
+rstrip.sh: /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-aarch64_cortex-a53/apk-openssl/usr/bin/apk: executable
+install -d -m0755 /mnt/build_wrt/bin/packages/aarch64_cortex-a53/base
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/apk-aarch64_cortex-a53/apk-openssl/
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-aarch64_cortex-a53/apk-openssl/lib/apk/packages/
+(cd /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/apk-aarch64_cortex-a53/apk-openssl; echo "$V_Package_apk_openssl_conffiles" > conffiles; )
+( echo "#!/bin/sh"; echo "[ \"\${IPKG_NO_SCRIPT}\" = \"1\" ] && exit 0"; echo "[ -s "\${IPKG_INSTROOT}/lib/functions.sh" ] || exit 0"; echo ". \${IPKG_INSTROOT}/lib/functions.sh"; echo 'export root="${IPKG_INSTROOT}"'; echo 'export pkgname="apk-openssl"'; echo "add_group_and_user"; echo "default_postinst"; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/apk-aarch64_cortex-a53/apk-openssl/postinst-pkg ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/apk-aarch64_cortex-a53/apk-openssl/postinst-pkg"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/apk-aarch64_cortex-a53/apk-openssl/post-install;
+( echo "#!/bin/sh"; echo 'export PKG_UPGRADE=1'; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/apk-aarch64_cortex-a53/apk-openssl/post-install ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/apk-aarch64_cortex-a53/apk-openssl/post-install"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/apk-aarch64_cortex-a53/apk-openssl/post-upgrade;
+( echo "#!/bin/sh"; echo "[ -s "\${IPKG_INSTROOT}/lib/functions.sh" ] || exit 0"; echo ". \${IPKG_INSTROOT}/lib/functions.sh"; echo 'export root="${IPKG_INSTROOT}"'; echo 'export pkgname="apk-openssl"'; echo "default_prerm"; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/apk-aarch64_cortex-a53/apk-openssl/prerm-pkg ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/apk-aarch64_cortex-a53/apk-openssl/prerm-pkg"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/apk-aarch64_cortex-a53/apk-openssl/pre-deinstall;
+[ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/apk-aarch64_cortex-a53/apk-openssl/postrm ] || sed -zi 's/^\s*#!/#!/' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/apk-aarch64_cortex-a53/apk-openssl/postrm";
+if [ -n "" ]; then echo  > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-aarch64_cortex-a53/apk-openssl/lib/apk/packages/apk-openssl.rusers; fi;
+if [ -n "" ]; then echo  > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-aarch64_cortex-a53/apk-openssl/lib/apk/packages/apk-openssl.alternatives; fi;
+(cd /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-aarch64_cortex-a53/apk-openssl && find . -type f,l -printf "/%P\n" | sort > /mnt/build_wrt/tmp/apk-openssl.list && mv /mnt/build_wrt/tmp/apk-openssl.list /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-aarch64_cortex-a53/apk-openssl/lib/apk/packages/apk-openssl.list)
+# Move conffiles to IDIR and build conffiles_static with csums
+if [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/apk-aarch64_cortex-a53/apk-openssl/conffiles ]; then mv -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/apk-aarch64_cortex-a53/apk-openssl/conffiles /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-aarch64_cortex-a53/apk-openssl/lib/apk/packages/apk-openssl.conffiles; for file in $(cat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-aarch64_cortex-a53/apk-openssl/lib/apk/packages/apk-openssl.conffiles); do [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-aarch64_cortex-a53/apk-openssl/$file ] || continue; csum=$(/mnt/build_wrt/staging_dir/host/bin/mkhash sha256 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-aarch64_cortex-a53/apk-openssl/$file); echo $file $csum >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-aarch64_cortex-a53/apk-openssl/lib/apk/packages/apk-openssl.conffiles_static; done; fi
+# Some package (base-files) manually append stuff to conffiles
+# Append stuff from it and delete the CONTROL directory since everything else should be migrated
+if [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-aarch64_cortex-a53/apk-openssl/CONTROL/conffiles ]; then echo $(IDIR_apk-openssl)/CONTROL/conffiles >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-aarch64_cortex-a53/apk-openssl/lib/apk/packages/apk-openssl.conffiles; for file in $(cat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-aarch64_cortex-a53/apk-openssl/CONTROL/conffiles); do [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-aarch64_cortex-a53/apk-openssl/$file ] || continue; csum=$(/mnt/build_wrt/staging_dir/host/bin/mkhash sha256 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-aarch64_cortex-a53/apk-openssl/$file); echo $file $csum >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-aarch64_cortex-a53/apk-openssl/lib/apk/packages/apk-openssl.conffiles_static; done; rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-aarch64_cortex-a53/apk-openssl/CONTROL/conffiles; fi
+if [ -z "$(ls -A /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-aarch64_cortex-a53/apk-openssl/CONTROL 2>/dev/null)" ]; then rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-aarch64_cortex-a53/apk-openssl/CONTROL; else echo "CONTROL directory /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-aarch64_cortex-a53/apk-openssl/CONTROL is not empty! This is not right and should be checked!" >&2; exit 1; fi
+SOURCE_DATE_EPOCH=0 /mnt/build_wrt/staging_dir/host/bin/fakeroot /mnt/build_wrt/staging_dir/host/bin/apk mkpkg --info "name:apk-openssl" --info "version:3.0.5-r3" --info "tags:openwrt:section=base" --info "description:apk package manager (openssl)" --info "arch:aarch64_cortex-a53" --info "license:GPL-2.0-only" --info "origin:feeds/base/system/apk" --info "url:https://gitlab.alpinelinux.org/alpine/apk-tools.git" --info "maintainer:Paul Spooren <mail@aparcar.org>" --info "provides:apk-openssl-any apk=3.0.5-r3" --info "provider-priority:100" --script "post-install:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/apk-aarch64_cortex-a53/apk-openssl/post-install" --script "post-upgrade:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/apk-aarch64_cortex-a53/apk-openssl/post-upgrade" --script "pre-deinstall:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/apk-aarch64_cortex-a53/apk-openssl/pre-deinstall" --info "depends:libc zlib wget-any libopenssl3" --files "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-aarch64_cortex-a53/apk-openssl" --sign /mnt/build_wrt/private-key.pem --output "/mnt/build_wrt/bin/packages/aarch64_cortex-a53/base/apk-openssl-3.0.5-r3.apk"
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/.pkgdir/apk-openssl.installed /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/.pkgdir/apk-openssl
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/.pkgdir/apk-openssl
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/.pkgdir/apk-openssl/lib/apk/db
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/.pkgdir/apk-openssl/usr/bin
+install -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/ipkg-install/usr/bin/apk /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/.pkgdir/apk-openssl/usr/bin/apk
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/.pkgdir/apk-openssl/etc/apk/repositories.d
+install -m0644 ./files/customfeeds.list /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/.pkgdir/apk-openssl/etc/apk/repositories.d/customfeeds.list
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/.pkgdir/apk-openssl.installed
+mkdir -p /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp
+SHELL= flock /mnt/build_wrt/tmp/.root-copy.flock -c 'cp -fpR /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/apk-openssl/apk-3.0.5/.pkgdir/apk-openssl/. /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/'
+touch /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp/.apk-openssl_installed
+echo "apk-openssl" >> /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/pkginfo/apk.openssl.install
+make[3]: Leaving directory '/mnt/build_wrt/package/system/apk'
+time: package/system/apk/openssl/compile#7.69#0.67#3.75
+make[3]: Entering directory '/mnt/build_wrt/package/system/mtd'
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/.built
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/.built_check
+CFLAGS="-Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd=mtd -flto=auto -fno-fat-lto-objects -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs -Dtarget_qualcommax=1 -Wall  -I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/include -I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/include -I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/include/fortify " CXXFLAGS="-Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd=mtd -flto=auto -fno-fat-lto-objects -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs -Dtarget_qualcommax=1 -Wall -flto=auto -fno-fat-lto-objects  -I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/include -I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/include -I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/include/fortify " LDFLAGS="-L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/lib -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/lib -fuse-ld=bfd -flto=auto -fuse-linker-plugin -zmax-page-size=4096 -znow -zrelro -zpack-relative-relocs " make -j1 -C /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/. AR="aarch64-openwrt-linux-musl-gcc-ar" AS="ccache aarch64-openwrt-linux-musl-gcc -c -Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd=mtd -flto=auto -fno-fat-lto-objects -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs -Dtarget_qualcommax=1 -Wall" LD="aarch64-openwrt-linux-musl-ld.bfd" NM="aarch64-openwrt-linux-musl-gcc-nm" CC="ccache aarch64-openwrt-linux-musl-gcc" GCC="ccache aarch64-openwrt-linux-musl-gcc" CXX="ccache aarch64-openwrt-linux-musl-g++" RANLIB="aarch64-openwrt-linux-musl-gcc-ranlib" STRIP=aarch64-openwrt-linux-musl-strip OBJCOPY=aarch64-openwrt-linux-musl-objcopy OBJDUMP=aarch64-openwrt-linux-musl-objdump SIZE=aarch64-openwrt-linux-musl-size CROSS="aarch64-openwrt-linux-musl-" ARCH="aarch64" TARGET="qualcommax" ;
+make[4]: Entering directory '/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd'
+make[4]: 'mtd' is up to date.
+make[4]: Leaving directory '/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd'
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/.built
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/ipkg-aarch64_cortex-a53/mtd
+/mnt/build_wrt/scripts/ipkg-remove mtd /mnt/build_wrt/bin/targets/qualcommax/ipq60xx/packages/mtd-28.apk
+removed '/mnt/build_wrt/bin/targets/qualcommax/ipq60xx/packages/mtd-28.apk'
+mkdir -p /mnt/build_wrt/bin/targets/qualcommax/ipq60xx/packages /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/ipkg-aarch64_cortex-a53/mtd /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/pkginfo
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/ipkg-aarch64_cortex-a53/mtd/sbin
+install -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/mtd /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/ipkg-aarch64_cortex-a53/mtd/sbin/
+find /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/ipkg-aarch64_cortex-a53/mtd -name '.svn' -o -name '.#*' -o -name '*~'| xargs -r rm -rf
+export CROSS="aarch64-openwrt-linux-musl-"  NO_RENAME=1 ; NM="aarch64-openwrt-linux-musl-nm" STRIP="/mnt/build_wrt/staging_dir/host/bin/sstrip -z" STRIP_KMOD="/mnt/build_wrt/scripts/strip-kmod.sh" PATCHELF="/mnt/build_wrt/staging_dir/host/bin/patchelf" /mnt/build_wrt/scripts/rstrip.sh /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/ipkg-aarch64_cortex-a53/mtd
+rstrip.sh: /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/ipkg-aarch64_cortex-a53/mtd/sbin/mtd: executable
+install -d -m0755 /mnt/build_wrt/bin/targets/qualcommax/ipq60xx/packages
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/apk-aarch64_cortex-a53/mtd/
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/ipkg-aarch64_cortex-a53/mtd/lib/apk/packages/
+(cd /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/apk-aarch64_cortex-a53/mtd; )
+( echo "#!/bin/sh"; echo "[ \"\${IPKG_NO_SCRIPT}\" = \"1\" ] && exit 0"; echo "[ -s "\${IPKG_INSTROOT}/lib/functions.sh" ] || exit 0"; echo ". \${IPKG_INSTROOT}/lib/functions.sh"; echo 'export root="${IPKG_INSTROOT}"'; echo 'export pkgname="mtd"'; echo "add_group_and_user"; echo "default_postinst"; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/apk-aarch64_cortex-a53/mtd/postinst-pkg ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/apk-aarch64_cortex-a53/mtd/postinst-pkg"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/apk-aarch64_cortex-a53/mtd/post-install;
+( echo "#!/bin/sh"; echo 'export PKG_UPGRADE=1'; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/apk-aarch64_cortex-a53/mtd/post-install ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/apk-aarch64_cortex-a53/mtd/post-install"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/apk-aarch64_cortex-a53/mtd/post-upgrade;
+( echo "#!/bin/sh"; echo "[ -s "\${IPKG_INSTROOT}/lib/functions.sh" ] || exit 0"; echo ". \${IPKG_INSTROOT}/lib/functions.sh"; echo 'export root="${IPKG_INSTROOT}"'; echo 'export pkgname="mtd"'; echo "default_prerm"; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/apk-aarch64_cortex-a53/mtd/prerm-pkg ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/apk-aarch64_cortex-a53/mtd/prerm-pkg"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/apk-aarch64_cortex-a53/mtd/pre-deinstall;
+[ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/apk-aarch64_cortex-a53/mtd/postrm ] || sed -zi 's/^\s*#!/#!/' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/apk-aarch64_cortex-a53/mtd/postrm";
+if [ -n "" ]; then echo  > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/ipkg-aarch64_cortex-a53/mtd/lib/apk/packages/mtd.rusers; fi;
+if [ -n "" ]; then echo  > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/ipkg-aarch64_cortex-a53/mtd/lib/apk/packages/mtd.alternatives; fi;
+(cd /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/ipkg-aarch64_cortex-a53/mtd && find . -type f,l -printf "/%P\n" | sort > /mnt/build_wrt/tmp/mtd.list && mv /mnt/build_wrt/tmp/mtd.list /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/ipkg-aarch64_cortex-a53/mtd/lib/apk/packages/mtd.list)
+# Move conffiles to IDIR and build conffiles_static with csums
+if [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/apk-aarch64_cortex-a53/mtd/conffiles ]; then mv -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/apk-aarch64_cortex-a53/mtd/conffiles /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/ipkg-aarch64_cortex-a53/mtd/lib/apk/packages/mtd.conffiles; for file in $(cat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/ipkg-aarch64_cortex-a53/mtd/lib/apk/packages/mtd.conffiles); do [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/ipkg-aarch64_cortex-a53/mtd/$file ] || continue; csum=$(/mnt/build_wrt/staging_dir/host/bin/mkhash sha256 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/ipkg-aarch64_cortex-a53/mtd/$file); echo $file $csum >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/ipkg-aarch64_cortex-a53/mtd/lib/apk/packages/mtd.conffiles_static; done; fi
+# Some package (base-files) manually append stuff to conffiles
+# Append stuff from it and delete the CONTROL directory since everything else should be migrated
+if [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/ipkg-aarch64_cortex-a53/mtd/CONTROL/conffiles ]; then echo $(IDIR_mtd)/CONTROL/conffiles >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/ipkg-aarch64_cortex-a53/mtd/lib/apk/packages/mtd.conffiles; for file in $(cat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/ipkg-aarch64_cortex-a53/mtd/CONTROL/conffiles); do [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/ipkg-aarch64_cortex-a53/mtd/$file ] || continue; csum=$(/mnt/build_wrt/staging_dir/host/bin/mkhash sha256 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/ipkg-aarch64_cortex-a53/mtd/$file); echo $file $csum >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/ipkg-aarch64_cortex-a53/mtd/lib/apk/packages/mtd.conffiles_static; done; rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/ipkg-aarch64_cortex-a53/mtd/CONTROL/conffiles; fi
+if [ -z "$(ls -A /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/ipkg-aarch64_cortex-a53/mtd/CONTROL 2>/dev/null)" ]; then rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/ipkg-aarch64_cortex-a53/mtd/CONTROL; else echo "CONTROL directory /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/ipkg-aarch64_cortex-a53/mtd/CONTROL is not empty! This is not right and should be checked!" >&2; exit 1; fi
+SOURCE_DATE_EPOCH=0 /mnt/build_wrt/staging_dir/host/bin/fakeroot /mnt/build_wrt/staging_dir/host/bin/apk mkpkg --info "name:mtd" --info "version:28" --info "tags:openwrt:section=utils" --info "description:This package contains an utility useful to upgrade from other firmware or older OpenWrt releases." --info "arch:aarch64_cortex-a53" --info "license:GPL-2.0+" --info "origin:feeds/base/system/mtd" --info "url:" --info "maintainer:" --info "provides:mtd-any"  --script "post-install:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/apk-aarch64_cortex-a53/mtd/post-install" --script "post-upgrade:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/apk-aarch64_cortex-a53/mtd/post-upgrade" --script "pre-deinstall:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/apk-aarch64_cortex-a53/mtd/pre-deinstall" --info "depends:libc libubox20260708" --files "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/ipkg-aarch64_cortex-a53/mtd" --sign /mnt/build_wrt/private-key.pem --output "/mnt/build_wrt/bin/targets/qualcommax/ipq60xx/packages/mtd-28.apk"
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/.pkgdir/mtd.installed /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/.pkgdir/mtd
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/.pkgdir/mtd
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/.pkgdir/mtd/sbin
+install -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/mtd /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/.pkgdir/mtd/sbin/
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/.pkgdir/mtd.installed
+mkdir -p /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp
+SHELL= flock /mnt/build_wrt/tmp/.root-copy.flock -c 'cp -fpR /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/mtd/.pkgdir/mtd/. /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/'
+touch /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp/.mtd_installed
+echo "mtd" >> /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/pkginfo/mtd.default.install
+make[3]: Leaving directory '/mnt/build_wrt/package/system/mtd'
+time: package/system/mtd/compile#1.13#0.39#1.49
+make[3]: Entering directory '/mnt/build_wrt/package/system/urandom-seed'
+mkdir -p /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp
+SHELL= flock /mnt/build_wrt/tmp/.root-copy.flock -c 'cp -fpR /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/urandom-seed/.pkgdir/urandom-seed/. /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/'
+touch /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp/.urandom-seed_installed
+echo "urandom-seed" >> /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/pkginfo/urandom-seed.default.install
+make[3]: Leaving directory '/mnt/build_wrt/package/system/urandom-seed'
+time: package/system/urandom-seed/compile#0.10#0.10#0.18
+make[3]: Entering directory '/mnt/build_wrt/package/system/urngd'
+mkdir -p /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp
+SHELL= flock /mnt/build_wrt/tmp/.root-copy.flock -c 'cp -fpR /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/urngd-2025.10.03~f17e33d9/.pkgdir/urngd/. /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/'
+touch /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp/.urngd_installed
+echo "urngd" >> /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/pkginfo/urngd.default.install
+make[3]: Leaving directory '/mnt/build_wrt/package/system/urngd'
+time: package/system/urngd/compile#0.10#0.11#0.20
+make[3]: Entering directory '/mnt/build_wrt/package/utils/usbmode'
+mkdir -p /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp
+SHELL= flock /mnt/build_wrt/tmp/.root-copy.flock -c 'cp -fpR /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/usbmode-2025.10.04~9b4d0a6e/.pkgdir/usb-modeswitch/. /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/'
+touch /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp/.usb-modeswitch_installed
+echo "usb-modeswitch" >> /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/pkginfo/usbmode.default.install
+make[3]: Leaving directory '/mnt/build_wrt/package/utils/usbmode'
+time: package/utils/usbmode/compile#0.09#0.13#0.21
+make[2]: Leaving directory '/mnt/build_wrt'
+make[2]: Entering directory '/mnt/build_wrt'
+rm -rf /mnt/build_wrt/staging_dir/packages/qualcommax
+mkdir -p /mnt/build_wrt/staging_dir/packages/qualcommax
+ln -s /mnt/build_wrt/bin/targets/qualcommax/ipq60xx/packages/*.apk /mnt/build_wrt/staging_dir/packages/qualcommax; ln -s /mnt/build_wrt/bin/packages/aarch64_cortex-a53/base/*.apk /mnt/build_wrt/staging_dir/packages/qualcommax; ln -s /mnt/build_wrt/bin/packages/aarch64_cortex-a53/luci/*.apk /mnt/build_wrt/staging_dir/packages/qualcommax; ln -s /mnt/build_wrt/bin/packages/aarch64_cortex-a53/packages/*.apk /mnt/build_wrt/staging_dir/packages/qualcommax;   
+(cd /mnt/build_wrt/staging_dir/packages/qualcommax && /mnt/build_wrt/staging_dir/host/bin/apk mkndx \
+		--root /mnt/build_wrt \
+		--keys-dir /mnt/build_wrt \
+		--allow-untrusted \
+		--sign /mnt/build_wrt/private-key.pem \
+		--output packages.adb \
+		*.apk; \
+)
+Index has 545 packages (of which 545 are new)
+find /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax -type d | xargs -r chmod 0755
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root.orig-qualcommax
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/tmp
+IPKG_INSTROOT=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax /mnt/build_wrt/staging_dir/host/bin/fakeroot /mnt/build_wrt/staging_dir/host/bin/apk --root /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax --keys-dir /mnt/build_wrt --no-logfile --preserve-env add --no-cache --initdb --no-scripts --arch aarch64_cortex-a53 \
+	--repositories-file /dev/null --repository file:///mnt/build_wrt/staging_dir/packages/qualcommax/packages.adb \
+	 \
+	$(cat /mnt/build_wrt/tmp/apk_install_list) \
+		"base-files=1~a4638cd" \
+		"libc=1.2.6-r5" \
+		"kernel=6.18.39~ac7ed71b0e073954793e4b21cce15b42-r1"
+ERROR: unable to select packages:
+  vmlinux-btf (no such package):
+    required by: dae-2026.07.13-r1[vmlinux-btf]
+make[2]: *** [package/Makefile:100: package/install] Error 4
+make[2]: Leaving directory '/mnt/build_wrt'
+make[1]: *** [package/Makefile:193: /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/stamp/.package_install] Error 2
+make[1]: Leaving directory '/mnt/build_wrt'
+make: *** [/mnt/build_wrt/include/toplevel.mk:233: world] Error 2
+
+--- RECENT ERROR LOGS IN BUILD DIR ---
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/aarch64-openwrt-linux-musl/libgcc/config.log ===
+build_os='linux-gnu'
+build_subdir='build-x86_64-pc-linux-gnu'
+build_vendor='pc'
+cpu_type='aarch64'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+decimal_float='no'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+double_type_size='64'
+dvidir='${docdir}'
+enable_decimal_float='no'
+enable_execute_stack='enable-execute-stack-empty.c'
+enable_gcov='yes'
+enable_shared='yes'
+enable_vtable_verify='no'
+exec_prefix='${prefix}'
+extra_parts='crtbegin.o crtbeginS.o crtbeginT.o crtend.o crtendS.o crtfastmath.o'
+fixed_point='no'
+force_explicit_eh_registry=''
+get_gcc_base_ver='cat'
+host='aarch64-openwrt-linux-musl'
+host_alias='aarch64-openwrt-linux-musl'
+host_cpu='aarch64'
+host_noncanonical='aarch64-openwrt-linux-musl'
+host_os='linux-musl'
+host_subdir='.'
+host_vendor='openwrt'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+libgcc_topdir='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/libgcc/..'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+long_double_type_size='128'
+mandir='${datarootdir}/man'
+md_unwind_header='aarch64/linux-unwind.h'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+real_host_noncanonical='aarch64-openwrt-linux-musl'
+sbindir='${exec_prefix}/sbin'
+set_have_cc_tls='-DHAVE_CC_TLS'
+set_use_emutls=''
+sfp_machine_header='aarch64/sfp-machine.h'
+sharedstatedir='${prefix}/com'
+slibdir='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/lib'
+solaris_ld_v2_maps=''
+sysconfdir='${prefix}/etc'
+target_alias='aarch64-openwrt-linux-musl'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_subdir='aarch64-openwrt-linux-musl'
+thread_header='gthr-posix.h'
+tm_defines=''
+tm_file=' $(srcdir)/config/aarch64/value-unwind.h'
+tmake_file=' $(srcdir)/config/t-crtstuff-pic $(srcdir)/config/t-libgcc-pic $(srcdir)/config/t-eh-dw2-dip $(srcdir)/config/t-slibgcc $(srcdir)/config/t-slibgcc-gld $(srcdir)/config/t-slibgcc-elf-ver $(srcdir)/config/t-linux $(srcdir)/config/aarch64/t-aarch64 $(srcdir)/config/aarch64/t-lse $(srcdir)/config/t-slibgcc-libgcc $(srcdir)/config/aarch64/t-softfp $(srcdir)/config/t-softfp $(srcdir)/config/t-crtfm $(srcdir)/config/t-dfprules $(srcdir)/config/aarch64/t-heap-trampoline $(srcdir)/config/t-gthr-noweak'
+toolexecdir='$(exec_prefix)/$(target_noncanonical)'
+toolexeclibdir='$(toolexecdir)/lib'
+unwind_header='unwind-generic.h'
+use_tm_clone_registry='-DUSE_TM_CLONE_REGISTRY=0'
+vis_hide='-fvisibility=hidden -DHIDE_EXPORTS'
+with_aix_soname='aix'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "GNU C Runtime Library"
+#define PACKAGE_TARNAME "libgcc"
+#define PACKAGE_VERSION "1.0"
+#define PACKAGE_STRING "GNU C Runtime Library 1.0"
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL "http://www.gnu.org/software/libgcc/"
+#define SIZEOF_DOUBLE 8
+#define SIZEOF_LONG_DOUBLE 16
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_FTW_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_STRING_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_SYS_AUXV_H 1
+#define HAVE_SYS_MMAN_H 1
+#define STDC_HEADERS 1
+#define HAVE_GETIPINFO 1
+#define AS_HIDDEN_DIRECTIVE .hidden
+#define HAVE_AS_CFI_SECTIONS 1
+#define HAVE_AS_LSE 1
+#define HAVE_AS_VARIANT_PCS 1
+#define HAVE_INIT_PRIORITY 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/aarch64-openwrt-linux-musl/libvtv/config.log ===
+ac_ct_DUMPBIN=''
+am__EXEEXT_FALSE=''
+am__EXEEXT_TRUE='#'
+am__fastdepCC_FALSE='#'
+am__fastdepCC_TRUE=''
+am__fastdepCXX_FALSE='#'
+am__fastdepCXX_TRUE=''
+am__include='include'
+am__isrc=' -I$(srcdir)'
+am__leading_dot='.'
+am__nodep='_no'
+am__quote=''
+am__tar='$${TAR-tar} chof - "$$tardir"'
+am__untar='$${TAR-tar} xf -'
+bindir='${exec_prefix}/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+enable_shared='yes'
+enable_static='yes'
+exec_prefix='${prefix}'
+get_gcc_base_ver='cat'
+host='aarch64-openwrt-linux-musl'
+host_alias='aarch64-openwrt-linux-musl'
+host_cpu='aarch64'
+host_os='linux-musl'
+host_vendor='openwrt'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+install_sh='${SHELL} /mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+libtool_VERSION='1:0:0'
+libvtv_builddir='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/aarch64-openwrt-linux-musl/libvtv'
+libvtv_srcdir='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/libvtv'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+lt_host_flags=''
+mandir='${datarootdir}/man'
+mkdir_p='$(MKDIR_P)'
+multi_basedir='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/libvtv/..'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_os='linux-musl'
+target_vendor='openwrt'
+toolexecdir='$(exec_prefix)/$(target_alias)'
+toolexeclibdir='$(toolexecdir)/lib'
+toplevel_builddir='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/aarch64-openwrt-linux-musl/libvtv/..'
+toplevel_srcdir='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/libvtv/..'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "GNU Vtable Verification Runtime Library"
+#define PACKAGE_TARNAME "libvtv"
+#define PACKAGE_VERSION "1.0"
+#define PACKAGE_STRING "GNU Vtable Verification Runtime Library 1.0"
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL "http://www.gnu.org/software/libvtv/"
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define PACKAGE "libvtv"
+#define VERSION "1.0"
+#define HAVE_SECURE_GETENV 1
+#define HAVE_DLFCN_H 1
+#define LT_OBJDIR ".libs/"
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/build-x86_64-pc-linux-gnu/libiberty/config.log ===
+#define HAVE_BCOPY 1
+#define HAVE_BSEARCH 1
+#define HAVE_BZERO 1
+#define HAVE_CALLOC 1
+#define HAVE_CLOCK 1
+#define HAVE_FFS 1
+#define HAVE_GETCWD 1
+#define HAVE_GETPAGESIZE 1
+#define HAVE_GETTIMEOFDAY 1
+#define HAVE_INDEX 1
+#define HAVE_INSQUE 1
+#define HAVE_MEMCHR 1
+#define HAVE_MEMCMP 1
+#define HAVE_MEMCPY 1
+#define HAVE_MEMMEM 1
+#define HAVE_MEMMOVE 1
+#define HAVE_MEMPCPY 1
+#define HAVE_MEMSET 1
+#define HAVE_MKSTEMPS 1
+#define HAVE_PUTENV 1
+#define HAVE_RANDOM 1
+#define HAVE_RENAME 1
+#define HAVE_RINDEX 1
+#define HAVE_SETENV 1
+#define HAVE_SNPRINTF 1
+#define HAVE_SIGSETMASK 1
+#define HAVE_STPCPY 1
+#define HAVE_STPNCPY 1
+#define HAVE_STRCASECMP 1
+#define HAVE_STRCHR 1
+#define HAVE_STRDUP 1
+#define HAVE_STRNCASECMP 1
+#define HAVE_STRNDUP 1
+#define HAVE_STRNLEN 1
+#define HAVE_STRRCHR 1
+#define HAVE_STRSTR 1
+#define HAVE_STRTOD 1
+#define HAVE_STRTOL 1
+#define HAVE_STRTOUL 1
+#define HAVE_STRTOLL 1
+#define HAVE_STRTOULL 1
+#define HAVE_STRVERSCMP 1
+#define HAVE_TMPNAM 1
+#define HAVE_VASPRINTF 1
+#define HAVE_VFPRINTF 1
+#define HAVE_VPRINTF 1
+#define HAVE_VSNPRINTF 1
+#define HAVE_VSPRINTF 1
+#define HAVE_WAITPID 1
+#define STACK_DIRECTION 1
+#define HAVE_FORK 1
+#define HAVE_VFORK 1
+#define HAVE_WORKING_VFORK 1
+#define HAVE_WORKING_FORK 1
+#define HAVE___FSETLOCKING 1
+#define HAVE_CANONICALIZE_FILE_NAME 1
+#define HAVE_DUP3 1
+#define HAVE_GETRLIMIT 1
+#define HAVE_GETRUSAGE 1
+#define HAVE_GETTIMEOFDAY 1
+#define HAVE_ON_EXIT 1
+#define HAVE_PIPE2 1
+#define HAVE_POSIX_SPAWN 1
+#define HAVE_POSIX_SPAWNP 1
+#define HAVE_PSIGNAL 1
+#define HAVE_REALPATH 1
+#define HAVE_SETRLIMIT 1
+#define HAVE_STRERROR 1
+#define HAVE_STRSIGNAL 1
+#define HAVE_SYSCONF 1
+#define HAVE_TIMES 1
+#define HAVE_WAIT3 1
+#define HAVE_WAIT4 1
+#define HAVE_SBRK 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_FFS 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_SNPRINTF 1
+#define HAVE_DECL_VSNPRINTF 1
+#define HAVE_DECL_CALLOC 1
+#define HAVE_DECL_GETENV 1
+#define HAVE_DECL_GETOPT 1
+#define HAVE_DECL_MALLOC 1
+#define HAVE_DECL_REALLOC 1
+#define HAVE_DECL_SBRK 1
+#define HAVE_DECL_STRTOL 1
+#define HAVE_DECL_STRTOUL 1
+#define HAVE_DECL_STRTOLL 1
+#define HAVE_DECL_STRTOULL 1
+#define HAVE_DECL_STRVERSCMP 1
+#define HAVE_DECL_STRNLEN 1
+#define HAVE_X86_SHA1_HW_SUPPORT 1
+#define HAVE_STDLIB_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_SYS_PARAM_H 1
+#define HAVE_GETPAGESIZE 1
+#define HAVE_MMAP 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/build-x86_64-pc-linux-gnu/libcpp/config.log ===
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_os='linux-musl'
+target_vendor='openwrt'
+warn='-W -Wall -Wno-narrowing -Wwrite-strings -Wmissing-format-attribute'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "cpplib"
+#define PACKAGE_TARNAME "cpplib"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "cpplib  "
+#define PACKAGE_BUGREPORT "gcc-bugs@gcc.gnu.org"
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define TIME_WITH_SYS_TIME 1
+#define STRING_WITH_STRINGS 1
+#define HAVE_LOCALE_H 1
+#define HAVE_FCNTL_H 1
+#define HAVE_LIMITS_H 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_STRING_H 1
+#define HAVE_SYS_FILE_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_OBSTACK 1
+#define HAVE_UINTPTR_T 1
+#define SIZEOF_INT 4
+#define SIZEOF_LONG 8
+#define HAVE_CLEARERR_UNLOCKED 1
+#define HAVE_FEOF_UNLOCKED 1
+#define HAVE_FERROR_UNLOCKED 1
+#define HAVE_FFLUSH_UNLOCKED 1
+#define HAVE_FGETC_UNLOCKED 1
+#define HAVE_FGETS_UNLOCKED 1
+#define HAVE_FILENO_UNLOCKED 1
+#define HAVE_FPUTC_UNLOCKED 1
+#define HAVE_FPUTS_UNLOCKED 1
+#define HAVE_FREAD_UNLOCKED 1
+#define HAVE_FWRITE_UNLOCKED 1
+#define HAVE_GETCHAR_UNLOCKED 1
+#define HAVE_GETC_UNLOCKED 1
+#define HAVE_PUTCHAR_UNLOCKED 1
+#define HAVE_PUTC_UNLOCKED 1
+#define HAVE_SETLOCALE 1
+#define HAVE_DECL_ABORT 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_ERRNO 0
+#define HAVE_DECL_GETOPT 1
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_CLEARERR_UNLOCKED 1
+#define HAVE_DECL_FEOF_UNLOCKED 1
+#define HAVE_DECL_FERROR_UNLOCKED 1
+#define HAVE_DECL_FFLUSH_UNLOCKED 1
+#define HAVE_DECL_FGETC_UNLOCKED 1
+#define HAVE_DECL_FGETS_UNLOCKED 1
+#define HAVE_DECL_FILENO_UNLOCKED 1
+#define HAVE_DECL_FPRINTF_UNLOCKED 0
+#define HAVE_DECL_FPUTC_UNLOCKED 1
+#define HAVE_DECL_FPUTS_UNLOCKED 1
+#define HAVE_DECL_FREAD_UNLOCKED 1
+#define HAVE_DECL_FWRITE_UNLOCKED 1
+#define HAVE_DECL_GETCHAR_UNLOCKED 1
+#define HAVE_DECL_GETC_UNLOCKED 1
+#define HAVE_DECL_PUTCHAR_UNLOCKED 1
+#define HAVE_DECL_PUTC_UNLOCKED 1
+#define HAVE_ALLOCA_H 1
+#define HAVE_ALLOCA 1
+#define STDC_HEADERS 1
+#define HAVE_LANGINFO_CODESET 1
+#define SIZEOF_INO_T 8
+#define SIZEOF_DEV_T 8
+#define ICONV_CONST 
+#define PACKAGE "cpplib"
+#define CHECKING_P 0
+#define ENABLE_ASSERT_CHECKING 1
+#define ENABLE_CANONICAL_SYSTEM_HEADERS 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/build-x86_64-pc-linux-gnu/fixincludes/config.log ===
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_os='linux-musl'
+target_vendor='openwrt'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "fixincludes"
+#define PACKAGE_TARNAME "fixincludes"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "fixincludes  "
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define EXE_EXT ""
+#define STDC_HEADERS 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_FCNTL_H 1
+#define HAVE_SYS_FILE_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_CLEARERR_UNLOCKED 1
+#define HAVE_FEOF_UNLOCKED 1
+#define HAVE_FERROR_UNLOCKED 1
+#define HAVE_FFLUSH_UNLOCKED 1
+#define HAVE_FGETC_UNLOCKED 1
+#define HAVE_FGETS_UNLOCKED 1
+#define HAVE_FILENO_UNLOCKED 1
+#define HAVE_FPUTC_UNLOCKED 1
+#define HAVE_FPUTS_UNLOCKED 1
+#define HAVE_FREAD_UNLOCKED 1
+#define HAVE_FWRITE_UNLOCKED 1
+#define HAVE_GETCHAR_UNLOCKED 1
+#define HAVE_GETC_UNLOCKED 1
+#define HAVE_PUTCHAR_UNLOCKED 1
+#define HAVE_PUTC_UNLOCKED 1
+#define HAVE_DECL_ABORT 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_ERRNO 0
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_MEMMEM 1
+#define HAVE_DECL_CLEARERR_UNLOCKED 1
+#define HAVE_DECL_FEOF_UNLOCKED 1
+#define HAVE_DECL_FERROR_UNLOCKED 1
+#define HAVE_DECL_FFLUSH_UNLOCKED 1
+#define HAVE_DECL_FGETC_UNLOCKED 1
+#define HAVE_DECL_FGETS_UNLOCKED 1
+#define HAVE_DECL_FILENO_UNLOCKED 1
+#define HAVE_DECL_FPRINTF_UNLOCKED 0
+#define HAVE_DECL_FPUTC_UNLOCKED 1
+#define HAVE_DECL_FPUTS_UNLOCKED 1
+#define HAVE_DECL_FREAD_UNLOCKED 1
+#define HAVE_DECL_FWRITE_UNLOCKED 1
+#define HAVE_DECL_GETCHAR_UNLOCKED 1
+#define HAVE_DECL_GETC_UNLOCKED 1
+#define HAVE_DECL_PUTCHAR_UNLOCKED 1
+#define HAVE_DECL_PUTC_UNLOCKED 1
+#define HAVE_MMAP_FILE 1
+#define HAVE_MMAP_DEV_ZERO 1
+#define HAVE_MMAP_ANON 1
+#define SED_PROGRAM "/mnt/build_wrt/staging_dir/host/bin/sed"
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/fixincludes/config.log ===
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_os='linux-musl'
+target_vendor='openwrt'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "fixincludes"
+#define PACKAGE_TARNAME "fixincludes"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "fixincludes  "
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define EXE_EXT ""
+#define STDC_HEADERS 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_FCNTL_H 1
+#define HAVE_SYS_FILE_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_CLEARERR_UNLOCKED 1
+#define HAVE_FEOF_UNLOCKED 1
+#define HAVE_FERROR_UNLOCKED 1
+#define HAVE_FFLUSH_UNLOCKED 1
+#define HAVE_FGETC_UNLOCKED 1
+#define HAVE_FGETS_UNLOCKED 1
+#define HAVE_FILENO_UNLOCKED 1
+#define HAVE_FPUTC_UNLOCKED 1
+#define HAVE_FPUTS_UNLOCKED 1
+#define HAVE_FREAD_UNLOCKED 1
+#define HAVE_FWRITE_UNLOCKED 1
+#define HAVE_GETCHAR_UNLOCKED 1
+#define HAVE_GETC_UNLOCKED 1
+#define HAVE_PUTCHAR_UNLOCKED 1
+#define HAVE_PUTC_UNLOCKED 1
+#define HAVE_DECL_ABORT 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_ERRNO 0
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_MEMMEM 1
+#define HAVE_DECL_CLEARERR_UNLOCKED 1
+#define HAVE_DECL_FEOF_UNLOCKED 1
+#define HAVE_DECL_FERROR_UNLOCKED 1
+#define HAVE_DECL_FFLUSH_UNLOCKED 1
+#define HAVE_DECL_FGETC_UNLOCKED 1
+#define HAVE_DECL_FGETS_UNLOCKED 1
+#define HAVE_DECL_FILENO_UNLOCKED 1
+#define HAVE_DECL_FPRINTF_UNLOCKED 0
+#define HAVE_DECL_FPUTC_UNLOCKED 1
+#define HAVE_DECL_FPUTS_UNLOCKED 1
+#define HAVE_DECL_FREAD_UNLOCKED 1
+#define HAVE_DECL_FWRITE_UNLOCKED 1
+#define HAVE_DECL_GETCHAR_UNLOCKED 1
+#define HAVE_DECL_GETC_UNLOCKED 1
+#define HAVE_DECL_PUTCHAR_UNLOCKED 1
+#define HAVE_DECL_PUTC_UNLOCKED 1
+#define HAVE_MMAP_FILE 1
+#define HAVE_MMAP_DEV_ZERO 1
+#define HAVE_MMAP_ANON 1
+#define SED_PROGRAM "/mnt/build_wrt/staging_dir/host/bin/sed"
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/gcc/config.log ===
+#define HAVE_DECL_MALLINFO2 1
+#define HAVE_DECL_LDGETNAME 0
+#define HAVE_DECL_TIMES 1
+#define HAVE_DECL_SIGALTSTACK 1
+#define HAVE_STRUCT_TMS 1
+#define HAVE_CLOCK_T 1
+#define HOST_HAS_F_SETLKW 1
+#define HOST_HAS_O_CLOEXEC 1
+#define HAVE_FCNTL_H 1
+#define HOST_HAS_O_NONBLOCK 1
+#define HOST_HAS_PERSONALITY_ADDR_NO_RANDOMIZE 1
+#define HAVE_AF_UNIX 1
+#define HAVE_AF_INET6 1
+#define HAVE_GNU_LD 1
+#define HAVE_GNU_AS 1
+#define DEFAULT_USE_CXA_ATEXIT 2
+#define EXTRA_MODES_FILE "config/aarch64/aarch64-modes.def"
+#define LTOPLUGINSONAME "liblto_plugin.so"
+#define HAVE_DLFCN_H 1
+#define LT_OBJDIR ".libs/"
+#define DARWIN_DO_EXTRA_RPATH 0
+#define DARWIN_ADD_RPATH ""
+#define PLUGIN_LD_SUFFIX "ld"
+#define HAVE_GAS_BALIGN_AND_P2ALIGN 1
+#define HAVE_GAS_MAX_SKIP_P2ALIGN 1
+#define HAVE_GAS_SUBSECTION_ORDERING 1
+#define HAVE_GAS_WEAK 1
+#define HAVE_GAS_WEAKREF 1
+#define HAVE_GNU_INDIRECT_FUNCTION 0
+#define HAVE_GAS_HIDDEN 1
+#define HAVE_LD_RO_RW_SECTION_MIXING 1
+#define HAVE_INITFINI_ARRAY_SUPPORT 1
+#define HAVE_AS_LEB128 1
+#define HAVE_GAS_CFI_DIRECTIVE 1
+#define HAVE_GAS_CFI_PERSONALITY_DIRECTIVE 1
+#define HAVE_GAS_CFI_SECTIONS_DIRECTIVE 1
+#define HAVE_GAS_SECTION_EXCLUDE 1
+#define HAVE_GAS_SHF_GNU_RETAIN 1
+#define HAVE_GAS_SECTION_LINK_ORDER 1
+#define HAVE_GAS_SHF_MERGE 1
+#define HAVE_LD_ALIGNED_SHF_MERGE 1
+#define HAVE_COMDAT_GROUP 1
+#define HAVE_GAS_LOC_STMT 1
+#define HAVE_GAS_DISCRIMINATOR 1
+#define HAVE_AS_TLS 1
+#define HAVE_LD_STATIC_DYNAMIC 1
+#define LD_STATIC_OPTION "-Bstatic"
+#define LD_DYNAMIC_OPTION "-Bdynamic"
+#define HAVE_LD_DEMANGLE 1
+#define HAVE_LTO_PLUGIN 2
+#define HAVE_AS_MABI_OPTION 1
+#define HAVE_AS_SMALL_PIC_RELOCS 1
+#define HAVE_AS_DWARF2_DEBUG_LINE 1
+#define HAVE_AS_DWARF2_DEBUG_VIEW 1
+#define HAVE_AS_GDWARF2_DEBUG_FLAG 1
+#define HAVE_AS_GDWARF_5_DEBUG_FLAG 1
+#define HAVE_AS_WORKING_DWARF_N_FLAG 1
+#define HAVE_AS_DEBUG_PREFIX_MAP 1
+#define HAVE_AS_COMPRESS_DEBUG 2
+#define AS_COMPRESS_DEBUG_OPTION "--compress-debug-sections"
+#define AS_NO_COMPRESS_DEBUG_OPTION "--nocompress-debug-sections"
+#define TARGET_GLIBC_MAJOR 0
+#define TARGET_GLIBC_MINOR 0
+#define HAVE_AS_LINE_ZERO 1
+#define HAVE_LD_EH_FRAME_HDR 1
+#define HAVE_LD_EH_FRAME_CIEV3 1
+#define HAVE_LD_PIE 1
+#define HAVE_LD_PIE_COPYRELOC 0
+#define HAVE_LD_EH_GC_SECTIONS 1
+#define HAVE_LD_COMPRESS_DEBUG 2
+#define LD_COMPRESS_DEBUG_OPTION "--compress-debug-sections"
+#define HAVE_LD_AS_NEEDED 1
+#define LD_AS_NEEDED_OPTION "--push-state --as-needed"
+#define LD_NO_AS_NEEDED_OPTION "--pop-state"
+#define HAVE_LD_BUILDID 1
+#define HAVE_LD_SYSROOT 1
+#define TARGET_LIBC_PROVIDES_SSP 1
+#define TARGET_DL_ITERATE_PHDR 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_PLUGIN 1
+#define ENABLE_LIBQUADMATH_SUPPORT 1
+#define DIAGNOSTICS_COLOR_DEFAULT -1
+#define DIAGNOSTICS_URLS_DEFAULT DIAGNOSTICS_URL_AUTO
+#define HAVE_LD_PUSHPOPSTATE_SUPPORT 1
+#define HAVE_LD_NOW_SUPPORT 1
+#define HAVE_LD_RELRO_SUPPORT 1
+#define HAVE_FHARDENED_SUPPORT 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/lto-plugin/config.log ===
+ac_lto_plugin_extra_ldflags='-pthread'
+ac_lto_plugin_ldflags='-Wc,-static-libgcc'
+ac_lto_plugin_warn_cflags='-Wall'
+accel_dir_suffix=''
+am__EXEEXT_FALSE=''
+am__EXEEXT_TRUE='#'
+am__fastdepCC_FALSE='#'
+am__fastdepCC_TRUE=''
+am__include='include'
+am__isrc=' -I$(srcdir)'
+am__leading_dot='.'
+am__nodep='_no'
+am__quote=''
+am__tar='$${TAR-tar} chof - "$$tardir"'
+am__untar='$${TAR-tar} xf -'
+bindir='${exec_prefix}/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_libsubdir='build-x86_64-pc-linux-gnu'
+build_os='linux-gnu'
+build_subdir='build-x86_64-pc-linux-gnu'
+build_vendor='pc'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+enable_host_bind_now=''
+exec_prefix='${prefix}'
+gcc_build_dir='../gcc'
+get_gcc_base_ver='cat'
+host='x86_64-pc-linux-gnu'
+host_alias='x86_64-pc-linux-gnu'
+host_cpu='x86_64'
+host_os='linux-gnu'
+host_subdir='.'
+host_vendor='pc'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+install_sh='${SHELL} /mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+lt_host_flags=''
+mandir='${datarootdir}/man'
+mkdir_p='$(MKDIR_P)'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+real_target_noncanonical='aarch64-openwrt-linux-musl'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_os='linux-musl'
+target_subdir='aarch64-openwrt-linux-musl'
+target_vendor='openwrt'
+with_libiberty='../libiberty'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "LTO plugin for ld"
+#define PACKAGE_TARNAME "lto-plugin"
+#define PACKAGE_VERSION "0.1"
+#define PACKAGE_STRING "LTO plugin for ld 0.1"
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define PACKAGE "lto-plugin"
+#define VERSION "0.1"
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define HAVE_PTHREAD_LOCKING 1
+#define HAVE_DLFCN_H 1
+#define LT_OBJDIR ".libs/"
+#define HAVE_SYS_WAIT_H 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/libdecnumber/config.log ===
+DEFS='-DHAVE_CONFIG_H'
+ECHO_C=''
+ECHO_N='-n'
+ECHO_T=''
+EGREP='/mnt/build_wrt/staging_dir/host/bin/grep -E'
+EXEEXT=''
+GREP='/mnt/build_wrt/staging_dir/host/bin/grep'
+LDFLAGS='-static-libstdc++ -static-libgcc '
+LIBOBJS=''
+LIBS=''
+LTLIBOBJS=''
+MAINT='#'
+OBJEXT='o'
+PACKAGE_BUGREPORT='gcc-bugs@gcc.gnu.org'
+PACKAGE_NAME='libdecnumber'
+PACKAGE_STRING='libdecnumber  '
+PACKAGE_TARNAME='libdecnumber'
+PACKAGE_URL=''
+PACKAGE_VERSION=' '
+PATH_SEPARATOR=':'
+PICFLAG=''
+RANLIB='ranlib --plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so'
+SET_MAKE=''
+SHELL='/bin/bash'
+WARN_CFLAGS='-W -Wall -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wold-style-definition -Wmissing-format-attribute -Wcast-qual'
+WARN_PEDANTIC='-pedantic -Wno-long-long'
+WERROR=''
+ac_ct_CC=''
+bindir='${exec_prefix}/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+enable_decimal_float='dpd'
+enable_host_pie=''
+enable_host_shared=''
+exec_prefix='${prefix}'
+host='x86_64-pc-linux-gnu'
+host_alias='x86_64-pc-linux-gnu'
+host_cpu='x86_64'
+host_os='linux-gnu'
+host_vendor='pc'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+nolto_flags='-fno-lto'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_os='linux-musl'
+target_vendor='openwrt'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "libdecnumber"
+#define PACKAGE_TARNAME "libdecnumber"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "libdecnumber  "
+#define PACKAGE_BUGREPORT "gcc-bugs@gcc.gnu.org"
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_CTYPE_H 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STRING_H 1
+#define HAVE_STDIO_H 1
+#define SIZEOF_INT 4
+#define SIZEOF_LONG 8
+#define STDC_HEADERS 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/libbacktrace/config.log ===
+VIEW_FILE='mmapio.lo'
+WARN_FLAGS='-W -Wall -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wold-style-definition -Wmissing-format-attribute -Wcast-qual'
+XZ='xz'
+ac_ct_CC=''
+ac_ct_DUMPBIN=''
+am__EXEEXT_FALSE=''
+am__EXEEXT_TRUE='#'
+am__isrc=' -I$(srcdir)'
+am__leading_dot='.'
+am__tar='$${TAR-tar} chof - "$$tardir"'
+am__untar='$${TAR-tar} xf -'
+bindir='${exec_prefix}/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+exec_prefix='${prefix}'
+host='x86_64-pc-linux-gnu'
+host_alias='x86_64-pc-linux-gnu'
+host_cpu='x86_64'
+host_os='linux-gnu'
+host_vendor='pc'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+install_sh='${SHELL} /mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+libtool_VERSION='1:0:0'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+mkdir_p='$(MKDIR_P)'
+multi_basedir=''
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_os='linux-musl'
+target_vendor='openwrt'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "package-unused"
+#define PACKAGE_TARNAME "libbacktrace"
+#define PACKAGE_VERSION "version-unused"
+#define PACKAGE_STRING "package-unused version-unused"
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define HAVE_DLFCN_H 1
+#define LT_OBJDIR ".libs/"
+#define HAVE_GETIPINFO 1
+#define HAVE_SYNC_FUNCTIONS 1
+#define HAVE_ATOMIC_FUNCTIONS 1
+#define BACKTRACE_ELF_SIZE 64
+#define BACKTRACE_XCOFF_SIZE unused
+#define HAVE_SYS_MMAN_H 1
+#define HAVE_LINK_H 1
+#define HAVE_DL_ITERATE_PHDR 1
+#define HAVE_FCNTL 1
+#define HAVE_DECL_STRNLEN 1
+#define HAVE_DECL_GETPAGESIZE 1
+#define HAVE_LSTAT 1
+#define HAVE_READLINK 1
+#define HAVE_DECL__PGMPTR 0
+#define HAVE_CLOCK_GETTIME 1
+#define HAVE_ZLIB 1
+#define HAVE_ZSTD 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/libiberty/config.log ===
+#define HAVE_BCOPY 1
+#define HAVE_BSEARCH 1
+#define HAVE_BZERO 1
+#define HAVE_CALLOC 1
+#define HAVE_CLOCK 1
+#define HAVE_FFS 1
+#define HAVE_GETCWD 1
+#define HAVE_GETPAGESIZE 1
+#define HAVE_GETTIMEOFDAY 1
+#define HAVE_INDEX 1
+#define HAVE_INSQUE 1
+#define HAVE_MEMCHR 1
+#define HAVE_MEMCMP 1
+#define HAVE_MEMCPY 1
+#define HAVE_MEMMEM 1
+#define HAVE_MEMMOVE 1
+#define HAVE_MEMPCPY 1
+#define HAVE_MEMSET 1
+#define HAVE_MKSTEMPS 1
+#define HAVE_PUTENV 1
+#define HAVE_RANDOM 1
+#define HAVE_RENAME 1
+#define HAVE_RINDEX 1
+#define HAVE_SETENV 1
+#define HAVE_SNPRINTF 1
+#define HAVE_SIGSETMASK 1
+#define HAVE_STPCPY 1
+#define HAVE_STPNCPY 1
+#define HAVE_STRCASECMP 1
+#define HAVE_STRCHR 1
+#define HAVE_STRDUP 1
+#define HAVE_STRNCASECMP 1
+#define HAVE_STRNDUP 1
+#define HAVE_STRNLEN 1
+#define HAVE_STRRCHR 1
+#define HAVE_STRSTR 1
+#define HAVE_STRTOD 1
+#define HAVE_STRTOL 1
+#define HAVE_STRTOUL 1
+#define HAVE_STRTOLL 1
+#define HAVE_STRTOULL 1
+#define HAVE_STRVERSCMP 1
+#define HAVE_TMPNAM 1
+#define HAVE_VASPRINTF 1
+#define HAVE_VFPRINTF 1
+#define HAVE_VPRINTF 1
+#define HAVE_VSNPRINTF 1
+#define HAVE_VSPRINTF 1
+#define HAVE_WAITPID 1
+#define STACK_DIRECTION 1
+#define HAVE_FORK 1
+#define HAVE_VFORK 1
+#define HAVE_WORKING_VFORK 1
+#define HAVE_WORKING_FORK 1
+#define HAVE___FSETLOCKING 1
+#define HAVE_CANONICALIZE_FILE_NAME 1
+#define HAVE_DUP3 1
+#define HAVE_GETRLIMIT 1
+#define HAVE_GETRUSAGE 1
+#define HAVE_GETTIMEOFDAY 1
+#define HAVE_ON_EXIT 1
+#define HAVE_PIPE2 1
+#define HAVE_POSIX_SPAWN 1
+#define HAVE_POSIX_SPAWNP 1
+#define HAVE_PSIGNAL 1
+#define HAVE_REALPATH 1
+#define HAVE_SETRLIMIT 1
+#define HAVE_STRERROR 1
+#define HAVE_STRSIGNAL 1
+#define HAVE_SYSCONF 1
+#define HAVE_TIMES 1
+#define HAVE_WAIT3 1
+#define HAVE_WAIT4 1
+#define HAVE_SBRK 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_FFS 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_SNPRINTF 1
+#define HAVE_DECL_VSNPRINTF 1
+#define HAVE_DECL_CALLOC 1
+#define HAVE_DECL_GETENV 1
+#define HAVE_DECL_GETOPT 1
+#define HAVE_DECL_MALLOC 1
+#define HAVE_DECL_REALLOC 1
+#define HAVE_DECL_SBRK 1
+#define HAVE_DECL_STRTOL 1
+#define HAVE_DECL_STRTOUL 1
+#define HAVE_DECL_STRTOLL 1
+#define HAVE_DECL_STRTOULL 1
+#define HAVE_DECL_STRVERSCMP 1
+#define HAVE_DECL_STRNLEN 1
+#define HAVE_X86_SHA1_HW_SUPPORT 1
+#define HAVE_STDLIB_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_SYS_PARAM_H 1
+#define HAVE_GETPAGESIZE 1
+#define HAVE_MMAP 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/libcody/config.log ===
+ac_cv_env_LDFLAGS_value='-static-libstdc++ -static-libgcc '
+ac_cv_env_LIBS_set=
+ac_cv_env_LIBS_value=
+ac_cv_env_build_alias_set=set
+ac_cv_env_build_alias_value=x86_64-pc-linux-gnu
+ac_cv_env_host_alias_set=set
+ac_cv_env_host_alias_value=x86_64-pc-linux-gnu
+ac_cv_env_target_alias_set=set
+ac_cv_env_target_alias_value=aarch64-openwrt-linux-musl
+ac_cv_host=x86_64-pc-linux-gnu
+ac_cv_objext=o
+ac_cv_prog_AR='ar --plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so'
+ac_cv_prog_RANLIB='ranlib --plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so'
+ac_cv_prog_cxx_g=yes
+ac_cv_search_ZSTD_compress='/mnt/build_wrt/staging_dir/host/lib/libzstd.a -pthread'
+libgcc_cv_fixed_point=no
+
+## ----------------- ##
+## Output variables. ##
+## ----------------- ##
+
+AR='ar --plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so'
+CPPFLAGS=''
+CXX='g++ -std=c++11'
+CXXFLAGS='-O2 -I/mnt/build_wrt/staging_dir/host/include -pipe  '
+DEFS='-DHAVE_CONFIG_H'
+ECHO_C=''
+ECHO_N='-n'
+ECHO_T=''
+EXCEPTIONS=''
+EXEEXT=''
+LDFLAGS='-static-libstdc++ -static-libgcc  -Wl,--no-undefined'
+LD_PICFLAG=''
+LIBOBJS=''
+LIBS=''
+LTLIBOBJS=''
+MAINTAINER=''
+OBJEXT='o'
+PACKAGE_BUGREPORT='github.com/urnathan/libcody'
+PACKAGE_NAME='codylib'
+PACKAGE_STRING='codylib 0.0'
+PACKAGE_TARNAME='codylib'
+PACKAGE_URL=''
+PACKAGE_VERSION='0.0'
+PATH_SEPARATOR=':'
+PICFLAG=''
+RANLIB='ranlib --plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so'
+SHELL='/bin/bash'
+ac_ct_CXX=''
+bindir='${exec_prefix}/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_os='linux-gnu'
+build_vendor='pc'
+configure_args=' '\''--srcdir=/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/libcody'\'' '\''--cache-file=./config.cache'\'' '\''--with-bugurl=http://bugs.openwrt.org/'\'' '\''--with-pkgversion=OpenWrt GCC 14.4.0 r0-a4638cd'\'' '\''--prefix=/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'\'' '\''--with-gnu-ld'\'' '\''--enable-target-optspace'\'' '\''--disable-libgomp'\'' '\''--disable-libmudflap'\'' '\''--disable-multilib'\'' '\''--disable-libmpx'\'' '\''--disable-nls'\'' '\''--disable-libssp'\'' '\''--disable-tm-clone-registry'\'' '\''--without-isl'\'' '\''--without-cloog'\'' '\''--with-host-libstdcxx=-lstdc++'\'' '\''--with-system-zlib=/mnt/build_wrt/staging_dir/host'\'' '\''--with-zstd=/mnt/build_wrt/staging_dir/host'\'' '\''--with-gmp=/mnt/build_wrt/staging_dir/host'\'' '\''--with-mpfr=/mnt/build_wrt/staging_dir/host'\'' '\''--with-mpc=/mnt/build_wrt/staging_dir/host'\'' '\''--disable-decimal-float'\'' '\''--with-diagnostics-color=auto-if-env'\'' '\''--enable-__cxa_atexit'\'' '\''--enable-libstdcxx-dual-abi'\'' '\''--with-default-libstdcxx-abi=new'\'' '\''--with-newlib'\'' '\''--with-sysroot=/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'\'' '\''--disable-shared'\'' '\''--disable-threads'\'' '\''--enable-languages=c,lto'\'' '\''--program-transform-name=s&^&aarch64-openwrt-linux-musl-&'\'' '\''--disable-option-checking'\'' '\''--build=x86_64-pc-linux-gnu'\'' '\''--host=x86_64-pc-linux-gnu'\'' '\''--target=aarch64-openwrt-linux-musl'\'' '\''build_alias=x86_64-pc-linux-gnu'\'' '\''host_alias=x86_64-pc-linux-gnu'\'' '\''target_alias=aarch64-openwrt-linux-musl'\'' '\''CXX=g++'\'' '\''CXXFLAGS=-O2 -I/mnt/build_wrt/staging_dir/host/include -pipe  '\'' '\''LDFLAGS=-static-libstdc++ -static-libgcc '\'''
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+enable_host_pie=''
+enable_host_shared=''
+exec_prefix='${prefix}'
+host='x86_64-pc-linux-gnu'
+host_alias='x86_64-pc-linux-gnu'
+host_cpu='x86_64'
+host_os='linux-gnu'
+host_vendor='pc'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target_alias='aarch64-openwrt-linux-musl'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "codylib"
+#define PACKAGE_TARNAME "codylib"
+#define PACKAGE_VERSION "0.0"
+#define PACKAGE_STRING "codylib 0.0"
+#define PACKAGE_BUGREPORT "github.com/urnathan/libcody"
+#define PACKAGE_URL ""
+#define NMS_CHECKING 0
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/config.log ===
+build_cpu='x86_64'
+build_libsubdir='build-x86_64-pc-linux-gnu'
+build_noncanonical='x86_64-pc-linux-gnu'
+build_os='linux-gnu'
+build_subdir='build-x86_64-pc-linux-gnu'
+build_tooldir='${exec_prefix}/aarch64-openwrt-linux-musl'
+build_vendor='pc'
+compare_exclusions='gcc/cc*-checksum$(objext) | gcc/ada/*tools/* | gcc/m2/gm2-compiler-boot/M2Version* | gcc/m2/gm2-compiler-boot/SYSTEM* | gcc/m2/gm2version*'
+configdirs=' libiberty zlib libbacktrace libcpp libcody libdecnumber fixincludes gcc libcc1 c++tools lto-plugin'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+do_compare='cmp --ignore-initial=16 $$f1 $$f2'
+docdir='${datarootdir}/doc/${PACKAGE}'
+dvidir='${docdir}'
+exec_prefix='${prefix}'
+extra_host_libiberty_configure_flags='--enable-shared'
+extra_host_zlib_configure_flags=''
+extra_isl_gmp_configure_flags=''
+extra_linker_plugin_configure_flags=''
+extra_linker_plugin_flags=''
+extra_mpc_gmp_configure_flags=''
+extra_mpc_mpfr_configure_flags=''
+extra_mpfr_configure_flags=''
+gcc_host_pie=''
+get_gcc_base_ver='cat'
+gmpinc='-I/mnt/build_wrt/staging_dir/host/include -I/mnt/build_wrt/staging_dir/host/include -I/mnt/build_wrt/staging_dir/host/include '
+gmplibs='-L/mnt/build_wrt/staging_dir/host/lib -L/mnt/build_wrt/staging_dir/host/lib -L/mnt/build_wrt/staging_dir/host/lib -lmpc -lmpfr -lgmp'
+host='x86_64-pc-linux-gnu'
+host_alias='x86_64-pc-linux-gnu'
+host_configargs=' --cache-file=./config.cache  '\''--with-bugurl=http://bugs.openwrt.org/'\'' '\''--with-pkgversion=OpenWrt GCC 14.4.0 r0-a4638cd'\'' '\''--prefix=/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'\'' '\''--with-gnu-ld'\'' '\''--enable-target-optspace'\'' '\''--disable-libgomp'\'' '\''--disable-libmudflap'\'' '\''--disable-multilib'\'' '\''--disable-libmpx'\'' '\''--disable-nls'\'' '\''--disable-libssp'\'' '\''--disable-tm-clone-registry'\'' '\''--without-isl'\'' '\''--without-cloog'\'' '\''--with-host-libstdcxx=-lstdc++'\'' '\''--with-system-zlib=/mnt/build_wrt/staging_dir/host'\'' '\''--with-zstd=/mnt/build_wrt/staging_dir/host'\'' '\''--with-gmp=/mnt/build_wrt/staging_dir/host'\'' '\''--with-mpfr=/mnt/build_wrt/staging_dir/host'\'' '\''--with-mpc=/mnt/build_wrt/staging_dir/host'\'' '\''--disable-decimal-float'\'' '\''--with-diagnostics-color=auto-if-env'\'' '\''--enable-__cxa_atexit'\'' '\''--enable-libstdcxx-dual-abi'\'' '\''--with-default-libstdcxx-abi=new'\'' '\''--with-newlib'\'' '\''--with-sysroot=/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'\'' '\''--disable-shared'\'' '\''--disable-threads'\'' '\''--enable-languages=c,lto'\'' --program-transform-name='\''s&^&aarch64-openwrt-linux-musl-&'\'' --disable-option-checking'
+host_cpu='x86_64'
+host_libs_picflag=''
+host_noncanonical='x86_64-pc-linux-gnu'
+host_os='linux-gnu'
+host_pie='no'
+host_shared='no'
+host_subdir='.'
+host_vendor='pc'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+islinc=''
+isllibs=''
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+poststage1_ldflags='-static-libstdc++ -static-libgcc'
+poststage1_libs=''
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+stage1_cflags='-g'
+stage1_checking='--enable-checking=yes,types'
+stage1_languages='c,lto'
+stage1_ldflags='-static-libstdc++ -static-libgcc'
+stage1_libs=''
+stage2_werror_flag=''
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_configargs='--cache-file=./config.cache --with-cross-host=x86_64-pc-linux-gnu   '\''--with-bugurl=http://bugs.openwrt.org/'\'' '\''--with-pkgversion=OpenWrt GCC 14.4.0 r0-a4638cd'\'' '\''--prefix=/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'\'' '\''--with-gnu-ld'\'' '\''--enable-target-optspace'\'' '\''--disable-libgomp'\'' '\''--disable-libmudflap'\'' '\''--disable-multilib'\'' '\''--disable-libmpx'\'' '\''--disable-nls'\'' '\''--disable-libssp'\'' '\''--disable-tm-clone-registry'\'' '\''--without-cloog'\'' '\''--with-host-libstdcxx=-lstdc++'\'' '\''--with-system-zlib=/mnt/build_wrt/staging_dir/host'\'' '\''--with-zstd=/mnt/build_wrt/staging_dir/host'\'' '\''--disable-decimal-float'\'' '\''--with-diagnostics-color=auto-if-env'\'' '\''--enable-__cxa_atexit'\'' '\''--enable-libstdcxx-dual-abi'\'' '\''--with-default-libstdcxx-abi=new'\'' '\''--with-newlib'\'' '\''--with-sysroot=/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'\'' '\''--disable-shared'\'' '\''--disable-threads'\'' '\''--enable-languages=c,lto'\'' --program-transform-name='\''s&^&aarch64-openwrt-linux-musl-&'\'' --disable-option-checking --disable-year2038'
+target_configdirs=' libgcc libatomic libquadmath'
+target_cpu='aarch64'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_os='linux-musl'
+target_subdir='aarch64-openwrt-linux-musl'
+target_vendor='openwrt'
+tooldir='${exec_prefix}/aarch64-openwrt-linux-musl'
+
+## ------------------- ##
+## File substitutions. ##
+## ------------------- ##
+
+alphaieee_frag='/dev/null'
+host_makefile_frag='/dev/null'
+ospace_frag='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/config/mt-ospace'
+serialization_dependencies='serdep.tmp'
+target_makefile_frag='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/config/mt-gnu'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME ""
+#define PACKAGE_TARNAME ""
+#define PACKAGE_VERSION ""
+#define PACKAGE_STRING ""
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define HAVE_CXX11 1
+#define LT_OBJDIR ".libs/"
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/libcpp/config.log ===
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_os='linux-musl'
+target_vendor='openwrt'
+warn='-W -Wall -Wno-narrowing -Wwrite-strings -Wmissing-format-attribute'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "cpplib"
+#define PACKAGE_TARNAME "cpplib"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "cpplib  "
+#define PACKAGE_BUGREPORT "gcc-bugs@gcc.gnu.org"
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define TIME_WITH_SYS_TIME 1
+#define STRING_WITH_STRINGS 1
+#define HAVE_LOCALE_H 1
+#define HAVE_FCNTL_H 1
+#define HAVE_LIMITS_H 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_STRING_H 1
+#define HAVE_SYS_FILE_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_OBSTACK 1
+#define HAVE_UINTPTR_T 1
+#define SIZEOF_INT 4
+#define SIZEOF_LONG 8
+#define HAVE_CLEARERR_UNLOCKED 1
+#define HAVE_FEOF_UNLOCKED 1
+#define HAVE_FERROR_UNLOCKED 1
+#define HAVE_FFLUSH_UNLOCKED 1
+#define HAVE_FGETC_UNLOCKED 1
+#define HAVE_FGETS_UNLOCKED 1
+#define HAVE_FILENO_UNLOCKED 1
+#define HAVE_FPUTC_UNLOCKED 1
+#define HAVE_FPUTS_UNLOCKED 1
+#define HAVE_FREAD_UNLOCKED 1
+#define HAVE_FWRITE_UNLOCKED 1
+#define HAVE_GETCHAR_UNLOCKED 1
+#define HAVE_GETC_UNLOCKED 1
+#define HAVE_PUTCHAR_UNLOCKED 1
+#define HAVE_PUTC_UNLOCKED 1
+#define HAVE_SETLOCALE 1
+#define HAVE_DECL_ABORT 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_ERRNO 0
+#define HAVE_DECL_GETOPT 1
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_CLEARERR_UNLOCKED 1
+#define HAVE_DECL_FEOF_UNLOCKED 1
+#define HAVE_DECL_FERROR_UNLOCKED 1
+#define HAVE_DECL_FFLUSH_UNLOCKED 1
+#define HAVE_DECL_FGETC_UNLOCKED 1
+#define HAVE_DECL_FGETS_UNLOCKED 1
+#define HAVE_DECL_FILENO_UNLOCKED 1
+#define HAVE_DECL_FPRINTF_UNLOCKED 0
+#define HAVE_DECL_FPUTC_UNLOCKED 1
+#define HAVE_DECL_FPUTS_UNLOCKED 1
+#define HAVE_DECL_FREAD_UNLOCKED 1
+#define HAVE_DECL_FWRITE_UNLOCKED 1
+#define HAVE_DECL_GETCHAR_UNLOCKED 1
+#define HAVE_DECL_GETC_UNLOCKED 1
+#define HAVE_DECL_PUTCHAR_UNLOCKED 1
+#define HAVE_DECL_PUTC_UNLOCKED 1
+#define HAVE_ALLOCA_H 1
+#define HAVE_ALLOCA 1
+#define STDC_HEADERS 1
+#define HAVE_LANGINFO_CODESET 1
+#define SIZEOF_INO_T 8
+#define SIZEOF_DEV_T 8
+#define HAVE_ICONV 1
+#define ICONV_CONST 
+#define PACKAGE "cpplib"
+#define CHECKING_P 0
+#define ENABLE_ASSERT_CHECKING 1
+#define ENABLE_CANONICAL_SYSTEM_HEADERS 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/zlib/config.log ===
+SET_MAKE=''
+SHELL='/bin/bash'
+STRIP='strip'
+TARGET_LIBRARY_FALSE=''
+TARGET_LIBRARY_TRUE='#'
+VERSION='1.1.4'
+ac_ct_CC=''
+ac_ct_DUMPBIN=''
+am__EXEEXT_FALSE=''
+am__EXEEXT_TRUE='#'
+am__fastdepCC_FALSE='#'
+am__fastdepCC_TRUE=''
+am__include='include'
+am__isrc=' -I$(srcdir)'
+am__leading_dot='.'
+am__nodep='_no'
+am__quote=''
+am__tar='$${TAR-tar} chof - "$$tardir"'
+am__untar='$${TAR-tar} xf -'
+bindir='${exec_prefix}/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+enable_host_pie=''
+enable_host_shared=''
+exec_prefix='${prefix}'
+host='x86_64-pc-linux-gnu'
+host_alias='x86_64-pc-linux-gnu'
+host_cpu='x86_64'
+host_os='linux-gnu'
+host_vendor='pc'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+install_sh='${SHELL} /mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+mkdir_p='$(MKDIR_P)'
+mkinstalldirs='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/mkinstalldirs'
+multi_basedir=''
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_os='linux-musl'
+target_vendor='openwrt'
+toolexecdir='$(libdir)/gcc-lib/$(target_alias)'
+toolexeclibdir='$(libdir)/../lib'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "zlib"
+#define PACKAGE_TARNAME "zlib"
+#define PACKAGE_VERSION "1.1.4"
+#define PACKAGE_STRING "zlib 1.1.4"
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define PACKAGE "zlib"
+#define VERSION "1.1.4"
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_DLFCN_H 1
+#define LT_OBJDIR ".libs/"
+#define HAVE_STDLIB_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_SYS_PARAM_H 1
+#define HAVE_GETPAGESIZE 1
+#define HAVE_MMAP 1
+#define HAVE_MEMCPY 1
+#define HAVE_STRERROR 1
+#define HAVE_UNISTD_H 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/aarch64-openwrt-linux-musl/libgcc/config.log ===
+PATH_SEPARATOR=':'
+PICFLAG='-fPIC'
+RANLIB='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/aarch64-openwrt-linux-musl/bin/ranlib'
+SHELL='/bin/bash'
+STRIP='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/aarch64-openwrt-linux-musl/bin/strip'
+ac_ct_CC=''
+accel_dir_suffix=''
+asm_hidden_op='.hidden'
+bindir='${exec_prefix}/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_libsubdir='build-x86_64-pc-linux-gnu'
+build_os='linux-gnu'
+build_subdir='build-x86_64-pc-linux-gnu'
+build_vendor='pc'
+cpu_type='aarch64'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+decimal_float='no'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+double_type_size='64'
+dvidir='${docdir}'
+enable_decimal_float='no'
+enable_execute_stack='enable-execute-stack-empty.c'
+enable_gcov='yes'
+enable_shared='no'
+enable_vtable_verify='no'
+exec_prefix='${prefix}'
+extra_parts='crtbegin.o crtbeginS.o crtbeginT.o crtend.o crtendS.o crtfastmath.o'
+fixed_point='no'
+force_explicit_eh_registry=''
+get_gcc_base_ver='cat'
+host='aarch64-openwrt-linux-musl'
+host_alias='aarch64-openwrt-linux-musl'
+host_cpu='aarch64'
+host_noncanonical='aarch64-openwrt-linux-musl'
+host_os='linux-musl'
+host_subdir='.'
+host_vendor='openwrt'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+libgcc_topdir='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/libgcc/..'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+long_double_type_size='128'
+mandir='${datarootdir}/man'
+md_unwind_header='aarch64/linux-unwind.h'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+real_host_noncanonical='aarch64-openwrt-linux-musl'
+sbindir='${exec_prefix}/sbin'
+set_have_cc_tls='-DHAVE_CC_TLS'
+set_use_emutls=''
+sfp_machine_header='aarch64/sfp-machine.h'
+sharedstatedir='${prefix}/com'
+slibdir='$(exec_prefix)/$(host_noncanonical)/lib'
+solaris_ld_v2_maps=''
+sysconfdir='${prefix}/etc'
+target_alias='aarch64-openwrt-linux-musl'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_subdir='aarch64-openwrt-linux-musl'
+thread_header='gthr-single.h'
+tm_defines=''
+tm_file=' $(srcdir)/config/aarch64/value-unwind.h'
+tmake_file=' $(srcdir)/config/t-crtstuff-pic $(srcdir)/config/t-libgcc-pic $(srcdir)/config/t-eh-dw2-dip $(srcdir)/config/t-slibgcc $(srcdir)/config/t-slibgcc-gld $(srcdir)/config/t-slibgcc-elf-ver $(srcdir)/config/t-linux $(srcdir)/config/aarch64/t-aarch64 $(srcdir)/config/aarch64/t-lse $(srcdir)/config/t-slibgcc-libgcc $(srcdir)/config/aarch64/t-softfp $(srcdir)/config/t-softfp $(srcdir)/config/t-crtfm $(srcdir)/config/t-dfprules $(srcdir)/config/aarch64/t-heap-trampoline $(srcdir)/config/t-gthr-noweak'
+toolexecdir='$(exec_prefix)/$(target_noncanonical)'
+toolexeclibdir='$(toolexecdir)/lib'
+unwind_header='unwind-generic.h'
+use_tm_clone_registry='-DUSE_TM_CLONE_REGISTRY=0'
+vis_hide='-fvisibility=hidden -DHIDE_EXPORTS'
+with_aix_soname='aix'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "GNU C Runtime Library"
+#define PACKAGE_TARNAME "libgcc"
+#define PACKAGE_VERSION "1.0"
+#define PACKAGE_STRING "GNU C Runtime Library 1.0"
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL "http://www.gnu.org/software/libgcc/"
+#define SIZEOF_DOUBLE 8
+#define SIZEOF_LONG_DOUBLE 16
+#define HAVE_GETIPINFO 1
+#define AS_HIDDEN_DIRECTIVE .hidden
+#define HAVE_AS_CFI_SECTIONS 1
+#define HAVE_AS_LSE 1
+#define HAVE_AS_VARIANT_PCS 1
+#define HAVE_INIT_PRIORITY 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/build-x86_64-pc-linux-gnu/libiberty/config.log ===
+#define HAVE_BCOPY 1
+#define HAVE_BSEARCH 1
+#define HAVE_BZERO 1
+#define HAVE_CALLOC 1
+#define HAVE_CLOCK 1
+#define HAVE_FFS 1
+#define HAVE_GETCWD 1
+#define HAVE_GETPAGESIZE 1
+#define HAVE_GETTIMEOFDAY 1
+#define HAVE_INDEX 1
+#define HAVE_INSQUE 1
+#define HAVE_MEMCHR 1
+#define HAVE_MEMCMP 1
+#define HAVE_MEMCPY 1
+#define HAVE_MEMMEM 1
+#define HAVE_MEMMOVE 1
+#define HAVE_MEMPCPY 1
+#define HAVE_MEMSET 1
+#define HAVE_MKSTEMPS 1
+#define HAVE_PUTENV 1
+#define HAVE_RANDOM 1
+#define HAVE_RENAME 1
+#define HAVE_RINDEX 1
+#define HAVE_SETENV 1
+#define HAVE_SNPRINTF 1
+#define HAVE_SIGSETMASK 1
+#define HAVE_STPCPY 1
+#define HAVE_STPNCPY 1
+#define HAVE_STRCASECMP 1
+#define HAVE_STRCHR 1
+#define HAVE_STRDUP 1
+#define HAVE_STRNCASECMP 1
+#define HAVE_STRNDUP 1
+#define HAVE_STRNLEN 1
+#define HAVE_STRRCHR 1
+#define HAVE_STRSTR 1
+#define HAVE_STRTOD 1
+#define HAVE_STRTOL 1
+#define HAVE_STRTOUL 1
+#define HAVE_STRTOLL 1
+#define HAVE_STRTOULL 1
+#define HAVE_STRVERSCMP 1
+#define HAVE_TMPNAM 1
+#define HAVE_VASPRINTF 1
+#define HAVE_VFPRINTF 1
+#define HAVE_VPRINTF 1
+#define HAVE_VSNPRINTF 1
+#define HAVE_VSPRINTF 1
+#define HAVE_WAITPID 1
+#define STACK_DIRECTION 1
+#define HAVE_FORK 1
+#define HAVE_VFORK 1
+#define HAVE_WORKING_VFORK 1
+#define HAVE_WORKING_FORK 1
+#define HAVE___FSETLOCKING 1
+#define HAVE_CANONICALIZE_FILE_NAME 1
+#define HAVE_DUP3 1
+#define HAVE_GETRLIMIT 1
+#define HAVE_GETRUSAGE 1
+#define HAVE_GETTIMEOFDAY 1
+#define HAVE_ON_EXIT 1
+#define HAVE_PIPE2 1
+#define HAVE_POSIX_SPAWN 1
+#define HAVE_POSIX_SPAWNP 1
+#define HAVE_PSIGNAL 1
+#define HAVE_REALPATH 1
+#define HAVE_SETRLIMIT 1
+#define HAVE_STRERROR 1
+#define HAVE_STRSIGNAL 1
+#define HAVE_SYSCONF 1
+#define HAVE_TIMES 1
+#define HAVE_WAIT3 1
+#define HAVE_WAIT4 1
+#define HAVE_SBRK 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_FFS 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_SNPRINTF 1
+#define HAVE_DECL_VSNPRINTF 1
+#define HAVE_DECL_CALLOC 1
+#define HAVE_DECL_GETENV 1
+#define HAVE_DECL_GETOPT 1
+#define HAVE_DECL_MALLOC 1
+#define HAVE_DECL_REALLOC 1
+#define HAVE_DECL_SBRK 1
+#define HAVE_DECL_STRTOL 1
+#define HAVE_DECL_STRTOUL 1
+#define HAVE_DECL_STRTOLL 1
+#define HAVE_DECL_STRTOULL 1
+#define HAVE_DECL_STRVERSCMP 1
+#define HAVE_DECL_STRNLEN 1
+#define HAVE_X86_SHA1_HW_SUPPORT 1
+#define HAVE_STDLIB_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_SYS_PARAM_H 1
+#define HAVE_GETPAGESIZE 1
+#define HAVE_MMAP 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/build-x86_64-pc-linux-gnu/libcpp/config.log ===
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_os='linux-musl'
+target_vendor='openwrt'
+warn='-W -Wall -Wno-narrowing -Wwrite-strings -Wmissing-format-attribute'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "cpplib"
+#define PACKAGE_TARNAME "cpplib"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "cpplib  "
+#define PACKAGE_BUGREPORT "gcc-bugs@gcc.gnu.org"
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define TIME_WITH_SYS_TIME 1
+#define STRING_WITH_STRINGS 1
+#define HAVE_LOCALE_H 1
+#define HAVE_FCNTL_H 1
+#define HAVE_LIMITS_H 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_STRING_H 1
+#define HAVE_SYS_FILE_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_OBSTACK 1
+#define HAVE_UINTPTR_T 1
+#define SIZEOF_INT 4
+#define SIZEOF_LONG 8
+#define HAVE_CLEARERR_UNLOCKED 1
+#define HAVE_FEOF_UNLOCKED 1
+#define HAVE_FERROR_UNLOCKED 1
+#define HAVE_FFLUSH_UNLOCKED 1
+#define HAVE_FGETC_UNLOCKED 1
+#define HAVE_FGETS_UNLOCKED 1
+#define HAVE_FILENO_UNLOCKED 1
+#define HAVE_FPUTC_UNLOCKED 1
+#define HAVE_FPUTS_UNLOCKED 1
+#define HAVE_FREAD_UNLOCKED 1
+#define HAVE_FWRITE_UNLOCKED 1
+#define HAVE_GETCHAR_UNLOCKED 1
+#define HAVE_GETC_UNLOCKED 1
+#define HAVE_PUTCHAR_UNLOCKED 1
+#define HAVE_PUTC_UNLOCKED 1
+#define HAVE_SETLOCALE 1
+#define HAVE_DECL_ABORT 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_ERRNO 0
+#define HAVE_DECL_GETOPT 1
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_CLEARERR_UNLOCKED 1
+#define HAVE_DECL_FEOF_UNLOCKED 1
+#define HAVE_DECL_FERROR_UNLOCKED 1
+#define HAVE_DECL_FFLUSH_UNLOCKED 1
+#define HAVE_DECL_FGETC_UNLOCKED 1
+#define HAVE_DECL_FGETS_UNLOCKED 1
+#define HAVE_DECL_FILENO_UNLOCKED 1
+#define HAVE_DECL_FPRINTF_UNLOCKED 0
+#define HAVE_DECL_FPUTC_UNLOCKED 1
+#define HAVE_DECL_FPUTS_UNLOCKED 1
+#define HAVE_DECL_FREAD_UNLOCKED 1
+#define HAVE_DECL_FWRITE_UNLOCKED 1
+#define HAVE_DECL_GETCHAR_UNLOCKED 1
+#define HAVE_DECL_GETC_UNLOCKED 1
+#define HAVE_DECL_PUTCHAR_UNLOCKED 1
+#define HAVE_DECL_PUTC_UNLOCKED 1
+#define HAVE_ALLOCA_H 1
+#define HAVE_ALLOCA 1
+#define STDC_HEADERS 1
+#define HAVE_LANGINFO_CODESET 1
+#define SIZEOF_INO_T 8
+#define SIZEOF_DEV_T 8
+#define ICONV_CONST 
+#define PACKAGE "cpplib"
+#define CHECKING_P 0
+#define ENABLE_ASSERT_CHECKING 1
+#define ENABLE_CANONICAL_SYSTEM_HEADERS 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/build-x86_64-pc-linux-gnu/fixincludes/config.log ===
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_os='linux-musl'
+target_vendor='openwrt'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "fixincludes"
+#define PACKAGE_TARNAME "fixincludes"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "fixincludes  "
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define EXE_EXT ""
+#define STDC_HEADERS 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_FCNTL_H 1
+#define HAVE_SYS_FILE_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_CLEARERR_UNLOCKED 1
+#define HAVE_FEOF_UNLOCKED 1
+#define HAVE_FERROR_UNLOCKED 1
+#define HAVE_FFLUSH_UNLOCKED 1
+#define HAVE_FGETC_UNLOCKED 1
+#define HAVE_FGETS_UNLOCKED 1
+#define HAVE_FILENO_UNLOCKED 1
+#define HAVE_FPUTC_UNLOCKED 1
+#define HAVE_FPUTS_UNLOCKED 1
+#define HAVE_FREAD_UNLOCKED 1
+#define HAVE_FWRITE_UNLOCKED 1
+#define HAVE_GETCHAR_UNLOCKED 1
+#define HAVE_GETC_UNLOCKED 1
+#define HAVE_PUTCHAR_UNLOCKED 1
+#define HAVE_PUTC_UNLOCKED 1
+#define HAVE_DECL_ABORT 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_ERRNO 0
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_MEMMEM 1
+#define HAVE_DECL_CLEARERR_UNLOCKED 1
+#define HAVE_DECL_FEOF_UNLOCKED 1
+#define HAVE_DECL_FERROR_UNLOCKED 1
+#define HAVE_DECL_FFLUSH_UNLOCKED 1
+#define HAVE_DECL_FGETC_UNLOCKED 1
+#define HAVE_DECL_FGETS_UNLOCKED 1
+#define HAVE_DECL_FILENO_UNLOCKED 1
+#define HAVE_DECL_FPRINTF_UNLOCKED 0
+#define HAVE_DECL_FPUTC_UNLOCKED 1
+#define HAVE_DECL_FPUTS_UNLOCKED 1
+#define HAVE_DECL_FREAD_UNLOCKED 1
+#define HAVE_DECL_FWRITE_UNLOCKED 1
+#define HAVE_DECL_GETCHAR_UNLOCKED 1
+#define HAVE_DECL_GETC_UNLOCKED 1
+#define HAVE_DECL_PUTCHAR_UNLOCKED 1
+#define HAVE_DECL_PUTC_UNLOCKED 1
+#define HAVE_MMAP_FILE 1
+#define HAVE_MMAP_DEV_ZERO 1
+#define HAVE_MMAP_ANON 1
+#define SED_PROGRAM "/mnt/build_wrt/staging_dir/host/bin/sed"
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/fixincludes/config.log ===
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_os='linux-musl'
+target_vendor='openwrt'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "fixincludes"
+#define PACKAGE_TARNAME "fixincludes"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "fixincludes  "
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define EXE_EXT ""
+#define STDC_HEADERS 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_FCNTL_H 1
+#define HAVE_SYS_FILE_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_CLEARERR_UNLOCKED 1
+#define HAVE_FEOF_UNLOCKED 1
+#define HAVE_FERROR_UNLOCKED 1
+#define HAVE_FFLUSH_UNLOCKED 1
+#define HAVE_FGETC_UNLOCKED 1
+#define HAVE_FGETS_UNLOCKED 1
+#define HAVE_FILENO_UNLOCKED 1
+#define HAVE_FPUTC_UNLOCKED 1
+#define HAVE_FPUTS_UNLOCKED 1
+#define HAVE_FREAD_UNLOCKED 1
+#define HAVE_FWRITE_UNLOCKED 1
+#define HAVE_GETCHAR_UNLOCKED 1
+#define HAVE_GETC_UNLOCKED 1
+#define HAVE_PUTCHAR_UNLOCKED 1
+#define HAVE_PUTC_UNLOCKED 1
+#define HAVE_DECL_ABORT 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_ERRNO 0
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_MEMMEM 1
+#define HAVE_DECL_CLEARERR_UNLOCKED 1
+#define HAVE_DECL_FEOF_UNLOCKED 1
+#define HAVE_DECL_FERROR_UNLOCKED 1
+#define HAVE_DECL_FFLUSH_UNLOCKED 1
+#define HAVE_DECL_FGETC_UNLOCKED 1
+#define HAVE_DECL_FGETS_UNLOCKED 1
+#define HAVE_DECL_FILENO_UNLOCKED 1
+#define HAVE_DECL_FPRINTF_UNLOCKED 0
+#define HAVE_DECL_FPUTC_UNLOCKED 1
+#define HAVE_DECL_FPUTS_UNLOCKED 1
+#define HAVE_DECL_FREAD_UNLOCKED 1
+#define HAVE_DECL_FWRITE_UNLOCKED 1
+#define HAVE_DECL_GETCHAR_UNLOCKED 1
+#define HAVE_DECL_GETC_UNLOCKED 1
+#define HAVE_DECL_PUTCHAR_UNLOCKED 1
+#define HAVE_DECL_PUTC_UNLOCKED 1
+#define HAVE_MMAP_FILE 1
+#define HAVE_MMAP_DEV_ZERO 1
+#define HAVE_MMAP_ANON 1
+#define SED_PROGRAM "/mnt/build_wrt/staging_dir/host/bin/sed"
+
+configure: exit 0
