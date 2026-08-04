@@ -57,6 +57,7 @@ UPDATE_PACKAGE "shadcn" "eamonxg/luci-theme-shadcn" "main"
 UPDATE_PACKAGE "theme-fluent" "LazuliKao/luci-theme-fluent" "main"
 
 UPDATE_PACKAGE "luci-app-dae" "davidtall/luci-app-dae" "kix"
+rm -rf ./luci-app-dae/dae
 UPDATE_PACKAGE "v2ray-geodata" "sbwml/v2ray-geodata" "master"
 UPDATE_PACKAGE "momo" "nikkinikki-org/OpenWrt-momo" "main"
 UPDATE_PACKAGE "nikki" "nikkinikki-org/OpenWrt-nikki" "main"
@@ -130,6 +131,8 @@ UPDATE_VERSION() {
 #删除官方默认重复包，防止同名碰撞
 rm -rf ../feeds/luci/applications/luci-app-dae* 2>/dev/null || true
 rm -rf ../feeds/packages/net/{v2ray-geodata,dae*} 2>/dev/null || true
+
+cp -rf $GITHUB_WORKSPACE/package/v2ray-geodata ./ 2>/dev/null || true
 
 #引入私有扩展脚本
 if [ -f "$GITHUB_WORKSPACE/Scripts/PRIVATE.sh" ]; then
