@@ -259,22 +259,26 @@ fi
 
 
 #预获取dae的PKG_SOURCE_VERSION (从Shell阶段发起网络请求，避免make解析阶段$(shell)不稳定)
-DAE_PKG_MAKEFILE="$(find "$PKG_PATH" -maxdepth 3 -type f -wholename '*/dae/Makefile' -not -path '*/luci-app-dae/*' -print -quit 2>/dev/null)"
+DAE_PKG_MAKEFILE="$PKG_PATH/dae/Makefile"
+echo "[Handles.sh] Checking for dae Makefile at: $DAE_PKG_MAKEFILE"
 if [ -f "$DAE_PKG_MAKEFILE" ] && grep -q "PLACEHOLDER_DAE_VERSION" "$DAE_PKG_MAKEFILE"; then
-	DAE_GIT_URL=$(grep -oP 'PKG_SOURCE_URL:=\K.*' "$DAE_PKG_MAKEFILE")
-	DAE_GIT_BRANCH=$(grep -oP 'GIT_BRANCH:=\K.*' "$DAE_PKG_MAKEFILE")
+	DAE_GIT_URL=$(sed -n 's/^[[:space:]]*PKG_SOURCE_URL:=//p' "$DAE_PKG_MAKEFILE")
+	DAE_GIT_BRANCH=$(sed -n 's/^[[:space:]]*GIT_BRANCH:=//p' "$DAE_PKG_MAKEFILE")
+	echo "[Handles.sh] dae URL=$DAE_GIT_URL BRANCH=$DAE_GIT_BRANCH"
 	DAE_VERSION=""
 	for i in 1 2 3; do
 		DAE_VERSION=$(git ls-remote "$DAE_GIT_URL" "$DAE_GIT_BRANCH" 2>/dev/null | cut -c1-7)
 		[ -n "$DAE_VERSION" ] && break
-		echo "dae git ls-remote attempt $i failed, retrying in 3s..."
+		echo "[Handles.sh] dae git ls-remote attempt $i failed, retrying in 3s..."
 		sleep 3
 	done
 	if [ -n "$DAE_VERSION" ]; then
 		sed -i "s/PLACEHOLDER_DAE_VERSION/$DAE_VERSION/g" "$DAE_PKG_MAKEFILE"
-		echo "dae PKG_SOURCE_VERSION set to: $DAE_VERSION"
+		echo "[Handles.sh] dae PKG_SOURCE_VERSION set to: $DAE_VERSION"
 	else
-		echo "WARNING: failed to fetch dae version after 3 retries!"
+		echo "[Handles.sh] WARNING: failed to fetch dae version after 3 retries!"
 	fi
+else
+	echo "[Handles.sh] dae Makefile not found or no placeholder to replace"
 fi
 
