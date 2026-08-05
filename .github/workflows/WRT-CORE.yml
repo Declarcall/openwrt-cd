@@ -177,12 +177,11 @@ jobs:
 
           make defconfig -j$(nproc) && make clean -j$(nproc)
 
-          # 强制关闭内核调试符号 (make defconfig会因BPF依赖自动重开，必须在defconfig之后强制覆盖)
+          # 强制关闭内核调试符号 (defconfig后最终覆盖，不再执行defconfig)
           # 雅典娜 U-Boot 6MB物理分区限制：GZIP FIT镜像必须 < 6291456 bytes
           sed -i 's/CONFIG_KERNEL_DEBUG_INFO=y/# CONFIG_KERNEL_DEBUG_INFO is not set/' .config
           sed -i 's/CONFIG_KERNEL_DEBUG_INFO_BTF=y/# CONFIG_KERNEL_DEBUG_INFO_BTF is not set/' .config
           sed -i 's/CONFIG_KERNEL_DEBUG_INFO_REDUCED=y/# CONFIG_KERNEL_DEBUG_INFO_REDUCED is not set/' .config
-          make defconfig -j$(nproc)
 
       - name: Download Packages
         if: env.WRT_TEST != 'true'
