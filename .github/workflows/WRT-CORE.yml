@@ -206,11 +206,14 @@ jobs:
           echo "========================================================="
           
           LOG_DIR="$GITHUB_WORKSPACE/logs/build_failures"
-          mkdir -p "$LOG_DIR"
+          FULL_LOG_DIR="/tmp/full_failure_logs"
+          mkdir -p "$LOG_DIR" "$FULL_LOG_DIR"
           
           TIMESTAMP=$(TZ=UTC-8 date +"%Y-%m-%d_%H-%M-%S")
           LOG_FILE="$LOG_DIR/failure_${WRT_NAME:-BUILD}_${TIMESTAMP}.log"
+          FULL_LOG_FILE="$FULL_LOG_DIR/failure_${WRT_NAME:-BUILD}_${TIMESTAMP}_full.log"
           
+          # === 精简版日志 (推送到 Git，快速排查) ===
           echo "Build Failure Diagnostic Report - $TIMESTAMP" > "$LOG_FILE"
           echo "Target Config: ${WRT_CONFIG:-UNKNOWN}" >> "$LOG_FILE"
           echo "Commit SHA: $GITHUB_SHA" >> "$LOG_FILE"
@@ -218,7 +221,7 @@ jobs:
           echo "" >> "$LOG_FILE"
           
           if [ -f "/tmp/build_verbose.log" ]; then
-            echo "--- VERBOSE SINGLE-THREADED BUILD OUTPUT (LAST 500 LINES) ---" >> "$LOG_FILE"
+            echo "--- VERBOSE BUILD OUTPUT (LAST 500 LINES) ---" >> "$LOG_FILE"
             tail -n 500 /tmp/build_verbose.log >> "$LOG_FILE" 2>/dev/null || true
             echo "" >> "$LOG_FILE"
           fi
@@ -236,6 +239,39 @@ jobs:
             done
           fi
           
+          # === 全量日志 (上传为 Artifact，深度排查) ===
+          echo "Build Failure FULL Diagnostic Report - $TIMESTAMP" > "$FULL_LOG_FILE"
+          echo "Target Config: ${WRT_CONFIG:-UNKNOWN}" >> "$FULL_LOG_FILE"
+          echo "Commit SHA: $GITHUB_SHA" >> "$FULL_LOG_FILE"
+          echo "=========================================================" >> "$FULL_LOG_FILE"
+          echo "" >> "$FULL_LOG_FILE"
+          
+          if [ -f "/tmp/build_verbose.log" ]; then
+            echo "--- FULL VERBOSE BUILD OUTPUT ---" >> "$FULL_LOG_FILE"
+            cat /tmp/build_verbose.log >> "$FULL_LOG_FILE" 2>/dev/null || true
+            echo "" >> "$FULL_LOG_FILE"
+          fi
+
+          if [ -d "./wrt/logs" ]; then
+            echo "--- OPENWRT BUILD LOGS ---" >> "$FULL_LOG_FILE"
+            find ./wrt/logs -type f -exec echo "=== Log: {} ===" \; -exec cat {} \; >> "$FULL_LOG_FILE" 2>/dev/null || true
+          fi
+
+          if [ -d "./wrt/build_dir" ]; then
+            echo "--- ALL ERROR LOGS IN BUILD DIR ---" >> "$FULL_LOG_FILE"
+            find ./wrt/build_dir -type f \( -name "*.log" -o -name "compile.log" -o -name "configure.log" \) 2>/dev/null | while read -r F; do
+              echo "=== File: $F ===" >> "$FULL_LOG_FILE"
+              cat "$F" >> "$FULL_LOG_FILE" 2>/dev/null || true
+            done
+          fi
+
+          # === 导出 .config 快照 (方便验证 defconfig 结果) ===
+          if [ -f "./wrt/.config" ]; then
+            echo "--- .config SNAPSHOT ---" >> "$FULL_LOG_FILE"
+            cat ./wrt/.config >> "$FULL_LOG_FILE" 2>/dev/null || true
+            cp ./wrt/.config "$FULL_LOG_DIR/dot_config_snapshot.txt" 2>/dev/null || true
+          fi
+          
           echo "--> Cleaning up failure logs older than 7 days..."
           find "$LOG_DIR" -type f -mtime +7 -delete 2>/dev/null || true
           
@@ -250,12 +286,12 @@ jobs:
             done
           )
 
-      - name: Upload Build Failure Log Artifact
+      - name: Upload Full Build Failure Logs
         if: failure()
         uses: actions/upload-artifact@v4
         with:
-          name: build-failure-log-${{ env.WRT_NAME }}-${{ env.WRT_DATE }}
-          path: logs/build_failures/
+          name: build-failure-FULL-${{ env.WRT_NAME }}-${{ env.WRT_DATE }}
+          path: /tmp/full_failure_logs/
 
       - name: Machine Information
         run: |
