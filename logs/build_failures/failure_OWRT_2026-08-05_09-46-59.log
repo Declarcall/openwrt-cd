@@ -1,0 +1,2528 @@
+Build Failure Diagnostic Report - 2026-08-05_09-46-59
+Target Config: IPQ60XX-WIFI-YES
+Commit SHA: 1142084965b73d71c9eb4a1457781c2aec6498c6
+=========================================================
+
+--- VERBOSE SINGLE-THREADED BUILD OUTPUT (LAST 500 LINES) ---
+
+Applying /mnt/build_wrt/package/boot/uboot-tools/patches/013-tools-fit_check_sign-all-image-types.patch using plaintext: 
+patching file boot/bootm.c
+patching file boot/image-fit.c
+
+Applying /mnt/build_wrt/package/boot/uboot-tools/patches/014-tools-fit_check_sign-no-decompress.patch using plaintext: 
+patching file boot/bootm.c
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/.prepared_a45cf6724c77ff28cf5691a62277ff43_6664517399ebbbc92a37c5bb081b5c53
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/.configured_*
+rm -f /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/stamp/.uboot-tools_installed
+CFLAGS="-Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07=u-boot-2026.07 -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs  -I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/include -I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/include -I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/include/fortify " CXXFLAGS="-Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07=u-boot-2026.07 -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs  -I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/include -I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/include -I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/include/fortify " LDFLAGS="-L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/lib -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/lib -fuse-ld=bfd -zmax-page-size=4096 -znow -zrelro -zpack-relative-relocs " make  -C /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/. AR="aarch64-openwrt-linux-musl-gcc-ar" AS="ccache aarch64-openwrt-linux-musl-gcc -c -Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07=u-boot-2026.07 -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs" LD="aarch64-openwrt-linux-musl-ld.bfd" NM="aarch64-openwrt-linux-musl-gcc-nm" CC="ccache aarch64-openwrt-linux-musl-gcc" GCC="ccache aarch64-openwrt-linux-musl-gcc" CXX="ccache aarch64-openwrt-linux-musl-g++" RANLIB="aarch64-openwrt-linux-musl-gcc-ranlib" STRIP=aarch64-openwrt-linux-musl-strip OBJCOPY=aarch64-openwrt-linux-musl-objcopy OBJDUMP=aarch64-openwrt-linux-musl-objdump SIZE=aarch64-openwrt-linux-musl-size CROSS="aarch64-openwrt-linux-musl-" ARCH="aarch64" ARCH="sandbox" TARGET_CFLAGS="-Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07=u-boot-2026.07 -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs" TARGET_LDFLAGS="-L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/lib -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/lib -fuse-ld=bfd -zmax-page-size=4096 -znow -zrelro -zpack-relative-relocs" NO_PYTHON=1 V= tools-only_defconfig;
+make[4]: Entering directory '/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07'
+  HOSTCC  scripts/basic/fixdep
+  HOSTCC  scripts/kconfig/conf.o
+  YACC    scripts/kconfig/zconf.tab.[ch]
+  LEX     scripts/kconfig/zconf.lex.c
+  HOSTCC  scripts/kconfig/zconf.tab.o
+  HOSTLD  scripts/kconfig/conf
+#
+# configuration written to .config
+#
+make[4]: Leaving directory '/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07'
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/scripts/config --file /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/.config --disable TOOLS_KWBIMAGE --disable TOOLS_LIBCRYPTO --disable TOOLS_MKEFICAPSULE
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/.configured_68b329da9893e34099c7d8ad5cb9c940
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/.built
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/.built_check
+CFLAGS="-Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07=u-boot-2026.07 -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs  -I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/include -I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/include -I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/include/fortify " CXXFLAGS="-Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07=u-boot-2026.07 -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs  -I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/include -I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/include -I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/include/fortify " LDFLAGS="-L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/lib -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/lib -fuse-ld=bfd -zmax-page-size=4096 -znow -zrelro -zpack-relative-relocs " make  -C /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/. AR="aarch64-openwrt-linux-musl-gcc-ar" AS="ccache aarch64-openwrt-linux-musl-gcc -c -Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07=u-boot-2026.07 -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs" LD="aarch64-openwrt-linux-musl-ld.bfd" NM="aarch64-openwrt-linux-musl-gcc-nm" CC="ccache aarch64-openwrt-linux-musl-gcc" GCC="ccache aarch64-openwrt-linux-musl-gcc" CXX="ccache aarch64-openwrt-linux-musl-g++" RANLIB="aarch64-openwrt-linux-musl-gcc-ranlib" STRIP=aarch64-openwrt-linux-musl-strip OBJCOPY=aarch64-openwrt-linux-musl-objcopy OBJDUMP=aarch64-openwrt-linux-musl-objdump SIZE=aarch64-openwrt-linux-musl-size CROSS="aarch64-openwrt-linux-musl-" ARCH="aarch64" ARCH="sandbox" TARGET_CFLAGS="-Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07=u-boot-2026.07 -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs" TARGET_LDFLAGS="-L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/lib -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/lib -fuse-ld=bfd -zmax-page-size=4096 -znow -zrelro -zpack-relative-relocs" NO_PYTHON=1 V= envtools;
+make[4]: Entering directory '/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07'
+scripts/kconfig/conf  --syncconfig Kconfig
+  UPD     include/config.h
+  CFG     u-boot.cfg
+  GEN     include/autoconf.mk
+  GEN     include/autoconf.mk.dep
+  UPD     include/config/uboot.release
+  UPD     include/generated/version_autogenerated.h
+  ENVC    include/generated/env.txt
+  ENVP    include/generated/env.in
+  ENVT    include/generated/environment.h
+  HOSTCC  tools/printinitialenv
+  GENENV  u-boot-initial-env
+/bin/sh: 1: ./tools/printinitialenv: Exec format error
+  UPD     include/generated/timestamp_autogenerated.h
+  COPY    tools/version.h
+  HOSTCC  tools/env/crc32.o
+  HOSTCC  tools/env/ctype.o
+  HOSTCC  tools/env/env_attr.o
+  HOSTCC  tools/env/env_flags.o
+  HOSTCC  tools/env/fw_env.o
+  HOSTCC  tools/env/linux_string.o
+  AR      tools/env/lib.a
+  HOSTCC  tools/env/fw_env_main.o
+  HOSTLD  tools/env/fw_printenv
+  STRIP   tools/env/fw_printenv
+make[4]: Leaving directory '/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07'
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/.built
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools
+mkdir -p /mnt/build_wrt/bin/targets/qualcommax/ipq60xx/packages /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/pkginfo
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/usr/sbin
+install -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/tools/env/fw_printenv /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/usr/sbin
+ln -sf fw_printenv /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/usr/sbin/fw_setenv
+install -m0755 ./uboot-envtools/files/fw_printsys /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/usr/sbin
+install -m0755 ./uboot-envtools/files/fw_setsys /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/usr/sbin
+install -m0755 ./uboot-envtools/files/fw_loadenv /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/usr/sbin
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/etc/board.d
+install -m0644 ./uboot-envtools/files/fw_defaults /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/etc/board.d/05_fw_defaults
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/lib
+install -m0644 ./uboot-envtools/files/uboot-envtools.sh /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/lib
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/etc/uci-defaults
+install -m0644 ./uboot-envtools/files/qualcommax_ipq60xx /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/etc/uci-defaults/30_uboot-envtools
+find /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools -name '.svn' -o -name '.#*' -o -name '*~'| xargs -r rm -rf
+export CROSS="aarch64-openwrt-linux-musl-"  NO_RENAME=1 ; NM="aarch64-openwrt-linux-musl-nm" STRIP="/mnt/build_wrt/staging_dir/host/bin/sstrip -z" STRIP_KMOD="/mnt/build_wrt/scripts/strip-kmod.sh" PATCHELF="/mnt/build_wrt/staging_dir/host/bin/patchelf" /mnt/build_wrt/scripts/rstrip.sh /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools
+rstrip.sh: /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/usr/sbin/fw_printenv: executable
+install -d -m0755 /mnt/build_wrt/bin/targets/qualcommax/ipq60xx/packages
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/apk-aarch64_cortex-a53/uboot-envtools/
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/lib/apk/packages/
+(cd /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/apk-aarch64_cortex-a53/uboot-envtools; echo "$V_Package_uboot_envtools_conffiles" > conffiles; )
+( echo "#!/bin/sh"; echo "[ \"\${IPKG_NO_SCRIPT}\" = \"1\" ] && exit 0"; echo "[ -s "\${IPKG_INSTROOT}/lib/functions.sh" ] || exit 0"; echo ". \${IPKG_INSTROOT}/lib/functions.sh"; echo 'export root="${IPKG_INSTROOT}"'; echo 'export pkgname="uboot-envtools"'; echo "add_group_and_user"; echo "default_postinst"; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/apk-aarch64_cortex-a53/uboot-envtools/postinst-pkg ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/apk-aarch64_cortex-a53/uboot-envtools/postinst-pkg"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/apk-aarch64_cortex-a53/uboot-envtools/post-install;
+( echo "#!/bin/sh"; echo 'export PKG_UPGRADE=1'; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/apk-aarch64_cortex-a53/uboot-envtools/post-install ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/apk-aarch64_cortex-a53/uboot-envtools/post-install"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/apk-aarch64_cortex-a53/uboot-envtools/post-upgrade;
+( echo "#!/bin/sh"; echo "[ -s "\${IPKG_INSTROOT}/lib/functions.sh" ] || exit 0"; echo ". \${IPKG_INSTROOT}/lib/functions.sh"; echo 'export root="${IPKG_INSTROOT}"'; echo 'export pkgname="uboot-envtools"'; echo "default_prerm"; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/apk-aarch64_cortex-a53/uboot-envtools/prerm-pkg ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/apk-aarch64_cortex-a53/uboot-envtools/prerm-pkg"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/apk-aarch64_cortex-a53/uboot-envtools/pre-deinstall;
+[ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/apk-aarch64_cortex-a53/uboot-envtools/postrm ] || sed -zi 's/^\s*#!/#!/' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/apk-aarch64_cortex-a53/uboot-envtools/postrm";
+if [ -n "" ]; then echo  > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/lib/apk/packages/uboot-envtools.rusers; fi;
+if [ -n "" ]; then echo  > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/lib/apk/packages/uboot-envtools.alternatives; fi;
+(cd /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools && find . -type f,l -printf "/%P\n" | sort > /mnt/build_wrt/tmp/uboot-envtools.list && mv /mnt/build_wrt/tmp/uboot-envtools.list /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/lib/apk/packages/uboot-envtools.list)
+# Move conffiles to IDIR and build conffiles_static with csums
+if [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/apk-aarch64_cortex-a53/uboot-envtools/conffiles ]; then mv -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/apk-aarch64_cortex-a53/uboot-envtools/conffiles /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/lib/apk/packages/uboot-envtools.conffiles; for file in $(cat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/lib/apk/packages/uboot-envtools.conffiles); do [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/$file ] || continue; csum=$(/mnt/build_wrt/staging_dir/host/bin/mkhash sha256 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/$file); echo $file $csum >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/lib/apk/packages/uboot-envtools.conffiles_static; done; fi
+# Some package (base-files) manually append stuff to conffiles
+# Append stuff from it and delete the CONTROL directory since everything else should be migrated
+if [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/CONTROL/conffiles ]; then echo $(IDIR_uboot-envtools)/CONTROL/conffiles >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/lib/apk/packages/uboot-envtools.conffiles; for file in $(cat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/CONTROL/conffiles); do [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/$file ] || continue; csum=$(/mnt/build_wrt/staging_dir/host/bin/mkhash sha256 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/$file); echo $file $csum >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/lib/apk/packages/uboot-envtools.conffiles_static; done; rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/CONTROL/conffiles; fi
+if [ -z "$(ls -A /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/CONTROL 2>/dev/null)" ]; then rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/CONTROL; else echo "CONTROL directory /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools/CONTROL is not empty! This is not right and should be checked!" >&2; exit 1; fi
+SOURCE_DATE_EPOCH=0 /mnt/build_wrt/staging_dir/host/bin/fakeroot /mnt/build_wrt/staging_dir/host/bin/apk mkpkg --info "name:uboot-envtools" --info "version:2026.07-r1" --info "tags:openwrt:section=utils" --info "description:This package includes tools to read and modify U-Boot bootloader environment." --info "arch:aarch64_cortex-a53" --info "license:GPL-2.0 GPL-2.0+" --info "origin:feeds/base/boot/uboot-tools" --info "url:https://docs.u-boot.org/en/latest/" --info "maintainer:" --info "provides:uboot-envtools-any"  --script "post-install:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/apk-aarch64_cortex-a53/uboot-envtools/post-install" --script "post-upgrade:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/apk-aarch64_cortex-a53/uboot-envtools/post-upgrade" --script "pre-deinstall:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/apk-aarch64_cortex-a53/uboot-envtools/pre-deinstall" --info "depends:libc" --files "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/ipkg-aarch64_cortex-a53/uboot-envtools" --sign /mnt/build_wrt/private-key.pem --output "/mnt/build_wrt/bin/targets/qualcommax/ipq60xx/packages/uboot-envtools-2026.07-r1.apk"
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/.pkgdir/uboot-envtools.installed /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/.pkgdir/uboot-envtools
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/.pkgdir/uboot-envtools
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/.pkgdir/uboot-envtools/usr/sbin
+install -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/tools/env/fw_printenv /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/.pkgdir/uboot-envtools/usr/sbin
+ln -sf fw_printenv /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/.pkgdir/uboot-envtools/usr/sbin/fw_setenv
+install -m0755 ./uboot-envtools/files/fw_printsys /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/.pkgdir/uboot-envtools/usr/sbin
+install -m0755 ./uboot-envtools/files/fw_setsys /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/.pkgdir/uboot-envtools/usr/sbin
+install -m0755 ./uboot-envtools/files/fw_loadenv /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/.pkgdir/uboot-envtools/usr/sbin
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/.pkgdir/uboot-envtools/etc/board.d
+install -m0644 ./uboot-envtools/files/fw_defaults /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/.pkgdir/uboot-envtools/etc/board.d/05_fw_defaults
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/.pkgdir/uboot-envtools/lib
+install -m0644 ./uboot-envtools/files/uboot-envtools.sh /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/.pkgdir/uboot-envtools/lib
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/.pkgdir/uboot-envtools/etc/uci-defaults
+install -m0644 ./uboot-envtools/files/qualcommax_ipq60xx /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/.pkgdir/uboot-envtools/etc/uci-defaults/30_uboot-envtools
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/.pkgdir/uboot-envtools.installed
+mkdir -p /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp
+SHELL= flock /mnt/build_wrt/tmp/.root-copy.flock -c 'cp -fpR /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/u-boot-2026.07/.pkgdir/uboot-envtools/. /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/'
+touch /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp/.uboot-envtools_installed
+echo "uboot-envtools" >> /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/pkginfo/uboot-tools.default.install
+make[3]: Leaving directory '/mnt/build_wrt/package/boot/uboot-tools'
+time: package/boot/uboot-tools/compile#10.21#3.41#11.97
+make[3]: Entering directory '/mnt/build_wrt/feeds/packages/lang/golang/golang-bootstrap'
+make[3]: Leaving directory '/mnt/build_wrt/feeds/packages/lang/golang/golang-bootstrap'
+time: package/feeds/packages/golang-bootstrap/host-compile#0.38#0.74#0.85
+make[3]: Entering directory '/mnt/build_wrt/feeds/packages/lang/golang/golang1.26'
+make[3]: Leaving directory '/mnt/build_wrt/feeds/packages/lang/golang/golang1.26'
+time: package/feeds/packages/golang1.26/host-compile#0.29#0.32#0.51
+make[3]: Entering directory '/mnt/build_wrt/feeds/packages/lang/golang/golang'
+make[3]: Leaving directory '/mnt/build_wrt/feeds/packages/lang/golang/golang'
+time: package/feeds/packages/golang/host-compile#0.08#0.06#0.13
+make[3]: Entering directory '/mnt/build_wrt/package/kernel/bpf-headers'
+make[3]: Leaving directory '/mnt/build_wrt/package/kernel/bpf-headers'
+time: package/kernel/bpf-headers/compile#0.99#1.13#1.71
+make[3]: Entering directory '/mnt/build_wrt/package/system/ca-certificates'
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/.built
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/.built_check
+CFLAGS="-Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601=ca-certificates-20260601 -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs  -I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/include -I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/include -I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/include/fortify " CXXFLAGS="-Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601=ca-certificates-20260601 -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs  -I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/include -I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/include -I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/include/fortify " LDFLAGS="-L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/lib -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/lib -fuse-ld=bfd -zmax-page-size=4096 -znow -zrelro -zpack-relative-relocs " make -j1 -C /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/. AR="aarch64-openwrt-linux-musl-gcc-ar" AS="ccache aarch64-openwrt-linux-musl-gcc -c -Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601=ca-certificates-20260601 -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs" LD="aarch64-openwrt-linux-musl-ld.bfd" NM="aarch64-openwrt-linux-musl-gcc-nm" CC="ccache aarch64-openwrt-linux-musl-gcc" GCC="ccache aarch64-openwrt-linux-musl-gcc" CXX="ccache aarch64-openwrt-linux-musl-g++" RANLIB="aarch64-openwrt-linux-musl-gcc-ranlib" STRIP=aarch64-openwrt-linux-musl-strip OBJCOPY=aarch64-openwrt-linux-musl-objcopy OBJDUMP=aarch64-openwrt-linux-musl-objdump SIZE=aarch64-openwrt-linux-musl-size CROSS="aarch64-openwrt-linux-musl-" ARCH="aarch64" ;
+make[4]: Entering directory '/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601'
+for dir in mozilla; do \
+  make -C $dir all; \
+done
+make[5]: Entering directory '/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/mozilla'
+python3 certdata2pem.py
+Ignoring certificate "GlobalSign Root CA".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "Entrust.net Premium 2048 Secure Server CA".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "Certum Root CA".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "Comodo AAA Services root".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "QuoVadis Root CA 2".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "QuoVadis Root CA 3".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "Go Daddy Class 2 CA".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_MUST_VERIFY_TRUST
+Ignoring certificate "Starfield Class 2 CA".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_MUST_VERIFY_TRUST
+Ignoring certificate "DigiCert Assured ID Root CA".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "DigiCert Global Root CA".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "DigiCert High Assurance EV Root CA".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "SwissSign Gold CA - G2".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "COMODO Certification Authority".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "OISTE WISeKey Global Root GA CA".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "Certigna".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "Staat der Nederlanden Root CA - G3".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "Entrust Root Certification Authority - G2".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "Entrust Root Certification Authority - EC1".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "D-TRUST Root CA 3 2013".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "Entrust Root Certification Authority - G4".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "GlobalSign Secure Mail Root R45".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "GlobalSign Secure Mail Root E45".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "HARICA Client RSA Root CA 2021".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "HARICA Client ECC Root CA 2021".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "GTS Root R2".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "DigiCert SMIME ECC P384 Root G5".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "DigiCert SMIME RSA4096 Root G5".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "DIGITALSIGN GLOBAL ROOT RSA CA".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "DIGITALSIGN GLOBAL ROOT ECDSA CA".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "LAWtrust Root CA2 (4096)".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "Sectigo Public Email Protection Root E46".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "Sectigo Public Email Protection Root R46".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "SSL.com Client ECC Root CA 2022".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "SSL.com Client RSA Root CA 2022".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "Atos TrustedRoot Root CA ECC G2 2020".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "Atos TrustedRoot Root CA RSA G2 2020".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "D-Trust SBR Root CA 1 2022".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "D-Trust SBR Root CA 2 2022".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "Telekom Security SMIME ECC Root 2021".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "Telekom Security SMIME RSA Root 2023".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "TWCA Global Root CA G2".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "TrustAsia SMIME ECC Root CA".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "TrustAsia SMIME RSA Root CA".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "SwissSign RSA SMIME Root CA 2022 - 1".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "OISTE Client Root ECC G1".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Ignoring certificate "OISTE Client Root RSA G1".  SAUTH=CKT_NSS_MUST_VERIFY_TRUST, EPROT=CKT_NSS_TRUSTED_DELEGATOR
+Found duplicate certificate name b'Entrust_Root_Certification_Authority', renaming.
+Found duplicate certificate name b'COMODO_ECC_Certification_Authority', renaming.
+Found duplicate certificate name b'ePKI_Root_Certification_Authority', renaming.
+Found duplicate certificate name b'NetLock_Arany_=Class_Gold=_F\xc5\x91tan\xc3\xbas\xc3\xadtv\xc3\xa1ny', renaming.
+Found duplicate certificate name b'Microsec_e-Szigno_Root_CA_2009', renaming.
+Found duplicate certificate name b'GlobalSign_Root_CA_-_R3', renaming.
+Found duplicate certificate name b'Izenpe.com', renaming.
+Found duplicate certificate name b'Go_Daddy_Root_Certificate_Authority_-_G2', renaming.
+Found duplicate certificate name b'Starfield_Root_Certificate_Authority_-_G2', renaming.
+Found duplicate certificate name b'Starfield_Services_Root_Certificate_Authority_-_G2', renaming.
+Found duplicate certificate name b'Certum_Trusted_Network_CA', renaming.
+Found duplicate certificate name b'TWCA_Root_Certification_Authority', renaming.
+Found duplicate certificate name b'Security_Communication_RootCA2', renaming.
+Found duplicate certificate name b'Actalis_Authentication_Root_CA', renaming.
+Found duplicate certificate name b'Buypass_Class_2_Root_CA', renaming.
+Found duplicate certificate name b'Buypass_Class_3_Root_CA', renaming.
+Found duplicate certificate name b'T-TeleSec_GlobalRoot_Class_3', renaming.
+Found duplicate certificate name b'D-TRUST_Root_Class_3_CA_2_2009', renaming.
+Found duplicate certificate name b'D-TRUST_Root_Class_3_CA_2_EV_2009', renaming.
+Found duplicate certificate name b'CA_Disig_Root_R2', renaming.
+Found duplicate certificate name b'ACCVRAIZ1', renaming.
+Found duplicate certificate name b'TWCA_Global_Root_CA', renaming.
+Found duplicate certificate name b'T-TeleSec_GlobalRoot_Class_2', renaming.
+Found duplicate certificate name b'Atos_TrustedRoot_2011', renaming.
+Found duplicate certificate name b'QuoVadis_Root_CA_1_G3', renaming.
+Found duplicate certificate name b'QuoVadis_Root_CA_2_G3', renaming.
+Found duplicate certificate name b'QuoVadis_Root_CA_3_G3', renaming.
+Found duplicate certificate name b'DigiCert_Assured_ID_Root_G2', renaming.
+Found duplicate certificate name b'DigiCert_Assured_ID_Root_G3', renaming.
+Found duplicate certificate name b'DigiCert_Global_Root_G2', renaming.
+Found duplicate certificate name b'DigiCert_Global_Root_G3', renaming.
+Found duplicate certificate name b'DigiCert_Trusted_Root_G4', renaming.
+Found duplicate certificate name b'COMODO_RSA_Certification_Authority', renaming.
+Found duplicate certificate name b'USERTrust_RSA_Certification_Authority', renaming.
+Found duplicate certificate name b'USERTrust_ECC_Certification_Authority', renaming.
+Found duplicate certificate name b'GlobalSign_ECC_Root_CA_-_R5', renaming.
+Found duplicate certificate name b'IdenTrust_Commercial_Root_CA_1', renaming.
+Found duplicate certificate name b'IdenTrust_Public_Sector_Root_CA_1', renaming.
+Found duplicate certificate name b'CFCA_EV_ROOT', renaming.
+Found duplicate certificate name b'OISTE_WISeKey_Global_Root_GB_CA', renaming.
+Found duplicate certificate name b'SZAFIR_ROOT_CA2', renaming.
+Found duplicate certificate name b'Certum_Trusted_Network_CA_2', renaming.
+Found duplicate certificate name b'Hellenic_Academic_and_Research_Institutions_RootCA_2015', renaming.
+Found duplicate certificate name b'Hellenic_Academic_and_Research_Institutions_ECC_RootCA_2015', renaming.
+Found duplicate certificate name b'ISRG_Root_X1', renaming.
+Found duplicate certificate name b'AC_RAIZ_FNMT-RCM', renaming.
+Found duplicate certificate name b'Amazon_Root_CA_1', renaming.
+Found duplicate certificate name b'Amazon_Root_CA_2', renaming.
+Found duplicate certificate name b'Amazon_Root_CA_3', renaming.
+Found duplicate certificate name b'Amazon_Root_CA_4', renaming.
+Found duplicate certificate name b'TUBITAK_Kamu_SM_SSL_Kok_Sertifikasi_-_Surum_1', renaming.
+Found duplicate certificate name b'GDCA_TrustAUTH_R5_ROOT', renaming.
+Found duplicate certificate name b'SSL.com_Root_Certification_Authority_RSA', renaming.
+Found duplicate certificate name b'SSL.com_Root_Certification_Authority_ECC', renaming.
+Found duplicate certificate name b'SSL.com_EV_Root_Certification_Authority_RSA_R2', renaming.
+Found duplicate certificate name b'SSL.com_EV_Root_Certification_Authority_ECC', renaming.
+Found duplicate certificate name b'GlobalSign_Root_CA_-_R6', renaming.
+Found duplicate certificate name b'OISTE_WISeKey_Global_Root_GC_CA', renaming.
+Found duplicate certificate name b'UCA_Global_G2_Root', renaming.
+Found duplicate certificate name b'UCA_Extended_Validation_Root', renaming.
+Found duplicate certificate name b'Certigna_Root_CA', renaming.
+Found duplicate certificate name b'emSign_Root_CA_-_G1', renaming.
+Found duplicate certificate name b'emSign_ECC_Root_CA_-_G3', renaming.
+Found duplicate certificate name b'emSign_Root_CA_-_C1', renaming.
+Found duplicate certificate name b'emSign_ECC_Root_CA_-_C3', renaming.
+Found duplicate certificate name b'Hongkong_Post_Root_CA_3', renaming.
+Found duplicate certificate name b'Microsoft_ECC_Root_Certificate_Authority_2017', renaming.
+Found duplicate certificate name b'Microsoft_RSA_Root_Certificate_Authority_2017', renaming.
+Found duplicate certificate name b'e-Szigno_Root_CA_2017', renaming.
+Found duplicate certificate name b'certSIGN_Root_CA_G2', renaming.
+Found duplicate certificate name b'NAVER_Global_Root_Certification_Authority', renaming.
+Found duplicate certificate name b'AC_RAIZ_FNMT-RCM_SERVIDORES_SEGUROS', renaming.
+Found duplicate certificate name b'GlobalSign_Root_R46', renaming.
+Found duplicate certificate name b'GlobalSign_Root_E46', renaming.
+Found duplicate certificate name b'ANF_Secure_Server_Root_CA', renaming.
+Found duplicate certificate name b'Certum_EC-384_CA', renaming.
+Found duplicate certificate name b'Certum_Trusted_Root_CA', renaming.
+Found duplicate certificate name b'TunTrust_Root_CA', renaming.
+Found duplicate certificate name b'HARICA_TLS_RSA_Root_CA_2021', renaming.
+Found duplicate certificate name b'HARICA_TLS_ECC_Root_CA_2021', renaming.
+Found duplicate certificate name b'Autoridad_de_Certificacion_Firmaprofesional_CIF_A62634068', renaming.
+Found duplicate certificate name b'vTrus_ECC_Root_CA', renaming.
+Found duplicate certificate name b'vTrus_Root_CA', renaming.
+Found duplicate certificate name b'ISRG_Root_X2', renaming.
+Found duplicate certificate name b'HiPKI_Root_CA_-_G1', renaming.
+Found duplicate certificate name b'GlobalSign_ECC_Root_CA_-_R4', renaming.
+Found duplicate certificate name b'GTS_Root_R1', renaming.
+Found duplicate certificate name b'GTS_Root_R3', renaming.
+Found duplicate certificate name b'GTS_Root_R4', renaming.
+Found duplicate certificate name b'Telia_Root_CA_v2', renaming.
+Found duplicate certificate name b'D-TRUST_BR_Root_CA_1_2020', renaming.
+Found duplicate certificate name b'D-TRUST_EV_Root_CA_1_2020', renaming.
+Found duplicate certificate name b'DigiCert_TLS_ECC_P384_Root_G5', renaming.
+Found duplicate certificate name b'DigiCert_TLS_RSA4096_Root_G5', renaming.
+Found duplicate certificate name b'Certainly_Root_R1', renaming.
+Found duplicate certificate name b'Certainly_Root_E1', renaming.
+Found duplicate certificate name b'Security_Communication_ECC_RootCA1', renaming.
+Found duplicate certificate name b'BJCA_Global_Root_CA1', renaming.
+Found duplicate certificate name b'BJCA_Global_Root_CA2', renaming.
+Found duplicate certificate name b'Sectigo_Public_Server_Authentication_Root_E46', renaming.
+Found duplicate certificate name b'Sectigo_Public_Server_Authentication_Root_R46', renaming.
+Found duplicate certificate name b'SSL.com_TLS_RSA_Root_CA_2022', renaming.
+Found duplicate certificate name b'SSL.com_TLS_ECC_Root_CA_2022', renaming.
+Found duplicate certificate name b'Atos_TrustedRoot_Root_CA_ECC_TLS_2021', renaming.
+Found duplicate certificate name b'Atos_TrustedRoot_Root_CA_RSA_TLS_2021', renaming.
+Found duplicate certificate name b'TrustAsia_Global_Root_CA_G3', renaming.
+Found duplicate certificate name b'TrustAsia_Global_Root_CA_G4', renaming.
+Found duplicate certificate name b'Telekom_Security_TLS_ECC_Root_2020', renaming.
+Found duplicate certificate name b'Telekom_Security_TLS_RSA_Root_2023', renaming.
+Found duplicate certificate name b'TWCA_CYBER_Root_CA', renaming.
+Found duplicate certificate name b'SecureSign_Root_CA12', renaming.
+Found duplicate certificate name b'SecureSign_Root_CA14', renaming.
+Found duplicate certificate name b'SecureSign_Root_CA15', renaming.
+Found duplicate certificate name b'D-TRUST_BR_Root_CA_2_2023', renaming.
+Found duplicate certificate name b'TrustAsia_TLS_ECC_Root_CA', renaming.
+Found duplicate certificate name b'TrustAsia_TLS_RSA_Root_CA', renaming.
+Found duplicate certificate name b'D-TRUST_EV_Root_CA_2_2023', renaming.
+Found duplicate certificate name b'SwissSign_RSA_TLS_Root_CA_2022_-_1', renaming.
+Found duplicate certificate name b'OISTE_Server_Root_ECC_G1', renaming.
+Found duplicate certificate name b'OISTE_Server_Root_RSA_G1', renaming.
+Found duplicate certificate name b'e-Szigno_TLS_Root_CA_2023', renaming.
+make[5]: Leaving directory '/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/mozilla'
+make[4]: Leaving directory '/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601'
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-install/usr/sbin /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-install/usr/share/ca-certificates
+CFLAGS="-Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601=ca-certificates-20260601 -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs  -I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/include -I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/include -I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/include/fortify " CXXFLAGS="-Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601=ca-certificates-20260601 -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs  -I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/include -I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/include -I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/include/fortify " LDFLAGS="-L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/lib -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/lib -fuse-ld=bfd -zmax-page-size=4096 -znow -zrelro -zpack-relative-relocs " make -C /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/. AR="aarch64-openwrt-linux-musl-gcc-ar" AS="ccache aarch64-openwrt-linux-musl-gcc -c -Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601=ca-certificates-20260601 -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs" LD="aarch64-openwrt-linux-musl-ld.bfd" NM="aarch64-openwrt-linux-musl-gcc-nm" CC="ccache aarch64-openwrt-linux-musl-gcc" GCC="ccache aarch64-openwrt-linux-musl-gcc" CXX="ccache aarch64-openwrt-linux-musl-g++" RANLIB="aarch64-openwrt-linux-musl-gcc-ranlib" STRIP=aarch64-openwrt-linux-musl-strip OBJCOPY=aarch64-openwrt-linux-musl-objcopy OBJDUMP=aarch64-openwrt-linux-musl-objdump SIZE=aarch64-openwrt-linux-musl-size CROSS="aarch64-openwrt-linux-musl-" ARCH="aarch64" DESTDIR="/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-install"   install;
+make[4]: Entering directory '/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601'
+for dir in mozilla; do \
+  mkdir /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-install//usr/share/ca-certificates/$dir; \
+  make -C $dir install CERTSDIR=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-install//usr/share/ca-certificates/$dir; \
+done
+mkdir: cannot create directory '/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-install//usr/share/ca-certificates/mozilla': File exists
+make[5]: Entering directory '/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/mozilla'
+install -d /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-install//usr/share/ca-certificates/mozilla
+for p in *.crt; do \
+ install -m 644 $p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-install//usr/share/ca-certificates/mozilla/$p ; \
+done
+make[5]: Leaving directory '/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/mozilla'
+for dir in sbin; do \
+  make -C $dir install CERTSDIR=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-install//usr/share/ca-certificates/$dir; \
+done
+make[5]: Entering directory '/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/sbin'
+install -d /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-install/usr/sbin
+install -m755 update-ca-certificates /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-install/usr/sbin/
+make[5]: Leaving directory '/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/sbin'
+make[4]: Leaving directory '/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601'
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/.built
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-bundle
+/mnt/build_wrt/scripts/ipkg-remove ca-bundle /mnt/build_wrt/bin/packages/aarch64_cortex-a53/base/ca-bundle-20260601-r1.apk
+removed '/mnt/build_wrt/bin/packages/aarch64_cortex-a53/base/ca-bundle-20260601-r1.apk'
+mkdir -p /mnt/build_wrt/bin/targets/qualcommax/ipq60xx/packages /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-bundle /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/pkginfo
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-bundle/etc/ssl/certs
+cat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-install/usr/share/ca-certificates/*/*.crt >/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-bundle/etc/ssl/certs/ca-certificates.crt
+ln -sf /etc/ssl/certs/ca-certificates.crt /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-bundle/etc/ssl/cert.pem
+find /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-bundle -name '.svn' -o -name '.#*' -o -name '*~'| xargs -r rm -rf
+export CROSS="aarch64-openwrt-linux-musl-"  NO_RENAME=1 ; NM="aarch64-openwrt-linux-musl-nm" STRIP="/mnt/build_wrt/staging_dir/host/bin/sstrip -z" STRIP_KMOD="/mnt/build_wrt/scripts/strip-kmod.sh" PATCHELF="/mnt/build_wrt/staging_dir/host/bin/patchelf" /mnt/build_wrt/scripts/rstrip.sh /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-bundle
+install -d -m0755 /mnt/build_wrt/bin/packages/aarch64_cortex-a53/base
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-bundle/
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-bundle/lib/apk/packages/
+(cd /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-bundle; )
+( echo "#!/bin/sh"; echo "[ \"\${IPKG_NO_SCRIPT}\" = \"1\" ] && exit 0"; echo "[ -s "\${IPKG_INSTROOT}/lib/functions.sh" ] || exit 0"; echo ". \${IPKG_INSTROOT}/lib/functions.sh"; echo 'export root="${IPKG_INSTROOT}"'; echo 'export pkgname="ca-bundle"'; echo "add_group_and_user"; echo "default_postinst"; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-bundle/postinst-pkg ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-bundle/postinst-pkg"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-bundle/post-install;
+( echo "#!/bin/sh"; echo 'export PKG_UPGRADE=1'; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-bundle/post-install ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-bundle/post-install"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-bundle/post-upgrade;
+( echo "#!/bin/sh"; echo "[ -s "\${IPKG_INSTROOT}/lib/functions.sh" ] || exit 0"; echo ". \${IPKG_INSTROOT}/lib/functions.sh"; echo 'export root="${IPKG_INSTROOT}"'; echo 'export pkgname="ca-bundle"'; echo "default_prerm"; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-bundle/prerm-pkg ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-bundle/prerm-pkg"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-bundle/pre-deinstall;
+[ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-bundle/postrm ] || sed -zi 's/^\s*#!/#!/' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-bundle/postrm";
+if [ -n "" ]; then echo  > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-bundle/lib/apk/packages/ca-bundle.rusers; fi;
+if [ -n "" ]; then echo  > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-bundle/lib/apk/packages/ca-bundle.alternatives; fi;
+(cd /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-bundle && find . -type f,l -printf "/%P\n" | sort > /mnt/build_wrt/tmp/ca-bundle.list && mv /mnt/build_wrt/tmp/ca-bundle.list /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-bundle/lib/apk/packages/ca-bundle.list)
+# Move conffiles to IDIR and build conffiles_static with csums
+if [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-bundle/conffiles ]; then mv -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-bundle/conffiles /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-bundle/lib/apk/packages/ca-bundle.conffiles; for file in $(cat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-bundle/lib/apk/packages/ca-bundle.conffiles); do [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-bundle/$file ] || continue; csum=$(/mnt/build_wrt/staging_dir/host/bin/mkhash sha256 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-bundle/$file); echo $file $csum >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-bundle/lib/apk/packages/ca-bundle.conffiles_static; done; fi
+# Some package (base-files) manually append stuff to conffiles
+# Append stuff from it and delete the CONTROL directory since everything else should be migrated
+if [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-bundle/CONTROL/conffiles ]; then echo $(IDIR_ca-bundle)/CONTROL/conffiles >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-bundle/lib/apk/packages/ca-bundle.conffiles; for file in $(cat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-bundle/CONTROL/conffiles); do [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-bundle/$file ] || continue; csum=$(/mnt/build_wrt/staging_dir/host/bin/mkhash sha256 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-bundle/$file); echo $file $csum >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-bundle/lib/apk/packages/ca-bundle.conffiles_static; done; rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-bundle/CONTROL/conffiles; fi
+if [ -z "$(ls -A /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-bundle/CONTROL 2>/dev/null)" ]; then rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-bundle/CONTROL; else echo "CONTROL directory /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-bundle/CONTROL is not empty! This is not right and should be checked!" >&2; exit 1; fi
+SOURCE_DATE_EPOCH=0 /mnt/build_wrt/staging_dir/host/bin/fakeroot /mnt/build_wrt/staging_dir/host/bin/apk mkpkg --info "name:ca-bundle" --info "version:20260601-r1" --info "tags:openwrt:section=base" --info "description:System CA certificates as a bundle" --info "arch:noarch" --info "license:GPL-2.0-or-later MPL-2.0" --info "origin:feeds/base/system/ca-certificates" --info "url:" --info "maintainer:" --info "provides:ca-bundle-any ca-certs ca-certificates-any"  --script "post-install:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-bundle/post-install" --script "post-upgrade:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-bundle/post-upgrade" --script "pre-deinstall:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-bundle/pre-deinstall" --info "depends:libc" --files "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-bundle" --sign /mnt/build_wrt/private-key.pem --output "/mnt/build_wrt/bin/packages/aarch64_cortex-a53/base/ca-bundle-20260601-r1.apk"
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-certificates
+/mnt/build_wrt/scripts/ipkg-remove ca-certificates /mnt/build_wrt/bin/packages/aarch64_cortex-a53/base/ca-certificates-20260601-r1.apk
+removed '/mnt/build_wrt/bin/packages/aarch64_cortex-a53/base/ca-certificates-20260601-r1.apk'
+mkdir -p /mnt/build_wrt/bin/targets/qualcommax/ipq60xx/packages /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-certificates /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/pkginfo
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-certificates/etc/ssl/certs
+install -m0644 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-install/usr/share/ca-certificates/*/*.crt /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-certificates/etc/ssl/certs/
+for CERTFILE in `ls -1 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-certificates/etc/ssl/certs`; do HASH=`openssl x509 -hash -noout -in /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-certificates/etc/ssl/certs/$CERTFILE` ; SUFFIX=0 ; while [ -h "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-certificates/etc/ssl/certs/$HASH.$SUFFIX" ]; do let "SUFFIX += 1" ; done ; ln -sf "$CERTFILE" "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-certificates/etc/ssl/certs/$HASH.$SUFFIX" ; done
+find /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-certificates -name '.svn' -o -name '.#*' -o -name '*~'| xargs -r rm -rf
+export CROSS="aarch64-openwrt-linux-musl-"  NO_RENAME=1 ; NM="aarch64-openwrt-linux-musl-nm" STRIP="/mnt/build_wrt/staging_dir/host/bin/sstrip -z" STRIP_KMOD="/mnt/build_wrt/scripts/strip-kmod.sh" PATCHELF="/mnt/build_wrt/staging_dir/host/bin/patchelf" /mnt/build_wrt/scripts/rstrip.sh /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-certificates
+install -d -m0755 /mnt/build_wrt/bin/packages/aarch64_cortex-a53/base
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-certificates/
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-certificates/lib/apk/packages/
+(cd /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-certificates; )
+( echo "#!/bin/sh"; echo "[ \"\${IPKG_NO_SCRIPT}\" = \"1\" ] && exit 0"; echo "[ -s "\${IPKG_INSTROOT}/lib/functions.sh" ] || exit 0"; echo ". \${IPKG_INSTROOT}/lib/functions.sh"; echo 'export root="${IPKG_INSTROOT}"'; echo 'export pkgname="ca-certificates"'; echo "add_group_and_user"; echo "default_postinst"; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-certificates/postinst-pkg ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-certificates/postinst-pkg"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-certificates/post-install;
+( echo "#!/bin/sh"; echo 'export PKG_UPGRADE=1'; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-certificates/post-install ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-certificates/post-install"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-certificates/post-upgrade;
+( echo "#!/bin/sh"; echo "[ -s "\${IPKG_INSTROOT}/lib/functions.sh" ] || exit 0"; echo ". \${IPKG_INSTROOT}/lib/functions.sh"; echo 'export root="${IPKG_INSTROOT}"'; echo 'export pkgname="ca-certificates"'; echo "default_prerm"; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-certificates/prerm-pkg ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-certificates/prerm-pkg"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-certificates/pre-deinstall;
+[ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-certificates/postrm ] || sed -zi 's/^\s*#!/#!/' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-certificates/postrm";
+if [ -n "" ]; then echo  > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-certificates/lib/apk/packages/ca-certificates.rusers; fi;
+if [ -n "" ]; then echo  > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-certificates/lib/apk/packages/ca-certificates.alternatives; fi;
+(cd /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-certificates && find . -type f,l -printf "/%P\n" | sort > /mnt/build_wrt/tmp/ca-certificates.list && mv /mnt/build_wrt/tmp/ca-certificates.list /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-certificates/lib/apk/packages/ca-certificates.list)
+# Move conffiles to IDIR and build conffiles_static with csums
+if [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-certificates/conffiles ]; then mv -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-certificates/conffiles /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-certificates/lib/apk/packages/ca-certificates.conffiles; for file in $(cat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-certificates/lib/apk/packages/ca-certificates.conffiles); do [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-certificates/$file ] || continue; csum=$(/mnt/build_wrt/staging_dir/host/bin/mkhash sha256 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-certificates/$file); echo $file $csum >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-certificates/lib/apk/packages/ca-certificates.conffiles_static; done; fi
+# Some package (base-files) manually append stuff to conffiles
+# Append stuff from it and delete the CONTROL directory since everything else should be migrated
+if [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-certificates/CONTROL/conffiles ]; then echo $(IDIR_ca-certificates)/CONTROL/conffiles >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-certificates/lib/apk/packages/ca-certificates.conffiles; for file in $(cat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-certificates/CONTROL/conffiles); do [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-certificates/$file ] || continue; csum=$(/mnt/build_wrt/staging_dir/host/bin/mkhash sha256 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-certificates/$file); echo $file $csum >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-certificates/lib/apk/packages/ca-certificates.conffiles_static; done; rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-certificates/CONTROL/conffiles; fi
+if [ -z "$(ls -A /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-certificates/CONTROL 2>/dev/null)" ]; then rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-certificates/CONTROL; else echo "CONTROL directory /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-certificates/CONTROL is not empty! This is not right and should be checked!" >&2; exit 1; fi
+SOURCE_DATE_EPOCH=0 /mnt/build_wrt/staging_dir/host/bin/fakeroot /mnt/build_wrt/staging_dir/host/bin/apk mkpkg --info "name:ca-certificates" --info "version:20260601-r1" --info "tags:openwrt:section=base" --info "description:System CA certificates" --info "arch:noarch" --info "license:GPL-2.0-or-later MPL-2.0" --info "origin:feeds/base/system/ca-certificates" --info "url:" --info "maintainer:" --info "provides:ca-certificates-any ca-certs"  --script "post-install:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-certificates/post-install" --script "post-upgrade:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-certificates/post-upgrade" --script "pre-deinstall:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/apk-all/ca-certificates/pre-deinstall" --info "depends:libc" --files "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-all/ca-certificates" --sign /mnt/build_wrt/private-key.pem --output "/mnt/build_wrt/bin/packages/aarch64_cortex-a53/base/ca-certificates-20260601-r1.apk"
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/.pkgdir/ca-bundle.installed /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/.pkgdir/ca-bundle
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/.pkgdir/ca-bundle
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/.pkgdir/ca-bundle/etc/ssl/certs
+cat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-install/usr/share/ca-certificates/*/*.crt >/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/.pkgdir/ca-bundle/etc/ssl/certs/ca-certificates.crt
+ln -sf /etc/ssl/certs/ca-certificates.crt /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/.pkgdir/ca-bundle/etc/ssl/cert.pem
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/.pkgdir/ca-bundle.installed
+mkdir -p /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp
+SHELL= flock /mnt/build_wrt/tmp/.root-copy.flock -c 'cp -fpR /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/.pkgdir/ca-bundle/. /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/'
+touch /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp/.ca-bundle_installed
+echo "ca-bundle" >> /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/pkginfo/ca-certificates.default.install
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/.pkgdir/ca-certificates.installed /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/.pkgdir/ca-certificates
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/.pkgdir/ca-certificates
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/.pkgdir/ca-certificates/etc/ssl/certs
+install -m0644 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/ipkg-install/usr/share/ca-certificates/*/*.crt /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/.pkgdir/ca-certificates/etc/ssl/certs/
+for CERTFILE in `ls -1 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/.pkgdir/ca-certificates/etc/ssl/certs`; do HASH=`openssl x509 -hash -noout -in /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/.pkgdir/ca-certificates/etc/ssl/certs/$CERTFILE` ; SUFFIX=0 ; while [ -h "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/.pkgdir/ca-certificates/etc/ssl/certs/$HASH.$SUFFIX" ]; do let "SUFFIX += 1" ; done ; ln -sf "$CERTFILE" "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/.pkgdir/ca-certificates/etc/ssl/certs/$HASH.$SUFFIX" ; done
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/.pkgdir/ca-certificates.installed
+mkdir -p /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp
+SHELL= flock /mnt/build_wrt/tmp/.root-copy.flock -c 'cp -fpR /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ca-certificates-20260601/.pkgdir/ca-certificates/. /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/'
+touch /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp/.ca-certificates_installed
+echo "ca-certificates" >> /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/pkginfo/ca-certificates.default.install
+make[3]: Leaving directory '/mnt/build_wrt/package/system/ca-certificates'
+time: package/system/ca-certificates/compile#2.96#2.04#4.95
+make[3]: Entering directory '/mnt/build_wrt/package/v2ray-geodata'
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/.built
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/.built_check
+( pushd /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata ; curl -L https://github.com/Loyalsoldier/geoip/releases/latest/download/geoip.dat -o geoip.dat --progress-bar ; curl -L https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat -o geosite.dat --progress-bar ; [ "" != "" ] && exit 1 ; [ "" != "" ] && exit 1 ; popd ; )
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata /mnt/build_wrt/package/v2ray-geodata
+#=#=#                                                                          ##O#-#                                                                                                                                                    0.7%####################                                                      28.7%######################################################################## 100.0%
+#=#=#                                                                          #                                                                          2.2%##########################                                                36.6%######################################################################## 100.0%
+/mnt/build_wrt/package/v2ray-geodata
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/.built
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geoip
+/mnt/build_wrt/scripts/ipkg-remove v2ray-geoip /mnt/build_wrt/bin/packages/aarch64_cortex-a53/base/v2ray-geoip-2026.08.04-r1.apk
+removed '/mnt/build_wrt/bin/packages/aarch64_cortex-a53/base/v2ray-geoip-2026.08.04-r1.apk'
+mkdir -p /mnt/build_wrt/bin/targets/qualcommax/ipq60xx/packages /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geoip /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/pkginfo
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geoip/usr/share/v2ray
+install -m0644 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/geoip.dat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geoip/usr/share/v2ray/geoip.dat
+find /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geoip -name '.svn' -o -name '.#*' -o -name '*~'| xargs -r rm -rf
+export CROSS="aarch64-openwrt-linux-musl-"  NO_RENAME=1 ; NM="aarch64-openwrt-linux-musl-nm" STRIP="/mnt/build_wrt/staging_dir/host/bin/sstrip -z" STRIP_KMOD="/mnt/build_wrt/scripts/strip-kmod.sh" PATCHELF="/mnt/build_wrt/staging_dir/host/bin/patchelf" /mnt/build_wrt/scripts/rstrip.sh /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geoip
+install -d -m0755 /mnt/build_wrt/bin/packages/aarch64_cortex-a53/base
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geoip/
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geoip/lib/apk/packages/
+(cd /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geoip; )
+( echo "#!/bin/sh"; echo "[ \"\${IPKG_NO_SCRIPT}\" = \"1\" ] && exit 0"; echo "[ -s "\${IPKG_INSTROOT}/lib/functions.sh" ] || exit 0"; echo ". \${IPKG_INSTROOT}/lib/functions.sh"; echo 'export root="${IPKG_INSTROOT}"'; echo 'export pkgname="v2ray-geoip"'; echo "add_group_and_user"; echo "default_postinst"; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geoip/postinst-pkg ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geoip/postinst-pkg"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geoip/post-install;
+( echo "#!/bin/sh"; echo 'export PKG_UPGRADE=1'; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geoip/post-install ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geoip/post-install"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geoip/post-upgrade;
+( echo "#!/bin/sh"; echo "[ -s "\${IPKG_INSTROOT}/lib/functions.sh" ] || exit 0"; echo ". \${IPKG_INSTROOT}/lib/functions.sh"; echo 'export root="${IPKG_INSTROOT}"'; echo 'export pkgname="v2ray-geoip"'; echo "default_prerm"; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geoip/prerm-pkg ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geoip/prerm-pkg"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geoip/pre-deinstall;
+[ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geoip/postrm ] || sed -zi 's/^\s*#!/#!/' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geoip/postrm";
+if [ -n "" ]; then echo  > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geoip/lib/apk/packages/v2ray-geoip.rusers; fi;
+if [ -n "" ]; then echo  > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geoip/lib/apk/packages/v2ray-geoip.alternatives; fi;
+(cd /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geoip && find . -type f,l -printf "/%P\n" | sort > /mnt/build_wrt/tmp/v2ray-geoip.list && mv /mnt/build_wrt/tmp/v2ray-geoip.list /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geoip/lib/apk/packages/v2ray-geoip.list)
+# Move conffiles to IDIR and build conffiles_static with csums
+if [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geoip/conffiles ]; then mv -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geoip/conffiles /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geoip/lib/apk/packages/v2ray-geoip.conffiles; for file in $(cat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geoip/lib/apk/packages/v2ray-geoip.conffiles); do [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geoip/$file ] || continue; csum=$(/mnt/build_wrt/staging_dir/host/bin/mkhash sha256 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geoip/$file); echo $file $csum >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geoip/lib/apk/packages/v2ray-geoip.conffiles_static; done; fi
+# Some package (base-files) manually append stuff to conffiles
+# Append stuff from it and delete the CONTROL directory since everything else should be migrated
+if [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geoip/CONTROL/conffiles ]; then echo $(IDIR_v2ray-geoip)/CONTROL/conffiles >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geoip/lib/apk/packages/v2ray-geoip.conffiles; for file in $(cat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geoip/CONTROL/conffiles); do [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geoip/$file ] || continue; csum=$(/mnt/build_wrt/staging_dir/host/bin/mkhash sha256 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geoip/$file); echo $file $csum >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geoip/lib/apk/packages/v2ray-geoip.conffiles_static; done; rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geoip/CONTROL/conffiles; fi
+if [ -z "$(ls -A /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geoip/CONTROL 2>/dev/null)" ]; then rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geoip/CONTROL; else echo "CONTROL directory /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geoip/CONTROL is not empty! This is not right and should be checked!" >&2; exit 1; fi
+SOURCE_DATE_EPOCH=0 /mnt/build_wrt/staging_dir/host/bin/fakeroot /mnt/build_wrt/staging_dir/host/bin/apk mkpkg --info "name:v2ray-geoip" --info "version:2026.08.05-r1" --info "tags:openwrt:section=net" --info "description:GeoIP List for V2Ray" --info "arch:noarch" --info "license:CC-BY-SA-4.0" --info "origin:feeds/base/v2ray-geodata" --info "url:https://www.v2fly.org" --info "maintainer:sbwml <admin@cooluc.com>" --info "provides:v2ray-geoip-any"  --script "post-install:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geoip/post-install" --script "post-upgrade:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geoip/post-upgrade" --script "pre-deinstall:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geoip/pre-deinstall" --info "depends:libc" --files "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geoip" --sign /mnt/build_wrt/private-key.pem --output "/mnt/build_wrt/bin/packages/aarch64_cortex-a53/base/v2ray-geoip-2026.08.05-r1.apk"
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geosite
+/mnt/build_wrt/scripts/ipkg-remove v2ray-geosite /mnt/build_wrt/bin/packages/aarch64_cortex-a53/base/v2ray-geosite-2026.08.04-r1.apk
+removed '/mnt/build_wrt/bin/packages/aarch64_cortex-a53/base/v2ray-geosite-2026.08.04-r1.apk'
+mkdir -p /mnt/build_wrt/bin/targets/qualcommax/ipq60xx/packages /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geosite /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/pkginfo
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geosite/usr/share/v2ray
+install -m0644 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/geosite.dat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geosite/usr/share/v2ray/geosite.dat
+find /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geosite -name '.svn' -o -name '.#*' -o -name '*~'| xargs -r rm -rf
+export CROSS="aarch64-openwrt-linux-musl-"  NO_RENAME=1 ; NM="aarch64-openwrt-linux-musl-nm" STRIP="/mnt/build_wrt/staging_dir/host/bin/sstrip -z" STRIP_KMOD="/mnt/build_wrt/scripts/strip-kmod.sh" PATCHELF="/mnt/build_wrt/staging_dir/host/bin/patchelf" /mnt/build_wrt/scripts/rstrip.sh /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geosite
+install -d -m0755 /mnt/build_wrt/bin/packages/aarch64_cortex-a53/base
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geosite/
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geosite/lib/apk/packages/
+(cd /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geosite; )
+( echo "#!/bin/sh"; echo "[ \"\${IPKG_NO_SCRIPT}\" = \"1\" ] && exit 0"; echo "[ -s "\${IPKG_INSTROOT}/lib/functions.sh" ] || exit 0"; echo ". \${IPKG_INSTROOT}/lib/functions.sh"; echo 'export root="${IPKG_INSTROOT}"'; echo 'export pkgname="v2ray-geosite"'; echo "add_group_and_user"; echo "default_postinst"; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geosite/postinst-pkg ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geosite/postinst-pkg"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geosite/post-install;
+( echo "#!/bin/sh"; echo 'export PKG_UPGRADE=1'; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geosite/post-install ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geosite/post-install"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geosite/post-upgrade;
+( echo "#!/bin/sh"; echo "[ -s "\${IPKG_INSTROOT}/lib/functions.sh" ] || exit 0"; echo ". \${IPKG_INSTROOT}/lib/functions.sh"; echo 'export root="${IPKG_INSTROOT}"'; echo 'export pkgname="v2ray-geosite"'; echo "default_prerm"; [ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geosite/prerm-pkg ] || sed '/^\s*#!/d' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geosite/prerm-pkg"; ) > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geosite/pre-deinstall;
+[ ! -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geosite/postrm ] || sed -zi 's/^\s*#!/#!/' "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geosite/postrm";
+if [ -n "" ]; then echo  > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geosite/lib/apk/packages/v2ray-geosite.rusers; fi;
+if [ -n "" ]; then echo  > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geosite/lib/apk/packages/v2ray-geosite.alternatives; fi;
+(cd /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geosite && find . -type f,l -printf "/%P\n" | sort > /mnt/build_wrt/tmp/v2ray-geosite.list && mv /mnt/build_wrt/tmp/v2ray-geosite.list /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geosite/lib/apk/packages/v2ray-geosite.list)
+# Move conffiles to IDIR and build conffiles_static with csums
+if [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geosite/conffiles ]; then mv -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geosite/conffiles /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geosite/lib/apk/packages/v2ray-geosite.conffiles; for file in $(cat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geosite/lib/apk/packages/v2ray-geosite.conffiles); do [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geosite/$file ] || continue; csum=$(/mnt/build_wrt/staging_dir/host/bin/mkhash sha256 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geosite/$file); echo $file $csum >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geosite/lib/apk/packages/v2ray-geosite.conffiles_static; done; fi
+# Some package (base-files) manually append stuff to conffiles
+# Append stuff from it and delete the CONTROL directory since everything else should be migrated
+if [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geosite/CONTROL/conffiles ]; then echo $(IDIR_v2ray-geosite)/CONTROL/conffiles >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geosite/lib/apk/packages/v2ray-geosite.conffiles; for file in $(cat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geosite/CONTROL/conffiles); do [ -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geosite/$file ] || continue; csum=$(/mnt/build_wrt/staging_dir/host/bin/mkhash sha256 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geosite/$file); echo $file $csum >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geosite/lib/apk/packages/v2ray-geosite.conffiles_static; done; rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geosite/CONTROL/conffiles; fi
+if [ -z "$(ls -A /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geosite/CONTROL 2>/dev/null)" ]; then rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geosite/CONTROL; else echo "CONTROL directory /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geosite/CONTROL is not empty! This is not right and should be checked!" >&2; exit 1; fi
+SOURCE_DATE_EPOCH=0 /mnt/build_wrt/staging_dir/host/bin/fakeroot /mnt/build_wrt/staging_dir/host/bin/apk mkpkg --info "name:v2ray-geosite" --info "version:2026.08.05-r1" --info "tags:openwrt:section=net" --info "description:Geosite List for V2Ray" --info "arch:noarch" --info "license:GPL-3.0" --info "origin:feeds/base/v2ray-geodata" --info "url:https://www.v2fly.org" --info "maintainer:sbwml <admin@cooluc.com>" --info "provides:v2ray-geosite-any"  --script "post-install:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geosite/post-install" --script "post-upgrade:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geosite/post-upgrade" --script "pre-deinstall:/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/apk-all/v2ray-geosite/pre-deinstall" --info "depends:libc" --files "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/ipkg-all/v2ray-geosite" --sign /mnt/build_wrt/private-key.pem --output "/mnt/build_wrt/bin/packages/aarch64_cortex-a53/base/v2ray-geosite-2026.08.05-r1.apk"
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/.pkgdir/v2ray-geoip.installed /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/.pkgdir/v2ray-geoip
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/.pkgdir/v2ray-geoip
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/.pkgdir/v2ray-geoip/usr/share/v2ray
+install -m0644 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/geoip.dat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/.pkgdir/v2ray-geoip/usr/share/v2ray/geoip.dat
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/.pkgdir/v2ray-geoip.installed
+mkdir -p /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp
+SHELL= flock /mnt/build_wrt/tmp/.root-copy.flock -c 'cp -fpR /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/.pkgdir/v2ray-geoip/. /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/'
+touch /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp/.v2ray-geoip_installed
+echo "v2ray-geoip" >> /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/pkginfo/v2ray-geodata.default.install
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/.pkgdir/v2ray-geosite.installed /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/.pkgdir/v2ray-geosite
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/.pkgdir/v2ray-geosite
+install -d -m0755 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/.pkgdir/v2ray-geosite/usr/share/v2ray
+install -m0644 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/geosite.dat /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/.pkgdir/v2ray-geosite/usr/share/v2ray/geosite.dat
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/.pkgdir/v2ray-geosite.installed
+mkdir -p /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp
+SHELL= flock /mnt/build_wrt/tmp/.root-copy.flock -c 'cp -fpR /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/v2ray-geodata/.pkgdir/v2ray-geosite/. /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/'
+touch /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/root-qualcommax/stamp/.v2ray-geosite_installed
+echo "v2ray-geosite" >> /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/pkginfo/v2ray-geodata.default.install
+make[3]: Leaving directory '/mnt/build_wrt/package/v2ray-geodata'
+time: package/v2ray-geodata/compile#11.08#0.71#12.48
+make[3]: Entering directory '/mnt/build_wrt/package/dae'
+mkdir -p /mnt/build_wrt/dl
+SHELL= flock /mnt/build_wrt/tmp/.dae-2026.08.05.tar.gz.flock -c '  	/mnt/build_wrt/scripts/download.pl "/mnt/build_wrt/dl" "dae-2026.08.05.tar.gz" "x" "" || (  /mnt/build_wrt/scripts/dl_github_archive.py --dl-dir="/mnt/build_wrt/dl" --url="https://github.com/olicesx/dae.git" --version="PLACEHOLDER_DAE_VERSION" --subdir="dae-2026.08.05" --source="dae-2026.08.05.tar.gz" --hash="x" --submodules  || ( 	echo "Checking out files from the git repository..."; mkdir -p /mnt/build_wrt/tmp/dl && cd /mnt/build_wrt/tmp/dl && rm -rf dae-2026.08.05 && [ \! -d dae-2026.08.05 ] && git clone --filter=blob:none  https://github.com/olicesx/dae.git dae-2026.08.05 && (cd dae-2026.08.05 && git checkout PLACEHOLDER_DAE_VERSION) && export TAR_TIMESTAMP=`cd dae-2026.08.05 && git log -1 --no-show-signature --format='\''@%ct'\''` && echo "Generating formal git archive (apply .gitattributes rules)" && (cd dae-2026.08.05 && git config core.abbrev 8 && git archive --format=tar HEAD --output=../dae-2026.08.05.tar.git) &&  tar --numeric-owner --owner=0 --group=0 --ignore-failed-read -C dae-2026.08.05 -f dae-2026.08.05.tar.git -r .git .gitmodules 2>/dev/null  && rm -rf dae-2026.08.05 && mkdir dae-2026.08.05 && tar -C dae-2026.08.05 -xf dae-2026.08.05.tar.git && (cd dae-2026.08.05 && git submodule update --init --recursive --  && rm -rf .git .gitmodules) && echo "Packing checkout..." && 	tar --numeric-owner --owner=0 --group=0 --mode=a-s --sort=name ${TAR_TIMESTAMP:+--mtime="$TAR_TIMESTAMP"} -c dae-2026.08.05 | 	gzip -nc > /mnt/build_wrt/tmp/dl/dae-2026.08.05.tar.gz && mv /mnt/build_wrt/tmp/dl/dae-2026.08.05.tar.gz /mnt/build_wrt/dl/ && rm -rf dae-2026.08.05; );  )     '
+Cannot find appropriate hash command, ensure the provided hash is either a MD5 or SHA256 checksum.
+dae-2026.08.05.tar.gz: Download from https://github.com/olicesx/dae.git failed
+dae-2026.08.05.tar.gz: Requires sha256sum for verification
+Checking out files from the git repository...
+Cloning into 'dae-2026.08.05'...
+error: pathspec 'PLACEHOLDER_DAE_VERSION' did not match any file(s) known to git
+make[3]: *** [Makefile:146: /mnt/build_wrt/dl/dae-2026.08.05.tar.gz] Error 1
+make[3]: Leaving directory '/mnt/build_wrt/package/dae'
+time: package/dae/compile#0.62#0.27#1.57
+    ERROR: package/dae failed to build.
+make[2]: *** [package/Makefile:198: package/dae/compile] Error 1
+make[2]: Leaving directory '/mnt/build_wrt'
+make[1]: *** [package/Makefile:192: /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/stamp/.package_compile] Error 2
+make[1]: Leaving directory '/mnt/build_wrt'
+make: *** [/mnt/build_wrt/include/toplevel.mk:233: world] Error 2
+
+--- RECENT ERROR LOGS IN BUILD DIR ---
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/aarch64-openwrt-linux-musl/libgcc/config.log ===
+build_os='linux-gnu'
+build_subdir='build-x86_64-pc-linux-gnu'
+build_vendor='pc'
+cpu_type='aarch64'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+decimal_float='no'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+double_type_size='64'
+dvidir='${docdir}'
+enable_decimal_float='no'
+enable_execute_stack='enable-execute-stack-empty.c'
+enable_gcov='yes'
+enable_shared='yes'
+enable_vtable_verify='no'
+exec_prefix='${prefix}'
+extra_parts='crtbegin.o crtbeginS.o crtbeginT.o crtend.o crtendS.o crtfastmath.o'
+fixed_point='no'
+force_explicit_eh_registry=''
+get_gcc_base_ver='cat'
+host='aarch64-openwrt-linux-musl'
+host_alias='aarch64-openwrt-linux-musl'
+host_cpu='aarch64'
+host_noncanonical='aarch64-openwrt-linux-musl'
+host_os='linux-musl'
+host_subdir='.'
+host_vendor='openwrt'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+libgcc_topdir='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/libgcc/..'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+long_double_type_size='128'
+mandir='${datarootdir}/man'
+md_unwind_header='aarch64/linux-unwind.h'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+real_host_noncanonical='aarch64-openwrt-linux-musl'
+sbindir='${exec_prefix}/sbin'
+set_have_cc_tls='-DHAVE_CC_TLS'
+set_use_emutls=''
+sfp_machine_header='aarch64/sfp-machine.h'
+sharedstatedir='${prefix}/com'
+slibdir='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/lib'
+solaris_ld_v2_maps=''
+sysconfdir='${prefix}/etc'
+target_alias='aarch64-openwrt-linux-musl'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_subdir='aarch64-openwrt-linux-musl'
+thread_header='gthr-posix.h'
+tm_defines=''
+tm_file=' $(srcdir)/config/aarch64/value-unwind.h'
+tmake_file=' $(srcdir)/config/t-crtstuff-pic $(srcdir)/config/t-libgcc-pic $(srcdir)/config/t-eh-dw2-dip $(srcdir)/config/t-slibgcc $(srcdir)/config/t-slibgcc-gld $(srcdir)/config/t-slibgcc-elf-ver $(srcdir)/config/t-linux $(srcdir)/config/aarch64/t-aarch64 $(srcdir)/config/aarch64/t-lse $(srcdir)/config/t-slibgcc-libgcc $(srcdir)/config/aarch64/t-softfp $(srcdir)/config/t-softfp $(srcdir)/config/t-crtfm $(srcdir)/config/t-dfprules $(srcdir)/config/aarch64/t-heap-trampoline $(srcdir)/config/t-gthr-noweak'
+toolexecdir='$(exec_prefix)/$(target_noncanonical)'
+toolexeclibdir='$(toolexecdir)/lib'
+unwind_header='unwind-generic.h'
+use_tm_clone_registry='-DUSE_TM_CLONE_REGISTRY=0'
+vis_hide='-fvisibility=hidden -DHIDE_EXPORTS'
+with_aix_soname='aix'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "GNU C Runtime Library"
+#define PACKAGE_TARNAME "libgcc"
+#define PACKAGE_VERSION "1.0"
+#define PACKAGE_STRING "GNU C Runtime Library 1.0"
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL "http://www.gnu.org/software/libgcc/"
+#define SIZEOF_DOUBLE 8
+#define SIZEOF_LONG_DOUBLE 16
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_FTW_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_STRING_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_SYS_AUXV_H 1
+#define HAVE_SYS_MMAN_H 1
+#define STDC_HEADERS 1
+#define HAVE_GETIPINFO 1
+#define AS_HIDDEN_DIRECTIVE .hidden
+#define HAVE_AS_CFI_SECTIONS 1
+#define HAVE_AS_LSE 1
+#define HAVE_AS_VARIANT_PCS 1
+#define HAVE_INIT_PRIORITY 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/aarch64-openwrt-linux-musl/libvtv/config.log ===
+ac_ct_DUMPBIN=''
+am__EXEEXT_FALSE=''
+am__EXEEXT_TRUE='#'
+am__fastdepCC_FALSE='#'
+am__fastdepCC_TRUE=''
+am__fastdepCXX_FALSE='#'
+am__fastdepCXX_TRUE=''
+am__include='include'
+am__isrc=' -I$(srcdir)'
+am__leading_dot='.'
+am__nodep='_no'
+am__quote=''
+am__tar='$${TAR-tar} chof - "$$tardir"'
+am__untar='$${TAR-tar} xf -'
+bindir='${exec_prefix}/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+enable_shared='yes'
+enable_static='yes'
+exec_prefix='${prefix}'
+get_gcc_base_ver='cat'
+host='aarch64-openwrt-linux-musl'
+host_alias='aarch64-openwrt-linux-musl'
+host_cpu='aarch64'
+host_os='linux-musl'
+host_vendor='openwrt'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+install_sh='${SHELL} /mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+libtool_VERSION='1:0:0'
+libvtv_builddir='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/aarch64-openwrt-linux-musl/libvtv'
+libvtv_srcdir='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/libvtv'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+lt_host_flags=''
+mandir='${datarootdir}/man'
+mkdir_p='$(MKDIR_P)'
+multi_basedir='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/libvtv/..'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_os='linux-musl'
+target_vendor='openwrt'
+toolexecdir='$(exec_prefix)/$(target_alias)'
+toolexeclibdir='$(toolexecdir)/lib'
+toplevel_builddir='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/aarch64-openwrt-linux-musl/libvtv/..'
+toplevel_srcdir='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/libvtv/..'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "GNU Vtable Verification Runtime Library"
+#define PACKAGE_TARNAME "libvtv"
+#define PACKAGE_VERSION "1.0"
+#define PACKAGE_STRING "GNU Vtable Verification Runtime Library 1.0"
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL "http://www.gnu.org/software/libvtv/"
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define PACKAGE "libvtv"
+#define VERSION "1.0"
+#define HAVE_SECURE_GETENV 1
+#define HAVE_DLFCN_H 1
+#define LT_OBJDIR ".libs/"
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/build-x86_64-pc-linux-gnu/libiberty/config.log ===
+#define HAVE_BCOPY 1
+#define HAVE_BSEARCH 1
+#define HAVE_BZERO 1
+#define HAVE_CALLOC 1
+#define HAVE_CLOCK 1
+#define HAVE_FFS 1
+#define HAVE_GETCWD 1
+#define HAVE_GETPAGESIZE 1
+#define HAVE_GETTIMEOFDAY 1
+#define HAVE_INDEX 1
+#define HAVE_INSQUE 1
+#define HAVE_MEMCHR 1
+#define HAVE_MEMCMP 1
+#define HAVE_MEMCPY 1
+#define HAVE_MEMMEM 1
+#define HAVE_MEMMOVE 1
+#define HAVE_MEMPCPY 1
+#define HAVE_MEMSET 1
+#define HAVE_MKSTEMPS 1
+#define HAVE_PUTENV 1
+#define HAVE_RANDOM 1
+#define HAVE_RENAME 1
+#define HAVE_RINDEX 1
+#define HAVE_SETENV 1
+#define HAVE_SNPRINTF 1
+#define HAVE_SIGSETMASK 1
+#define HAVE_STPCPY 1
+#define HAVE_STPNCPY 1
+#define HAVE_STRCASECMP 1
+#define HAVE_STRCHR 1
+#define HAVE_STRDUP 1
+#define HAVE_STRNCASECMP 1
+#define HAVE_STRNDUP 1
+#define HAVE_STRNLEN 1
+#define HAVE_STRRCHR 1
+#define HAVE_STRSTR 1
+#define HAVE_STRTOD 1
+#define HAVE_STRTOL 1
+#define HAVE_STRTOUL 1
+#define HAVE_STRTOLL 1
+#define HAVE_STRTOULL 1
+#define HAVE_STRVERSCMP 1
+#define HAVE_TMPNAM 1
+#define HAVE_VASPRINTF 1
+#define HAVE_VFPRINTF 1
+#define HAVE_VPRINTF 1
+#define HAVE_VSNPRINTF 1
+#define HAVE_VSPRINTF 1
+#define HAVE_WAITPID 1
+#define STACK_DIRECTION 1
+#define HAVE_FORK 1
+#define HAVE_VFORK 1
+#define HAVE_WORKING_VFORK 1
+#define HAVE_WORKING_FORK 1
+#define HAVE___FSETLOCKING 1
+#define HAVE_CANONICALIZE_FILE_NAME 1
+#define HAVE_DUP3 1
+#define HAVE_GETRLIMIT 1
+#define HAVE_GETRUSAGE 1
+#define HAVE_GETTIMEOFDAY 1
+#define HAVE_ON_EXIT 1
+#define HAVE_PIPE2 1
+#define HAVE_POSIX_SPAWN 1
+#define HAVE_POSIX_SPAWNP 1
+#define HAVE_PSIGNAL 1
+#define HAVE_REALPATH 1
+#define HAVE_SETRLIMIT 1
+#define HAVE_STRERROR 1
+#define HAVE_STRSIGNAL 1
+#define HAVE_SYSCONF 1
+#define HAVE_TIMES 1
+#define HAVE_WAIT3 1
+#define HAVE_WAIT4 1
+#define HAVE_SBRK 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_FFS 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_SNPRINTF 1
+#define HAVE_DECL_VSNPRINTF 1
+#define HAVE_DECL_CALLOC 1
+#define HAVE_DECL_GETENV 1
+#define HAVE_DECL_GETOPT 1
+#define HAVE_DECL_MALLOC 1
+#define HAVE_DECL_REALLOC 1
+#define HAVE_DECL_SBRK 1
+#define HAVE_DECL_STRTOL 1
+#define HAVE_DECL_STRTOUL 1
+#define HAVE_DECL_STRTOLL 1
+#define HAVE_DECL_STRTOULL 1
+#define HAVE_DECL_STRVERSCMP 1
+#define HAVE_DECL_STRNLEN 1
+#define HAVE_X86_SHA1_HW_SUPPORT 1
+#define HAVE_STDLIB_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_SYS_PARAM_H 1
+#define HAVE_GETPAGESIZE 1
+#define HAVE_MMAP 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/build-x86_64-pc-linux-gnu/libcpp/config.log ===
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_os='linux-musl'
+target_vendor='openwrt'
+warn='-W -Wall -Wno-narrowing -Wwrite-strings -Wmissing-format-attribute'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "cpplib"
+#define PACKAGE_TARNAME "cpplib"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "cpplib  "
+#define PACKAGE_BUGREPORT "gcc-bugs@gcc.gnu.org"
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define TIME_WITH_SYS_TIME 1
+#define STRING_WITH_STRINGS 1
+#define HAVE_LOCALE_H 1
+#define HAVE_FCNTL_H 1
+#define HAVE_LIMITS_H 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_STRING_H 1
+#define HAVE_SYS_FILE_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_OBSTACK 1
+#define HAVE_UINTPTR_T 1
+#define SIZEOF_INT 4
+#define SIZEOF_LONG 8
+#define HAVE_CLEARERR_UNLOCKED 1
+#define HAVE_FEOF_UNLOCKED 1
+#define HAVE_FERROR_UNLOCKED 1
+#define HAVE_FFLUSH_UNLOCKED 1
+#define HAVE_FGETC_UNLOCKED 1
+#define HAVE_FGETS_UNLOCKED 1
+#define HAVE_FILENO_UNLOCKED 1
+#define HAVE_FPUTC_UNLOCKED 1
+#define HAVE_FPUTS_UNLOCKED 1
+#define HAVE_FREAD_UNLOCKED 1
+#define HAVE_FWRITE_UNLOCKED 1
+#define HAVE_GETCHAR_UNLOCKED 1
+#define HAVE_GETC_UNLOCKED 1
+#define HAVE_PUTCHAR_UNLOCKED 1
+#define HAVE_PUTC_UNLOCKED 1
+#define HAVE_SETLOCALE 1
+#define HAVE_DECL_ABORT 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_ERRNO 0
+#define HAVE_DECL_GETOPT 1
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_CLEARERR_UNLOCKED 1
+#define HAVE_DECL_FEOF_UNLOCKED 1
+#define HAVE_DECL_FERROR_UNLOCKED 1
+#define HAVE_DECL_FFLUSH_UNLOCKED 1
+#define HAVE_DECL_FGETC_UNLOCKED 1
+#define HAVE_DECL_FGETS_UNLOCKED 1
+#define HAVE_DECL_FILENO_UNLOCKED 1
+#define HAVE_DECL_FPRINTF_UNLOCKED 0
+#define HAVE_DECL_FPUTC_UNLOCKED 1
+#define HAVE_DECL_FPUTS_UNLOCKED 1
+#define HAVE_DECL_FREAD_UNLOCKED 1
+#define HAVE_DECL_FWRITE_UNLOCKED 1
+#define HAVE_DECL_GETCHAR_UNLOCKED 1
+#define HAVE_DECL_GETC_UNLOCKED 1
+#define HAVE_DECL_PUTCHAR_UNLOCKED 1
+#define HAVE_DECL_PUTC_UNLOCKED 1
+#define HAVE_ALLOCA_H 1
+#define HAVE_ALLOCA 1
+#define STDC_HEADERS 1
+#define HAVE_LANGINFO_CODESET 1
+#define SIZEOF_INO_T 8
+#define SIZEOF_DEV_T 8
+#define ICONV_CONST 
+#define PACKAGE "cpplib"
+#define CHECKING_P 0
+#define ENABLE_ASSERT_CHECKING 1
+#define ENABLE_CANONICAL_SYSTEM_HEADERS 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/build-x86_64-pc-linux-gnu/fixincludes/config.log ===
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_os='linux-musl'
+target_vendor='openwrt'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "fixincludes"
+#define PACKAGE_TARNAME "fixincludes"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "fixincludes  "
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define EXE_EXT ""
+#define STDC_HEADERS 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_FCNTL_H 1
+#define HAVE_SYS_FILE_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_CLEARERR_UNLOCKED 1
+#define HAVE_FEOF_UNLOCKED 1
+#define HAVE_FERROR_UNLOCKED 1
+#define HAVE_FFLUSH_UNLOCKED 1
+#define HAVE_FGETC_UNLOCKED 1
+#define HAVE_FGETS_UNLOCKED 1
+#define HAVE_FILENO_UNLOCKED 1
+#define HAVE_FPUTC_UNLOCKED 1
+#define HAVE_FPUTS_UNLOCKED 1
+#define HAVE_FREAD_UNLOCKED 1
+#define HAVE_FWRITE_UNLOCKED 1
+#define HAVE_GETCHAR_UNLOCKED 1
+#define HAVE_GETC_UNLOCKED 1
+#define HAVE_PUTCHAR_UNLOCKED 1
+#define HAVE_PUTC_UNLOCKED 1
+#define HAVE_DECL_ABORT 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_ERRNO 0
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_MEMMEM 1
+#define HAVE_DECL_CLEARERR_UNLOCKED 1
+#define HAVE_DECL_FEOF_UNLOCKED 1
+#define HAVE_DECL_FERROR_UNLOCKED 1
+#define HAVE_DECL_FFLUSH_UNLOCKED 1
+#define HAVE_DECL_FGETC_UNLOCKED 1
+#define HAVE_DECL_FGETS_UNLOCKED 1
+#define HAVE_DECL_FILENO_UNLOCKED 1
+#define HAVE_DECL_FPRINTF_UNLOCKED 0
+#define HAVE_DECL_FPUTC_UNLOCKED 1
+#define HAVE_DECL_FPUTS_UNLOCKED 1
+#define HAVE_DECL_FREAD_UNLOCKED 1
+#define HAVE_DECL_FWRITE_UNLOCKED 1
+#define HAVE_DECL_GETCHAR_UNLOCKED 1
+#define HAVE_DECL_GETC_UNLOCKED 1
+#define HAVE_DECL_PUTCHAR_UNLOCKED 1
+#define HAVE_DECL_PUTC_UNLOCKED 1
+#define HAVE_MMAP_FILE 1
+#define HAVE_MMAP_DEV_ZERO 1
+#define HAVE_MMAP_ANON 1
+#define SED_PROGRAM "/mnt/build_wrt/staging_dir/host/bin/sed"
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/fixincludes/config.log ===
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_os='linux-musl'
+target_vendor='openwrt'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "fixincludes"
+#define PACKAGE_TARNAME "fixincludes"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "fixincludes  "
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define EXE_EXT ""
+#define STDC_HEADERS 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_FCNTL_H 1
+#define HAVE_SYS_FILE_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_CLEARERR_UNLOCKED 1
+#define HAVE_FEOF_UNLOCKED 1
+#define HAVE_FERROR_UNLOCKED 1
+#define HAVE_FFLUSH_UNLOCKED 1
+#define HAVE_FGETC_UNLOCKED 1
+#define HAVE_FGETS_UNLOCKED 1
+#define HAVE_FILENO_UNLOCKED 1
+#define HAVE_FPUTC_UNLOCKED 1
+#define HAVE_FPUTS_UNLOCKED 1
+#define HAVE_FREAD_UNLOCKED 1
+#define HAVE_FWRITE_UNLOCKED 1
+#define HAVE_GETCHAR_UNLOCKED 1
+#define HAVE_GETC_UNLOCKED 1
+#define HAVE_PUTCHAR_UNLOCKED 1
+#define HAVE_PUTC_UNLOCKED 1
+#define HAVE_DECL_ABORT 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_ERRNO 0
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_MEMMEM 1
+#define HAVE_DECL_CLEARERR_UNLOCKED 1
+#define HAVE_DECL_FEOF_UNLOCKED 1
+#define HAVE_DECL_FERROR_UNLOCKED 1
+#define HAVE_DECL_FFLUSH_UNLOCKED 1
+#define HAVE_DECL_FGETC_UNLOCKED 1
+#define HAVE_DECL_FGETS_UNLOCKED 1
+#define HAVE_DECL_FILENO_UNLOCKED 1
+#define HAVE_DECL_FPRINTF_UNLOCKED 0
+#define HAVE_DECL_FPUTC_UNLOCKED 1
+#define HAVE_DECL_FPUTS_UNLOCKED 1
+#define HAVE_DECL_FREAD_UNLOCKED 1
+#define HAVE_DECL_FWRITE_UNLOCKED 1
+#define HAVE_DECL_GETCHAR_UNLOCKED 1
+#define HAVE_DECL_GETC_UNLOCKED 1
+#define HAVE_DECL_PUTCHAR_UNLOCKED 1
+#define HAVE_DECL_PUTC_UNLOCKED 1
+#define HAVE_MMAP_FILE 1
+#define HAVE_MMAP_DEV_ZERO 1
+#define HAVE_MMAP_ANON 1
+#define SED_PROGRAM "/mnt/build_wrt/staging_dir/host/bin/sed"
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/gcc/config.log ===
+#define HAVE_DECL_MALLINFO2 1
+#define HAVE_DECL_LDGETNAME 0
+#define HAVE_DECL_TIMES 1
+#define HAVE_DECL_SIGALTSTACK 1
+#define HAVE_STRUCT_TMS 1
+#define HAVE_CLOCK_T 1
+#define HOST_HAS_F_SETLKW 1
+#define HOST_HAS_O_CLOEXEC 1
+#define HAVE_FCNTL_H 1
+#define HOST_HAS_O_NONBLOCK 1
+#define HOST_HAS_PERSONALITY_ADDR_NO_RANDOMIZE 1
+#define HAVE_AF_UNIX 1
+#define HAVE_AF_INET6 1
+#define HAVE_GNU_LD 1
+#define HAVE_GNU_AS 1
+#define DEFAULT_USE_CXA_ATEXIT 2
+#define EXTRA_MODES_FILE "config/aarch64/aarch64-modes.def"
+#define LTOPLUGINSONAME "liblto_plugin.so"
+#define HAVE_DLFCN_H 1
+#define LT_OBJDIR ".libs/"
+#define DARWIN_DO_EXTRA_RPATH 0
+#define DARWIN_ADD_RPATH ""
+#define PLUGIN_LD_SUFFIX "ld"
+#define HAVE_GAS_BALIGN_AND_P2ALIGN 1
+#define HAVE_GAS_MAX_SKIP_P2ALIGN 1
+#define HAVE_GAS_SUBSECTION_ORDERING 1
+#define HAVE_GAS_WEAK 1
+#define HAVE_GAS_WEAKREF 1
+#define HAVE_GNU_INDIRECT_FUNCTION 0
+#define HAVE_GAS_HIDDEN 1
+#define HAVE_LD_RO_RW_SECTION_MIXING 1
+#define HAVE_INITFINI_ARRAY_SUPPORT 1
+#define HAVE_AS_LEB128 1
+#define HAVE_GAS_CFI_DIRECTIVE 1
+#define HAVE_GAS_CFI_PERSONALITY_DIRECTIVE 1
+#define HAVE_GAS_CFI_SECTIONS_DIRECTIVE 1
+#define HAVE_GAS_SECTION_EXCLUDE 1
+#define HAVE_GAS_SHF_GNU_RETAIN 1
+#define HAVE_GAS_SECTION_LINK_ORDER 1
+#define HAVE_GAS_SHF_MERGE 1
+#define HAVE_LD_ALIGNED_SHF_MERGE 1
+#define HAVE_COMDAT_GROUP 1
+#define HAVE_GAS_LOC_STMT 1
+#define HAVE_GAS_DISCRIMINATOR 1
+#define HAVE_AS_TLS 1
+#define HAVE_LD_STATIC_DYNAMIC 1
+#define LD_STATIC_OPTION "-Bstatic"
+#define LD_DYNAMIC_OPTION "-Bdynamic"
+#define HAVE_LD_DEMANGLE 1
+#define HAVE_LTO_PLUGIN 2
+#define HAVE_AS_MABI_OPTION 1
+#define HAVE_AS_SMALL_PIC_RELOCS 1
+#define HAVE_AS_DWARF2_DEBUG_LINE 1
+#define HAVE_AS_DWARF2_DEBUG_VIEW 1
+#define HAVE_AS_GDWARF2_DEBUG_FLAG 1
+#define HAVE_AS_GDWARF_5_DEBUG_FLAG 1
+#define HAVE_AS_WORKING_DWARF_N_FLAG 1
+#define HAVE_AS_DEBUG_PREFIX_MAP 1
+#define HAVE_AS_COMPRESS_DEBUG 2
+#define AS_COMPRESS_DEBUG_OPTION "--compress-debug-sections"
+#define AS_NO_COMPRESS_DEBUG_OPTION "--nocompress-debug-sections"
+#define TARGET_GLIBC_MAJOR 0
+#define TARGET_GLIBC_MINOR 0
+#define HAVE_AS_LINE_ZERO 1
+#define HAVE_LD_EH_FRAME_HDR 1
+#define HAVE_LD_EH_FRAME_CIEV3 1
+#define HAVE_LD_PIE 1
+#define HAVE_LD_PIE_COPYRELOC 0
+#define HAVE_LD_EH_GC_SECTIONS 1
+#define HAVE_LD_COMPRESS_DEBUG 2
+#define LD_COMPRESS_DEBUG_OPTION "--compress-debug-sections"
+#define HAVE_LD_AS_NEEDED 1
+#define LD_AS_NEEDED_OPTION "--push-state --as-needed"
+#define LD_NO_AS_NEEDED_OPTION "--pop-state"
+#define HAVE_LD_BUILDID 1
+#define HAVE_LD_SYSROOT 1
+#define TARGET_LIBC_PROVIDES_SSP 1
+#define TARGET_DL_ITERATE_PHDR 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_PLUGIN 1
+#define ENABLE_LIBQUADMATH_SUPPORT 1
+#define DIAGNOSTICS_COLOR_DEFAULT -1
+#define DIAGNOSTICS_URLS_DEFAULT DIAGNOSTICS_URL_AUTO
+#define HAVE_LD_PUSHPOPSTATE_SUPPORT 1
+#define HAVE_LD_NOW_SUPPORT 1
+#define HAVE_LD_RELRO_SUPPORT 1
+#define HAVE_FHARDENED_SUPPORT 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/lto-plugin/config.log ===
+ac_lto_plugin_extra_ldflags='-pthread'
+ac_lto_plugin_ldflags='-Wc,-static-libgcc'
+ac_lto_plugin_warn_cflags='-Wall'
+accel_dir_suffix=''
+am__EXEEXT_FALSE=''
+am__EXEEXT_TRUE='#'
+am__fastdepCC_FALSE='#'
+am__fastdepCC_TRUE=''
+am__include='include'
+am__isrc=' -I$(srcdir)'
+am__leading_dot='.'
+am__nodep='_no'
+am__quote=''
+am__tar='$${TAR-tar} chof - "$$tardir"'
+am__untar='$${TAR-tar} xf -'
+bindir='${exec_prefix}/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_libsubdir='build-x86_64-pc-linux-gnu'
+build_os='linux-gnu'
+build_subdir='build-x86_64-pc-linux-gnu'
+build_vendor='pc'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+enable_host_bind_now=''
+exec_prefix='${prefix}'
+gcc_build_dir='../gcc'
+get_gcc_base_ver='cat'
+host='x86_64-pc-linux-gnu'
+host_alias='x86_64-pc-linux-gnu'
+host_cpu='x86_64'
+host_os='linux-gnu'
+host_subdir='.'
+host_vendor='pc'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+install_sh='${SHELL} /mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+lt_host_flags=''
+mandir='${datarootdir}/man'
+mkdir_p='$(MKDIR_P)'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+real_target_noncanonical='aarch64-openwrt-linux-musl'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_os='linux-musl'
+target_subdir='aarch64-openwrt-linux-musl'
+target_vendor='openwrt'
+with_libiberty='../libiberty'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "LTO plugin for ld"
+#define PACKAGE_TARNAME "lto-plugin"
+#define PACKAGE_VERSION "0.1"
+#define PACKAGE_STRING "LTO plugin for ld 0.1"
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define PACKAGE "lto-plugin"
+#define VERSION "0.1"
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define HAVE_PTHREAD_LOCKING 1
+#define HAVE_DLFCN_H 1
+#define LT_OBJDIR ".libs/"
+#define HAVE_SYS_WAIT_H 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/libdecnumber/config.log ===
+DEFS='-DHAVE_CONFIG_H'
+ECHO_C=''
+ECHO_N='-n'
+ECHO_T=''
+EGREP='/mnt/build_wrt/staging_dir/host/bin/grep -E'
+EXEEXT=''
+GREP='/mnt/build_wrt/staging_dir/host/bin/grep'
+LDFLAGS='-static-libstdc++ -static-libgcc '
+LIBOBJS=''
+LIBS=''
+LTLIBOBJS=''
+MAINT='#'
+OBJEXT='o'
+PACKAGE_BUGREPORT='gcc-bugs@gcc.gnu.org'
+PACKAGE_NAME='libdecnumber'
+PACKAGE_STRING='libdecnumber  '
+PACKAGE_TARNAME='libdecnumber'
+PACKAGE_URL=''
+PACKAGE_VERSION=' '
+PATH_SEPARATOR=':'
+PICFLAG=''
+RANLIB='ranlib --plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so'
+SET_MAKE=''
+SHELL='/bin/bash'
+WARN_CFLAGS='-W -Wall -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wold-style-definition -Wmissing-format-attribute -Wcast-qual'
+WARN_PEDANTIC='-pedantic -Wno-long-long'
+WERROR=''
+ac_ct_CC=''
+bindir='${exec_prefix}/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+enable_decimal_float='dpd'
+enable_host_pie=''
+enable_host_shared=''
+exec_prefix='${prefix}'
+host='x86_64-pc-linux-gnu'
+host_alias='x86_64-pc-linux-gnu'
+host_cpu='x86_64'
+host_os='linux-gnu'
+host_vendor='pc'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+nolto_flags='-fno-lto'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_os='linux-musl'
+target_vendor='openwrt'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "libdecnumber"
+#define PACKAGE_TARNAME "libdecnumber"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "libdecnumber  "
+#define PACKAGE_BUGREPORT "gcc-bugs@gcc.gnu.org"
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_CTYPE_H 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STRING_H 1
+#define HAVE_STDIO_H 1
+#define SIZEOF_INT 4
+#define SIZEOF_LONG 8
+#define STDC_HEADERS 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/libbacktrace/config.log ===
+VIEW_FILE='mmapio.lo'
+WARN_FLAGS='-W -Wall -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wold-style-definition -Wmissing-format-attribute -Wcast-qual'
+XZ='xz'
+ac_ct_CC=''
+ac_ct_DUMPBIN=''
+am__EXEEXT_FALSE=''
+am__EXEEXT_TRUE='#'
+am__isrc=' -I$(srcdir)'
+am__leading_dot='.'
+am__tar='$${TAR-tar} chof - "$$tardir"'
+am__untar='$${TAR-tar} xf -'
+bindir='${exec_prefix}/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+exec_prefix='${prefix}'
+host='x86_64-pc-linux-gnu'
+host_alias='x86_64-pc-linux-gnu'
+host_cpu='x86_64'
+host_os='linux-gnu'
+host_vendor='pc'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+install_sh='${SHELL} /mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+libtool_VERSION='1:0:0'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+mkdir_p='$(MKDIR_P)'
+multi_basedir=''
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_os='linux-musl'
+target_vendor='openwrt'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "package-unused"
+#define PACKAGE_TARNAME "libbacktrace"
+#define PACKAGE_VERSION "version-unused"
+#define PACKAGE_STRING "package-unused version-unused"
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define HAVE_DLFCN_H 1
+#define LT_OBJDIR ".libs/"
+#define HAVE_GETIPINFO 1
+#define HAVE_SYNC_FUNCTIONS 1
+#define HAVE_ATOMIC_FUNCTIONS 1
+#define BACKTRACE_ELF_SIZE 64
+#define BACKTRACE_XCOFF_SIZE unused
+#define HAVE_SYS_MMAN_H 1
+#define HAVE_LINK_H 1
+#define HAVE_DL_ITERATE_PHDR 1
+#define HAVE_FCNTL 1
+#define HAVE_DECL_STRNLEN 1
+#define HAVE_DECL_GETPAGESIZE 1
+#define HAVE_LSTAT 1
+#define HAVE_READLINK 1
+#define HAVE_DECL__PGMPTR 0
+#define HAVE_CLOCK_GETTIME 1
+#define HAVE_ZLIB 1
+#define HAVE_ZSTD 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/libiberty/config.log ===
+#define HAVE_BCOPY 1
+#define HAVE_BSEARCH 1
+#define HAVE_BZERO 1
+#define HAVE_CALLOC 1
+#define HAVE_CLOCK 1
+#define HAVE_FFS 1
+#define HAVE_GETCWD 1
+#define HAVE_GETPAGESIZE 1
+#define HAVE_GETTIMEOFDAY 1
+#define HAVE_INDEX 1
+#define HAVE_INSQUE 1
+#define HAVE_MEMCHR 1
+#define HAVE_MEMCMP 1
+#define HAVE_MEMCPY 1
+#define HAVE_MEMMEM 1
+#define HAVE_MEMMOVE 1
+#define HAVE_MEMPCPY 1
+#define HAVE_MEMSET 1
+#define HAVE_MKSTEMPS 1
+#define HAVE_PUTENV 1
+#define HAVE_RANDOM 1
+#define HAVE_RENAME 1
+#define HAVE_RINDEX 1
+#define HAVE_SETENV 1
+#define HAVE_SNPRINTF 1
+#define HAVE_SIGSETMASK 1
+#define HAVE_STPCPY 1
+#define HAVE_STPNCPY 1
+#define HAVE_STRCASECMP 1
+#define HAVE_STRCHR 1
+#define HAVE_STRDUP 1
+#define HAVE_STRNCASECMP 1
+#define HAVE_STRNDUP 1
+#define HAVE_STRNLEN 1
+#define HAVE_STRRCHR 1
+#define HAVE_STRSTR 1
+#define HAVE_STRTOD 1
+#define HAVE_STRTOL 1
+#define HAVE_STRTOUL 1
+#define HAVE_STRTOLL 1
+#define HAVE_STRTOULL 1
+#define HAVE_STRVERSCMP 1
+#define HAVE_TMPNAM 1
+#define HAVE_VASPRINTF 1
+#define HAVE_VFPRINTF 1
+#define HAVE_VPRINTF 1
+#define HAVE_VSNPRINTF 1
+#define HAVE_VSPRINTF 1
+#define HAVE_WAITPID 1
+#define STACK_DIRECTION 1
+#define HAVE_FORK 1
+#define HAVE_VFORK 1
+#define HAVE_WORKING_VFORK 1
+#define HAVE_WORKING_FORK 1
+#define HAVE___FSETLOCKING 1
+#define HAVE_CANONICALIZE_FILE_NAME 1
+#define HAVE_DUP3 1
+#define HAVE_GETRLIMIT 1
+#define HAVE_GETRUSAGE 1
+#define HAVE_GETTIMEOFDAY 1
+#define HAVE_ON_EXIT 1
+#define HAVE_PIPE2 1
+#define HAVE_POSIX_SPAWN 1
+#define HAVE_POSIX_SPAWNP 1
+#define HAVE_PSIGNAL 1
+#define HAVE_REALPATH 1
+#define HAVE_SETRLIMIT 1
+#define HAVE_STRERROR 1
+#define HAVE_STRSIGNAL 1
+#define HAVE_SYSCONF 1
+#define HAVE_TIMES 1
+#define HAVE_WAIT3 1
+#define HAVE_WAIT4 1
+#define HAVE_SBRK 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_FFS 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_SNPRINTF 1
+#define HAVE_DECL_VSNPRINTF 1
+#define HAVE_DECL_CALLOC 1
+#define HAVE_DECL_GETENV 1
+#define HAVE_DECL_GETOPT 1
+#define HAVE_DECL_MALLOC 1
+#define HAVE_DECL_REALLOC 1
+#define HAVE_DECL_SBRK 1
+#define HAVE_DECL_STRTOL 1
+#define HAVE_DECL_STRTOUL 1
+#define HAVE_DECL_STRTOLL 1
+#define HAVE_DECL_STRTOULL 1
+#define HAVE_DECL_STRVERSCMP 1
+#define HAVE_DECL_STRNLEN 1
+#define HAVE_X86_SHA1_HW_SUPPORT 1
+#define HAVE_STDLIB_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_SYS_PARAM_H 1
+#define HAVE_GETPAGESIZE 1
+#define HAVE_MMAP 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/libcody/config.log ===
+ac_cv_env_LDFLAGS_value='-static-libstdc++ -static-libgcc '
+ac_cv_env_LIBS_set=
+ac_cv_env_LIBS_value=
+ac_cv_env_build_alias_set=set
+ac_cv_env_build_alias_value=x86_64-pc-linux-gnu
+ac_cv_env_host_alias_set=set
+ac_cv_env_host_alias_value=x86_64-pc-linux-gnu
+ac_cv_env_target_alias_set=set
+ac_cv_env_target_alias_value=aarch64-openwrt-linux-musl
+ac_cv_host=x86_64-pc-linux-gnu
+ac_cv_objext=o
+ac_cv_prog_AR='ar --plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so'
+ac_cv_prog_RANLIB='ranlib --plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so'
+ac_cv_prog_cxx_g=yes
+ac_cv_search_ZSTD_compress='/mnt/build_wrt/staging_dir/host/lib/libzstd.a -pthread'
+libgcc_cv_fixed_point=no
+
+## ----------------- ##
+## Output variables. ##
+## ----------------- ##
+
+AR='ar --plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so'
+CPPFLAGS=''
+CXX='g++ -std=c++11'
+CXXFLAGS='-O2 -I/mnt/build_wrt/staging_dir/host/include -pipe  '
+DEFS='-DHAVE_CONFIG_H'
+ECHO_C=''
+ECHO_N='-n'
+ECHO_T=''
+EXCEPTIONS=''
+EXEEXT=''
+LDFLAGS='-static-libstdc++ -static-libgcc  -Wl,--no-undefined'
+LD_PICFLAG=''
+LIBOBJS=''
+LIBS=''
+LTLIBOBJS=''
+MAINTAINER=''
+OBJEXT='o'
+PACKAGE_BUGREPORT='github.com/urnathan/libcody'
+PACKAGE_NAME='codylib'
+PACKAGE_STRING='codylib 0.0'
+PACKAGE_TARNAME='codylib'
+PACKAGE_URL=''
+PACKAGE_VERSION='0.0'
+PATH_SEPARATOR=':'
+PICFLAG=''
+RANLIB='ranlib --plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so'
+SHELL='/bin/bash'
+ac_ct_CXX=''
+bindir='${exec_prefix}/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_os='linux-gnu'
+build_vendor='pc'
+configure_args=' '\''--srcdir=/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/libcody'\'' '\''--cache-file=./config.cache'\'' '\''--with-bugurl=http://bugs.openwrt.org/'\'' '\''--with-pkgversion=OpenWrt GCC 14.4.0 r0-4f611b0'\'' '\''--prefix=/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'\'' '\''--with-gnu-ld'\'' '\''--enable-target-optspace'\'' '\''--disable-libgomp'\'' '\''--disable-libmudflap'\'' '\''--disable-multilib'\'' '\''--disable-libmpx'\'' '\''--disable-nls'\'' '\''--disable-libssp'\'' '\''--disable-tm-clone-registry'\'' '\''--without-isl'\'' '\''--without-cloog'\'' '\''--with-host-libstdcxx=-lstdc++'\'' '\''--with-system-zlib=/mnt/build_wrt/staging_dir/host'\'' '\''--with-zstd=/mnt/build_wrt/staging_dir/host'\'' '\''--with-gmp=/mnt/build_wrt/staging_dir/host'\'' '\''--with-mpfr=/mnt/build_wrt/staging_dir/host'\'' '\''--with-mpc=/mnt/build_wrt/staging_dir/host'\'' '\''--disable-decimal-float'\'' '\''--with-diagnostics-color=auto-if-env'\'' '\''--enable-__cxa_atexit'\'' '\''--enable-libstdcxx-dual-abi'\'' '\''--with-default-libstdcxx-abi=new'\'' '\''--with-newlib'\'' '\''--with-sysroot=/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'\'' '\''--disable-shared'\'' '\''--disable-threads'\'' '\''--enable-languages=c,lto'\'' '\''--program-transform-name=s&^&aarch64-openwrt-linux-musl-&'\'' '\''--disable-option-checking'\'' '\''--build=x86_64-pc-linux-gnu'\'' '\''--host=x86_64-pc-linux-gnu'\'' '\''--target=aarch64-openwrt-linux-musl'\'' '\''build_alias=x86_64-pc-linux-gnu'\'' '\''host_alias=x86_64-pc-linux-gnu'\'' '\''target_alias=aarch64-openwrt-linux-musl'\'' '\''CXX=g++'\'' '\''CXXFLAGS=-O2 -I/mnt/build_wrt/staging_dir/host/include -pipe  '\'' '\''LDFLAGS=-static-libstdc++ -static-libgcc '\'''
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+enable_host_pie=''
+enable_host_shared=''
+exec_prefix='${prefix}'
+host='x86_64-pc-linux-gnu'
+host_alias='x86_64-pc-linux-gnu'
+host_cpu='x86_64'
+host_os='linux-gnu'
+host_vendor='pc'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target_alias='aarch64-openwrt-linux-musl'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "codylib"
+#define PACKAGE_TARNAME "codylib"
+#define PACKAGE_VERSION "0.0"
+#define PACKAGE_STRING "codylib 0.0"
+#define PACKAGE_BUGREPORT "github.com/urnathan/libcody"
+#define PACKAGE_URL ""
+#define NMS_CHECKING 0
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/config.log ===
+build_cpu='x86_64'
+build_libsubdir='build-x86_64-pc-linux-gnu'
+build_noncanonical='x86_64-pc-linux-gnu'
+build_os='linux-gnu'
+build_subdir='build-x86_64-pc-linux-gnu'
+build_tooldir='${exec_prefix}/aarch64-openwrt-linux-musl'
+build_vendor='pc'
+compare_exclusions='gcc/cc*-checksum$(objext) | gcc/ada/*tools/* | gcc/m2/gm2-compiler-boot/M2Version* | gcc/m2/gm2-compiler-boot/SYSTEM* | gcc/m2/gm2version*'
+configdirs=' libiberty zlib libbacktrace libcpp libcody libdecnumber fixincludes gcc libcc1 c++tools lto-plugin'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+do_compare='cmp --ignore-initial=16 $$f1 $$f2'
+docdir='${datarootdir}/doc/${PACKAGE}'
+dvidir='${docdir}'
+exec_prefix='${prefix}'
+extra_host_libiberty_configure_flags='--enable-shared'
+extra_host_zlib_configure_flags=''
+extra_isl_gmp_configure_flags=''
+extra_linker_plugin_configure_flags=''
+extra_linker_plugin_flags=''
+extra_mpc_gmp_configure_flags=''
+extra_mpc_mpfr_configure_flags=''
+extra_mpfr_configure_flags=''
+gcc_host_pie=''
+get_gcc_base_ver='cat'
+gmpinc='-I/mnt/build_wrt/staging_dir/host/include -I/mnt/build_wrt/staging_dir/host/include -I/mnt/build_wrt/staging_dir/host/include '
+gmplibs='-L/mnt/build_wrt/staging_dir/host/lib -L/mnt/build_wrt/staging_dir/host/lib -L/mnt/build_wrt/staging_dir/host/lib -lmpc -lmpfr -lgmp'
+host='x86_64-pc-linux-gnu'
+host_alias='x86_64-pc-linux-gnu'
+host_configargs=' --cache-file=./config.cache  '\''--with-bugurl=http://bugs.openwrt.org/'\'' '\''--with-pkgversion=OpenWrt GCC 14.4.0 r0-4f611b0'\'' '\''--prefix=/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'\'' '\''--with-gnu-ld'\'' '\''--enable-target-optspace'\'' '\''--disable-libgomp'\'' '\''--disable-libmudflap'\'' '\''--disable-multilib'\'' '\''--disable-libmpx'\'' '\''--disable-nls'\'' '\''--disable-libssp'\'' '\''--disable-tm-clone-registry'\'' '\''--without-isl'\'' '\''--without-cloog'\'' '\''--with-host-libstdcxx=-lstdc++'\'' '\''--with-system-zlib=/mnt/build_wrt/staging_dir/host'\'' '\''--with-zstd=/mnt/build_wrt/staging_dir/host'\'' '\''--with-gmp=/mnt/build_wrt/staging_dir/host'\'' '\''--with-mpfr=/mnt/build_wrt/staging_dir/host'\'' '\''--with-mpc=/mnt/build_wrt/staging_dir/host'\'' '\''--disable-decimal-float'\'' '\''--with-diagnostics-color=auto-if-env'\'' '\''--enable-__cxa_atexit'\'' '\''--enable-libstdcxx-dual-abi'\'' '\''--with-default-libstdcxx-abi=new'\'' '\''--with-newlib'\'' '\''--with-sysroot=/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'\'' '\''--disable-shared'\'' '\''--disable-threads'\'' '\''--enable-languages=c,lto'\'' --program-transform-name='\''s&^&aarch64-openwrt-linux-musl-&'\'' --disable-option-checking'
+host_cpu='x86_64'
+host_libs_picflag=''
+host_noncanonical='x86_64-pc-linux-gnu'
+host_os='linux-gnu'
+host_pie='no'
+host_shared='no'
+host_subdir='.'
+host_vendor='pc'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+islinc=''
+isllibs=''
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+poststage1_ldflags='-static-libstdc++ -static-libgcc'
+poststage1_libs=''
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+stage1_cflags='-g'
+stage1_checking='--enable-checking=yes,types'
+stage1_languages='c,lto'
+stage1_ldflags='-static-libstdc++ -static-libgcc'
+stage1_libs=''
+stage2_werror_flag=''
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_configargs='--cache-file=./config.cache --with-cross-host=x86_64-pc-linux-gnu   '\''--with-bugurl=http://bugs.openwrt.org/'\'' '\''--with-pkgversion=OpenWrt GCC 14.4.0 r0-4f611b0'\'' '\''--prefix=/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'\'' '\''--with-gnu-ld'\'' '\''--enable-target-optspace'\'' '\''--disable-libgomp'\'' '\''--disable-libmudflap'\'' '\''--disable-multilib'\'' '\''--disable-libmpx'\'' '\''--disable-nls'\'' '\''--disable-libssp'\'' '\''--disable-tm-clone-registry'\'' '\''--without-cloog'\'' '\''--with-host-libstdcxx=-lstdc++'\'' '\''--with-system-zlib=/mnt/build_wrt/staging_dir/host'\'' '\''--with-zstd=/mnt/build_wrt/staging_dir/host'\'' '\''--disable-decimal-float'\'' '\''--with-diagnostics-color=auto-if-env'\'' '\''--enable-__cxa_atexit'\'' '\''--enable-libstdcxx-dual-abi'\'' '\''--with-default-libstdcxx-abi=new'\'' '\''--with-newlib'\'' '\''--with-sysroot=/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'\'' '\''--disable-shared'\'' '\''--disable-threads'\'' '\''--enable-languages=c,lto'\'' --program-transform-name='\''s&^&aarch64-openwrt-linux-musl-&'\'' --disable-option-checking --disable-year2038'
+target_configdirs=' libgcc libatomic libquadmath'
+target_cpu='aarch64'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_os='linux-musl'
+target_subdir='aarch64-openwrt-linux-musl'
+target_vendor='openwrt'
+tooldir='${exec_prefix}/aarch64-openwrt-linux-musl'
+
+## ------------------- ##
+## File substitutions. ##
+## ------------------- ##
+
+alphaieee_frag='/dev/null'
+host_makefile_frag='/dev/null'
+ospace_frag='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/config/mt-ospace'
+serialization_dependencies='serdep.tmp'
+target_makefile_frag='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/config/mt-gnu'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME ""
+#define PACKAGE_TARNAME ""
+#define PACKAGE_VERSION ""
+#define PACKAGE_STRING ""
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define HAVE_CXX11 1
+#define LT_OBJDIR ".libs/"
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/libcpp/config.log ===
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_os='linux-musl'
+target_vendor='openwrt'
+warn='-W -Wall -Wno-narrowing -Wwrite-strings -Wmissing-format-attribute'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "cpplib"
+#define PACKAGE_TARNAME "cpplib"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "cpplib  "
+#define PACKAGE_BUGREPORT "gcc-bugs@gcc.gnu.org"
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define TIME_WITH_SYS_TIME 1
+#define STRING_WITH_STRINGS 1
+#define HAVE_LOCALE_H 1
+#define HAVE_FCNTL_H 1
+#define HAVE_LIMITS_H 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_STRING_H 1
+#define HAVE_SYS_FILE_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_OBSTACK 1
+#define HAVE_UINTPTR_T 1
+#define SIZEOF_INT 4
+#define SIZEOF_LONG 8
+#define HAVE_CLEARERR_UNLOCKED 1
+#define HAVE_FEOF_UNLOCKED 1
+#define HAVE_FERROR_UNLOCKED 1
+#define HAVE_FFLUSH_UNLOCKED 1
+#define HAVE_FGETC_UNLOCKED 1
+#define HAVE_FGETS_UNLOCKED 1
+#define HAVE_FILENO_UNLOCKED 1
+#define HAVE_FPUTC_UNLOCKED 1
+#define HAVE_FPUTS_UNLOCKED 1
+#define HAVE_FREAD_UNLOCKED 1
+#define HAVE_FWRITE_UNLOCKED 1
+#define HAVE_GETCHAR_UNLOCKED 1
+#define HAVE_GETC_UNLOCKED 1
+#define HAVE_PUTCHAR_UNLOCKED 1
+#define HAVE_PUTC_UNLOCKED 1
+#define HAVE_SETLOCALE 1
+#define HAVE_DECL_ABORT 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_ERRNO 0
+#define HAVE_DECL_GETOPT 1
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_CLEARERR_UNLOCKED 1
+#define HAVE_DECL_FEOF_UNLOCKED 1
+#define HAVE_DECL_FERROR_UNLOCKED 1
+#define HAVE_DECL_FFLUSH_UNLOCKED 1
+#define HAVE_DECL_FGETC_UNLOCKED 1
+#define HAVE_DECL_FGETS_UNLOCKED 1
+#define HAVE_DECL_FILENO_UNLOCKED 1
+#define HAVE_DECL_FPRINTF_UNLOCKED 0
+#define HAVE_DECL_FPUTC_UNLOCKED 1
+#define HAVE_DECL_FPUTS_UNLOCKED 1
+#define HAVE_DECL_FREAD_UNLOCKED 1
+#define HAVE_DECL_FWRITE_UNLOCKED 1
+#define HAVE_DECL_GETCHAR_UNLOCKED 1
+#define HAVE_DECL_GETC_UNLOCKED 1
+#define HAVE_DECL_PUTCHAR_UNLOCKED 1
+#define HAVE_DECL_PUTC_UNLOCKED 1
+#define HAVE_ALLOCA_H 1
+#define HAVE_ALLOCA 1
+#define STDC_HEADERS 1
+#define HAVE_LANGINFO_CODESET 1
+#define SIZEOF_INO_T 8
+#define SIZEOF_DEV_T 8
+#define HAVE_ICONV 1
+#define ICONV_CONST 
+#define PACKAGE "cpplib"
+#define CHECKING_P 0
+#define ENABLE_ASSERT_CHECKING 1
+#define ENABLE_CANONICAL_SYSTEM_HEADERS 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/zlib/config.log ===
+SET_MAKE=''
+SHELL='/bin/bash'
+STRIP='strip'
+TARGET_LIBRARY_FALSE=''
+TARGET_LIBRARY_TRUE='#'
+VERSION='1.1.4'
+ac_ct_CC=''
+ac_ct_DUMPBIN=''
+am__EXEEXT_FALSE=''
+am__EXEEXT_TRUE='#'
+am__fastdepCC_FALSE='#'
+am__fastdepCC_TRUE=''
+am__include='include'
+am__isrc=' -I$(srcdir)'
+am__leading_dot='.'
+am__nodep='_no'
+am__quote=''
+am__tar='$${TAR-tar} chof - "$$tardir"'
+am__untar='$${TAR-tar} xf -'
+bindir='${exec_prefix}/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+enable_host_pie=''
+enable_host_shared=''
+exec_prefix='${prefix}'
+host='x86_64-pc-linux-gnu'
+host_alias='x86_64-pc-linux-gnu'
+host_cpu='x86_64'
+host_os='linux-gnu'
+host_vendor='pc'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+install_sh='${SHELL} /mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+mkdir_p='$(MKDIR_P)'
+mkinstalldirs='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/mkinstalldirs'
+multi_basedir=''
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_os='linux-musl'
+target_vendor='openwrt'
+toolexecdir='$(libdir)/gcc-lib/$(target_alias)'
+toolexeclibdir='$(libdir)/../lib'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "zlib"
+#define PACKAGE_TARNAME "zlib"
+#define PACKAGE_VERSION "1.1.4"
+#define PACKAGE_STRING "zlib 1.1.4"
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define PACKAGE "zlib"
+#define VERSION "1.1.4"
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_DLFCN_H 1
+#define LT_OBJDIR ".libs/"
+#define HAVE_STDLIB_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_SYS_PARAM_H 1
+#define HAVE_GETPAGESIZE 1
+#define HAVE_MMAP 1
+#define HAVE_MEMCPY 1
+#define HAVE_STRERROR 1
+#define HAVE_UNISTD_H 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/aarch64-openwrt-linux-musl/libgcc/config.log ===
+PATH_SEPARATOR=':'
+PICFLAG='-fPIC'
+RANLIB='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/aarch64-openwrt-linux-musl/bin/ranlib'
+SHELL='/bin/bash'
+STRIP='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/aarch64-openwrt-linux-musl/bin/strip'
+ac_ct_CC=''
+accel_dir_suffix=''
+asm_hidden_op='.hidden'
+bindir='${exec_prefix}/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_libsubdir='build-x86_64-pc-linux-gnu'
+build_os='linux-gnu'
+build_subdir='build-x86_64-pc-linux-gnu'
+build_vendor='pc'
+cpu_type='aarch64'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+decimal_float='no'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+double_type_size='64'
+dvidir='${docdir}'
+enable_decimal_float='no'
+enable_execute_stack='enable-execute-stack-empty.c'
+enable_gcov='yes'
+enable_shared='no'
+enable_vtable_verify='no'
+exec_prefix='${prefix}'
+extra_parts='crtbegin.o crtbeginS.o crtbeginT.o crtend.o crtendS.o crtfastmath.o'
+fixed_point='no'
+force_explicit_eh_registry=''
+get_gcc_base_ver='cat'
+host='aarch64-openwrt-linux-musl'
+host_alias='aarch64-openwrt-linux-musl'
+host_cpu='aarch64'
+host_noncanonical='aarch64-openwrt-linux-musl'
+host_os='linux-musl'
+host_subdir='.'
+host_vendor='openwrt'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+libgcc_topdir='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/libgcc/..'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+long_double_type_size='128'
+mandir='${datarootdir}/man'
+md_unwind_header='aarch64/linux-unwind.h'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+real_host_noncanonical='aarch64-openwrt-linux-musl'
+sbindir='${exec_prefix}/sbin'
+set_have_cc_tls='-DHAVE_CC_TLS'
+set_use_emutls=''
+sfp_machine_header='aarch64/sfp-machine.h'
+sharedstatedir='${prefix}/com'
+slibdir='$(exec_prefix)/$(host_noncanonical)/lib'
+solaris_ld_v2_maps=''
+sysconfdir='${prefix}/etc'
+target_alias='aarch64-openwrt-linux-musl'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_subdir='aarch64-openwrt-linux-musl'
+thread_header='gthr-single.h'
+tm_defines=''
+tm_file=' $(srcdir)/config/aarch64/value-unwind.h'
+tmake_file=' $(srcdir)/config/t-crtstuff-pic $(srcdir)/config/t-libgcc-pic $(srcdir)/config/t-eh-dw2-dip $(srcdir)/config/t-slibgcc $(srcdir)/config/t-slibgcc-gld $(srcdir)/config/t-slibgcc-elf-ver $(srcdir)/config/t-linux $(srcdir)/config/aarch64/t-aarch64 $(srcdir)/config/aarch64/t-lse $(srcdir)/config/t-slibgcc-libgcc $(srcdir)/config/aarch64/t-softfp $(srcdir)/config/t-softfp $(srcdir)/config/t-crtfm $(srcdir)/config/t-dfprules $(srcdir)/config/aarch64/t-heap-trampoline $(srcdir)/config/t-gthr-noweak'
+toolexecdir='$(exec_prefix)/$(target_noncanonical)'
+toolexeclibdir='$(toolexecdir)/lib'
+unwind_header='unwind-generic.h'
+use_tm_clone_registry='-DUSE_TM_CLONE_REGISTRY=0'
+vis_hide='-fvisibility=hidden -DHIDE_EXPORTS'
+with_aix_soname='aix'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "GNU C Runtime Library"
+#define PACKAGE_TARNAME "libgcc"
+#define PACKAGE_VERSION "1.0"
+#define PACKAGE_STRING "GNU C Runtime Library 1.0"
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL "http://www.gnu.org/software/libgcc/"
+#define SIZEOF_DOUBLE 8
+#define SIZEOF_LONG_DOUBLE 16
+#define HAVE_GETIPINFO 1
+#define AS_HIDDEN_DIRECTIVE .hidden
+#define HAVE_AS_CFI_SECTIONS 1
+#define HAVE_AS_LSE 1
+#define HAVE_AS_VARIANT_PCS 1
+#define HAVE_INIT_PRIORITY 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/build-x86_64-pc-linux-gnu/libiberty/config.log ===
+#define HAVE_BCOPY 1
+#define HAVE_BSEARCH 1
+#define HAVE_BZERO 1
+#define HAVE_CALLOC 1
+#define HAVE_CLOCK 1
+#define HAVE_FFS 1
+#define HAVE_GETCWD 1
+#define HAVE_GETPAGESIZE 1
+#define HAVE_GETTIMEOFDAY 1
+#define HAVE_INDEX 1
+#define HAVE_INSQUE 1
+#define HAVE_MEMCHR 1
+#define HAVE_MEMCMP 1
+#define HAVE_MEMCPY 1
+#define HAVE_MEMMEM 1
+#define HAVE_MEMMOVE 1
+#define HAVE_MEMPCPY 1
+#define HAVE_MEMSET 1
+#define HAVE_MKSTEMPS 1
+#define HAVE_PUTENV 1
+#define HAVE_RANDOM 1
+#define HAVE_RENAME 1
+#define HAVE_RINDEX 1
+#define HAVE_SETENV 1
+#define HAVE_SNPRINTF 1
+#define HAVE_SIGSETMASK 1
+#define HAVE_STPCPY 1
+#define HAVE_STPNCPY 1
+#define HAVE_STRCASECMP 1
+#define HAVE_STRCHR 1
+#define HAVE_STRDUP 1
+#define HAVE_STRNCASECMP 1
+#define HAVE_STRNDUP 1
+#define HAVE_STRNLEN 1
+#define HAVE_STRRCHR 1
+#define HAVE_STRSTR 1
+#define HAVE_STRTOD 1
+#define HAVE_STRTOL 1
+#define HAVE_STRTOUL 1
+#define HAVE_STRTOLL 1
+#define HAVE_STRTOULL 1
+#define HAVE_STRVERSCMP 1
+#define HAVE_TMPNAM 1
+#define HAVE_VASPRINTF 1
+#define HAVE_VFPRINTF 1
+#define HAVE_VPRINTF 1
+#define HAVE_VSNPRINTF 1
+#define HAVE_VSPRINTF 1
+#define HAVE_WAITPID 1
+#define STACK_DIRECTION 1
+#define HAVE_FORK 1
+#define HAVE_VFORK 1
+#define HAVE_WORKING_VFORK 1
+#define HAVE_WORKING_FORK 1
+#define HAVE___FSETLOCKING 1
+#define HAVE_CANONICALIZE_FILE_NAME 1
+#define HAVE_DUP3 1
+#define HAVE_GETRLIMIT 1
+#define HAVE_GETRUSAGE 1
+#define HAVE_GETTIMEOFDAY 1
+#define HAVE_ON_EXIT 1
+#define HAVE_PIPE2 1
+#define HAVE_POSIX_SPAWN 1
+#define HAVE_POSIX_SPAWNP 1
+#define HAVE_PSIGNAL 1
+#define HAVE_REALPATH 1
+#define HAVE_SETRLIMIT 1
+#define HAVE_STRERROR 1
+#define HAVE_STRSIGNAL 1
+#define HAVE_SYSCONF 1
+#define HAVE_TIMES 1
+#define HAVE_WAIT3 1
+#define HAVE_WAIT4 1
+#define HAVE_SBRK 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_FFS 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_SNPRINTF 1
+#define HAVE_DECL_VSNPRINTF 1
+#define HAVE_DECL_CALLOC 1
+#define HAVE_DECL_GETENV 1
+#define HAVE_DECL_GETOPT 1
+#define HAVE_DECL_MALLOC 1
+#define HAVE_DECL_REALLOC 1
+#define HAVE_DECL_SBRK 1
+#define HAVE_DECL_STRTOL 1
+#define HAVE_DECL_STRTOUL 1
+#define HAVE_DECL_STRTOLL 1
+#define HAVE_DECL_STRTOULL 1
+#define HAVE_DECL_STRVERSCMP 1
+#define HAVE_DECL_STRNLEN 1
+#define HAVE_X86_SHA1_HW_SUPPORT 1
+#define HAVE_STDLIB_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_SYS_PARAM_H 1
+#define HAVE_GETPAGESIZE 1
+#define HAVE_MMAP 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/build-x86_64-pc-linux-gnu/libcpp/config.log ===
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_os='linux-musl'
+target_vendor='openwrt'
+warn='-W -Wall -Wno-narrowing -Wwrite-strings -Wmissing-format-attribute'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "cpplib"
+#define PACKAGE_TARNAME "cpplib"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "cpplib  "
+#define PACKAGE_BUGREPORT "gcc-bugs@gcc.gnu.org"
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define TIME_WITH_SYS_TIME 1
+#define STRING_WITH_STRINGS 1
+#define HAVE_LOCALE_H 1
+#define HAVE_FCNTL_H 1
+#define HAVE_LIMITS_H 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_STRING_H 1
+#define HAVE_SYS_FILE_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_OBSTACK 1
+#define HAVE_UINTPTR_T 1
+#define SIZEOF_INT 4
+#define SIZEOF_LONG 8
+#define HAVE_CLEARERR_UNLOCKED 1
+#define HAVE_FEOF_UNLOCKED 1
+#define HAVE_FERROR_UNLOCKED 1
+#define HAVE_FFLUSH_UNLOCKED 1
+#define HAVE_FGETC_UNLOCKED 1
+#define HAVE_FGETS_UNLOCKED 1
+#define HAVE_FILENO_UNLOCKED 1
+#define HAVE_FPUTC_UNLOCKED 1
+#define HAVE_FPUTS_UNLOCKED 1
+#define HAVE_FREAD_UNLOCKED 1
+#define HAVE_FWRITE_UNLOCKED 1
+#define HAVE_GETCHAR_UNLOCKED 1
+#define HAVE_GETC_UNLOCKED 1
+#define HAVE_PUTCHAR_UNLOCKED 1
+#define HAVE_PUTC_UNLOCKED 1
+#define HAVE_SETLOCALE 1
+#define HAVE_DECL_ABORT 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_ERRNO 0
+#define HAVE_DECL_GETOPT 1
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_CLEARERR_UNLOCKED 1
+#define HAVE_DECL_FEOF_UNLOCKED 1
+#define HAVE_DECL_FERROR_UNLOCKED 1
+#define HAVE_DECL_FFLUSH_UNLOCKED 1
+#define HAVE_DECL_FGETC_UNLOCKED 1
+#define HAVE_DECL_FGETS_UNLOCKED 1
+#define HAVE_DECL_FILENO_UNLOCKED 1
+#define HAVE_DECL_FPRINTF_UNLOCKED 0
+#define HAVE_DECL_FPUTC_UNLOCKED 1
+#define HAVE_DECL_FPUTS_UNLOCKED 1
+#define HAVE_DECL_FREAD_UNLOCKED 1
+#define HAVE_DECL_FWRITE_UNLOCKED 1
+#define HAVE_DECL_GETCHAR_UNLOCKED 1
+#define HAVE_DECL_GETC_UNLOCKED 1
+#define HAVE_DECL_PUTCHAR_UNLOCKED 1
+#define HAVE_DECL_PUTC_UNLOCKED 1
+#define HAVE_ALLOCA_H 1
+#define HAVE_ALLOCA 1
+#define STDC_HEADERS 1
+#define HAVE_LANGINFO_CODESET 1
+#define SIZEOF_INO_T 8
+#define SIZEOF_DEV_T 8
+#define ICONV_CONST 
+#define PACKAGE "cpplib"
+#define CHECKING_P 0
+#define ENABLE_ASSERT_CHECKING 1
+#define ENABLE_CANONICAL_SYSTEM_HEADERS 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/build-x86_64-pc-linux-gnu/fixincludes/config.log ===
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_os='linux-musl'
+target_vendor='openwrt'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "fixincludes"
+#define PACKAGE_TARNAME "fixincludes"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "fixincludes  "
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define EXE_EXT ""
+#define STDC_HEADERS 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_FCNTL_H 1
+#define HAVE_SYS_FILE_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_CLEARERR_UNLOCKED 1
+#define HAVE_FEOF_UNLOCKED 1
+#define HAVE_FERROR_UNLOCKED 1
+#define HAVE_FFLUSH_UNLOCKED 1
+#define HAVE_FGETC_UNLOCKED 1
+#define HAVE_FGETS_UNLOCKED 1
+#define HAVE_FILENO_UNLOCKED 1
+#define HAVE_FPUTC_UNLOCKED 1
+#define HAVE_FPUTS_UNLOCKED 1
+#define HAVE_FREAD_UNLOCKED 1
+#define HAVE_FWRITE_UNLOCKED 1
+#define HAVE_GETCHAR_UNLOCKED 1
+#define HAVE_GETC_UNLOCKED 1
+#define HAVE_PUTCHAR_UNLOCKED 1
+#define HAVE_PUTC_UNLOCKED 1
+#define HAVE_DECL_ABORT 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_ERRNO 0
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_MEMMEM 1
+#define HAVE_DECL_CLEARERR_UNLOCKED 1
+#define HAVE_DECL_FEOF_UNLOCKED 1
+#define HAVE_DECL_FERROR_UNLOCKED 1
+#define HAVE_DECL_FFLUSH_UNLOCKED 1
+#define HAVE_DECL_FGETC_UNLOCKED 1
+#define HAVE_DECL_FGETS_UNLOCKED 1
+#define HAVE_DECL_FILENO_UNLOCKED 1
+#define HAVE_DECL_FPRINTF_UNLOCKED 0
+#define HAVE_DECL_FPUTC_UNLOCKED 1
+#define HAVE_DECL_FPUTS_UNLOCKED 1
+#define HAVE_DECL_FREAD_UNLOCKED 1
+#define HAVE_DECL_FWRITE_UNLOCKED 1
+#define HAVE_DECL_GETCHAR_UNLOCKED 1
+#define HAVE_DECL_GETC_UNLOCKED 1
+#define HAVE_DECL_PUTCHAR_UNLOCKED 1
+#define HAVE_DECL_PUTC_UNLOCKED 1
+#define HAVE_MMAP_FILE 1
+#define HAVE_MMAP_DEV_ZERO 1
+#define HAVE_MMAP_ANON 1
+#define SED_PROGRAM "/mnt/build_wrt/staging_dir/host/bin/sed"
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/fixincludes/config.log ===
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_os='linux-musl'
+target_vendor='openwrt'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "fixincludes"
+#define PACKAGE_TARNAME "fixincludes"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "fixincludes  "
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define EXE_EXT ""
+#define STDC_HEADERS 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_FCNTL_H 1
+#define HAVE_SYS_FILE_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_CLEARERR_UNLOCKED 1
+#define HAVE_FEOF_UNLOCKED 1
+#define HAVE_FERROR_UNLOCKED 1
+#define HAVE_FFLUSH_UNLOCKED 1
+#define HAVE_FGETC_UNLOCKED 1
+#define HAVE_FGETS_UNLOCKED 1
+#define HAVE_FILENO_UNLOCKED 1
+#define HAVE_FPUTC_UNLOCKED 1
+#define HAVE_FPUTS_UNLOCKED 1
+#define HAVE_FREAD_UNLOCKED 1
+#define HAVE_FWRITE_UNLOCKED 1
+#define HAVE_GETCHAR_UNLOCKED 1
+#define HAVE_GETC_UNLOCKED 1
+#define HAVE_PUTCHAR_UNLOCKED 1
+#define HAVE_PUTC_UNLOCKED 1
+#define HAVE_DECL_ABORT 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_ERRNO 0
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_MEMMEM 1
+#define HAVE_DECL_CLEARERR_UNLOCKED 1
+#define HAVE_DECL_FEOF_UNLOCKED 1
+#define HAVE_DECL_FERROR_UNLOCKED 1
+#define HAVE_DECL_FFLUSH_UNLOCKED 1
+#define HAVE_DECL_FGETC_UNLOCKED 1
+#define HAVE_DECL_FGETS_UNLOCKED 1
+#define HAVE_DECL_FILENO_UNLOCKED 1
+#define HAVE_DECL_FPRINTF_UNLOCKED 0
+#define HAVE_DECL_FPUTC_UNLOCKED 1
+#define HAVE_DECL_FPUTS_UNLOCKED 1
+#define HAVE_DECL_FREAD_UNLOCKED 1
+#define HAVE_DECL_FWRITE_UNLOCKED 1
+#define HAVE_DECL_GETCHAR_UNLOCKED 1
+#define HAVE_DECL_GETC_UNLOCKED 1
+#define HAVE_DECL_PUTCHAR_UNLOCKED 1
+#define HAVE_DECL_PUTC_UNLOCKED 1
+#define HAVE_MMAP_FILE 1
+#define HAVE_MMAP_DEV_ZERO 1
+#define HAVE_MMAP_ANON 1
+#define SED_PROGRAM "/mnt/build_wrt/staging_dir/host/bin/sed"
+
+configure: exit 0
