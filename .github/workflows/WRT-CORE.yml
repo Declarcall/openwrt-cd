@@ -198,6 +198,60 @@ jobs:
           export GOPROXY=https://proxy.golang.org,direct
           make -j$(nproc) || make -j1 V=s 2>&1 | tee /tmp/build_verbose.log
 
+      - name: Collect Kernel Size Diagnostics
+        if: env.WRT_TEST != 'true'
+        run: |
+          set +e
+          DIAG_DIR="/tmp/kernel_diag"
+          mkdir -p "$DIAG_DIR"
+          DIAG_FILE="$DIAG_DIR/kernel_diag.txt"
+          {
+            echo "=== Kernel Size Diagnostic ==="
+            echo "Config: $WRT_CONFIG | Source: $WRT_SOURCE | Time: $(TZ=UTC-8 date '+%F %T')"
+            echo ""
+
+            KDIR=$(find ./wrt/build_dir -maxdepth 3 -type d -name "linux-qualcommax_ipq60xx" 2>/dev/null | head -1)
+            LINUX_DIR=$(ls -d "$KDIR"/linux-* 2>/dev/null | head -1)
+            echo "Kernel build dir : $KDIR"
+            echo "Kernel src dir   : $LINUX_DIR"
+            echo ""
+
+            echo "--- top .config: CONFIG_KERNEL_* ---"
+            grep -E '^#? ?CONFIG_KERNEL_' ./wrt/.config 2>/dev/null
+            cp ./wrt/.config "$DIAG_DIR/top_dot_config.txt" 2>/dev/null
+            echo ""
+
+            if [ -n "$LINUX_DIR" ] && [ -f "$LINUX_DIR/.config" ]; then
+              cp "$LINUX_DIR/.config" "$DIAG_DIR/kernel_dot_config.txt"
+              echo "--- key CONFIG states in kernel .config ---"
+              grep -E '^#? ?CONFIG_(DEBUG_INFO|DEBUG_INFO_BTF|DEBUG_INFO_REDUCED|DEBUG_FS|KALLSYMS|KALLSYMS_UNCOMPRESSED|FUNCTION_TRACER|FTRACE|KPROBES|UPROBES|BPF|BPF_EVENTS|BPF_JIT|XDP|XDP_SOCKETS|IKCONFIG|IKHEADERS|PERF_EVENTS|HW_PERF_EVENTS|PROFILING|CGROUP_BPF|SLAB|SLUB|CFG80211|MAC80211|ATH11K|IPV6|WIRELESS|NETFILTER|USB|ATA|NVME|MMC|FUSE|BTRFS)' "$LINUX_DIR/.config" 2>/dev/null
+              echo ""
+            fi
+
+            echo "--- artifact sizes (bytes) ---"
+            for F in "$KDIR/Image" "$KDIR/vmlinux" "$LINUX_DIR/vmlinux" "$LINUX_DIR/arch/arm64/boot/Image" "$KDIR"/*-uImage.itb "$KDIR"/*-uImage.itb.new "$KDIR"/*.dtb; do
+              [ -f "$F" ] && echo "$(stat -c '%s' "$F")  $F"
+            done
+            echo ""
+
+            if [ -n "$LINUX_DIR" ] && [ -f "$LINUX_DIR/vmlinux" ]; then
+              SZ=$(find ./wrt/staging_dir -path "*/bin/aarch64-openwrt-linux-musl-size" 2>/dev/null | head -1)
+              if [ -n "$SZ" ]; then
+                echo "--- size of kernel vmlinux (text/data/bss) ---"
+                "$SZ" "$LINUX_DIR/vmlinux"
+              fi
+            fi
+          } > "$DIAG_FILE" 2>&1
+          echo "diagnostics written to $DIAG_FILE"
+          cat "$DIAG_FILE"
+
+      - name: Upload Kernel Size Diagnostics
+        if: env.WRT_TEST != 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: kernel-diag-${{ env.WRT_NAME }}-${{ env.WRT_DATE }}
+          path: /tmp/kernel_diag/
+
       - name: Collect and Commit Build Failure Logs
         if: failure()
         run: |
@@ -238,6 +292,13 @@ jobs:
               tail -n 100 "$F" >> "$LOG_FILE" 2>/dev/null || true
             done
           fi
+
+          # === 内核尺寸诊断 (来自 Collect Kernel Size Diagnostics 步骤) ===
+          if [ -f "/tmp/kernel_diag/kernel_diag.txt" ]; then
+            echo "--- KERNEL SIZE DIAGNOSTIC ---" >> "$LOG_FILE"
+            cat /tmp/kernel_diag/kernel_diag.txt >> "$LOG_FILE" 2>/dev/null || true
+            echo "" >> "$LOG_FILE"
+          fi
           
           # === 全量日志 (上传为 Artifact，深度排查) ===
           echo "Build Failure FULL Diagnostic Report - $TIMESTAMP" > "$FULL_LOG_FILE"
@@ -270,6 +331,18 @@ jobs:
             echo "--- .config SNAPSHOT ---" >> "$FULL_LOG_FILE"
             cat ./wrt/.config >> "$FULL_LOG_FILE" 2>/dev/null || true
             cp ./wrt/.config "$FULL_LOG_DIR/dot_config_snapshot.txt" 2>/dev/null || true
+          fi
+
+          # === 导出内核诊断 + 内核实际生效 .config ===
+          if [ -f "/tmp/kernel_diag/kernel_diag.txt" ]; then
+            echo "--- KERNEL SIZE DIAGNOSTIC ---" >> "$FULL_LOG_FILE"
+            cat /tmp/kernel_diag/kernel_diag.txt >> "$FULL_LOG_FILE" 2>/dev/null || true
+          fi
+          KDIAG_CFG=$(find ./wrt/build_dir -maxdepth 4 -path "*linux-qualcommax*" -name ".config" 2>/dev/null | head -1)
+          if [ -n "$KDIAG_CFG" ]; then
+            echo "--- KERNEL .config ($KDIAG_CFG) ---" >> "$FULL_LOG_FILE"
+            cat "$KDIAG_CFG" >> "$FULL_LOG_FILE" 2>/dev/null || true
+            cp "$KDIAG_CFG" "$FULL_LOG_DIR/kernel_dot_config.txt" 2>/dev/null || true
           fi
           
           echo "--> Cleaning up failure logs older than 7 days..."
