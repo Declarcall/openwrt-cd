@@ -59,7 +59,7 @@ define Package/dae
   $(call Package/dae/Default)
   TITLE:=A lightweight and high-performance transparent proxy solution
   # You need enable KERNEL_DEBUG_INFO_BTF and KERNEL_BPF_EVENTS
-  DEPENDS:=$(GO_ARCH_DEPENDS) $(BPF_DEPENDS)  \
+  DEPENDS:=$(GO_ARCH_DEPENDS) \
     +ca-bundle +kmod-sched-core +kmod-sched-bpf +kmod-xdp-sockets-diag \
     +kmod-veth +v2ray-geoip +v2ray-geosite
 endef

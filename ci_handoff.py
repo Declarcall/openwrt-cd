@@ -56,7 +56,7 @@ def http_json(path, headers=None):
         h.update(headers)
     token = get_token()
     if token:
-        h["Authorization"] = f"token {token}"
+        h["Authorization"] = f"Bearer {token}"
     opener = urllib.request.build_opener()
     if PROXY:
         opener = urllib.request.build_opener(
@@ -74,7 +74,7 @@ def download(path, dest, headers=None):
         h.update(headers)
     token = get_token()
     if token:
-        h["Authorization"] = f"token {token}"
+        h["Authorization"] = f"Bearer {token}"
     opener = urllib.request.build_opener()
     if PROXY:
         opener = urllib.request.build_opener(
