@@ -56,9 +56,13 @@ fi
 #高通平台调整
 DTS_PATH="./target/linux/qualcommax/dts/"
 if [[ "${WRT_TARGET^^}" == *"QUALCOMMAX"* ]] || [ -d "./target/linux/qualcommax" ]; then
-	# 禁用 qualcommax 平台内核配置文件中的 DEBUG_INFO / BTF，确保 GZIP 内核成功瘦身至 ~4.8MB (低于 6144k 限制)
-	find ./target/linux/qualcommax/ -name "config-*" -exec sed -i 's/CONFIG_DEBUG_INFO=y/# CONFIG_DEBUG_INFO is not set/g' {} + 2>/dev/null || true
-	find ./target/linux/qualcommax/ -name "config-*" -exec sed -i 's/CONFIG_DEBUG_INFO_BTF=y/# CONFIG_DEBUG_INFO_BTF is not set/g' {} + 2>/dev/null || true
+	# 禁用 qualcommax 及 generic 全平台内核配置文件中的 DEBUG_INFO / BTF，确保 GZIP 内核成功瘦身至 ~4.8MB (低于 6144k 限制)
+	find ./target/linux/ -name "config-*" -exec sed -i 's/CONFIG_DEBUG_INFO=y/# CONFIG_DEBUG_INFO is not set/g' {} + 2>/dev/null || true
+	find ./target/linux/ -name "config-*" -exec sed -i 's/CONFIG_DEBUG_INFO_BTF=y/# CONFIG_DEBUG_INFO_BTF is not set/g' {} + 2>/dev/null || true
+	find ./target/linux/ -name "config-*" -exec sed -i 's/CONFIG_DEBUG_INFO_DWARF_TOOLCHAIN_DEFAULT=y/# CONFIG_DEBUG_INFO_DWARF_TOOLCHAIN_DEFAULT is not set/g' {} + 2>/dev/null || true
+	if [ -f "./include/kernel-build.mk" ]; then
+		sed -i -E 's/(^\s*awk .*CONFIG_KERNEL_.*\.config\.target)/\1; sed -i "s\/CONFIG_DEBUG_INFO=y\/# CONFIG_DEBUG_INFO is not set\/g" \$(LINUX_DIR)\/\.config\.target/' ./include/kernel-build.mk 2>/dev/null || true
+	fi
 
 	#无WIFI配置调整Q6大小
 	if [[ "${WRT_CONFIG,,}" == *"wifi"* && "${WRT_CONFIG,,}" == *"no"* ]]; then
