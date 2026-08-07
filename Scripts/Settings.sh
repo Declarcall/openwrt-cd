@@ -55,7 +55,11 @@ fi
 
 #高通平台调整
 DTS_PATH="./target/linux/qualcommax/dts/"
-if [[ "${WRT_TARGET^^}" == *"QUALCOMMAX"* ]]; then
+if [[ "${WRT_TARGET^^}" == *"QUALCOMMAX"* ]] || [ -d "./target/linux/qualcommax" ]; then
+	# 禁用 qualcommax 平台内核配置文件中的 DEBUG_INFO / BTF，确保 GZIP 内核成功瘦身至 ~4.8MB (低于 6144k 限制)
+	find ./target/linux/qualcommax/ -name "config-*" -exec sed -i 's/CONFIG_DEBUG_INFO=y/# CONFIG_DEBUG_INFO is not set/g' {} + 2>/dev/null || true
+	find ./target/linux/qualcommax/ -name "config-*" -exec sed -i 's/CONFIG_DEBUG_INFO_BTF=y/# CONFIG_DEBUG_INFO_BTF is not set/g' {} + 2>/dev/null || true
+
 	#无WIFI配置调整Q6大小
 	if [[ "${WRT_CONFIG,,}" == *"wifi"* && "${WRT_CONFIG,,}" == *"no"* ]]; then
 		find $DTS_PATH -type f ! -iname '*nowifi*' -exec sed -i 's/ipq\(6018\|8074\).dtsi/ipq\1-nowifi.dtsi/g' {} +
