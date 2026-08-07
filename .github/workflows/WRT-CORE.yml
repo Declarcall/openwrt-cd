@@ -177,6 +177,15 @@ jobs:
 
           make defconfig -j$(nproc) && make clean -j$(nproc)
 
+          # === 🔍 依赖反查诊断钩子：如果发现 DEBUG_INFO 被重新勾选，直接打印引用的罪魁祸首 Makefile ===
+          if grep -q "CONFIG_KERNEL_DEBUG_INFO=y" .config || grep -q "CONFIG_KERNEL_DEBUG_INFO_BTF=y" .config; then
+            echo "========================================================="
+            echo "🚨 [CONFIG WARNING] CONFIG_KERNEL_DEBUG_INFO / BTF is forced by package dependencies!"
+            echo "Searching for culprit packages that declare DEBUG_INFO dependency:"
+            grep -rn -E "KERNEL_DEBUG_INFO|BPF_DEPENDS" ./package/ ./feeds/ 2>/dev/null || true
+            echo "========================================================="
+          fi
+
       - name: Download Packages
         if: env.WRT_TEST != 'true'
         run: |
@@ -266,6 +275,13 @@ jobs:
           echo "Target Config: ${WRT_CONFIG:-UNKNOWN}" >> "$LOG_FILE"
           echo "Commit SHA: $GITHUB_SHA" >> "$LOG_FILE"
           echo "=========================================================" >> "$LOG_FILE"
+          
+          # === 🎯 罪魁祸首摘要区：直接提取致命错误，无需翻看几十万行日志 ===
+          echo "--- 🚨 CRITICAL ERROR SUMMARY (罪魁祸首摘要表) 🚨 ---" >> "$LOG_FILE"
+          if [ -f "/tmp/build_verbose.log" ]; then
+            grep -E "is too big|Error 1|Error 2|FAILED:|undefined reference|No such file or directory|No rule to make target|compilation terminated" /tmp/build_verbose.log | tail -n 25 >> "$LOG_FILE" 2>/dev/null || echo "No explicit build error matched in verbose log." >> "$LOG_FILE"
+          fi
+          echo "=========================================================" >> "$LOG_FILE"
           echo "" >> "$LOG_FILE"
           
           if [ -f "/tmp/build_verbose.log" ]; then
@@ -298,6 +314,13 @@ jobs:
           echo "Build Failure FULL Diagnostic Report - $TIMESTAMP" > "$FULL_LOG_FILE"
           echo "Target Config: ${WRT_CONFIG:-UNKNOWN}" >> "$FULL_LOG_FILE"
           echo "Commit SHA: $GITHUB_SHA" >> "$FULL_LOG_FILE"
+          echo "=========================================================" >> "$FULL_LOG_FILE"
+          
+          # === 🎯 全量日志顶部同样添加罪魁祸首摘要表 ===
+          echo "--- 🚨 CRITICAL ERROR SUMMARY (罪魁祸首摘要表) 🚨 ---" >> "$FULL_LOG_FILE"
+          if [ -f "/tmp/build_verbose.log" ]; then
+            grep -E "is too big|Error 1|Error 2|FAILED:|undefined reference|No such file or directory|No rule to make target|compilation terminated" /tmp/build_verbose.log | tail -n 25 >> "$FULL_LOG_FILE" 2>/dev/null || echo "No explicit build error matched in verbose log." >> "$FULL_LOG_FILE"
+          fi
           echo "=========================================================" >> "$FULL_LOG_FILE"
           echo "" >> "$FULL_LOG_FILE"
           
