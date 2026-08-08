@@ -202,10 +202,18 @@ jobs:
 
           # === 🔧 强行注入 olddefconfig 自动结算与 DEBUG_INFO_NONE 拦截 ===
           if [ -f "./include/kernel-build.mk" ]; then
-            sed -i -E 's/(^\s*awk .*CONFIG_KERNEL_.*\.config\.target)/\1; echo "CONFIG_DEBUG_INFO_NONE=y" >> \$(LINUX_DIR)\/\.config\.target; sed -i "s\/CONFIG_DEBUG_INFO=y\/# CONFIG_DEBUG_INFO is not set\/g" \$(LINUX_DIR)\/\.config\.target/' ./include/kernel-build.mk
-            sed -i -E '/cmp -s.*\.config\.set/s/.*/\tcp \$(LINUX_DIR)\/\.config\.set \$(LINUX_DIR)\/\.config \&\& \$(KERNEL_MAKEOPTS) olddefconfig \&\& cp \$(LINUX_DIR)\/\.config \$(LINUX_DIR)\/\.config\.prev/' ./include/kernel-build.mk
+            python3 -c '
+import re
+p = "./include/kernel-build.mk"
+with open(p, "r") as f:
+    text = f.read()
+text = re.sub(r"(awk .*CONFIG_KERNEL.*\.config\.target)", r"\1\n\techo \"CONFIG_DEBUG_INFO_NONE=y\" >> \$(LINUX_DIR)/\.config\.target\n\tsed -i \"s/CONFIG_DEBUG_INFO=y/# CONFIG_DEBUG_INFO is not set/g\" \$(LINUX_DIR)/\.config\.target", text)
+text = re.sub(r"cmp -s \$\(LINUX_DIR\)/\.config\.set \$\(LINUX_DIR\)/\.config\.prev \|\| \{[\s\S]*?\}", "\tcp $(LINUX_DIR)/.config.set $(LINUX_DIR)/.config\n\t$(KERNEL_MAKEOPTS) olddefconfig\n\tcp $(LINUX_DIR)/.config $(LINUX_DIR)/.config.prev", text)
+with open(p, "w") as f:
+    f.write(text)
+'
             echo "--- Verified modified kernel-build.mk ---"
-            grep -n "olddefconfig" ./include/kernel-build.mk || true
+            grep -n -C 3 "olddefconfig" ./include/kernel-build.mk || true
           fi
 
           make -j$(nproc) || make -j1 V=s 2>&1 | tee /tmp/build_verbose.log
