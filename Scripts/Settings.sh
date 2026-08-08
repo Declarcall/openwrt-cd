@@ -25,6 +25,10 @@ elif [ -f "$WIFI_UC" ]; then
 	sed -i "s/key='.*'/key='$WRT_WORD'/g" $WIFI_UC
 fi
 
+# 开启默认 Wi-Fi 发射状态 (开机默认直接发射 Wi-Fi 信号，无需手动开启)
+sed -i "s/disabled='1'/disabled='0'/g" $WIFI_SH 2>/dev/null || true
+sed -i "s/disabled=1/disabled=0/g" $WIFI_UC 2>/dev/null || true
+
 CFG_FILE="./package/base-files/files/bin/config_generate"
 #修改默认IP地址
 sed -i "s/192\.168\.[0-9]*\.[0-9]*/$WRT_IP/g" $CFG_FILE
