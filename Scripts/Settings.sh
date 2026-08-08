@@ -64,16 +64,7 @@ if [[ "${WRT_TARGET^^}" == *"QUALCOMMAX"* ]] || [ -d "./target/linux/qualcommax"
 
 	# 对 include/kernel-build.mk 注入 make olddefconfig 自动非交互式补全选择，彻底消除 choice[1-4?] 询问
 	if [ -f "./include/kernel-build.mk" ]; then
-		python3 -c '
-import re
-p = "./include/kernel-build.mk"
-with open(p, "r") as f:
-    text = f.read()
-text = re.sub(r"(awk .*CONFIG_KERNEL.*\.config\.target)", r"\1\n\techo \"CONFIG_DEBUG_INFO_NONE=y\" >> \$(LINUX_DIR)/\.config\.target\n\tsed -i \"s/CONFIG_DEBUG_INFO=y/# CONFIG_DEBUG_INFO is not set/g\" \$(LINUX_DIR)/\.config\.target", text)
-text = re.sub(r"cmp -s \$\(LINUX_DIR\)/\.config\.set \$\(LINUX_DIR\)/\.config\.prev \|\| \{[\s\S]*?\}", "\tcp $(LINUX_DIR)/.config.set $(LINUX_DIR)/.config\n\t$(KERNEL_MAKEOPTS) olddefconfig\n\tcp $(LINUX_DIR)/.config $(LINUX_DIR)/.config.prev", text)
-with open(p, "w") as f:
-    f.write(text)
-' 2>/dev/null || true
+		python3 $GITHUB_WORKSPACE/Scripts/patch_kernel_mk.py ./include/kernel-build.mk 2>/dev/null || true
 	fi
 
 	#无WIFI配置调整Q6大小
