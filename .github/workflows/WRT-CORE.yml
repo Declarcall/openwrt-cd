@@ -199,14 +199,6 @@ jobs:
           set -o pipefail
           cd ./wrt/
           export GOPROXY=https://proxy.golang.org,direct
-
-          # === 🔧 强行注入 non-interactive oldconfig 到 kernel-defaults.mk ===
-          if [ -f "./include/kernel-defaults.mk" ]; then
-            python3 $GITHUB_WORKSPACE/Scripts/patch_kernel_mk.py ./include/kernel-defaults.mk
-            echo "--- Verified modified kernel-defaults.mk ---"
-            grep -n -C 3 "oldconfig" ./include/kernel-defaults.mk || true
-          fi
-
           make -j$(nproc) || make -j1 V=s 2>&1 | tee /tmp/build_verbose.log
 
       - name: Collect Kernel Size Diagnostics

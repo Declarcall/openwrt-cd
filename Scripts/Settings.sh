@@ -56,16 +56,18 @@ fi
 #高通平台调整
 DTS_PATH="./target/linux/qualcommax/dts/"
 if [[ "${WRT_TARGET^^}" == *"QUALCOMMAX"* ]] || [ -d "./target/linux/qualcommax" ]; then
-	# 禁用 qualcommax 及 generic 全平台内核配置文件中的 DEBUG_INFO，显式勾选 CONFIG_DEBUG_INFO_NONE=y
-	find ./target/linux/ -name "config-*" -exec sed -i 's/CONFIG_DEBUG_INFO=y/CONFIG_DEBUG_INFO_NONE=y\n# CONFIG_DEBUG_INFO is not set/g' {} + 2>/dev/null || true
-	find ./target/linux/ -name "config-*" -exec sed -i 's/CONFIG_DEBUG_INFO_BTF=y/# CONFIG_DEBUG_INFO_BTF is not set/g' {} + 2>/dev/null || true
-	find ./target/linux/ -name "config-*" -exec sed -i 's/CONFIG_DEBUG_INFO_DWARF.*=y/# CONFIG_DEBUG_INFO_DWARF is not set/g' {} + 2>/dev/null || true
-	find ./target/linux/ -name "config-*" -exec sed -i 's/CONFIG_DEBUG_FS=y/# CONFIG_DEBUG_FS is not set/g' {} + 2>/dev/null || true
-
-	# 对 include/kernel-defaults.mk 注入 make oldconfig 自动非交互式补全选择，彻底消除 choice[1-4?] 询问
-	if [ -f "./include/kernel-defaults.mk" ]; then
-		python3 $GITHUB_WORKSPACE/Scripts/patch_kernel_mk.py ./include/kernel-defaults.mk 2>/dev/null || true
-	fi
+	# 正规标准做法：在 target/linux/ 的 config-* 模板中显式并完整对齐 DEBUG_INFO 的 Choice 选单所有反选项
+	find ./target/linux/ -name "config-*" -exec sed -i "/CONFIG_DEBUG_INFO/d" {} + 2>/dev/null || true
+	find ./target/linux/ -name "config-*" -exec sed -i "/CONFIG_DEBUG_FS/d" {} + 2>/dev/null || true
+	find ./target/linux/ -name "config-*" -exec bash -c '
+		echo "CONFIG_DEBUG_INFO_NONE=y" >> "$1"
+		echo "# CONFIG_DEBUG_INFO is not set" >> "$1"
+		echo "# CONFIG_DEBUG_INFO_BTF is not set" >> "$1"
+		echo "# CONFIG_DEBUG_INFO_DWARF_TOOLCHAIN_DEFAULT is not set" >> "$1"
+		echo "# CONFIG_DEBUG_INFO_DWARF4 is not set" >> "$1"
+		echo "# CONFIG_DEBUG_INFO_DWARF5 is not set" >> "$1"
+		echo "# CONFIG_DEBUG_FS is not set" >> "$1"
+	' _ {} \; 2>/dev/null || true
 
 	#无WIFI配置调整Q6大小
 	if [[ "${WRT_CONFIG,,}" == *"wifi"* && "${WRT_CONFIG,,}" == *"no"* ]]; then
