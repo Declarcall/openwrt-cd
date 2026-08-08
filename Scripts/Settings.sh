@@ -62,10 +62,6 @@ if [[ "${WRT_TARGET^^}" == *"QUALCOMMAX"* ]] || [ -d "./target/linux/qualcommax"
 	find ./target/linux/ -name "config-*" -exec sed -i 's/CONFIG_DEBUG_INFO_DWARF.*=y/# CONFIG_DEBUG_INFO_DWARF is not set/g' {} + 2>/dev/null || true
 	find ./target/linux/ -name "config-*" -exec sed -i 's/CONFIG_DEBUG_FS=y/# CONFIG_DEBUG_FS is not set/g' {} + 2>/dev/null || true
 
-	# 强制开启内核 -Os 编译优化 (代替 -O2，无损省出 600KB~1MB 体积)
-	find ./target/linux/ -name "config-*" -exec sed -i 's/CONFIG_CC_OPTIMIZE_FOR_PERFORMANCE=y/# CONFIG_CC_OPTIMIZE_FOR_PERFORMANCE is not set/g' {} + 2>/dev/null || true
-	find ./target/linux/ -name "config-*" -exec sed -i 's/# CONFIG_CC_OPTIMIZE_FOR_SIZE is not set/CONFIG_CC_OPTIMIZE_FOR_SIZE=y/g' {} + 2>/dev/null || true
-
 	if [ -f "./include/kernel-build.mk" ]; then
 		sed -i -E 's/(^\s*awk .*CONFIG_KERNEL_.*\.config\.target)/\1; sed -i "s\/CONFIG_DEBUG_INFO=y\/# CONFIG_DEBUG_INFO is not set\/g" \$(LINUX_DIR)\/\.config\.target; sed -i "s\/CONFIG_DEBUG_INFO_DWARF4=y\/# CONFIG_DEBUG_INFO_DWARF4 is not set\/g" \$(LINUX_DIR)\/\.config\.target; sed -i "s\/CONFIG_DEBUG_FS=y\/# CONFIG_DEBUG_FS is not set\/g" \$(LINUX_DIR)\/\.config\.target/' ./include/kernel-build.mk 2>/dev/null || true
 	fi
