@@ -65,7 +65,7 @@ if [[ "${WRT_TARGET^^}" == *"QUALCOMMAX"* ]] || [ -d "./target/linux/qualcommax"
 	# 对 include/kernel-build.mk 注入 make olddefconfig 自动非交互式补全选择，彻底消除 choice[1-4?] 询问
 	if [ -f "./include/kernel-build.mk" ]; then
 		sed -i -E 's/(^\s*awk .*CONFIG_KERNEL_.*\.config\.target)/\1; echo "CONFIG_DEBUG_INFO_NONE=y" >> \$(LINUX_DIR)\/\.config\.target; sed -i "s\/CONFIG_DEBUG_INFO=y\/# CONFIG_DEBUG_INFO is not set\/g" \$(LINUX_DIR)\/\.config\.target/' ./include/kernel-build.mk 2>/dev/null || true
-		sed -i -E 's/cmp -s \$\(LINUX_DIR\)\/\.config\.set \$\(LINUX_DIR\)\/\.config\.prev \|\| \{ cp \$\(LINUX_DIR\)\/\.config\.set \$\(LINUX_DIR\)\/\.config; cp \$\(LINUX_DIR\)\/\.config\.set \$\(LINUX_DIR\)\/\.config\.prev; \}/cp \$(LINUX_DIR)\/\.config\.set \$(LINUX_DIR)\/\.config \&\& \$(KERNEL_MAKEOPTS) olddefconfig \&\& cp \$(LINUX_DIR)\/\.config \$(LINUX_DIR)\/\.config\.prev/g' ./include/kernel-build.mk 2>/dev/null || true
+		sed -i '/cmp -s \$(LINUX_DIR)\/\.config\.set/c \tcp \$(LINUX_DIR)\/\.config\.set \$(LINUX_DIR)\/\.config \&\& \$(KERNEL_MAKEOPTS) olddefconfig \&\& cp \$(LINUX_DIR)\/\.config \$(LINUX_DIR)\/\.config\.prev' ./include/kernel-build.mk 2>/dev/null || true
 	fi
 
 	#无WIFI配置调整Q6大小
