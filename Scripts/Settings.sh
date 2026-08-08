@@ -56,7 +56,7 @@ fi
 #高通平台调整
 DTS_PATH="./target/linux/qualcommax/dts/"
 if [[ "${WRT_TARGET^^}" == *"QUALCOMMAX"* ]] || [ -d "./target/linux/qualcommax" ]; then
-	# 正规标准做法：在 target/linux/ 的 config-* 模板中显式并完整对齐 DEBUG_INFO 的 Choice 选单所有反选项
+	# 正规标准做法：在 target/linux/ 的 config-* 模板中显式并完整对齐 DEBUG_INFO & DEBUG_FS 的 Choice 选单所有反选项
 	find ./target/linux/ -name "config-*" -exec sed -i "/CONFIG_DEBUG_INFO/d" {} + 2>/dev/null || true
 	find ./target/linux/ -name "config-*" -exec sed -i "/CONFIG_DEBUG_FS/d" {} + 2>/dev/null || true
 	find ./target/linux/ -name "config-*" -exec bash -c '
@@ -67,6 +67,9 @@ if [[ "${WRT_TARGET^^}" == *"QUALCOMMAX"* ]] || [ -d "./target/linux/qualcommax"
 		echo "# CONFIG_DEBUG_INFO_DWARF4 is not set" >> "$1"
 		echo "# CONFIG_DEBUG_INFO_DWARF5 is not set" >> "$1"
 		echo "# CONFIG_DEBUG_FS is not set" >> "$1"
+		echo "CONFIG_DEBUG_FS_ALLOW_NONE=y" >> "$1"
+		echo "# CONFIG_DEBUG_FS_ALLOW_ALL is not set" >> "$1"
+		echo "# CONFIG_DEBUG_FS_DISALLOW_MOUNT is not set" >> "$1"
 	' _ {} \; 2>/dev/null || true
 
 	#无WIFI配置调整Q6大小
