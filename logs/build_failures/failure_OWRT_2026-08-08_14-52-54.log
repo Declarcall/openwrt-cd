@@ -1,0 +1,2107 @@
+Build Failure Diagnostic Report - 2026-08-08_14-52-54
+Target Config: IPQ60XX-WIFI-YES
+Commit SHA: c35764515144490eec8c514b6346ebac2c1aaa4a
+=========================================================
+--- 🚨 CRITICAL ERROR SUMMARY (罪魁祸首摘要表) 🚨 ---
+choice[1-4?]: make[8]: *** [scripts/kconfig/Makefile:85: syncconfig] Error 1
+make[7]: *** [Makefile:749: syncconfig] Error 2
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/Makefile:821: include/config/auto.conf.cmd: No such file or directory
+make[6]: *** [/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/Makefile:844: include/config/auto.conf.cmd] Error 2
+make[5]: *** [Makefile:248: __sub-make] Error 2
+make[4]: *** [Makefile:39: /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.modules] Error 2
+make[3]: *** [Makefile:12: compile] Error 2
+make[2]: *** [target/Makefile:32: target/linux/compile] Error 1
+make[1]: *** [target/Makefile:25: /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/stamp/.target_compile] Error 2
+make: *** [/mnt/build_wrt/include/toplevel.mk:233: world] Error 2
+=========================================================
+
+--- VERBOSE BUILD OUTPUT (LAST 500 LINES) ---
+WARNING: Makefile 'package/netspeedtest/luci-app-netspeedtest/Makefile' has a dependency on 'python3-pkg-resources', which does not exist
+WARNING: Makefile 'package/netspeedtest/luci-app-netspeedtest/Makefile' has a dependency on 'python3-email', which does not exist
+WARNING: Makefile 'package/QModem/application/qmodem/Makefile' has a dependency on 'kmod-mhi-wwan', which does not exist
+WARNING: Makefile 'package/QModem/application/qmodem/Makefile' has a dependency on 'quectel-CM-5G', which does not exist
+WARNING: Makefile 'package/feeds/video/sdl3/Makefile' has a build dependency on 'libwayland', which does not exist
+make[2]: Entering directory '/mnt/build_wrt/scripts/config'
+make[2]: 'conf' is up to date.
+make[2]: Leaving directory '/mnt/build_wrt/scripts/config'
+make[1]: Entering directory '/mnt/build_wrt'
+make[2]: Entering directory '/mnt/build_wrt'
++ mkdir -p /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl
++ cd /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl
++ mkdir -p bin lib stamp usr/include usr/lib
+mkdir -p /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/stamp
+touch /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/.prepared
+make[3]: Entering directory '/mnt/build_wrt/target/linux'
+make[4]: Entering directory '/mnt/build_wrt/target/linux/qualcommax'
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/localversion
+/mnt/build_wrt/scripts/kconfig.pl  + + /mnt/build_wrt/target/linux/generic/config-6.18 /mnt/build_wrt/target/linux/qualcommax/config-6.18 /mnt/build_wrt/target/linux/qualcommax/ipq60xx/config-default > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.target
+awk '/^(#[[:space:]]+)?CONFIG_KERNEL/{sub("CONFIG_KERNEL_","CONFIG_");print}' /mnt/build_wrt/.config >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.target
+echo "# CONFIG_KALLSYMS_EXTRA_PASS is not set" >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.target
+echo "# CONFIG_KALLSYMS_ALL is not set" >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.target
+echo "CONFIG_KALLSYMS_UNCOMPRESSED=y" >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.target
+/mnt/build_wrt/scripts/package-metadata.pl kconfig /mnt/build_wrt/tmp/.packageinfo /mnt/build_wrt/.config 6.18 > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.override
+/mnt/build_wrt/scripts/kconfig.pl 'm+' '+' /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.target /dev/null /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.override > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.set
+mv /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.set /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.old
+grep -v INITRAMFS /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.old > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.set
+echo 'CONFIG_INITRAMFS_SOURCE=""' >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.set
+echo '# CONFIG_INITRAMFS_FORCE is not set' >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.set
+echo "# CONFIG_INITRAMFS_PRESERVE_MTIME is not set" >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.set
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/modules
+cmp -s /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.set /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.prev || { cp /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.set /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config; cp /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.set /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.prev; }
+export MAKEFLAGS= ; [ -d /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/user_headers ] || make -C /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41 KCFLAGS="-fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl=target-aarch64_cortex-a53_musl -fno-caller-saves " KAFLAGS="-fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl=target-aarch64_cortex-a53_musl" HOSTCFLAGS="-O2 -I/mnt/build_wrt/staging_dir/host/include -Wall -Wmissing-prototypes -Wstrict-prototypes" CROSS_COMPILE="aarch64-openwrt-linux-musl-" ARCH="arm64" KBUILD_HAVE_NLS=no KBUILD_BUILD_USER="" KBUILD_BUILD_HOST="" KBUILD_BUILD_TIMESTAMP="Sat Aug  8 03:51:03 2026" KBUILD_BUILD_VERSION="0" KBUILD_HOSTLDFLAGS="-L/mnt/build_wrt/staging_dir/host/lib" CONFIG_SHELL="bash" V=''  cmd_syscalls=  CC="ccache aarch64-openwrt-linux-musl-gcc" KERNELRELEASE=6.18.41  INSTALL_HDR_PATH=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/user_headers headers_install
+grep '=[ym]' /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.set | LC_ALL=C sort | /mnt/build_wrt/staging_dir/host/bin/mkhash md5 > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.vermagic
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.configured
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/vmlinux /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/System.map
+make -C /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41 KCFLAGS="-fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl=target-aarch64_cortex-a53_musl -fno-caller-saves " KAFLAGS="-fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl=target-aarch64_cortex-a53_musl" HOSTCFLAGS="-O2 -I/mnt/build_wrt/staging_dir/host/include -Wall -Wmissing-prototypes -Wstrict-prototypes" CROSS_COMPILE="aarch64-openwrt-linux-musl-" ARCH="arm64" KBUILD_HAVE_NLS=no KBUILD_BUILD_USER="" KBUILD_BUILD_HOST="" KBUILD_BUILD_TIMESTAMP="Sat Aug  8 03:51:03 2026" KBUILD_BUILD_VERSION="0" KBUILD_HOSTLDFLAGS="-L/mnt/build_wrt/staging_dir/host/lib" CONFIG_SHELL="bash" V=''  cmd_syscalls=  CC="ccache aarch64-openwrt-linux-musl-gcc" KERNELRELEASE=6.18.41 Image modules
+make[5]: Entering directory '/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41'
+  SYNC    include/config/auto.conf.cmd
+*
+* Restart config...
+*
+*
+* Compile-time checks and compiler options
+*
+Debug information
+> 1. Disable debug information (DEBUG_INFO_NONE)
+  2. Rely on the toolchain's implicit default DWARF version (DEBUG_INFO_DWARF_TOOLCHAIN_DEFAULT) (NEW)
+  3. Generate DWARF Version 4 debuginfo (DEBUG_INFO_DWARF4)
+  4. Generate DWARF Version 5 debuginfo (DEBUG_INFO_DWARF5)
+choice[1-4?]: make[8]: *** [scripts/kconfig/Makefile:85: syncconfig] Error 1
+make[7]: *** [Makefile:749: syncconfig] Error 2
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/Makefile:821: include/config/auto.conf.cmd: No such file or directory
+make[6]: *** [/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/Makefile:844: include/config/auto.conf.cmd] Error 2
+make[5]: *** [Makefile:248: __sub-make] Error 2
+make[5]: Leaving directory '/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41'
+make[4]: *** [Makefile:39: /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.modules] Error 2
+make[4]: Leaving directory '/mnt/build_wrt/target/linux/qualcommax'
+make[3]: *** [Makefile:12: compile] Error 2
+make[3]: Leaving directory '/mnt/build_wrt/target/linux'
+time: target/linux/compile#1.16#0.50#1.63
+    ERROR: target/linux failed to build.
+make[2]: *** [target/Makefile:32: target/linux/compile] Error 1
+make[2]: Leaving directory '/mnt/build_wrt'
+make[1]: *** [target/Makefile:25: /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/stamp/.target_compile] Error 2
+make[1]: Leaving directory '/mnt/build_wrt'
+make: *** [/mnt/build_wrt/include/toplevel.mk:233: world] Error 2
+
+--- RECENT ERROR LOGS IN BUILD DIR ---
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/aarch64-openwrt-linux-musl/libgcc/config.log ===
+build_os='linux-gnu'
+build_subdir='build-x86_64-pc-linux-gnu'
+build_vendor='pc'
+cpu_type='aarch64'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+decimal_float='no'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+double_type_size='64'
+dvidir='${docdir}'
+enable_decimal_float='no'
+enable_execute_stack='enable-execute-stack-empty.c'
+enable_gcov='yes'
+enable_shared='yes'
+enable_vtable_verify='no'
+exec_prefix='${prefix}'
+extra_parts='crtbegin.o crtbeginS.o crtbeginT.o crtend.o crtendS.o crtfastmath.o'
+fixed_point='no'
+force_explicit_eh_registry=''
+get_gcc_base_ver='cat'
+host='aarch64-openwrt-linux-musl'
+host_alias='aarch64-openwrt-linux-musl'
+host_cpu='aarch64'
+host_noncanonical='aarch64-openwrt-linux-musl'
+host_os='linux-musl'
+host_subdir='.'
+host_vendor='openwrt'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+libgcc_topdir='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/libgcc/..'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+long_double_type_size='128'
+mandir='${datarootdir}/man'
+md_unwind_header='aarch64/linux-unwind.h'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+real_host_noncanonical='aarch64-openwrt-linux-musl'
+sbindir='${exec_prefix}/sbin'
+set_have_cc_tls='-DHAVE_CC_TLS'
+set_use_emutls=''
+sfp_machine_header='aarch64/sfp-machine.h'
+sharedstatedir='${prefix}/com'
+slibdir='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/lib'
+solaris_ld_v2_maps=''
+sysconfdir='${prefix}/etc'
+target_alias='aarch64-openwrt-linux-musl'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_subdir='aarch64-openwrt-linux-musl'
+thread_header='gthr-posix.h'
+tm_defines=''
+tm_file=' $(srcdir)/config/aarch64/value-unwind.h'
+tmake_file=' $(srcdir)/config/t-crtstuff-pic $(srcdir)/config/t-libgcc-pic $(srcdir)/config/t-eh-dw2-dip $(srcdir)/config/t-slibgcc $(srcdir)/config/t-slibgcc-gld $(srcdir)/config/t-slibgcc-elf-ver $(srcdir)/config/t-linux $(srcdir)/config/aarch64/t-aarch64 $(srcdir)/config/aarch64/t-lse $(srcdir)/config/t-slibgcc-libgcc $(srcdir)/config/aarch64/t-softfp $(srcdir)/config/t-softfp $(srcdir)/config/t-crtfm $(srcdir)/config/t-dfprules $(srcdir)/config/aarch64/t-heap-trampoline $(srcdir)/config/t-gthr-noweak'
+toolexecdir='$(exec_prefix)/$(target_noncanonical)'
+toolexeclibdir='$(toolexecdir)/lib'
+unwind_header='unwind-generic.h'
+use_tm_clone_registry='-DUSE_TM_CLONE_REGISTRY=0'
+vis_hide='-fvisibility=hidden -DHIDE_EXPORTS'
+with_aix_soname='aix'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "GNU C Runtime Library"
+#define PACKAGE_TARNAME "libgcc"
+#define PACKAGE_VERSION "1.0"
+#define PACKAGE_STRING "GNU C Runtime Library 1.0"
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL "http://www.gnu.org/software/libgcc/"
+#define SIZEOF_DOUBLE 8
+#define SIZEOF_LONG_DOUBLE 16
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_FTW_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_STRING_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_SYS_AUXV_H 1
+#define HAVE_SYS_MMAN_H 1
+#define STDC_HEADERS 1
+#define HAVE_GETIPINFO 1
+#define AS_HIDDEN_DIRECTIVE .hidden
+#define HAVE_AS_CFI_SECTIONS 1
+#define HAVE_AS_LSE 1
+#define HAVE_AS_VARIANT_PCS 1
+#define HAVE_INIT_PRIORITY 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/aarch64-openwrt-linux-musl/libvtv/config.log ===
+ac_ct_DUMPBIN=''
+am__EXEEXT_FALSE=''
+am__EXEEXT_TRUE='#'
+am__fastdepCC_FALSE='#'
+am__fastdepCC_TRUE=''
+am__fastdepCXX_FALSE='#'
+am__fastdepCXX_TRUE=''
+am__include='include'
+am__isrc=' -I$(srcdir)'
+am__leading_dot='.'
+am__nodep='_no'
+am__quote=''
+am__tar='$${TAR-tar} chof - "$$tardir"'
+am__untar='$${TAR-tar} xf -'
+bindir='${exec_prefix}/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+enable_shared='yes'
+enable_static='yes'
+exec_prefix='${prefix}'
+get_gcc_base_ver='cat'
+host='aarch64-openwrt-linux-musl'
+host_alias='aarch64-openwrt-linux-musl'
+host_cpu='aarch64'
+host_os='linux-musl'
+host_vendor='openwrt'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+install_sh='${SHELL} /mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+libtool_VERSION='1:0:0'
+libvtv_builddir='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/aarch64-openwrt-linux-musl/libvtv'
+libvtv_srcdir='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/libvtv'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+lt_host_flags=''
+mandir='${datarootdir}/man'
+mkdir_p='$(MKDIR_P)'
+multi_basedir='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/libvtv/..'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_os='linux-musl'
+target_vendor='openwrt'
+toolexecdir='$(exec_prefix)/$(target_alias)'
+toolexeclibdir='$(toolexecdir)/lib'
+toplevel_builddir='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/aarch64-openwrt-linux-musl/libvtv/..'
+toplevel_srcdir='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/libvtv/..'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "GNU Vtable Verification Runtime Library"
+#define PACKAGE_TARNAME "libvtv"
+#define PACKAGE_VERSION "1.0"
+#define PACKAGE_STRING "GNU Vtable Verification Runtime Library 1.0"
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL "http://www.gnu.org/software/libvtv/"
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define PACKAGE "libvtv"
+#define VERSION "1.0"
+#define HAVE_SECURE_GETENV 1
+#define HAVE_DLFCN_H 1
+#define LT_OBJDIR ".libs/"
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/build-x86_64-pc-linux-gnu/libiberty/config.log ===
+#define HAVE_BCOPY 1
+#define HAVE_BSEARCH 1
+#define HAVE_BZERO 1
+#define HAVE_CALLOC 1
+#define HAVE_CLOCK 1
+#define HAVE_FFS 1
+#define HAVE_GETCWD 1
+#define HAVE_GETPAGESIZE 1
+#define HAVE_GETTIMEOFDAY 1
+#define HAVE_INDEX 1
+#define HAVE_INSQUE 1
+#define HAVE_MEMCHR 1
+#define HAVE_MEMCMP 1
+#define HAVE_MEMCPY 1
+#define HAVE_MEMMEM 1
+#define HAVE_MEMMOVE 1
+#define HAVE_MEMPCPY 1
+#define HAVE_MEMSET 1
+#define HAVE_MKSTEMPS 1
+#define HAVE_PUTENV 1
+#define HAVE_RANDOM 1
+#define HAVE_RENAME 1
+#define HAVE_RINDEX 1
+#define HAVE_SETENV 1
+#define HAVE_SNPRINTF 1
+#define HAVE_SIGSETMASK 1
+#define HAVE_STPCPY 1
+#define HAVE_STPNCPY 1
+#define HAVE_STRCASECMP 1
+#define HAVE_STRCHR 1
+#define HAVE_STRDUP 1
+#define HAVE_STRNCASECMP 1
+#define HAVE_STRNDUP 1
+#define HAVE_STRNLEN 1
+#define HAVE_STRRCHR 1
+#define HAVE_STRSTR 1
+#define HAVE_STRTOD 1
+#define HAVE_STRTOL 1
+#define HAVE_STRTOUL 1
+#define HAVE_STRTOLL 1
+#define HAVE_STRTOULL 1
+#define HAVE_STRVERSCMP 1
+#define HAVE_TMPNAM 1
+#define HAVE_VASPRINTF 1
+#define HAVE_VFPRINTF 1
+#define HAVE_VPRINTF 1
+#define HAVE_VSNPRINTF 1
+#define HAVE_VSPRINTF 1
+#define HAVE_WAITPID 1
+#define STACK_DIRECTION 1
+#define HAVE_FORK 1
+#define HAVE_VFORK 1
+#define HAVE_WORKING_VFORK 1
+#define HAVE_WORKING_FORK 1
+#define HAVE___FSETLOCKING 1
+#define HAVE_CANONICALIZE_FILE_NAME 1
+#define HAVE_DUP3 1
+#define HAVE_GETRLIMIT 1
+#define HAVE_GETRUSAGE 1
+#define HAVE_GETTIMEOFDAY 1
+#define HAVE_ON_EXIT 1
+#define HAVE_PIPE2 1
+#define HAVE_POSIX_SPAWN 1
+#define HAVE_POSIX_SPAWNP 1
+#define HAVE_PSIGNAL 1
+#define HAVE_REALPATH 1
+#define HAVE_SETRLIMIT 1
+#define HAVE_STRERROR 1
+#define HAVE_STRSIGNAL 1
+#define HAVE_SYSCONF 1
+#define HAVE_TIMES 1
+#define HAVE_WAIT3 1
+#define HAVE_WAIT4 1
+#define HAVE_SBRK 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_FFS 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_SNPRINTF 1
+#define HAVE_DECL_VSNPRINTF 1
+#define HAVE_DECL_CALLOC 1
+#define HAVE_DECL_GETENV 1
+#define HAVE_DECL_GETOPT 1
+#define HAVE_DECL_MALLOC 1
+#define HAVE_DECL_REALLOC 1
+#define HAVE_DECL_SBRK 1
+#define HAVE_DECL_STRTOL 1
+#define HAVE_DECL_STRTOUL 1
+#define HAVE_DECL_STRTOLL 1
+#define HAVE_DECL_STRTOULL 1
+#define HAVE_DECL_STRVERSCMP 1
+#define HAVE_DECL_STRNLEN 1
+#define HAVE_X86_SHA1_HW_SUPPORT 1
+#define HAVE_STDLIB_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_SYS_PARAM_H 1
+#define HAVE_GETPAGESIZE 1
+#define HAVE_MMAP 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/build-x86_64-pc-linux-gnu/libcpp/config.log ===
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_os='linux-musl'
+target_vendor='openwrt'
+warn='-W -Wall -Wno-narrowing -Wwrite-strings -Wmissing-format-attribute'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "cpplib"
+#define PACKAGE_TARNAME "cpplib"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "cpplib  "
+#define PACKAGE_BUGREPORT "gcc-bugs@gcc.gnu.org"
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define TIME_WITH_SYS_TIME 1
+#define STRING_WITH_STRINGS 1
+#define HAVE_LOCALE_H 1
+#define HAVE_FCNTL_H 1
+#define HAVE_LIMITS_H 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_STRING_H 1
+#define HAVE_SYS_FILE_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_OBSTACK 1
+#define HAVE_UINTPTR_T 1
+#define SIZEOF_INT 4
+#define SIZEOF_LONG 8
+#define HAVE_CLEARERR_UNLOCKED 1
+#define HAVE_FEOF_UNLOCKED 1
+#define HAVE_FERROR_UNLOCKED 1
+#define HAVE_FFLUSH_UNLOCKED 1
+#define HAVE_FGETC_UNLOCKED 1
+#define HAVE_FGETS_UNLOCKED 1
+#define HAVE_FILENO_UNLOCKED 1
+#define HAVE_FPUTC_UNLOCKED 1
+#define HAVE_FPUTS_UNLOCKED 1
+#define HAVE_FREAD_UNLOCKED 1
+#define HAVE_FWRITE_UNLOCKED 1
+#define HAVE_GETCHAR_UNLOCKED 1
+#define HAVE_GETC_UNLOCKED 1
+#define HAVE_PUTCHAR_UNLOCKED 1
+#define HAVE_PUTC_UNLOCKED 1
+#define HAVE_SETLOCALE 1
+#define HAVE_DECL_ABORT 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_ERRNO 0
+#define HAVE_DECL_GETOPT 1
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_CLEARERR_UNLOCKED 1
+#define HAVE_DECL_FEOF_UNLOCKED 1
+#define HAVE_DECL_FERROR_UNLOCKED 1
+#define HAVE_DECL_FFLUSH_UNLOCKED 1
+#define HAVE_DECL_FGETC_UNLOCKED 1
+#define HAVE_DECL_FGETS_UNLOCKED 1
+#define HAVE_DECL_FILENO_UNLOCKED 1
+#define HAVE_DECL_FPRINTF_UNLOCKED 0
+#define HAVE_DECL_FPUTC_UNLOCKED 1
+#define HAVE_DECL_FPUTS_UNLOCKED 1
+#define HAVE_DECL_FREAD_UNLOCKED 1
+#define HAVE_DECL_FWRITE_UNLOCKED 1
+#define HAVE_DECL_GETCHAR_UNLOCKED 1
+#define HAVE_DECL_GETC_UNLOCKED 1
+#define HAVE_DECL_PUTCHAR_UNLOCKED 1
+#define HAVE_DECL_PUTC_UNLOCKED 1
+#define HAVE_ALLOCA_H 1
+#define HAVE_ALLOCA 1
+#define STDC_HEADERS 1
+#define HAVE_LANGINFO_CODESET 1
+#define SIZEOF_INO_T 8
+#define SIZEOF_DEV_T 8
+#define ICONV_CONST 
+#define PACKAGE "cpplib"
+#define CHECKING_P 0
+#define ENABLE_ASSERT_CHECKING 1
+#define ENABLE_CANONICAL_SYSTEM_HEADERS 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/build-x86_64-pc-linux-gnu/fixincludes/config.log ===
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_os='linux-musl'
+target_vendor='openwrt'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "fixincludes"
+#define PACKAGE_TARNAME "fixincludes"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "fixincludes  "
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define EXE_EXT ""
+#define STDC_HEADERS 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_FCNTL_H 1
+#define HAVE_SYS_FILE_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_CLEARERR_UNLOCKED 1
+#define HAVE_FEOF_UNLOCKED 1
+#define HAVE_FERROR_UNLOCKED 1
+#define HAVE_FFLUSH_UNLOCKED 1
+#define HAVE_FGETC_UNLOCKED 1
+#define HAVE_FGETS_UNLOCKED 1
+#define HAVE_FILENO_UNLOCKED 1
+#define HAVE_FPUTC_UNLOCKED 1
+#define HAVE_FPUTS_UNLOCKED 1
+#define HAVE_FREAD_UNLOCKED 1
+#define HAVE_FWRITE_UNLOCKED 1
+#define HAVE_GETCHAR_UNLOCKED 1
+#define HAVE_GETC_UNLOCKED 1
+#define HAVE_PUTCHAR_UNLOCKED 1
+#define HAVE_PUTC_UNLOCKED 1
+#define HAVE_DECL_ABORT 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_ERRNO 0
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_MEMMEM 1
+#define HAVE_DECL_CLEARERR_UNLOCKED 1
+#define HAVE_DECL_FEOF_UNLOCKED 1
+#define HAVE_DECL_FERROR_UNLOCKED 1
+#define HAVE_DECL_FFLUSH_UNLOCKED 1
+#define HAVE_DECL_FGETC_UNLOCKED 1
+#define HAVE_DECL_FGETS_UNLOCKED 1
+#define HAVE_DECL_FILENO_UNLOCKED 1
+#define HAVE_DECL_FPRINTF_UNLOCKED 0
+#define HAVE_DECL_FPUTC_UNLOCKED 1
+#define HAVE_DECL_FPUTS_UNLOCKED 1
+#define HAVE_DECL_FREAD_UNLOCKED 1
+#define HAVE_DECL_FWRITE_UNLOCKED 1
+#define HAVE_DECL_GETCHAR_UNLOCKED 1
+#define HAVE_DECL_GETC_UNLOCKED 1
+#define HAVE_DECL_PUTCHAR_UNLOCKED 1
+#define HAVE_DECL_PUTC_UNLOCKED 1
+#define HAVE_MMAP_FILE 1
+#define HAVE_MMAP_DEV_ZERO 1
+#define HAVE_MMAP_ANON 1
+#define SED_PROGRAM "/mnt/build_wrt/staging_dir/host/bin/sed"
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/fixincludes/config.log ===
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_os='linux-musl'
+target_vendor='openwrt'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "fixincludes"
+#define PACKAGE_TARNAME "fixincludes"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "fixincludes  "
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define EXE_EXT ""
+#define STDC_HEADERS 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_FCNTL_H 1
+#define HAVE_SYS_FILE_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_CLEARERR_UNLOCKED 1
+#define HAVE_FEOF_UNLOCKED 1
+#define HAVE_FERROR_UNLOCKED 1
+#define HAVE_FFLUSH_UNLOCKED 1
+#define HAVE_FGETC_UNLOCKED 1
+#define HAVE_FGETS_UNLOCKED 1
+#define HAVE_FILENO_UNLOCKED 1
+#define HAVE_FPUTC_UNLOCKED 1
+#define HAVE_FPUTS_UNLOCKED 1
+#define HAVE_FREAD_UNLOCKED 1
+#define HAVE_FWRITE_UNLOCKED 1
+#define HAVE_GETCHAR_UNLOCKED 1
+#define HAVE_GETC_UNLOCKED 1
+#define HAVE_PUTCHAR_UNLOCKED 1
+#define HAVE_PUTC_UNLOCKED 1
+#define HAVE_DECL_ABORT 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_ERRNO 0
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_MEMMEM 1
+#define HAVE_DECL_CLEARERR_UNLOCKED 1
+#define HAVE_DECL_FEOF_UNLOCKED 1
+#define HAVE_DECL_FERROR_UNLOCKED 1
+#define HAVE_DECL_FFLUSH_UNLOCKED 1
+#define HAVE_DECL_FGETC_UNLOCKED 1
+#define HAVE_DECL_FGETS_UNLOCKED 1
+#define HAVE_DECL_FILENO_UNLOCKED 1
+#define HAVE_DECL_FPRINTF_UNLOCKED 0
+#define HAVE_DECL_FPUTC_UNLOCKED 1
+#define HAVE_DECL_FPUTS_UNLOCKED 1
+#define HAVE_DECL_FREAD_UNLOCKED 1
+#define HAVE_DECL_FWRITE_UNLOCKED 1
+#define HAVE_DECL_GETCHAR_UNLOCKED 1
+#define HAVE_DECL_GETC_UNLOCKED 1
+#define HAVE_DECL_PUTCHAR_UNLOCKED 1
+#define HAVE_DECL_PUTC_UNLOCKED 1
+#define HAVE_MMAP_FILE 1
+#define HAVE_MMAP_DEV_ZERO 1
+#define HAVE_MMAP_ANON 1
+#define SED_PROGRAM "/mnt/build_wrt/staging_dir/host/bin/sed"
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/gcc/config.log ===
+#define HAVE_DECL_MALLINFO2 1
+#define HAVE_DECL_LDGETNAME 0
+#define HAVE_DECL_TIMES 1
+#define HAVE_DECL_SIGALTSTACK 1
+#define HAVE_STRUCT_TMS 1
+#define HAVE_CLOCK_T 1
+#define HOST_HAS_F_SETLKW 1
+#define HOST_HAS_O_CLOEXEC 1
+#define HAVE_FCNTL_H 1
+#define HOST_HAS_O_NONBLOCK 1
+#define HOST_HAS_PERSONALITY_ADDR_NO_RANDOMIZE 1
+#define HAVE_AF_UNIX 1
+#define HAVE_AF_INET6 1
+#define HAVE_GNU_LD 1
+#define HAVE_GNU_AS 1
+#define DEFAULT_USE_CXA_ATEXIT 2
+#define EXTRA_MODES_FILE "config/aarch64/aarch64-modes.def"
+#define LTOPLUGINSONAME "liblto_plugin.so"
+#define HAVE_DLFCN_H 1
+#define LT_OBJDIR ".libs/"
+#define DARWIN_DO_EXTRA_RPATH 0
+#define DARWIN_ADD_RPATH ""
+#define PLUGIN_LD_SUFFIX "ld"
+#define HAVE_GAS_BALIGN_AND_P2ALIGN 1
+#define HAVE_GAS_MAX_SKIP_P2ALIGN 1
+#define HAVE_GAS_SUBSECTION_ORDERING 1
+#define HAVE_GAS_WEAK 1
+#define HAVE_GAS_WEAKREF 1
+#define HAVE_GNU_INDIRECT_FUNCTION 0
+#define HAVE_GAS_HIDDEN 1
+#define HAVE_LD_RO_RW_SECTION_MIXING 1
+#define HAVE_INITFINI_ARRAY_SUPPORT 1
+#define HAVE_AS_LEB128 1
+#define HAVE_GAS_CFI_DIRECTIVE 1
+#define HAVE_GAS_CFI_PERSONALITY_DIRECTIVE 1
+#define HAVE_GAS_CFI_SECTIONS_DIRECTIVE 1
+#define HAVE_GAS_SECTION_EXCLUDE 1
+#define HAVE_GAS_SHF_GNU_RETAIN 1
+#define HAVE_GAS_SECTION_LINK_ORDER 1
+#define HAVE_GAS_SHF_MERGE 1
+#define HAVE_LD_ALIGNED_SHF_MERGE 1
+#define HAVE_COMDAT_GROUP 1
+#define HAVE_GAS_LOC_STMT 1
+#define HAVE_GAS_DISCRIMINATOR 1
+#define HAVE_AS_TLS 1
+#define HAVE_LD_STATIC_DYNAMIC 1
+#define LD_STATIC_OPTION "-Bstatic"
+#define LD_DYNAMIC_OPTION "-Bdynamic"
+#define HAVE_LD_DEMANGLE 1
+#define HAVE_LTO_PLUGIN 2
+#define HAVE_AS_MABI_OPTION 1
+#define HAVE_AS_SMALL_PIC_RELOCS 1
+#define HAVE_AS_DWARF2_DEBUG_LINE 1
+#define HAVE_AS_DWARF2_DEBUG_VIEW 1
+#define HAVE_AS_GDWARF2_DEBUG_FLAG 1
+#define HAVE_AS_GDWARF_5_DEBUG_FLAG 1
+#define HAVE_AS_WORKING_DWARF_N_FLAG 1
+#define HAVE_AS_DEBUG_PREFIX_MAP 1
+#define HAVE_AS_COMPRESS_DEBUG 2
+#define AS_COMPRESS_DEBUG_OPTION "--compress-debug-sections"
+#define AS_NO_COMPRESS_DEBUG_OPTION "--nocompress-debug-sections"
+#define TARGET_GLIBC_MAJOR 0
+#define TARGET_GLIBC_MINOR 0
+#define HAVE_AS_LINE_ZERO 1
+#define HAVE_LD_EH_FRAME_HDR 1
+#define HAVE_LD_EH_FRAME_CIEV3 1
+#define HAVE_LD_PIE 1
+#define HAVE_LD_PIE_COPYRELOC 0
+#define HAVE_LD_EH_GC_SECTIONS 1
+#define HAVE_LD_COMPRESS_DEBUG 2
+#define LD_COMPRESS_DEBUG_OPTION "--compress-debug-sections"
+#define HAVE_LD_AS_NEEDED 1
+#define LD_AS_NEEDED_OPTION "--push-state --as-needed"
+#define LD_NO_AS_NEEDED_OPTION "--pop-state"
+#define HAVE_LD_BUILDID 1
+#define HAVE_LD_SYSROOT 1
+#define TARGET_LIBC_PROVIDES_SSP 1
+#define TARGET_DL_ITERATE_PHDR 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_PLUGIN 1
+#define ENABLE_LIBQUADMATH_SUPPORT 1
+#define DIAGNOSTICS_COLOR_DEFAULT -1
+#define DIAGNOSTICS_URLS_DEFAULT DIAGNOSTICS_URL_AUTO
+#define HAVE_LD_PUSHPOPSTATE_SUPPORT 1
+#define HAVE_LD_NOW_SUPPORT 1
+#define HAVE_LD_RELRO_SUPPORT 1
+#define HAVE_FHARDENED_SUPPORT 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/lto-plugin/config.log ===
+ac_lto_plugin_extra_ldflags='-pthread'
+ac_lto_plugin_ldflags='-Wc,-static-libgcc'
+ac_lto_plugin_warn_cflags='-Wall'
+accel_dir_suffix=''
+am__EXEEXT_FALSE=''
+am__EXEEXT_TRUE='#'
+am__fastdepCC_FALSE='#'
+am__fastdepCC_TRUE=''
+am__include='include'
+am__isrc=' -I$(srcdir)'
+am__leading_dot='.'
+am__nodep='_no'
+am__quote=''
+am__tar='$${TAR-tar} chof - "$$tardir"'
+am__untar='$${TAR-tar} xf -'
+bindir='${exec_prefix}/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_libsubdir='build-x86_64-pc-linux-gnu'
+build_os='linux-gnu'
+build_subdir='build-x86_64-pc-linux-gnu'
+build_vendor='pc'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+enable_host_bind_now=''
+exec_prefix='${prefix}'
+gcc_build_dir='../gcc'
+get_gcc_base_ver='cat'
+host='x86_64-pc-linux-gnu'
+host_alias='x86_64-pc-linux-gnu'
+host_cpu='x86_64'
+host_os='linux-gnu'
+host_subdir='.'
+host_vendor='pc'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+install_sh='${SHELL} /mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+lt_host_flags=''
+mandir='${datarootdir}/man'
+mkdir_p='$(MKDIR_P)'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+real_target_noncanonical='aarch64-openwrt-linux-musl'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_os='linux-musl'
+target_subdir='aarch64-openwrt-linux-musl'
+target_vendor='openwrt'
+with_libiberty='../libiberty'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "LTO plugin for ld"
+#define PACKAGE_TARNAME "lto-plugin"
+#define PACKAGE_VERSION "0.1"
+#define PACKAGE_STRING "LTO plugin for ld 0.1"
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define PACKAGE "lto-plugin"
+#define VERSION "0.1"
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define HAVE_PTHREAD_LOCKING 1
+#define HAVE_DLFCN_H 1
+#define LT_OBJDIR ".libs/"
+#define HAVE_SYS_WAIT_H 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/libdecnumber/config.log ===
+DEFS='-DHAVE_CONFIG_H'
+ECHO_C=''
+ECHO_N='-n'
+ECHO_T=''
+EGREP='/mnt/build_wrt/staging_dir/host/bin/grep -E'
+EXEEXT=''
+GREP='/mnt/build_wrt/staging_dir/host/bin/grep'
+LDFLAGS='-static-libstdc++ -static-libgcc '
+LIBOBJS=''
+LIBS=''
+LTLIBOBJS=''
+MAINT='#'
+OBJEXT='o'
+PACKAGE_BUGREPORT='gcc-bugs@gcc.gnu.org'
+PACKAGE_NAME='libdecnumber'
+PACKAGE_STRING='libdecnumber  '
+PACKAGE_TARNAME='libdecnumber'
+PACKAGE_URL=''
+PACKAGE_VERSION=' '
+PATH_SEPARATOR=':'
+PICFLAG=''
+RANLIB='ranlib --plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so'
+SET_MAKE=''
+SHELL='/bin/bash'
+WARN_CFLAGS='-W -Wall -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wold-style-definition -Wmissing-format-attribute -Wcast-qual'
+WARN_PEDANTIC='-pedantic -Wno-long-long'
+WERROR=''
+ac_ct_CC=''
+bindir='${exec_prefix}/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+enable_decimal_float='dpd'
+enable_host_pie=''
+enable_host_shared=''
+exec_prefix='${prefix}'
+host='x86_64-pc-linux-gnu'
+host_alias='x86_64-pc-linux-gnu'
+host_cpu='x86_64'
+host_os='linux-gnu'
+host_vendor='pc'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+nolto_flags='-fno-lto'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_os='linux-musl'
+target_vendor='openwrt'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "libdecnumber"
+#define PACKAGE_TARNAME "libdecnumber"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "libdecnumber  "
+#define PACKAGE_BUGREPORT "gcc-bugs@gcc.gnu.org"
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_CTYPE_H 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STRING_H 1
+#define HAVE_STDIO_H 1
+#define SIZEOF_INT 4
+#define SIZEOF_LONG 8
+#define STDC_HEADERS 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/libbacktrace/config.log ===
+VIEW_FILE='mmapio.lo'
+WARN_FLAGS='-W -Wall -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wold-style-definition -Wmissing-format-attribute -Wcast-qual'
+XZ='xz'
+ac_ct_CC=''
+ac_ct_DUMPBIN=''
+am__EXEEXT_FALSE=''
+am__EXEEXT_TRUE='#'
+am__isrc=' -I$(srcdir)'
+am__leading_dot='.'
+am__tar='$${TAR-tar} chof - "$$tardir"'
+am__untar='$${TAR-tar} xf -'
+bindir='${exec_prefix}/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+exec_prefix='${prefix}'
+host='x86_64-pc-linux-gnu'
+host_alias='x86_64-pc-linux-gnu'
+host_cpu='x86_64'
+host_os='linux-gnu'
+host_vendor='pc'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+install_sh='${SHELL} /mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+libtool_VERSION='1:0:0'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+mkdir_p='$(MKDIR_P)'
+multi_basedir=''
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_os='linux-musl'
+target_vendor='openwrt'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "package-unused"
+#define PACKAGE_TARNAME "libbacktrace"
+#define PACKAGE_VERSION "version-unused"
+#define PACKAGE_STRING "package-unused version-unused"
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define HAVE_DLFCN_H 1
+#define LT_OBJDIR ".libs/"
+#define HAVE_GETIPINFO 1
+#define HAVE_SYNC_FUNCTIONS 1
+#define HAVE_ATOMIC_FUNCTIONS 1
+#define BACKTRACE_ELF_SIZE 64
+#define BACKTRACE_XCOFF_SIZE unused
+#define HAVE_SYS_MMAN_H 1
+#define HAVE_LINK_H 1
+#define HAVE_DL_ITERATE_PHDR 1
+#define HAVE_FCNTL 1
+#define HAVE_DECL_STRNLEN 1
+#define HAVE_DECL_GETPAGESIZE 1
+#define HAVE_LSTAT 1
+#define HAVE_READLINK 1
+#define HAVE_DECL__PGMPTR 0
+#define HAVE_CLOCK_GETTIME 1
+#define HAVE_ZLIB 1
+#define HAVE_ZSTD 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/libiberty/config.log ===
+#define HAVE_BCOPY 1
+#define HAVE_BSEARCH 1
+#define HAVE_BZERO 1
+#define HAVE_CALLOC 1
+#define HAVE_CLOCK 1
+#define HAVE_FFS 1
+#define HAVE_GETCWD 1
+#define HAVE_GETPAGESIZE 1
+#define HAVE_GETTIMEOFDAY 1
+#define HAVE_INDEX 1
+#define HAVE_INSQUE 1
+#define HAVE_MEMCHR 1
+#define HAVE_MEMCMP 1
+#define HAVE_MEMCPY 1
+#define HAVE_MEMMEM 1
+#define HAVE_MEMMOVE 1
+#define HAVE_MEMPCPY 1
+#define HAVE_MEMSET 1
+#define HAVE_MKSTEMPS 1
+#define HAVE_PUTENV 1
+#define HAVE_RANDOM 1
+#define HAVE_RENAME 1
+#define HAVE_RINDEX 1
+#define HAVE_SETENV 1
+#define HAVE_SNPRINTF 1
+#define HAVE_SIGSETMASK 1
+#define HAVE_STPCPY 1
+#define HAVE_STPNCPY 1
+#define HAVE_STRCASECMP 1
+#define HAVE_STRCHR 1
+#define HAVE_STRDUP 1
+#define HAVE_STRNCASECMP 1
+#define HAVE_STRNDUP 1
+#define HAVE_STRNLEN 1
+#define HAVE_STRRCHR 1
+#define HAVE_STRSTR 1
+#define HAVE_STRTOD 1
+#define HAVE_STRTOL 1
+#define HAVE_STRTOUL 1
+#define HAVE_STRTOLL 1
+#define HAVE_STRTOULL 1
+#define HAVE_STRVERSCMP 1
+#define HAVE_TMPNAM 1
+#define HAVE_VASPRINTF 1
+#define HAVE_VFPRINTF 1
+#define HAVE_VPRINTF 1
+#define HAVE_VSNPRINTF 1
+#define HAVE_VSPRINTF 1
+#define HAVE_WAITPID 1
+#define STACK_DIRECTION 1
+#define HAVE_FORK 1
+#define HAVE_VFORK 1
+#define HAVE_WORKING_VFORK 1
+#define HAVE_WORKING_FORK 1
+#define HAVE___FSETLOCKING 1
+#define HAVE_CANONICALIZE_FILE_NAME 1
+#define HAVE_DUP3 1
+#define HAVE_GETRLIMIT 1
+#define HAVE_GETRUSAGE 1
+#define HAVE_GETTIMEOFDAY 1
+#define HAVE_ON_EXIT 1
+#define HAVE_PIPE2 1
+#define HAVE_POSIX_SPAWN 1
+#define HAVE_POSIX_SPAWNP 1
+#define HAVE_PSIGNAL 1
+#define HAVE_REALPATH 1
+#define HAVE_SETRLIMIT 1
+#define HAVE_STRERROR 1
+#define HAVE_STRSIGNAL 1
+#define HAVE_SYSCONF 1
+#define HAVE_TIMES 1
+#define HAVE_WAIT3 1
+#define HAVE_WAIT4 1
+#define HAVE_SBRK 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_FFS 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_SNPRINTF 1
+#define HAVE_DECL_VSNPRINTF 1
+#define HAVE_DECL_CALLOC 1
+#define HAVE_DECL_GETENV 1
+#define HAVE_DECL_GETOPT 1
+#define HAVE_DECL_MALLOC 1
+#define HAVE_DECL_REALLOC 1
+#define HAVE_DECL_SBRK 1
+#define HAVE_DECL_STRTOL 1
+#define HAVE_DECL_STRTOUL 1
+#define HAVE_DECL_STRTOLL 1
+#define HAVE_DECL_STRTOULL 1
+#define HAVE_DECL_STRVERSCMP 1
+#define HAVE_DECL_STRNLEN 1
+#define HAVE_X86_SHA1_HW_SUPPORT 1
+#define HAVE_STDLIB_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_SYS_PARAM_H 1
+#define HAVE_GETPAGESIZE 1
+#define HAVE_MMAP 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/libcody/config.log ===
+ac_cv_env_LDFLAGS_value='-static-libstdc++ -static-libgcc '
+ac_cv_env_LIBS_set=
+ac_cv_env_LIBS_value=
+ac_cv_env_build_alias_set=set
+ac_cv_env_build_alias_value=x86_64-pc-linux-gnu
+ac_cv_env_host_alias_set=set
+ac_cv_env_host_alias_value=x86_64-pc-linux-gnu
+ac_cv_env_target_alias_set=set
+ac_cv_env_target_alias_value=aarch64-openwrt-linux-musl
+ac_cv_host=x86_64-pc-linux-gnu
+ac_cv_objext=o
+ac_cv_prog_AR='ar --plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so'
+ac_cv_prog_RANLIB='ranlib --plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so'
+ac_cv_prog_cxx_g=yes
+ac_cv_search_ZSTD_compress='/mnt/build_wrt/staging_dir/host/lib/libzstd.a -pthread'
+libgcc_cv_fixed_point=no
+
+## ----------------- ##
+## Output variables. ##
+## ----------------- ##
+
+AR='ar --plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so'
+CPPFLAGS=''
+CXX='g++ -std=c++11'
+CXXFLAGS='-O2 -I/mnt/build_wrt/staging_dir/host/include -pipe  '
+DEFS='-DHAVE_CONFIG_H'
+ECHO_C=''
+ECHO_N='-n'
+ECHO_T=''
+EXCEPTIONS=''
+EXEEXT=''
+LDFLAGS='-static-libstdc++ -static-libgcc  -Wl,--no-undefined'
+LD_PICFLAG=''
+LIBOBJS=''
+LIBS=''
+LTLIBOBJS=''
+MAINTAINER=''
+OBJEXT='o'
+PACKAGE_BUGREPORT='github.com/urnathan/libcody'
+PACKAGE_NAME='codylib'
+PACKAGE_STRING='codylib 0.0'
+PACKAGE_TARNAME='codylib'
+PACKAGE_URL=''
+PACKAGE_VERSION='0.0'
+PATH_SEPARATOR=':'
+PICFLAG=''
+RANLIB='ranlib --plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so'
+SHELL='/bin/bash'
+ac_ct_CXX=''
+bindir='${exec_prefix}/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_os='linux-gnu'
+build_vendor='pc'
+configure_args=' '\''--srcdir=/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/libcody'\'' '\''--cache-file=./config.cache'\'' '\''--with-bugurl=http://bugs.openwrt.org/'\'' '\''--with-pkgversion=OpenWrt GCC 14.4.0 r0-3fd1e27'\'' '\''--prefix=/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'\'' '\''--with-gnu-ld'\'' '\''--enable-target-optspace'\'' '\''--disable-libgomp'\'' '\''--disable-libmudflap'\'' '\''--disable-multilib'\'' '\''--disable-libmpx'\'' '\''--disable-nls'\'' '\''--disable-libssp'\'' '\''--disable-tm-clone-registry'\'' '\''--without-isl'\'' '\''--without-cloog'\'' '\''--with-host-libstdcxx=-lstdc++'\'' '\''--with-system-zlib=/mnt/build_wrt/staging_dir/host'\'' '\''--with-zstd=/mnt/build_wrt/staging_dir/host'\'' '\''--with-gmp=/mnt/build_wrt/staging_dir/host'\'' '\''--with-mpfr=/mnt/build_wrt/staging_dir/host'\'' '\''--with-mpc=/mnt/build_wrt/staging_dir/host'\'' '\''--disable-decimal-float'\'' '\''--with-diagnostics-color=auto-if-env'\'' '\''--enable-__cxa_atexit'\'' '\''--enable-libstdcxx-dual-abi'\'' '\''--with-default-libstdcxx-abi=new'\'' '\''--with-newlib'\'' '\''--with-sysroot=/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'\'' '\''--disable-shared'\'' '\''--disable-threads'\'' '\''--enable-languages=c,lto'\'' '\''--program-transform-name=s&^&aarch64-openwrt-linux-musl-&'\'' '\''--disable-option-checking'\'' '\''--build=x86_64-pc-linux-gnu'\'' '\''--host=x86_64-pc-linux-gnu'\'' '\''--target=aarch64-openwrt-linux-musl'\'' '\''build_alias=x86_64-pc-linux-gnu'\'' '\''host_alias=x86_64-pc-linux-gnu'\'' '\''target_alias=aarch64-openwrt-linux-musl'\'' '\''CXX=g++'\'' '\''CXXFLAGS=-O2 -I/mnt/build_wrt/staging_dir/host/include -pipe  '\'' '\''LDFLAGS=-static-libstdc++ -static-libgcc '\'''
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+enable_host_pie=''
+enable_host_shared=''
+exec_prefix='${prefix}'
+host='x86_64-pc-linux-gnu'
+host_alias='x86_64-pc-linux-gnu'
+host_cpu='x86_64'
+host_os='linux-gnu'
+host_vendor='pc'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target_alias='aarch64-openwrt-linux-musl'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "codylib"
+#define PACKAGE_TARNAME "codylib"
+#define PACKAGE_VERSION "0.0"
+#define PACKAGE_STRING "codylib 0.0"
+#define PACKAGE_BUGREPORT "github.com/urnathan/libcody"
+#define PACKAGE_URL ""
+#define NMS_CHECKING 0
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/config.log ===
+build_cpu='x86_64'
+build_libsubdir='build-x86_64-pc-linux-gnu'
+build_noncanonical='x86_64-pc-linux-gnu'
+build_os='linux-gnu'
+build_subdir='build-x86_64-pc-linux-gnu'
+build_tooldir='${exec_prefix}/aarch64-openwrt-linux-musl'
+build_vendor='pc'
+compare_exclusions='gcc/cc*-checksum$(objext) | gcc/ada/*tools/* | gcc/m2/gm2-compiler-boot/M2Version* | gcc/m2/gm2-compiler-boot/SYSTEM* | gcc/m2/gm2version*'
+configdirs=' libiberty zlib libbacktrace libcpp libcody libdecnumber fixincludes gcc libcc1 c++tools lto-plugin'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+do_compare='cmp --ignore-initial=16 $$f1 $$f2'
+docdir='${datarootdir}/doc/${PACKAGE}'
+dvidir='${docdir}'
+exec_prefix='${prefix}'
+extra_host_libiberty_configure_flags='--enable-shared'
+extra_host_zlib_configure_flags=''
+extra_isl_gmp_configure_flags=''
+extra_linker_plugin_configure_flags=''
+extra_linker_plugin_flags=''
+extra_mpc_gmp_configure_flags=''
+extra_mpc_mpfr_configure_flags=''
+extra_mpfr_configure_flags=''
+gcc_host_pie=''
+get_gcc_base_ver='cat'
+gmpinc='-I/mnt/build_wrt/staging_dir/host/include -I/mnt/build_wrt/staging_dir/host/include -I/mnt/build_wrt/staging_dir/host/include '
+gmplibs='-L/mnt/build_wrt/staging_dir/host/lib -L/mnt/build_wrt/staging_dir/host/lib -L/mnt/build_wrt/staging_dir/host/lib -lmpc -lmpfr -lgmp'
+host='x86_64-pc-linux-gnu'
+host_alias='x86_64-pc-linux-gnu'
+host_configargs=' --cache-file=./config.cache  '\''--with-bugurl=http://bugs.openwrt.org/'\'' '\''--with-pkgversion=OpenWrt GCC 14.4.0 r0-3fd1e27'\'' '\''--prefix=/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'\'' '\''--with-gnu-ld'\'' '\''--enable-target-optspace'\'' '\''--disable-libgomp'\'' '\''--disable-libmudflap'\'' '\''--disable-multilib'\'' '\''--disable-libmpx'\'' '\''--disable-nls'\'' '\''--disable-libssp'\'' '\''--disable-tm-clone-registry'\'' '\''--without-isl'\'' '\''--without-cloog'\'' '\''--with-host-libstdcxx=-lstdc++'\'' '\''--with-system-zlib=/mnt/build_wrt/staging_dir/host'\'' '\''--with-zstd=/mnt/build_wrt/staging_dir/host'\'' '\''--with-gmp=/mnt/build_wrt/staging_dir/host'\'' '\''--with-mpfr=/mnt/build_wrt/staging_dir/host'\'' '\''--with-mpc=/mnt/build_wrt/staging_dir/host'\'' '\''--disable-decimal-float'\'' '\''--with-diagnostics-color=auto-if-env'\'' '\''--enable-__cxa_atexit'\'' '\''--enable-libstdcxx-dual-abi'\'' '\''--with-default-libstdcxx-abi=new'\'' '\''--with-newlib'\'' '\''--with-sysroot=/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'\'' '\''--disable-shared'\'' '\''--disable-threads'\'' '\''--enable-languages=c,lto'\'' --program-transform-name='\''s&^&aarch64-openwrt-linux-musl-&'\'' --disable-option-checking'
+host_cpu='x86_64'
+host_libs_picflag=''
+host_noncanonical='x86_64-pc-linux-gnu'
+host_os='linux-gnu'
+host_pie='no'
+host_shared='no'
+host_subdir='.'
+host_vendor='pc'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+islinc=''
+isllibs=''
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+poststage1_ldflags='-static-libstdc++ -static-libgcc'
+poststage1_libs=''
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+stage1_cflags='-g'
+stage1_checking='--enable-checking=yes,types'
+stage1_languages='c,lto'
+stage1_ldflags='-static-libstdc++ -static-libgcc'
+stage1_libs=''
+stage2_werror_flag=''
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_configargs='--cache-file=./config.cache --with-cross-host=x86_64-pc-linux-gnu   '\''--with-bugurl=http://bugs.openwrt.org/'\'' '\''--with-pkgversion=OpenWrt GCC 14.4.0 r0-3fd1e27'\'' '\''--prefix=/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'\'' '\''--with-gnu-ld'\'' '\''--enable-target-optspace'\'' '\''--disable-libgomp'\'' '\''--disable-libmudflap'\'' '\''--disable-multilib'\'' '\''--disable-libmpx'\'' '\''--disable-nls'\'' '\''--disable-libssp'\'' '\''--disable-tm-clone-registry'\'' '\''--without-cloog'\'' '\''--with-host-libstdcxx=-lstdc++'\'' '\''--with-system-zlib=/mnt/build_wrt/staging_dir/host'\'' '\''--with-zstd=/mnt/build_wrt/staging_dir/host'\'' '\''--disable-decimal-float'\'' '\''--with-diagnostics-color=auto-if-env'\'' '\''--enable-__cxa_atexit'\'' '\''--enable-libstdcxx-dual-abi'\'' '\''--with-default-libstdcxx-abi=new'\'' '\''--with-newlib'\'' '\''--with-sysroot=/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'\'' '\''--disable-shared'\'' '\''--disable-threads'\'' '\''--enable-languages=c,lto'\'' --program-transform-name='\''s&^&aarch64-openwrt-linux-musl-&'\'' --disable-option-checking --disable-year2038'
+target_configdirs=' libgcc libatomic libquadmath'
+target_cpu='aarch64'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_os='linux-musl'
+target_subdir='aarch64-openwrt-linux-musl'
+target_vendor='openwrt'
+tooldir='${exec_prefix}/aarch64-openwrt-linux-musl'
+
+## ------------------- ##
+## File substitutions. ##
+## ------------------- ##
+
+alphaieee_frag='/dev/null'
+host_makefile_frag='/dev/null'
+ospace_frag='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/config/mt-ospace'
+serialization_dependencies='serdep.tmp'
+target_makefile_frag='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/config/mt-gnu'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME ""
+#define PACKAGE_TARNAME ""
+#define PACKAGE_VERSION ""
+#define PACKAGE_STRING ""
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define HAVE_CXX11 1
+#define LT_OBJDIR ".libs/"
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/libcpp/config.log ===
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_os='linux-musl'
+target_vendor='openwrt'
+warn='-W -Wall -Wno-narrowing -Wwrite-strings -Wmissing-format-attribute'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "cpplib"
+#define PACKAGE_TARNAME "cpplib"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "cpplib  "
+#define PACKAGE_BUGREPORT "gcc-bugs@gcc.gnu.org"
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define TIME_WITH_SYS_TIME 1
+#define STRING_WITH_STRINGS 1
+#define HAVE_LOCALE_H 1
+#define HAVE_FCNTL_H 1
+#define HAVE_LIMITS_H 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_STRING_H 1
+#define HAVE_SYS_FILE_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_OBSTACK 1
+#define HAVE_UINTPTR_T 1
+#define SIZEOF_INT 4
+#define SIZEOF_LONG 8
+#define HAVE_CLEARERR_UNLOCKED 1
+#define HAVE_FEOF_UNLOCKED 1
+#define HAVE_FERROR_UNLOCKED 1
+#define HAVE_FFLUSH_UNLOCKED 1
+#define HAVE_FGETC_UNLOCKED 1
+#define HAVE_FGETS_UNLOCKED 1
+#define HAVE_FILENO_UNLOCKED 1
+#define HAVE_FPUTC_UNLOCKED 1
+#define HAVE_FPUTS_UNLOCKED 1
+#define HAVE_FREAD_UNLOCKED 1
+#define HAVE_FWRITE_UNLOCKED 1
+#define HAVE_GETCHAR_UNLOCKED 1
+#define HAVE_GETC_UNLOCKED 1
+#define HAVE_PUTCHAR_UNLOCKED 1
+#define HAVE_PUTC_UNLOCKED 1
+#define HAVE_SETLOCALE 1
+#define HAVE_DECL_ABORT 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_ERRNO 0
+#define HAVE_DECL_GETOPT 1
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_CLEARERR_UNLOCKED 1
+#define HAVE_DECL_FEOF_UNLOCKED 1
+#define HAVE_DECL_FERROR_UNLOCKED 1
+#define HAVE_DECL_FFLUSH_UNLOCKED 1
+#define HAVE_DECL_FGETC_UNLOCKED 1
+#define HAVE_DECL_FGETS_UNLOCKED 1
+#define HAVE_DECL_FILENO_UNLOCKED 1
+#define HAVE_DECL_FPRINTF_UNLOCKED 0
+#define HAVE_DECL_FPUTC_UNLOCKED 1
+#define HAVE_DECL_FPUTS_UNLOCKED 1
+#define HAVE_DECL_FREAD_UNLOCKED 1
+#define HAVE_DECL_FWRITE_UNLOCKED 1
+#define HAVE_DECL_GETCHAR_UNLOCKED 1
+#define HAVE_DECL_GETC_UNLOCKED 1
+#define HAVE_DECL_PUTCHAR_UNLOCKED 1
+#define HAVE_DECL_PUTC_UNLOCKED 1
+#define HAVE_ALLOCA_H 1
+#define HAVE_ALLOCA 1
+#define STDC_HEADERS 1
+#define HAVE_LANGINFO_CODESET 1
+#define SIZEOF_INO_T 8
+#define SIZEOF_DEV_T 8
+#define HAVE_ICONV 1
+#define ICONV_CONST 
+#define PACKAGE "cpplib"
+#define CHECKING_P 0
+#define ENABLE_ASSERT_CHECKING 1
+#define ENABLE_CANONICAL_SYSTEM_HEADERS 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/zlib/config.log ===
+SET_MAKE=''
+SHELL='/bin/bash'
+STRIP='strip'
+TARGET_LIBRARY_FALSE=''
+TARGET_LIBRARY_TRUE='#'
+VERSION='1.1.4'
+ac_ct_CC=''
+ac_ct_DUMPBIN=''
+am__EXEEXT_FALSE=''
+am__EXEEXT_TRUE='#'
+am__fastdepCC_FALSE='#'
+am__fastdepCC_TRUE=''
+am__include='include'
+am__isrc=' -I$(srcdir)'
+am__leading_dot='.'
+am__nodep='_no'
+am__quote=''
+am__tar='$${TAR-tar} chof - "$$tardir"'
+am__untar='$${TAR-tar} xf -'
+bindir='${exec_prefix}/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+enable_host_pie=''
+enable_host_shared=''
+exec_prefix='${prefix}'
+host='x86_64-pc-linux-gnu'
+host_alias='x86_64-pc-linux-gnu'
+host_cpu='x86_64'
+host_os='linux-gnu'
+host_vendor='pc'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+install_sh='${SHELL} /mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+mkdir_p='$(MKDIR_P)'
+mkinstalldirs='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/mkinstalldirs'
+multi_basedir=''
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_os='linux-musl'
+target_vendor='openwrt'
+toolexecdir='$(libdir)/gcc-lib/$(target_alias)'
+toolexeclibdir='$(libdir)/../lib'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "zlib"
+#define PACKAGE_TARNAME "zlib"
+#define PACKAGE_VERSION "1.1.4"
+#define PACKAGE_STRING "zlib 1.1.4"
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define PACKAGE "zlib"
+#define VERSION "1.1.4"
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_DLFCN_H 1
+#define LT_OBJDIR ".libs/"
+#define HAVE_STDLIB_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_SYS_PARAM_H 1
+#define HAVE_GETPAGESIZE 1
+#define HAVE_MMAP 1
+#define HAVE_MEMCPY 1
+#define HAVE_STRERROR 1
+#define HAVE_UNISTD_H 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/aarch64-openwrt-linux-musl/libgcc/config.log ===
+PATH_SEPARATOR=':'
+PICFLAG='-fPIC'
+RANLIB='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/aarch64-openwrt-linux-musl/bin/ranlib'
+SHELL='/bin/bash'
+STRIP='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/aarch64-openwrt-linux-musl/bin/strip'
+ac_ct_CC=''
+accel_dir_suffix=''
+asm_hidden_op='.hidden'
+bindir='${exec_prefix}/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_libsubdir='build-x86_64-pc-linux-gnu'
+build_os='linux-gnu'
+build_subdir='build-x86_64-pc-linux-gnu'
+build_vendor='pc'
+cpu_type='aarch64'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+decimal_float='no'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+double_type_size='64'
+dvidir='${docdir}'
+enable_decimal_float='no'
+enable_execute_stack='enable-execute-stack-empty.c'
+enable_gcov='yes'
+enable_shared='no'
+enable_vtable_verify='no'
+exec_prefix='${prefix}'
+extra_parts='crtbegin.o crtbeginS.o crtbeginT.o crtend.o crtendS.o crtfastmath.o'
+fixed_point='no'
+force_explicit_eh_registry=''
+get_gcc_base_ver='cat'
+host='aarch64-openwrt-linux-musl'
+host_alias='aarch64-openwrt-linux-musl'
+host_cpu='aarch64'
+host_noncanonical='aarch64-openwrt-linux-musl'
+host_os='linux-musl'
+host_subdir='.'
+host_vendor='openwrt'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+libgcc_topdir='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/libgcc/..'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+long_double_type_size='128'
+mandir='${datarootdir}/man'
+md_unwind_header='aarch64/linux-unwind.h'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+real_host_noncanonical='aarch64-openwrt-linux-musl'
+sbindir='${exec_prefix}/sbin'
+set_have_cc_tls='-DHAVE_CC_TLS'
+set_use_emutls=''
+sfp_machine_header='aarch64/sfp-machine.h'
+sharedstatedir='${prefix}/com'
+slibdir='$(exec_prefix)/$(host_noncanonical)/lib'
+solaris_ld_v2_maps=''
+sysconfdir='${prefix}/etc'
+target_alias='aarch64-openwrt-linux-musl'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_subdir='aarch64-openwrt-linux-musl'
+thread_header='gthr-single.h'
+tm_defines=''
+tm_file=' $(srcdir)/config/aarch64/value-unwind.h'
+tmake_file=' $(srcdir)/config/t-crtstuff-pic $(srcdir)/config/t-libgcc-pic $(srcdir)/config/t-eh-dw2-dip $(srcdir)/config/t-slibgcc $(srcdir)/config/t-slibgcc-gld $(srcdir)/config/t-slibgcc-elf-ver $(srcdir)/config/t-linux $(srcdir)/config/aarch64/t-aarch64 $(srcdir)/config/aarch64/t-lse $(srcdir)/config/t-slibgcc-libgcc $(srcdir)/config/aarch64/t-softfp $(srcdir)/config/t-softfp $(srcdir)/config/t-crtfm $(srcdir)/config/t-dfprules $(srcdir)/config/aarch64/t-heap-trampoline $(srcdir)/config/t-gthr-noweak'
+toolexecdir='$(exec_prefix)/$(target_noncanonical)'
+toolexeclibdir='$(toolexecdir)/lib'
+unwind_header='unwind-generic.h'
+use_tm_clone_registry='-DUSE_TM_CLONE_REGISTRY=0'
+vis_hide='-fvisibility=hidden -DHIDE_EXPORTS'
+with_aix_soname='aix'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "GNU C Runtime Library"
+#define PACKAGE_TARNAME "libgcc"
+#define PACKAGE_VERSION "1.0"
+#define PACKAGE_STRING "GNU C Runtime Library 1.0"
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL "http://www.gnu.org/software/libgcc/"
+#define SIZEOF_DOUBLE 8
+#define SIZEOF_LONG_DOUBLE 16
+#define HAVE_GETIPINFO 1
+#define AS_HIDDEN_DIRECTIVE .hidden
+#define HAVE_AS_CFI_SECTIONS 1
+#define HAVE_AS_LSE 1
+#define HAVE_AS_VARIANT_PCS 1
+#define HAVE_INIT_PRIORITY 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/build-x86_64-pc-linux-gnu/libiberty/config.log ===
+#define HAVE_BCOPY 1
+#define HAVE_BSEARCH 1
+#define HAVE_BZERO 1
+#define HAVE_CALLOC 1
+#define HAVE_CLOCK 1
+#define HAVE_FFS 1
+#define HAVE_GETCWD 1
+#define HAVE_GETPAGESIZE 1
+#define HAVE_GETTIMEOFDAY 1
+#define HAVE_INDEX 1
+#define HAVE_INSQUE 1
+#define HAVE_MEMCHR 1
+#define HAVE_MEMCMP 1
+#define HAVE_MEMCPY 1
+#define HAVE_MEMMEM 1
+#define HAVE_MEMMOVE 1
+#define HAVE_MEMPCPY 1
+#define HAVE_MEMSET 1
+#define HAVE_MKSTEMPS 1
+#define HAVE_PUTENV 1
+#define HAVE_RANDOM 1
+#define HAVE_RENAME 1
+#define HAVE_RINDEX 1
+#define HAVE_SETENV 1
+#define HAVE_SNPRINTF 1
+#define HAVE_SIGSETMASK 1
+#define HAVE_STPCPY 1
+#define HAVE_STPNCPY 1
+#define HAVE_STRCASECMP 1
+#define HAVE_STRCHR 1
+#define HAVE_STRDUP 1
+#define HAVE_STRNCASECMP 1
+#define HAVE_STRNDUP 1
+#define HAVE_STRNLEN 1
+#define HAVE_STRRCHR 1
+#define HAVE_STRSTR 1
+#define HAVE_STRTOD 1
+#define HAVE_STRTOL 1
+#define HAVE_STRTOUL 1
+#define HAVE_STRTOLL 1
+#define HAVE_STRTOULL 1
+#define HAVE_STRVERSCMP 1
+#define HAVE_TMPNAM 1
+#define HAVE_VASPRINTF 1
+#define HAVE_VFPRINTF 1
+#define HAVE_VPRINTF 1
+#define HAVE_VSNPRINTF 1
+#define HAVE_VSPRINTF 1
+#define HAVE_WAITPID 1
+#define STACK_DIRECTION 1
+#define HAVE_FORK 1
+#define HAVE_VFORK 1
+#define HAVE_WORKING_VFORK 1
+#define HAVE_WORKING_FORK 1
+#define HAVE___FSETLOCKING 1
+#define HAVE_CANONICALIZE_FILE_NAME 1
+#define HAVE_DUP3 1
+#define HAVE_GETRLIMIT 1
+#define HAVE_GETRUSAGE 1
+#define HAVE_GETTIMEOFDAY 1
+#define HAVE_ON_EXIT 1
+#define HAVE_PIPE2 1
+#define HAVE_POSIX_SPAWN 1
+#define HAVE_POSIX_SPAWNP 1
+#define HAVE_PSIGNAL 1
+#define HAVE_REALPATH 1
+#define HAVE_SETRLIMIT 1
+#define HAVE_STRERROR 1
+#define HAVE_STRSIGNAL 1
+#define HAVE_SYSCONF 1
+#define HAVE_TIMES 1
+#define HAVE_WAIT3 1
+#define HAVE_WAIT4 1
+#define HAVE_SBRK 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_FFS 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_SNPRINTF 1
+#define HAVE_DECL_VSNPRINTF 1
+#define HAVE_DECL_CALLOC 1
+#define HAVE_DECL_GETENV 1
+#define HAVE_DECL_GETOPT 1
+#define HAVE_DECL_MALLOC 1
+#define HAVE_DECL_REALLOC 1
+#define HAVE_DECL_SBRK 1
+#define HAVE_DECL_STRTOL 1
+#define HAVE_DECL_STRTOUL 1
+#define HAVE_DECL_STRTOLL 1
+#define HAVE_DECL_STRTOULL 1
+#define HAVE_DECL_STRVERSCMP 1
+#define HAVE_DECL_STRNLEN 1
+#define HAVE_X86_SHA1_HW_SUPPORT 1
+#define HAVE_STDLIB_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_SYS_PARAM_H 1
+#define HAVE_GETPAGESIZE 1
+#define HAVE_MMAP 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/build-x86_64-pc-linux-gnu/libcpp/config.log ===
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_os='linux-musl'
+target_vendor='openwrt'
+warn='-W -Wall -Wno-narrowing -Wwrite-strings -Wmissing-format-attribute'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "cpplib"
+#define PACKAGE_TARNAME "cpplib"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "cpplib  "
+#define PACKAGE_BUGREPORT "gcc-bugs@gcc.gnu.org"
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define TIME_WITH_SYS_TIME 1
+#define STRING_WITH_STRINGS 1
+#define HAVE_LOCALE_H 1
+#define HAVE_FCNTL_H 1
+#define HAVE_LIMITS_H 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_STRING_H 1
+#define HAVE_SYS_FILE_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_OBSTACK 1
+#define HAVE_UINTPTR_T 1
+#define SIZEOF_INT 4
+#define SIZEOF_LONG 8
+#define HAVE_CLEARERR_UNLOCKED 1
+#define HAVE_FEOF_UNLOCKED 1
+#define HAVE_FERROR_UNLOCKED 1
+#define HAVE_FFLUSH_UNLOCKED 1
+#define HAVE_FGETC_UNLOCKED 1
+#define HAVE_FGETS_UNLOCKED 1
+#define HAVE_FILENO_UNLOCKED 1
+#define HAVE_FPUTC_UNLOCKED 1
+#define HAVE_FPUTS_UNLOCKED 1
+#define HAVE_FREAD_UNLOCKED 1
+#define HAVE_FWRITE_UNLOCKED 1
+#define HAVE_GETCHAR_UNLOCKED 1
+#define HAVE_GETC_UNLOCKED 1
+#define HAVE_PUTCHAR_UNLOCKED 1
+#define HAVE_PUTC_UNLOCKED 1
+#define HAVE_SETLOCALE 1
+#define HAVE_DECL_ABORT 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_ERRNO 0
+#define HAVE_DECL_GETOPT 1
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_CLEARERR_UNLOCKED 1
+#define HAVE_DECL_FEOF_UNLOCKED 1
+#define HAVE_DECL_FERROR_UNLOCKED 1
+#define HAVE_DECL_FFLUSH_UNLOCKED 1
+#define HAVE_DECL_FGETC_UNLOCKED 1
+#define HAVE_DECL_FGETS_UNLOCKED 1
+#define HAVE_DECL_FILENO_UNLOCKED 1
+#define HAVE_DECL_FPRINTF_UNLOCKED 0
+#define HAVE_DECL_FPUTC_UNLOCKED 1
+#define HAVE_DECL_FPUTS_UNLOCKED 1
+#define HAVE_DECL_FREAD_UNLOCKED 1
+#define HAVE_DECL_FWRITE_UNLOCKED 1
+#define HAVE_DECL_GETCHAR_UNLOCKED 1
+#define HAVE_DECL_GETC_UNLOCKED 1
+#define HAVE_DECL_PUTCHAR_UNLOCKED 1
+#define HAVE_DECL_PUTC_UNLOCKED 1
+#define HAVE_ALLOCA_H 1
+#define HAVE_ALLOCA 1
+#define STDC_HEADERS 1
+#define HAVE_LANGINFO_CODESET 1
+#define SIZEOF_INO_T 8
+#define SIZEOF_DEV_T 8
+#define ICONV_CONST 
+#define PACKAGE "cpplib"
+#define CHECKING_P 0
+#define ENABLE_ASSERT_CHECKING 1
+#define ENABLE_CANONICAL_SYSTEM_HEADERS 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/build-x86_64-pc-linux-gnu/fixincludes/config.log ===
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_os='linux-musl'
+target_vendor='openwrt'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "fixincludes"
+#define PACKAGE_TARNAME "fixincludes"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "fixincludes  "
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define EXE_EXT ""
+#define STDC_HEADERS 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_FCNTL_H 1
+#define HAVE_SYS_FILE_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_CLEARERR_UNLOCKED 1
+#define HAVE_FEOF_UNLOCKED 1
+#define HAVE_FERROR_UNLOCKED 1
+#define HAVE_FFLUSH_UNLOCKED 1
+#define HAVE_FGETC_UNLOCKED 1
+#define HAVE_FGETS_UNLOCKED 1
+#define HAVE_FILENO_UNLOCKED 1
+#define HAVE_FPUTC_UNLOCKED 1
+#define HAVE_FPUTS_UNLOCKED 1
+#define HAVE_FREAD_UNLOCKED 1
+#define HAVE_FWRITE_UNLOCKED 1
+#define HAVE_GETCHAR_UNLOCKED 1
+#define HAVE_GETC_UNLOCKED 1
+#define HAVE_PUTCHAR_UNLOCKED 1
+#define HAVE_PUTC_UNLOCKED 1
+#define HAVE_DECL_ABORT 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_ERRNO 0
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_MEMMEM 1
+#define HAVE_DECL_CLEARERR_UNLOCKED 1
+#define HAVE_DECL_FEOF_UNLOCKED 1
+#define HAVE_DECL_FERROR_UNLOCKED 1
+#define HAVE_DECL_FFLUSH_UNLOCKED 1
+#define HAVE_DECL_FGETC_UNLOCKED 1
+#define HAVE_DECL_FGETS_UNLOCKED 1
+#define HAVE_DECL_FILENO_UNLOCKED 1
+#define HAVE_DECL_FPRINTF_UNLOCKED 0
+#define HAVE_DECL_FPUTC_UNLOCKED 1
+#define HAVE_DECL_FPUTS_UNLOCKED 1
+#define HAVE_DECL_FREAD_UNLOCKED 1
+#define HAVE_DECL_FWRITE_UNLOCKED 1
+#define HAVE_DECL_GETCHAR_UNLOCKED 1
+#define HAVE_DECL_GETC_UNLOCKED 1
+#define HAVE_DECL_PUTCHAR_UNLOCKED 1
+#define HAVE_DECL_PUTC_UNLOCKED 1
+#define HAVE_MMAP_FILE 1
+#define HAVE_MMAP_DEV_ZERO 1
+#define HAVE_MMAP_ANON 1
+#define SED_PROGRAM "/mnt/build_wrt/staging_dir/host/bin/sed"
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/fixincludes/config.log ===
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_os='linux-musl'
+target_vendor='openwrt'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "fixincludes"
+#define PACKAGE_TARNAME "fixincludes"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "fixincludes  "
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define EXE_EXT ""
+#define STDC_HEADERS 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_FCNTL_H 1
+#define HAVE_SYS_FILE_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_CLEARERR_UNLOCKED 1
+#define HAVE_FEOF_UNLOCKED 1
+#define HAVE_FERROR_UNLOCKED 1
+#define HAVE_FFLUSH_UNLOCKED 1
+#define HAVE_FGETC_UNLOCKED 1
+#define HAVE_FGETS_UNLOCKED 1
+#define HAVE_FILENO_UNLOCKED 1
+#define HAVE_FPUTC_UNLOCKED 1
+#define HAVE_FPUTS_UNLOCKED 1
+#define HAVE_FREAD_UNLOCKED 1
+#define HAVE_FWRITE_UNLOCKED 1
+#define HAVE_GETCHAR_UNLOCKED 1
+#define HAVE_GETC_UNLOCKED 1
+#define HAVE_PUTCHAR_UNLOCKED 1
+#define HAVE_PUTC_UNLOCKED 1
+#define HAVE_DECL_ABORT 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_ERRNO 0
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_MEMMEM 1
+#define HAVE_DECL_CLEARERR_UNLOCKED 1
+#define HAVE_DECL_FEOF_UNLOCKED 1
+#define HAVE_DECL_FERROR_UNLOCKED 1
+#define HAVE_DECL_FFLUSH_UNLOCKED 1
+#define HAVE_DECL_FGETC_UNLOCKED 1
+#define HAVE_DECL_FGETS_UNLOCKED 1
+#define HAVE_DECL_FILENO_UNLOCKED 1
+#define HAVE_DECL_FPRINTF_UNLOCKED 0
+#define HAVE_DECL_FPUTC_UNLOCKED 1
+#define HAVE_DECL_FPUTS_UNLOCKED 1
+#define HAVE_DECL_FREAD_UNLOCKED 1
+#define HAVE_DECL_FWRITE_UNLOCKED 1
+#define HAVE_DECL_GETCHAR_UNLOCKED 1
+#define HAVE_DECL_GETC_UNLOCKED 1
+#define HAVE_DECL_PUTCHAR_UNLOCKED 1
+#define HAVE_DECL_PUTC_UNLOCKED 1
+#define HAVE_MMAP_FILE 1
+#define HAVE_MMAP_DEV_ZERO 1
+#define HAVE_MMAP_ANON 1
+#define SED_PROGRAM "/mnt/build_wrt/staging_dir/host/bin/sed"
+
+configure: exit 0
