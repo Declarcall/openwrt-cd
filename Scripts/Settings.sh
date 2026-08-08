@@ -62,9 +62,9 @@ if [[ "${WRT_TARGET^^}" == *"QUALCOMMAX"* ]] || [ -d "./target/linux/qualcommax"
 	find ./target/linux/ -name "config-*" -exec sed -i 's/CONFIG_DEBUG_INFO_DWARF.*=y/# CONFIG_DEBUG_INFO_DWARF is not set/g' {} + 2>/dev/null || true
 	find ./target/linux/ -name "config-*" -exec sed -i 's/CONFIG_DEBUG_FS=y/# CONFIG_DEBUG_FS is not set/g' {} + 2>/dev/null || true
 
-	# 对 include/kernel-build.mk 注入 make olddefconfig 自动非交互式补全选择，彻底消除 choice[1-4?] 询问
-	if [ -f "./include/kernel-build.mk" ]; then
-		python3 $GITHUB_WORKSPACE/Scripts/patch_kernel_mk.py ./include/kernel-build.mk 2>/dev/null || true
+	# 对 include/kernel-defaults.mk 注入 make oldconfig 自动非交互式补全选择，彻底消除 choice[1-4?] 询问
+	if [ -f "./include/kernel-defaults.mk" ]; then
+		python3 $GITHUB_WORKSPACE/Scripts/patch_kernel_mk.py ./include/kernel-defaults.mk 2>/dev/null || true
 	fi
 
 	#无WIFI配置调整Q6大小

@@ -200,11 +200,11 @@ jobs:
           cd ./wrt/
           export GOPROXY=https://proxy.golang.org,direct
 
-          # === 🔧 强行注入 olddefconfig 自动结算与 DEBUG_INFO_NONE 拦截 ===
-          if [ -f "./include/kernel-build.mk" ]; then
-            python3 $GITHUB_WORKSPACE/Scripts/patch_kernel_mk.py ./include/kernel-build.mk
-            echo "--- Verified modified kernel-build.mk ---"
-            grep -n -C 3 "olddefconfig" ./include/kernel-build.mk || true
+          # === 🔧 强行注入 non-interactive oldconfig 到 kernel-defaults.mk ===
+          if [ -f "./include/kernel-defaults.mk" ]; then
+            python3 $GITHUB_WORKSPACE/Scripts/patch_kernel_mk.py ./include/kernel-defaults.mk
+            echo "--- Verified modified kernel-defaults.mk ---"
+            grep -n -C 3 "oldconfig" ./include/kernel-defaults.mk || true
           fi
 
           make -j$(nproc) || make -j1 V=s 2>&1 | tee /tmp/build_verbose.log
