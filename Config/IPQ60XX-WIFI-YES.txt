@@ -1,6 +1,19 @@
-#设备平台
+# 设备平台
 CONFIG_TARGET_qualcommax=y
 CONFIG_TARGET_qualcommax_ipq60xx=y
-#设备列表
+# 仅编译京东云雅典娜 (RE-CS-02) 固件
 CONFIG_TARGET_DEVICE_qualcommax_ipq60xx_DEVICE_jdcloud_re-cs-02=y
+
+# 京东云雅典娜 IPQ6018 / QCN9074 Wi-Fi 驱动与硬件微码固件
+CONFIG_PACKAGE_kmod-ath=y
+CONFIG_PACKAGE_kmod-ath11k=y
+CONFIG_PACKAGE_kmod-ath11k-ahb=y
+CONFIG_PACKAGE_kmod-ath11k-pci=y
+CONFIG_PACKAGE_ath11k-firmware-ipq6018=y
+CONFIG_PACKAGE_ath11k-firmware-qcn9074=y
+
+# 无线协议守护进程与 LuCI 无线页面依赖
+CONFIG_PACKAGE_wpad-openssl=y
+CONFIG_PACKAGE_iwinfo=y
+CONFIG_PACKAGE_wireless-regdb=y
 
