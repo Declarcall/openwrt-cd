@@ -35,6 +35,9 @@ sed -i "s/192\.168\.[0-9]*\.[0-9]*/$WRT_IP/g" $CFG_FILE
 #修改默认主机名
 sed -i "s/hostname='.*'/hostname='$WRT_NAME'/g" $CFG_FILE
 
+# 彻底关闭 uhttpd 的 HTTPS 自动重定向 (出厂默认纯 HTTP 访问，绝不强制重定向)
+sed -i "s/option redirect_https '1'/option redirect_https '0'/g" ./package/network/services/uhttpd/files/uhttpd.config 2>/dev/null || true
+
 #配置文件修改
 echo "CONFIG_PACKAGE_luci=y" >> ./.config
 echo "CONFIG_LUCI_LANG_zh_Hans=y" >> ./.config
