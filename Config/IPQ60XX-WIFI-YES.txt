@@ -1,26 +1,6 @@
 # 设备平台
 CONFIG_TARGET_qualcommax=y
 CONFIG_TARGET_qualcommax_ipq60xx=y
-# 仅编译京东云雅典娜 (RE-CS-02) 固件
+# 仅编译京东云雅典娜 (RE-CS-02) 固件，禁用其他所有无关设备
 CONFIG_TARGET_DEVICE_qualcommax_ipq60xx_DEVICE_jdcloud_re-cs-02=y
-
-# 京东云雅典娜 Wi-Fi 无线驱动与无线协议守护进程 (hostapd / wpad)
-CONFIG_PACKAGE_kmod-cfg80211=y
-CONFIG_PACKAGE_kmod-mac80211=y
-CONFIG_PACKAGE_kmod-ath=y
-CONFIG_PACKAGE_kmod-ath11k=y
-CONFIG_PACKAGE_kmod-ath11k-ahb=y
-CONFIG_PACKAGE_kmod-ath11k-pci=y
-CONFIG_PACKAGE_kmod-qca-nss-drv-wifi-meshmgr=y
-CONFIG_ATH11K_NSS_SUPPORT=y
-CONFIG_ATH11K_NSS_MESH_SUPPORT=y
-CONFIG_PACKAGE_kmod-qrtr=y
-CONFIG_PACKAGE_kmod-qrtr-mhi=y
-CONFIG_PACKAGE_kmod-mhi=y
-CONFIG_PACKAGE_kmod-qmi-helpers=y
-CONFIG_PACKAGE_kmod-crypto-michael-mic=y
-CONFIG_PACKAGE_wpad-openssl=y
-CONFIG_PACKAGE_iw=y
-CONFIG_PACKAGE_iwinfo=y
-CONFIG_PACKAGE_wireless-regdb=y
 
