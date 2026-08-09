@@ -177,6 +177,11 @@ jobs:
 
           make defconfig -j$(nproc) && make clean -j$(nproc)
 
+          echo "========================================================="
+          echo "📶 [Wi-Fi Package Selection Audit Log / 无线关键包勾选日志]"
+          grep -E '^#? ?CONFIG_PACKAGE_(kmod-ath|kmod-ath11k|wpad|iw|iwinfo|wireless-regdb|ath11k-firmware|ipq-wifi)' .config || echo "No explicit match in .config"
+          echo "========================================================="
+
           # === 🔍 依赖反查诊断钩子：如果发现 DEBUG_INFO 被重新勾选，直接打印引用的罪魁祸首 Makefile ===
           if grep -q "CONFIG_KERNEL_DEBUG_INFO=y" .config || grep -q "CONFIG_KERNEL_DEBUG_INFO_BTF=y" .config; then
             echo "========================================================="
@@ -222,6 +227,10 @@ jobs:
             echo "--- top .config: CONFIG_KERNEL_* ---"
             grep -E '^#? ?CONFIG_KERNEL_' ./wrt/.config 2>/dev/null
             cp ./wrt/.config "$DIAG_DIR/top_dot_config.txt" 2>/dev/null
+            echo ""
+
+            echo "--- 📶 Wi-Fi Key Package Selection Audit ---"
+            grep -E '^#? ?CONFIG_PACKAGE_(kmod-ath|kmod-ath11k|wpad|iw|iwinfo|wireless-regdb|ath11k-firmware|ipq-wifi)' ./wrt/.config 2>/dev/null || echo "No explicit match in .config"
             echo ""
 
             if [ -n "$LINUX_DIR" ] && [ -f "$LINUX_DIR/.config" ]; then
