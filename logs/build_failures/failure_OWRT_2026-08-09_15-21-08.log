@@ -1,0 +1,2115 @@
+Build Failure Diagnostic Report - 2026-08-09_15-21-08
+Target Config: IPQ60XX-WIFI-YES
+Commit SHA: efd478f72fc707736e548cdcc22c869bc91945e2
+=========================================================
+--- 🚨 CRITICAL ERROR SUMMARY (罪魁祸首摘要表) 🚨 ---
+ls: cannot access 'usr/lib/ruby/4.0/pstore/': No such file or directory
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/etc/init.d/gecoosac: line 3: /lib/functions.sh: No such file or directory
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/etc/init.d/gecoosac: line 4: /lib/functions/procd.sh: No such file or directory
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/etc/init.d/gecoosac: line 5: /usr/share/gecoosac/runtime.sh: No such file or directory
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/usr/share/openclash/uci.sh: line 2: /lib/functions.sh: No such file or directory
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/usr/share/openclash/uci.sh: line 2: /lib/functions.sh: No such file or directory
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/usr/share/openclash/openclash_curl.sh: line 2: /usr/share/openclash/log.sh: No such file or directory
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/usr/share/openclash/openclash_curl.sh: line 3: /usr/share/openclash/openclash_etag.sh: No such file or directory
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/usr/share/passwall/utils.sh: line 18: /lib/functions/network.sh: No such file or directory
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/etc/init.d/wolultra: line 3: /lib/functions.sh: No such file or directory
+./etc/init.d/gecoosac: line 3: /lib/functions.sh: No such file or directory
+./etc/init.d/gecoosac: line 4: /lib/functions/procd.sh: No such file or directory
+./etc/init.d/gecoosac: line 5: /usr/share/gecoosac/runtime.sh: No such file or directory
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/usr/share/openclash/uci.sh: line 2: /lib/functions.sh: No such file or directory
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/usr/share/openclash/uci.sh: line 2: /lib/functions.sh: No such file or directory
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/usr/share/openclash/openclash_curl.sh: line 2: /usr/share/openclash/log.sh: No such file or directory
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/usr/share/openclash/openclash_curl.sh: line 3: /usr/share/openclash/openclash_etag.sh: No such file or directory
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/usr/share/passwall/utils.sh: line 18: /lib/functions/network.sh: No such file or directory
+./etc/init.d/wolultra: line 3: /lib/functions.sh: No such file or directory
+make[5]: *** [/mnt/build_wrt/include/image.mk:413: target-dir-c4e4fd53] Error 1
+make[4]: *** [Makefile:38: install] Error 2
+make[3]: *** [Makefile:12: install] Error 2
+make[2]: *** [target/Makefile:32: target/linux/install] Error 1
+make[1]: *** [target/Makefile:26: /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/stamp/.target_install] Error 2
+make: *** [/mnt/build_wrt/include/toplevel.mk:233: world] Error 2
+=========================================================
+
+--- VERBOSE BUILD OUTPUT (LAST 500 LINES) ---
+(433/582) Installing lua (5.1.5-r11)
+(434/582) Installing rpcd (2026.07.19~e37ed9d8-r1)
+(435/582) Installing rpcd-mod-file (2026.07.19~e37ed9d8-r1)
+(436/582) Installing rpcd-mod-luci (20240305-r1)
+(437/582) Installing rpcd-mod-ucode (2026.07.19~e37ed9d8-r1)
+(438/582) Installing ucode-mod-html (1)
+(439/582) Installing ucode-mod-log (2026.07.09~b885dd0f-r1)
+(440/582) Installing ucode-mod-math (2026.07.09~b885dd0f-r1)
+(441/582) Installing luci-base (26.217.33303~8c4171b)
+(442/582) Installing luci-app-package-manager (26.217.33303~8c4171b)
+(443/582) Installing luci-app-firewall (26.217.33303~8c4171b)
+(444/582) Installing luci-lib-uqr (26.217.33303~8c4171b)
+(445/582) Installing rpcd-mod-iwinfo (2026.07.19~e37ed9d8-r1)
+(446/582) Installing luci-mod-network (26.217.33303~8c4171b)
+(447/582) Installing luci-mod-status (26.217.33303~8c4171b)
+(448/582) Installing luci-mod-system (26.217.33303~8c4171b)
+(449/582) Installing luci-mod-admin-full (26.217.33303~8c4171b)
+(450/582) Installing luci-proto-ipv6 (26.217.33303~8c4171b)
+(451/582) Installing luci-proto-ppp (26.217.33303~8c4171b)
+(452/582) Installing luci-theme-aurora (1.2.0-r20260808)
+(453/582) Installing rpcd-mod-rrdns (20170710)
+(454/582) Installing uhttpd (2026.06.16~7b1bec45-r1)
+(455/582) Installing uhttpd-mod-ubus (2026.06.16~7b1bec45-r1)
+(456/582) Installing luci-light (26.217.33303~8c4171b)
+(457/582) Installing luci (26.217.33303~8c4171b)
+(458/582) Installing luci-app-aurora-config (1.2.0-r20260808)
+(459/582) Installing luci-app-autoreboot (26.217.33303~8c4171b)
+(460/582) Installing luci-app-cpufreq (26.217.33303~8c4171b)
+(461/582) Installing luci-lib-ip (26.217.33303~8c4171b)
+(462/582) Installing luci-lib-jsonc (26.217.33303~8c4171b)
+(463/582) Installing luci-lib-nixio (26.217.33303~8c4171b)
+(464/582) Installing luci-lib-base (26.217.33303~8c4171b)
+(465/582) Installing ucode-mod-lua (1)
+(466/582) Installing luci-lua-runtime (26.217.33303~8c4171b)
+(467/582) Installing luci-compat (26.217.33303~8c4171b)
+(468/582) Installing luci-app-dae (1.1.0-r22)
+(469/582) Installing luci-app-ddns-go (1.6.8-r20260323)
+(470/582) Installing ttyd (1.7.7-r1)
+(471/582) Installing ucode-mod-socket (2026.07.09~b885dd0f-r1)
+(472/582) Installing luci-app-dockerman (26.217.33303~8c4171b)
+(473/582) Installing luci-app-gecoosac (20260802-r1)
+(474/582) Installing sing-box (1.14.0_beta10-r1)
+(475/582) Installing unzip (6.0-r9)
+(476/582) Installing luci-app-homeproxy (20260808-r1)
+(477/582) Installing parted (3.6-r2)
+(478/582) Installing luci-app-mini-diskmanager (1.0.29-r20260215)
+(479/582) Installing luci-app-netwizard (2.1.5-r20260312)
+(480/582) Installing ruby (4.0.2-r1)
+(481/582) Installing ruby-digest (4.0.2-r1)
+(482/582) Installing ruby-enc (4.0.2-r1)
+(483/582) Installing ruby-pstore (4.0.2-r1)
+(484/582) Installing ruby-bigdecimal (4.0.2-r1)
+(485/582) Installing ruby-date (4.0.2-r1)
+(486/582) Installing ruby-stringio (4.0.2-r1)
+(487/582) Installing ruby-psych (4.0.2-r1)
+(488/582) Installing ruby-yaml (4.0.2-r1)
+(489/582) Installing luci-app-openclash (0.47.152)
+(490/582) Installing resize2fs (1.47.4-r1)
+(491/582) Installing luci-app-partexp (2.0.5-r20260318)
+(492/582) Installing lyaml (6.2.7-r2)
+(493/582) Installing microsocks (1.0.5-r2)
+(494/582) Installing resolveip (2)
+(495/582) Installing tcping (2020.07.04~db910183-r1)
+(496/582) Installing luci-app-passwall (26.8.1-r1)
+(497/582) Installing nginx-ssl-util (1.7-r2)
+(498/582) Installing nginx-ssl (1.30.3-r1)
+(499/582) Installing nginx-mod-ubus (1.30.3-r1)
+(500/582) Installing uwsgi (2.0.30-r1)
+(501/582) Installing uwsgi-cgi-plugin (2.0.30-r1)
+(502/582) Installing uwsgi-syslog-plugin (2.0.30-r1)
+(503/582) Installing uwsgi-luci-support (2.0.30-r1)
+(504/582) Installing nginx-mod-luci (1.30.3-r1)
+(505/582) Installing luci-nginx (26.217.33303~8c4171b)
+(506/582) Installing quickfile (1.0.25-r1)
+(507/582) Installing luci-app-quickfile (1.0.0-r1)
+(508/582) Installing samba4-libs (4.22.7-r3)
+(509/582) Installing samba4-server (4.22.7-r3)
+(510/582) Installing luci-app-samba4 (26.217.33303~8c4171b)
+(511/582) Installing tc-tiny (6.18.0-r2)
+(512/582) Installing sqm-scripts (1.7.2-r1)
+(513/582) Installing luci-app-sqm (26.217.33303~8c4171b)
+(514/582) Installing luci-app-ttyd (26.217.33303~8c4171b)
+(515/582) Installing miniupnpd-nftables (2.3.9-r3)
+(516/582) Installing luci-app-upnp (26.217.33303~8c4171b)
+(517/582) Installing vlmcsd (2020.03.30~e5990804-r8)
+(518/582) Installing luci-app-vlmcsd (26.217.33303~8c4171b)
+(519/582) Installing luci-app-wolultra (20260802-r1)
+(520/582) Installing zerotier (1.16.2-r1)
+(521/582) Installing luci-app-zerotier (26.217.33303~8c4171b)
+(522/582) Installing luci-i18n-aurora-config-zh-cn (26.220.29449~110aeca)
+(523/582) Installing luci-i18n-autoreboot-zh-cn (26.217.33303~8c4171b)
+(524/582) Installing luci-i18n-base-zh-cn (26.217.33303~8c4171b)
+(525/582) Installing luci-i18n-cpufreq-zh-cn (26.217.33303~8c4171b)
+(526/582) Installing luci-i18n-dae-zh-cn (26.198.07003~1197ca6)
+(527/582) Installing luci-i18n-ddns-go-zh-cn (26.174.43440~7092e6d)
+(528/582) Installing luci-i18n-dockerman-zh-cn (26.217.33303~8c4171b)
+(529/582) Installing luci-i18n-firewall-zh-cn (26.217.33303~8c4171b)
+(530/582) Installing luci-i18n-gecoosac-zh-cn (20260802-r1)
+(531/582) Installing luci-i18n-homeproxy-zh-cn (20260808-r1)
+(532/582) Installing luci-i18n-mini-diskmanager-zh-cn (26.055.40085~4b2b733)
+(533/582) Installing luci-i18n-netwizard-zh-cn (26.071.50141~7867a28)
+(534/582) Installing luci-i18n-package-manager-zh-cn (26.217.33303~8c4171b)
+(535/582) Installing luci-i18n-partexp-zh-cn (26.088.58914~236187c)
+(536/582) Installing luci-i18n-passwall-zh-cn (26.8.1)
+(537/582) Installing luci-i18n-quickfile-zh-cn (26.185.16729~4baa2bd)
+(538/582) Installing luci-i18n-samba4-zh-cn (26.217.33303~8c4171b)
+(539/582) Installing luci-i18n-sqm-zh-cn (26.217.33303~8c4171b)
+(540/582) Installing luci-i18n-ttyd-zh-cn (26.217.33303~8c4171b)
+(541/582) Installing luci-i18n-upnp-zh-cn (26.217.33303~8c4171b)
+(542/582) Installing luci-i18n-vlmcsd-zh-cn (26.217.33303~8c4171b)
+(543/582) Installing luci-i18n-wolultra-zh-cn (20260802-r1)
+(544/582) Installing luci-i18n-zerotier-zh-cn (26.217.33303~8c4171b)
+(545/582) Installing luci-lib-ipkg (26.217.33303~8c4171b)
+(546/582) Installing relayd (2025.10.04~708a76fa-r1)
+(547/582) Installing luci-proto-relay (26.217.33303~8c4171b)
+(548/582) Installing wireguard-tools (1.0.20260223-r1)
+(549/582) Installing luci-proto-wireguard (26.217.33303~8c4171b)
+(550/582) Installing mmc-utils (2025.12.21~8f41ccbb-r1)
+(551/582) Installing mtd (28)
+(552/582) Installing nand-utils (2.3.1-r1)
+(553/582) Installing nvme-cli (2.15-r1)
+(554/582) Installing odhcp6c (2026.06.27~10a52220-r3)
+(555/582) Installing odhcpd-ipv6only (2026.06.28~68f38269-r1)
+(556/582) Installing openssh-keygen (10.4_p1-r1)
+(557/582) Installing openssh-sftp-server (10.4_p1-r1)
+(558/582) Installing openssl-util (3.5.7-r1)
+(559/582) Installing shellsync (0.2-r2)
+(560/582) Installing ppp (2.5.3-r2)
+(561/582) Installing ppp-mod-pppoe (2.5.3-r2)
+(562/582) Installing procd-ujail (2026.06.17~60fdbf00-r1)
+(563/582) Installing proto-bonding (2021.04.09-r1)
+(564/582) Installing sfdisk (2.42.2-r1)
+(565/582) Installing sgdisk (1.0.10-r1)
+(566/582) Installing shadowsocks-rust-sslocal (1.24.0-r1)
+(567/582) Installing simple-obfs-client (0.0.5-r2)
+(568/582) Installing smartmontools (7.5-r1)
+(569/582) Installing smartmontools-drivedb (7.5-r1)
+(570/582) Installing uboot-envtools (2026.07-r1)
+(571/582) Installing uci (2025.12.02~66127cd7-r1)
+(572/582) Installing urandom-seed (3)
+(573/582) Installing urngd (2025.10.03~f17e33d9-r1)
+(574/582) Installing usb-modeswitch (2025.10.04~9b4d0a6e-r1)
+(575/582) Installing usbids (0.407-r1)
+(576/582) Installing usbutils (019-r1)
+(577/582) Installing usbmuxd (2025.02.01~523f7004-r1)
+(578/582) Installing v2ray-plugin (5.49.0-r1)
+(579/582) Installing wpad-openssl (2026.07.09~f08f2749-r1)
+(580/582) Installing wsdd2 (2023.12.21~b676d8ac-r2)
+(581/582) Installing xray-core (26.3.27-r1)
+(582/582) Installing xz-utils (5.8.3-r1)
+OK: 593.8 MiB in 582 packages
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/run
+cp -fpR /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root.orig-qualcommax
+add alternative: /bin/base64 -> /usr/libexec/base64-coreutils
+add alternative: /usr/bin/nohup -> /usr/libexec/nohup-coreutils
+add alternative: /usr/bin/timeout -> /usr/libexec/timeout-coreutils
+add alternative: /usr/bin/scp -> /usr/sbin/dropbear
+add alternative: /usr/bin/ssh -> /usr/sbin/dropbear
+add alternative: /sbin/ip -> /usr/libexec/ip-full
+add alternative: /usr/sbin/ip6tables -> xtables-nft-multi
+add alternative: /usr/sbin/ip6tables-restore -> xtables-nft-multi
+add alternative: /usr/sbin/ip6tables-save -> xtables-nft-multi
+add alternative: /usr/sbin/ip6tables-nft -> xtables-nft-multi
+add alternative: /usr/sbin/ip6tables-nft-restore -> xtables-nft-multi
+add alternative: /usr/sbin/ip6tables-nft-save -> xtables-nft-multi
+add alternative: /usr/sbin/ip6tables-restore-translate -> xtables-nft-multi
+add alternative: /usr/sbin/ip6tables-translate -> xtables-nft-multi
+add alternative: /usr/sbin/iptables -> xtables-nft-multi
+add alternative: /usr/sbin/iptables-restore -> xtables-nft-multi
+add alternative: /usr/sbin/iptables-save -> xtables-nft-multi
+add alternative: /usr/sbin/iptables-nft -> xtables-nft-multi
+add alternative: /usr/sbin/iptables-nft-restore -> xtables-nft-multi
+add alternative: /usr/sbin/iptables-nft-save -> xtables-nft-multi
+add alternative: /usr/sbin/iptables-restore-translate -> xtables-nft-multi
+add alternative: /usr/sbin/iptables-translate -> xtables-nft-multi
+add alternative: /sbin/logread -> /usr/libexec/logread-ubox
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/etc/init.d/gecoosac: line 3: /lib/functions.sh: No such file or directory
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/etc/init.d/gecoosac: line 4: /lib/functions/procd.sh: No such file or directory
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/etc/init.d/gecoosac: line 5: /usr/share/gecoosac/runtime.sh: No such file or directory
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/etc/init.d/homeproxy: line 25: uci: command not found
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/usr/share/openclash/uci.sh: line 2: /lib/functions.sh: No such file or directory
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/usr/share/openclash/uci.sh: line 2: /lib/functions.sh: No such file or directory
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/usr/share/openclash/openclash_curl.sh: line 2: /usr/share/openclash/log.sh: No such file or directory
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/usr/share/openclash/openclash_curl.sh: line 3: /usr/share/openclash/openclash_etag.sh: No such file or directory
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/usr/share/passwall/utils.sh: line 18: /lib/functions/network.sh: No such file or directory
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/etc/init.d/wolultra: line 3: /lib/functions.sh: No such file or directory
+add alternative: /usr/bin/ssh-keygen -> /usr/libexec/ssh-keygen-openssh
+add alternative: /sbin/tc -> /usr/libexec/tc-tiny
+add alternative: /sbin/rmmod -> /sbin/kmodloader
+add alternative: /sbin/insmod -> /sbin/kmodloader
+add alternative: /sbin/lsmod -> /sbin/kmodloader
+add alternative: /sbin/modinfo -> /sbin/kmodloader
+add alternative: /sbin/modprobe -> /sbin/kmodloader
+add alternative: /usr/bin/wget -> /bin/uclient-fetch
+add alternative: /usr/bin/lsusb -> /usr/libexec/lsusb-usbutils
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/etc/init.d/vlmcsd: line 6: uci: command not found
+Enabling autoreboot
+Enabling avahi-daemon
+Enabling boot
+Enabling bootcount
+Enabling cpufreq
+Enabling cron
+Enabling dae
+Enabling dbus
+Enabling ddns-go
+Enabling dnsmasq
+Enabling dockerd
+Enabling done
+Enabling dropbear
+Enabling etherwake
+Enabling firewall
+Enabling fstab
+./etc/init.d/gecoosac: line 3: /lib/functions.sh: No such file or directory
+./etc/init.d/gecoosac: line 4: /lib/functions/procd.sh: No such file or directory
+./etc/init.d/gecoosac: line 5: /usr/share/gecoosac/runtime.sh: No such file or directory
+Enabling gecoosac
+Enabling gpio_switch
+Enabling haproxy
+./etc/init.d/homeproxy: line 25: uci: command not found
+Enabling homeproxy
+Enabling led
+Enabling log
+Enabling microsocks
+Enabling miniupnpd
+Enabling netwizard
+Enabling network
+Enabling nginx
+Enabling nss_freq
+Enabling odhcpd
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/usr/share/openclash/uci.sh: line 2: /lib/functions.sh: No such file or directory
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/usr/share/openclash/uci.sh: line 2: /lib/functions.sh: No such file or directory
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/usr/share/openclash/openclash_curl.sh: line 2: /usr/share/openclash/log.sh: No such file or directory
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/usr/share/openclash/openclash_curl.sh: line 3: /usr/share/openclash/openclash_etag.sh: No such file or directory
+Enabling openclash
+Enabling openssl
+Enabling packet_steering
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/usr/share/passwall/utils.sh: line 18: /lib/functions/network.sh: No such file or directory
+Enabling passwall
+Enabling passwall_server
+Enabling qca-nss-drv
+Enabling qca-nss-ecm
+Enabling qca-nss-netlink
+Enabling qca-nss-pbuf
+Enabling quickfile
+Enabling radius
+Enabling relayd
+Enabling rpcd
+Enabling samba4
+Enabling set-irq-affinity
+Enabling sing-box
+Enabling skb_recycler
+Enabling smp_affinity
+Enabling sqm
+Enabling sysctl
+Enabling sysfixtime
+Enabling sysntpd
+Enabling system
+Enabling ttyd
+Enabling ubihealthd
+Enabling ucitrack
+Enabling uhttpd
+Enabling umount
+Enabling urandom_seed
+Enabling urngd
+Enabling usbmode
+Enabling usbmuxd
+Enabling uwsgi
+./etc/init.d/vlmcsd: line 6: uci: command not found
+Enabling vlmcsd
+./etc/init.d/wolultra: line 3: /lib/functions.sh: No such file or directory
+Enabling wolultra
+Enabling wpad
+Enabling wsdd2
+Enabling xray
+Enabling zerotier
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/boot /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/tmp/* /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/lib/apk/db/*.post-install* /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/usr/lib/opkg/info/*.postinst* /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/usr/lib/opkg/lists/* /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/var/lock/*.lock
+find /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/ -mindepth 1 -execdir touch -hcd "@1786161063" "{}" +
+make[2]: Leaving directory '/mnt/build_wrt'
+make[2]: Entering directory '/mnt/build_wrt'
+make[3]: Entering directory '/mnt/build_wrt/target/linux'
+make[4]: Entering directory '/mnt/build_wrt/target/linux/qualcommax'
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/localversion
+/mnt/build_wrt/scripts/kconfig.pl  + + /mnt/build_wrt/target/linux/generic/config-6.18 /mnt/build_wrt/target/linux/qualcommax/config-6.18 /mnt/build_wrt/target/linux/qualcommax/ipq60xx/config-default > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.target
+awk '/^(#[[:space:]]+)?CONFIG_KERNEL/{sub("CONFIG_KERNEL_","CONFIG_");print}' /mnt/build_wrt/.config >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.target
+echo "# CONFIG_KALLSYMS_EXTRA_PASS is not set" >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.target
+echo "# CONFIG_KALLSYMS_ALL is not set" >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.target
+echo "CONFIG_KALLSYMS_UNCOMPRESSED=y" >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.target
+/mnt/build_wrt/scripts/package-metadata.pl kconfig /mnt/build_wrt/tmp/.packageinfo /mnt/build_wrt/.config 6.18 > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.override
+/mnt/build_wrt/scripts/kconfig.pl 'm+' '+' /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.target /dev/null /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.override > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.set
+mv /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.set /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.old
+grep -v INITRAMFS /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.old > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.set
+echo 'CONFIG_INITRAMFS_SOURCE=""' >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.set
+echo '# CONFIG_INITRAMFS_FORCE is not set' >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.set
+echo "# CONFIG_INITRAMFS_PRESERVE_MTIME is not set" >> /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.set
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/modules
+cmp -s /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.set /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.prev || { cp /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.set /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config; cp /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.set /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.prev; }
+export MAKEFLAGS= ; [ -d /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/user_headers ] || make -C /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41 KCFLAGS="-fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl=target-aarch64_cortex-a53_musl -fno-caller-saves " KAFLAGS="-fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl=target-aarch64_cortex-a53_musl" HOSTCFLAGS="-O2 -I/mnt/build_wrt/staging_dir/host/include -Wall -Wmissing-prototypes -Wstrict-prototypes" CROSS_COMPILE="aarch64-openwrt-linux-musl-" ARCH="arm64" KBUILD_HAVE_NLS=no KBUILD_BUILD_USER="" KBUILD_BUILD_HOST="" KBUILD_BUILD_TIMESTAMP="Sat Aug  8 03:51:03 2026" KBUILD_BUILD_VERSION="0" KBUILD_HOSTLDFLAGS="-L/mnt/build_wrt/staging_dir/host/lib" CONFIG_SHELL="bash" V=''  cmd_syscalls=  CC="ccache aarch64-openwrt-linux-musl-gcc" KERNELRELEASE=6.18.41  INSTALL_HDR_PATH=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/user_headers headers_install
+grep '=[ym]' /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.config.set | LC_ALL=C sort | /mnt/build_wrt/staging_dir/host/bin/mkhash md5 > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.vermagic
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.configured
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/init
+make -C /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41 KCFLAGS="-fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl=target-aarch64_cortex-a53_musl -fno-caller-saves " KAFLAGS="-fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl=target-aarch64_cortex-a53_musl" HOSTCFLAGS="-O2 -I/mnt/build_wrt/staging_dir/host/include -Wall -Wmissing-prototypes -Wstrict-prototypes" CROSS_COMPILE="aarch64-openwrt-linux-musl-" ARCH="arm64" KBUILD_HAVE_NLS=no KBUILD_BUILD_USER="" KBUILD_BUILD_HOST="" KBUILD_BUILD_TIMESTAMP="Sat Aug  8 03:51:03 2026" KBUILD_BUILD_VERSION="0" KBUILD_HOSTLDFLAGS="-L/mnt/build_wrt/staging_dir/host/lib" CONFIG_SHELL="bash" V=''  cmd_syscalls=  CC="ccache aarch64-openwrt-linux-musl-gcc" KERNELRELEASE=6.18.41  Image
+make[5]: Entering directory '/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41'
+make[5]: Leaving directory '/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41'
+cmp -s /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/vmlinux /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/vmlinux.debug || { aarch64-openwrt-linux-musl-objcopy -O binary -R .reginfo -R .notes -R .note -R .comment -R .mdebug -R .note.gnu.build-id -S /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/vmlinux /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/vmlinux; aarch64-openwrt-linux-musl-objcopy -R .reginfo -R .notes -R .note -R .comment -R .mdebug -R .note.gnu.build-id -S /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/vmlinux /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/vmlinux.elf; cp -fpR /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/vmlinux /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/vmlinux.debug;  cp -fpR /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot//Image /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/Image;  }
+touch /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/.image
+make -C image compile install TARGET_BUILD=
+make[5]: Entering directory '/mnt/build_wrt/target/linux/qualcommax/image'
+make[5]: Nothing to be done for 'compile'.
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-mango-dvk.dtb.tmp ../dts/ipq6010-mango-dvk.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-mango-dvk.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-mango-dvk.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-mango-dvk.dtb.tmp
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-ap120c-ax.dtb.tmp ../dts/ipq6000-ap120c-ax.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-ap120c-ax.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-ap120c-ax.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-ap120c-ax.dtb.tmp
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-xe3-4.dtb.tmp ../dts/ipq6010-xe3-4.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-xe3-4.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-xe3-4.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-xe3-4.dtb.tmp
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-gl-ax1800.dtb.tmp ../dts/ipq6000-gl-ax1800.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-gl-ax1800.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-gl-ax1800.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-gl-ax1800.dtb.tmp
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-gl-axt1800.dtb.tmp ../dts/ipq6000-gl-axt1800.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-gl-axt1800.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-gl-axt1800.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-gl-axt1800.dtb.tmp
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-re-cs-02.dtb.tmp ../dts/ipq6010-re-cs-02.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-re-cs-02.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-re-cs-02.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-re-cs-02.dtb.tmp
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-re-cs-07.dtb.tmp ../dts/ipq6010-re-cs-07.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-re-cs-07.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-re-cs-07.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-re-cs-07.dtb.tmp
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-re-ss-01.dtb.tmp ../dts/ipq6000-re-ss-01.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-re-ss-01.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-re-ss-01.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-re-ss-01.dtb.tmp
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-nn6000-v1.dtb.tmp ../dts/ipq6000-nn6000-v1.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-nn6000-v1.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-nn6000-v1.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-nn6000-v1.dtb.tmp
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-nn6000-v2.dtb.tmp ../dts/ipq6000-nn6000-v2.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-nn6000-v2.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-nn6000-v2.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-nn6000-v2.dtb.tmp
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-mr7350.dtb.tmp ../dts/ipq6000-mr7350.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-mr7350.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-mr7350.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-mr7350.dtb.tmp
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-mr7500.dtb.tmp ../dts/ipq6018-mr7500.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-mr7500.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-mr7500.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-mr7500.dtb.tmp
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-rbr350.dtb.tmp ../dts/ipq6018-rbr350.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-rbr350.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-rbr350.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-rbr350.dtb.tmp
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-rbs350.dtb.tmp ../dts/ipq6018-rbs350.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-rbs350.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-rbs350.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-rbs350.dtb.tmp
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-wax214.dtb.tmp ../dts/ipq6010-wax214.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-wax214.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-wax214.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-wax214.dtb.tmp
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-wax610.dtb.tmp ../dts/ipq6010-wax610.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-wax610.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-wax610.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-wax610.dtb.tmp
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-wax610y.dtb.tmp ../dts/ipq6010-wax610y.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-wax610y.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-wax610y.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-wax610y.dtb.tmp
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-360v6.dtb.tmp ../dts/ipq6000-360v6.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-360v6.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-360v6.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-360v6.dtb.tmp
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-eap610-outdoor.dtb.tmp ../dts/ipq6018-eap610-outdoor.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-eap610-outdoor.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-eap610-outdoor.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-eap610-outdoor.dtb.tmp
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-eap623-outdoor-hd-v1.dtb.tmp ../dts/ipq6018-eap623-outdoor-hd-v1.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-eap623-outdoor-hd-v1.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-eap623-outdoor-hd-v1.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-eap623-outdoor-hd-v1.dtb.tmp
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-eap625-outdoor-hd-v1.dtb.tmp ../dts/ipq6018-eap625-outdoor-hd-v1.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-eap625-outdoor-hd-v1.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-eap625-outdoor-hd-v1.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-eap625-outdoor-hd-v1.dtb.tmp
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-eap620-hd-v3.dtb.tmp ../dts/ipq6018-eap620-hd-v3.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-eap620-hd-v3.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-eap620-hd-v3.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-eap620-hd-v3.dtb.tmp
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-fap650.dtb.tmp ../dts/ipq6018-fap650.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-fap650.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-fap650.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6018-fap650.dtb.tmp
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-e1.dtb.tmp ../dts/ipq6010-e1.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-e1.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-e1.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-e1.dtb.tmp
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-ax18.dtb.tmp ../dts/ipq6000-ax18.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-ax18.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-ax18.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-ax18.dtb.tmp
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-ap3000-2c.dtb.tmp ../dts/ipq6000-ap3000-2c.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-ap3000-2c.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-ap3000-2c.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-ap3000-2c.dtb.tmp
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-ax5.dtb.tmp ../dts/ipq6000-ax5.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-ax5.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-ax5.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-ax5.dtb.tmp
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-ax1800.dtb.tmp ../dts/ipq6000-ax1800.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-ax1800.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-ax1800.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-ax1800.dtb.tmp
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-m2.dtb.tmp ../dts/ipq6000-m2.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-m2.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-m2.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-m2.dtb.tmp
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-ly1800.dtb.tmp ../dts/ipq6010-ly1800.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-ly1800.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-ly1800.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-ly1800.dtb.tmp
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-ax5-jdcloud.dtb.tmp ../dts/ipq6000-ax5-jdcloud.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-ax5-jdcloud.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-ax5-jdcloud.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6000-ax5-jdcloud.dtb.tmp
+aarch64-openwrt-linux-musl-cpp -nostdinc -x assembler-with-cpp  -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/arch/arm64/boot/dts/qcom/include -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/include/ -I/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/include-prefixes -undef -D__DTS__  -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-y6010.dtb.tmp ../dts/ipq6010-y6010.dts
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc/dtc -O dtb -i../dts/ -Wno-interrupt_provider -Wno-unique_unit_address -Wno-unit_address_vs_reg -Wno-avoid_unnecessary_addr_size -Wno-alias_paths -Wno-graph_child_address -Wno-simple_bus_reg    -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-y6010.dtb /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-y6010.dtb.tmp
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-y6010.dtb.tmp
+mkdir -p /mnt/build_wrt/bin/targets/qualcommax/ipq60xx /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/tmp
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/json_info_files
+/mnt/build_wrt/staging_dir/host/bin/mksquashfs4 /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/root.squashfs -nopad -noappend -root-owned -comp xz -Xpreset 9 -Xe -Xlc 0 -Xlp 2 -Xpb 2  -b 256k -p '/dev d 755 0 0' -p '/dev/console c 600 0 0 5 1' -no-xattrs -block-readers 4 -small-readers 4
+Pseudo file "dev" exists in source filesystem "/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root-qualcommax/dev".
+Ignoring, exclude it (-e/-ef) to override.
+Parallel mksquashfs: Using 4 processors
+Creating 4.0 filesystem on /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/root.squashfs, block size 262144.
+[|                                                             ]    0/5613   0%[================================-                             ] 3100/5908  52%[==================================/                           ] 3300/5908  55%[=============================================================/] 5908/5908 100%
+
+Exportable Squashfs 4.0 filesystem, xz compressed, data block size 262144
+	compressed data, compressed metadata, compressed fragments,
+	no xattrs, compressed ids
+	duplicates are removed
+Filesystem size 170286.91 Kbytes (166.30 Mbytes)
+	27.97% of uncompressed filesystem size (608814.52 Kbytes)
+Inode table size 39358 bytes (38.44 Kbytes)
+	23.91% of uncompressed inode table size (164586 bytes)
+Directory table size 47956 bytes (46.83 Kbytes)
+	44.57% of uncompressed directory table size (107603 bytes)
+Number of duplicate files found 187
+Number of inodes 4543
+Number of files 3496
+Number of fragments 201
+Number of symbolic links 722
+Number of device nodes 1
+Number of fifo nodes 0
+Number of socket nodes 0
+Number of directories 324
+Number of hard-links 0
+Number of ids (unique uids + gids) 1
+Number of uids 1
+	root (0)
+Number of gids 1
+	root (0)
+rm -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/jdcloud_re-cs-02-uImage.itb
+cp /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/Image /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/jdcloud_re-cs-02-uImage.itb
+/mnt/build_wrt/staging_dir/host/bin/libdeflate-gzip -f -12 -c /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/jdcloud_re-cs-02-uImage.itb  > /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/jdcloud_re-cs-02-uImage.itb.new
+/mnt/build_wrt/scripts/mkits.sh -D jdcloud_re-cs-02 -o /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/jdcloud_re-cs-02-uImage.itb.its -k /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/jdcloud_re-cs-02-uImage.itb -C gzip   -d /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/image-ipq6010-re-cs-02.dtb   -a 0x41000000 -e 0x41000000     -c config@cp03-c3 -A arm64 -v 6.18.41
+SHELL= flock /mnt/build_wrt/tmp/.gen-cpio.c4e4fd53.flock -c 'PATH=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/linux-6.18.41/scripts/dtc:/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/bin:/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/bin:/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/bin:/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/bin:/mnt/build_wrt/staging_dir/host/bin:/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/bin:/mnt/build_wrt/staging_dir/host/bin:/mnt/build_wrt/staging_dir/host/bin:/snap/bin:/home/runner/.local/bin:/opt/pipx_bin:/home/runner/.cargo/bin:/home/runner/.config/composer/vendor/bin:/usr/local/.ghcup/bin:/home/runner/.dotnet/tools:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin mkimage  -f /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/jdcloud_re-cs-02-uImage.itb.its /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/jdcloud_re-cs-02-uImage.itb.new'
+/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/jdcloud_re-cs-02-uImage.itb.its:48.18-55.5: Warning (unit_address_vs_reg): /configurations/config@cp03-c3: node has a unit name, but no reg or ranges property
+FIT description: ARM64 OpenWrt FIT (Flattened Image Tree)
+Created:         Sat Aug  8 03:51:03 2026
+ Image 0 (kernel-1)
+  Description:  ARM64 OpenWrt Linux-6.18.41
+  Created:      Sat Aug  8 03:51:03 2026
+  Type:         Kernel Image
+  Compression:  gzip compressed
+  Data Size:    5383833 Bytes = 5257.65 KiB = 5.13 MiB
+  Architecture: AArch64
+  OS:           Linux
+  Load Address: 0x41000000
+  Entry Point:  0x41000000
+  Hash algo:    crc32
+  Hash value:   1af00a9e
+  Hash algo:    sha1
+  Hash value:   bb373891112c51e6bd955c71b2bbea63d3eddde7
+ Image 1 (fdt-1)
+  Description:  ARM64 OpenWrt jdcloud_re-cs-02 device tree blob
+  Created:      Sat Aug  8 03:51:03 2026
+  Type:         Flat Device Tree
+  Compression:  uncompressed
+  Data Size:    38283 Bytes = 37.39 KiB = 0.04 MiB
+  Architecture: AArch64
+  Hash algo:    crc32
+  Hash value:   5c5854ce
+  Hash algo:    sha1
+  Hash value:   401cf25420f749da7870e636d6455c5c69fd3917
+ Default Configuration: 'config@cp03-c3'
+ Configuration 0 (config@cp03-c3)
+  Description:  OpenWrt jdcloud_re-cs-02
+  Kernel:       kernel-1
+  FDT:          fdt-1
+rm -rf /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/target-dir-c4e4fd53
+cp -fpR /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/root.orig-qualcommax /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/target-dir-c4e4fd53
+IPKG_INSTROOT=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/target-dir-c4e4fd53 /mnt/build_wrt/staging_dir/host/bin/fakeroot /mnt/build_wrt/staging_dir/host/bin/apk --root /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/target-dir-c4e4fd53 --keys-dir /mnt/build_wrt --no-logfile --preserve-env --no-scripts --repositories-file /dev/null --repository file:///mnt/build_wrt/staging_dir/packages/qualcommax/packages.adb add ipq-wifi-jdcloud_re-cs-02 ath11k-firmware-qcn9074-ddwrt luci-app-athena-led luci-i18n-athena-led-zh-cn
+(1/4) Installing ath11k-firmware-qcn9074-ddwrt (2026.03.21~e853ab3f-r1)
+ERROR: ath11k-firmware-qcn9074-ddwrt-2026.03.21~e853ab3f-r1: trying to overwrite lib/firmware/ath11k/QCN9074/hw1.0/amss.bin owned by ath11k-firmware-qcn9074-20260622-r2.
+ERROR: ath11k-firmware-qcn9074-ddwrt-2026.03.21~e853ab3f-r1: trying to overwrite lib/firmware/ath11k/QCN9074/hw1.0/board-2.bin owned by ath11k-firmware-qcn9074-20260622-r2.
+ERROR: ath11k-firmware-qcn9074-ddwrt-2026.03.21~e853ab3f-r1: trying to overwrite lib/firmware/ath11k/QCN9074/hw1.0/m3.bin owned by ath11k-firmware-qcn9074-20260622-r2.
+(2/4) Installing ipq-wifi-jdcloud_re-cs-02 (2026.05.18~e20f4c6f-r1)
+(3/4) Installing luci-app-athena-led (1.0-r20260610)
+(4/4) Installing luci-i18n-athena-led-zh-cn (26.220.13863~3fd1e27)
+1 error; 605.0 MiB in 586 packages
+make[5]: *** [/mnt/build_wrt/include/image.mk:413: target-dir-c4e4fd53] Error 1
+make[5]: Leaving directory '/mnt/build_wrt/target/linux/qualcommax/image'
+make[4]: *** [Makefile:38: install] Error 2
+make[4]: Leaving directory '/mnt/build_wrt/target/linux/qualcommax'
+make[3]: *** [Makefile:12: install] Error 2
+make[3]: Leaving directory '/mnt/build_wrt/target/linux'
+time: target/linux/install#228.35#7.49#71.67
+    ERROR: target/linux failed to build.
+make[2]: *** [target/Makefile:32: target/linux/install] Error 1
+make[2]: Leaving directory '/mnt/build_wrt'
+make[1]: *** [target/Makefile:26: /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/stamp/.target_install] Error 2
+make[1]: Leaving directory '/mnt/build_wrt'
+make: *** [/mnt/build_wrt/include/toplevel.mk:233: world] Error 2
+
+--- RECENT ERROR LOGS IN BUILD DIR ---
+=== File: ./wrt/build_dir/target-aarch64_cortex-a53_musl/samba-4.22.7/third_party/heimdal/lib/hcrypto/libtommath/logs/mult.log ===
+   240       114
+   360       182
+   480       273
+   600       364
+   717       471
+   840       597
+   960       737
+  1080       881
+  1196      1041
+  1318      1215
+  1438      1405
+  1559      1600
+  1679      1812
+  1800      2045
+  1918      2289
+  2040      2534
+  2160      2800
+  2280      3067
+  2397      3375
+  2520      3678
+  2640      4007
+  2759      4325
+  2880      4851
+  3000      5200
+  3117      5557
+  3239      5938
+  3356      6332
+  3480      6741
+  3600      7168
+  3720      7597
+  3840      8054
+  3960      8514
+  4079      8956
+  4198      9451
+  4320      9976
+  4440     10457
+  4560     10973
+  4679     11535
+  4797     12085
+  4920     12639
+  5040     13235
+  5160     13832
+  5279     14454
+  5400     15063
+  5519     15657
+  5640     16339
+  5760     16992
+  5879     17676
+  6000     18380
+  6120     18022
+  6237     18567
+  6360     19259
+  6479     19929
+  6599     20686
+  6719     21180
+  6840     22121
+  6960     22741
+  7080     23664
+  7200     24315
+  7320     25107
+  7439     25945
+  7560     26557
+  7680     27527
+  7799     28341
+  7920     30761
+  8040     31648
+  8159     32628
+  8280     33498
+  8400     34508
+  8520     33657
+  8640     34566
+  8758     35203
+  8878     36356
+  9000     37379
+  9119     38072
+  9240     39390
+  9360     48931
+  9475     66682
+  9600     72564
+  9719     51493
+  9840     52637
+  9960     48247
+ 10080     49030
+ 10195     50592
+=== File: ./wrt/build_dir/target-aarch64_cortex-a53_musl/samba-4.22.7/third_party/heimdal/lib/hcrypto/libtommath/logs/sub.log ===
+   480        36
+   960        51
+  1440        64
+  1920        78
+  2400        90
+  2880       105
+  3360       118
+  3840       133
+  4320       146
+  4800       161
+  5280       182
+  5760       201
+  6240       201
+  6720       214
+  7200       228
+  7680       243
+=== File: ./wrt/build_dir/target-aarch64_cortex-a53_musl/samba-4.22.7/third_party/heimdal/lib/hcrypto/libtommath/logs/expt.log ===
+   513    446633
+   769   1110301
+  1025   2414927
+  2049  14870787
+  2561  26299761
+  3073  44323310
+  4097  98934292
+=== File: ./wrt/build_dir/target-aarch64_cortex-a53_musl/samba-4.22.7/third_party/heimdal/lib/hcrypto/libtommath/logs/add.log ===
+   480        48
+   960        61
+  1440        82
+  1920        97
+  2400       106
+  2880       112
+  3360       127
+  3840       130
+  4320       146
+  4800       157
+  5280       174
+  5760       185
+  6240       200
+  6720       214
+  7200       230
+  7680       244
+=== File: ./wrt/build_dir/target-aarch64_cortex-a53_musl/samba-4.22.7/bin/config.log ===
+#define HAVE_SYS_KERNEL_PROC_CORE_PATTERN 1
+#define __TIME_T_MAX 1
+#define TIME_T_MAX 67768036191676799ll
+#define HAVE_MAKEDEV 1
+#define REALPATH_TAKES_NULL 1
+#define HAVE_FTRUNCATE_EXTEND 1
+#define HAVE_BROKEN_READLINK 1
+#define HAVE_SYS_SENDFILE_H 1
+#define _HAVE_SENDFILE 1
+#define HAVE_SENDFILE 1
+#define LINUX_SENDFILE_API 1
+#define GETCWD_TAKES_NULL 1
+#define HAVE_GETSPNAM 1
+#define HAVE_SCHED_H 1
+#define HAVE_UNSHARE_CLONE_FS 1
+#define HAVE_LINUX_FS_H 1
+#define HAVE_DECL_FS_IOC_GETFLAGS 1
+#define HAVE_DECL_FS_COMPR_FL 1
+#define HAVE_LINUX_IOCTL 1
+/* #undef HAVE_GLUSTERFS */
+#define HAVE_URING 1
+#define HAVE_LIBURING_H 1
+#define HAVE_LIBURING 1
+#define HAVE_IO_URING_RING_DONTFORK 1
+#define HAVE_IO_URING_PREP_WRITEV2 1
+#define HAVE_LIBURING_COMPAT_H 1
+/* #undef HAVE_STRUCT_OPEN_HOW_LIBURING_COMPAT_H */
+#define HAVE_FTW_H 1
+#define HAVE_NFTW 1
+#define HAVE_LIBCRYPTO 1
+#define HAVE_DES_PCBC_ENCRYPT 1
+#define HAVE_GLIB_2_0 1
+#define HAVE_GLIB_H 1
+#define HAVE_LIBGLIB_2_0 1
+#define HAVE_GLIB 1
+#define WITH_TEVENT_GLIB_GLUE 1
+#define WITH_WSP 1
+#define HAVE_RPC_TYPES_H 1
+#define HAVE_RPC_XDR_H 1
+/* #undef HAVE_NSCD_FLUSH_CACHE */
+#define STRING_STATIC_MODULES "vfs_default vfs_not_implemented auth_builtin auth_sam auth_unix pdb_smbpasswd pdb_tdbsam"
+#define STRING_SHARED_MODULES "auth_script vfs_io_uring vfs_fruit vfs_shadow_copy2 vfs_recycle vfs_fake_perms vfs_readonly vfs_cap vfs_offline vfs_crossrename vfs_catia vfs_streams_xattr vfs_xattr_tdb vfs_widelinks vfs_btrfs"
+#define static_decl_vfs extern NTSTATUS vfs_default_init(TALLOC_CTX *mem_ctx);  extern NTSTATUS vfs_not_implemented_init(TALLOC_CTX *mem_ctx); 
+#define static_init_vfs(mem_ctx) { vfs_default_init((mem_ctx));  vfs_not_implemented_init((mem_ctx)); }
+#define vfs_io_uring_init samba_init_module
+#define vfs_fruit_init samba_init_module
+#define vfs_shadow_copy2_init samba_init_module
+#define vfs_recycle_init samba_init_module
+#define vfs_fake_perms_init samba_init_module
+#define vfs_readonly_init samba_init_module
+#define vfs_cap_init samba_init_module
+#define vfs_offline_init samba_init_module
+#define vfs_crossrename_init samba_init_module
+#define vfs_catia_init samba_init_module
+#define vfs_streams_xattr_init samba_init_module
+#define vfs_xattr_tdb_init samba_init_module
+#define vfs_widelinks_init samba_init_module
+#define vfs_btrfs_init samba_init_module
+#define static_decl_pdb extern NTSTATUS pdb_smbpasswd_init(TALLOC_CTX *mem_ctx);  extern NTSTATUS pdb_tdbsam_init(TALLOC_CTX *mem_ctx); 
+#define static_init_pdb(mem_ctx) { pdb_smbpasswd_init((mem_ctx));  pdb_tdbsam_init((mem_ctx)); }
+#define static_decl_auth extern NTSTATUS auth_builtin_init(TALLOC_CTX *mem_ctx);  extern NTSTATUS auth_sam_init(TALLOC_CTX *mem_ctx);  extern NTSTATUS auth_unix_init(TALLOC_CTX *mem_ctx); 
+#define static_init_auth(mem_ctx) { auth_builtin_init((mem_ctx));  auth_sam_init((mem_ctx));  auth_unix_init((mem_ctx)); }
+#define auth_script_init samba_init_module
+#define static_decl_nss_info 
+#define static_init_nss_info(mem_ctx) {}
+#define static_decl_charset 
+#define static_init_charset(mem_ctx) {}
+#define static_decl_idmap 
+#define static_init_idmap(mem_ctx) {}
+#define static_decl_gpext 
+#define static_init_gpext(mem_ctx) {}
+#define HAVE_PTY_H 1
+#define HAVE_OPENPTY 1
+#define HAVE_TCP_USER_TIMEOUT 1
+#define HAVE_LINUX_SOCKIOS_H 1
+#define HAVE_LINUX_ETHTOOL_H 1
+#define HAVE_ETHTOOL 1
+#define HAVE_LIBTASN1 1
+/* #undef HAVE_DECL_KRB5_PAC_GET_BUFFER */
+#define SUMMARY_PASSES 1
+#define WITH_SMB1SERVER 1
+
+
+                                #include <stdio.h>
+
+                                int main(void)
+                                {
+                                    char t[100000];
+                                    while (fgets(t, sizeof(t), stdin));
+                                    return 0;
+                                }
+                                
+<==
+[1/2] Compiling bin/.conf_check_9287fc74bd028d6d30d2d550eac1b2fa/test.c
+
+['ccache', 'aarch64-openwrt-linux-musl-gcc', '-D_SAMBA_BUILD_=4', '-DHAVE_CONFIG_H=1', '-Os', '-pipe', '-mcpu=cortex-a53', '-fno-caller-saves', '-fno-plt', '-fhonour-copts', '-fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/samba-4.22.7=samba-4.22.7', '-ffunction-sections', '-fdata-sections', '-Wl,-z,max-page-size=4096', '-Wformat', '-Werror=format-security', '-fstack-protector', '-D_FORTIFY_SOURCE=1', '-Wl,-z,now', '-Wl,-z,relro', '-Wl,-z,pack-relative-relocs', '-DPIC', '-fPIC', '-std=gnu17', '-MMD', '-D_GNU_SOURCE=1', '-D_XOPEN_SOURCE_EXTENDED=1', '-Werror', '-fstack-clash-protection', '../../test.c', '-c', '-o/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/samba-4.22.7/bin/.conf_check_9287fc74bd028d6d30d2d550eac1b2fa/testbuild/default/test.c.1.o', '-I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/include', '-I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/include', '-I/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/include/fortify']
+[2/2] Linking bin/.conf_check_9287fc74bd028d6d30d2d550eac1b2fa/testbuild/default/testprog
+
+['ccache', 'aarch64-openwrt-linux-musl-gcc', '-Wl,--as-needed', 'test.c.1.o', '-o/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/samba-4.22.7/bin/.conf_check_9287fc74bd028d6d30d2d550eac1b2fa/testbuild/default/testprog', '-Wl,-Bstatic', '-Wl,-Bdynamic', '-L/usr/local/lib', '-L/usr/local/lib', '-L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/lib', '-L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/lib', '-fuse-ld=bfd', '-Wl,--gc-sections', '-zmax-page-size=4096', '-znow', '-zrelro', '-zpack-relative-relocs', '-Wl,--as-needed']
+yes
+=== File: ./wrt/build_dir/target-aarch64_cortex-a53_musl/ethtool-tiny/ethtool-7.1/config.log ===
+INSTALL_DATA='${INSTALL} -m 644'
+INSTALL_PROGRAM='${INSTALL}'
+INSTALL_SCRIPT='${INSTALL}'
+INSTALL_STRIP_PROGRAM='$(install_sh) -c -s'
+LDFLAGS='-L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/lib -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/lib -fuse-ld=bfd -zmax-page-size=4096 -znow -zrelro -zpack-relative-relocs '
+LIBOBJS=''
+LIBS=''
+LTLIBOBJS=''
+MAINT='#'
+MAINTAINER_MODE_FALSE=''
+MAINTAINER_MODE_TRUE='#'
+MAKEINFO='${SHELL} '\''/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ethtool-tiny/ethtool-7.1/missing'\'' makeinfo'
+MKDIR_P='/usr/bin/mkdir -p'
+MNL_CFLAGS=''
+MNL_LIBS=''
+OBJEXT='o'
+PACKAGE='ethtool'
+PACKAGE_BUGREPORT='netdev@vger.kernel.org'
+PACKAGE_NAME='ethtool'
+PACKAGE_STRING='ethtool 7.1'
+PACKAGE_TARNAME='ethtool'
+PACKAGE_URL=''
+PACKAGE_VERSION='7.1'
+PATH_SEPARATOR=':'
+PKG_CONFIG='/mnt/build_wrt/staging_dir/host/bin/pkg-config'
+PKG_CONFIG_LIBDIR='/mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/usr/lib/pkgconfig:/mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/usr/share/pkgconfig'
+PKG_CONFIG_PATH='/mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/usr/lib/pkgconfig:/mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/usr/share/pkgconfig'
+SET_MAKE=''
+SHELL='/bin/bash'
+STRIP='aarch64-openwrt-linux-musl-strip'
+VERSION='7.1'
+ac_ct_CC=''
+am__EXEEXT_FALSE=''
+am__EXEEXT_TRUE='#'
+am__fastdepCC_FALSE=''
+am__fastdepCC_TRUE='#'
+am__include='include'
+am__isrc=''
+am__leading_dot='.'
+am__nodep=''
+am__quote=''
+am__rm_f_notfound=''
+am__tar='tar --format=ustar -chf - "$$tardir"'
+am__untar='tar -xf -'
+am__xargs_n='xargs -n'
+bindir='/usr/bin'
+build_alias='x86_64-pc-linux-gnu'
+datadir='/usr/share'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+exec_prefix='/usr'
+host_alias='aarch64-openwrt-linux'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='/usr/info'
+install_sh='${SHELL} /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/ethtool-tiny/ethtool-7.1/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='/usr/lib'
+localedir='${datarootdir}/locale'
+localstatedir='/var'
+mandir='/usr/man'
+mkdir_p='$(MKDIR_P)'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/usr'
+program_transform_name='s&$$&&;s&^&&'
+psdir='${docdir}'
+runstatedir='${localstatedir}/run'
+sbindir='/usr/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='/etc'
+target_alias='aarch64-openwrt-linux'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "ethtool"
+#define PACKAGE_TARNAME "ethtool"
+#define PACKAGE_VERSION "7.1"
+#define PACKAGE_STRING "ethtool 7.1"
+#define PACKAGE_BUGREPORT "netdev@vger.kernel.org"
+#define PACKAGE_URL ""
+#define PACKAGE "ethtool"
+#define VERSION "7.1"
+#define HAVE_STDIO_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_UNISTD_H 1
+#define STDC_HEADERS 1
+#define HAVE_SOCKET 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/target-aarch64_cortex-a53_musl/curl-8.21.0/config.log ===
+#define HAVE_SELECT 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_RECV 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SEND 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_ALARM 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_LIBGEN_H 1
+#define HAVE_BASENAME 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_FCNTL_H 1
+#define HAVE_FCNTL 1
+#define HAVE_FCNTL_O_NONBLOCK 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_NETDB_H 1
+#define HAVE_FREEADDRINFO 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_XATTR_H 1
+#define HAVE_FSETXATTR 1
+#define HAVE_FSETXATTR_5 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_GETADDRINFO 1
+#define HAVE_GETADDRINFO_THREADSAFE 1
+#define HAVE_GETHOSTBYNAME_R 1
+#define HAVE_GETHOSTBYNAME_R_6 1
+#define GETHOSTNAME_TYPE_ARG2 size_t
+#define HAVE_GETHOSTNAME 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_NETINET_IN_H 1
+#define HAVE_IFADDRS_H 1
+#define HAVE_GETIFADDRS 1
+#define HAVE_GETPEERNAME 1
+#define HAVE_GETSOCKNAME 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_GMTIME_R 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_SYS_IOCTL_H 1
+#define HAVE_STROPTS_H 1
+#define HAVE_IOCTL_FIONBIO 1
+#define HAVE_IOCTL_SIOCGIFADDR 1
+#define HAVE_LOCALTIME_R 1
+#define HAVE_MEMRCHR 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SIGACTION 1
+#define HAVE_SIGINTERRUPT 1
+#define HAVE_SIGNAL 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SIGSETJMP 1
+#define HAVE_SOCKET 1
+#define HAVE_SOCKETPAIR 1
+#define HAVE_STRERROR_R 1
+#define HAVE_POSIX_STRERROR_R 1
+#define HAVE_ACCEPT4 1
+#define HAVE_EVENTFD 1
+#define HAVE_FNMATCH 1
+#define HAVE_GETEUID 1
+#define HAVE_GETPPID 1
+#define HAVE_GETPWUID 1
+#define HAVE_GETPWUID_R 1
+#define HAVE_GETRLIMIT 1
+#define HAVE_GETTIMEOFDAY 1
+#define HAVE_PIPE 1
+#define HAVE_POLL 1
+#define HAVE_SENDMMSG 1
+#define HAVE_SENDMSG 1
+#define HAVE_SETLOCALE 1
+#define HAVE_SETRLIMIT 1
+#define HAVE_UTIME 1
+#define HAVE_UTIMES 1
+#define HAVE_PIPE2 1
+#define HAVE_IF_NAMETOINDEX 1
+#define HAVE_REALPATH 1
+#define HAVE_SCHED_YIELD 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_NETINET_IN_H 1
+#define HAVE_ARPA_INET_H 1
+#define HAVE_INET_NTOP 1
+#define HAVE_INET_PTON 1
+#define HAVE_STRCASECMP 1
+#define HAVE_FSEEKO 1
+#define HAVE_DECL_FSEEKO 1
+#define HAVE_THREADS_POSIX 1
+#define USE_RESOLV_THREADED 1
+#define HAVE_DIRENT_H 1
+#define HAVE_OPENDIR 1
+#define CURL_DISABLE_VERBOSE_STRINGS 1
+#define USE_TLS_SRP 1
+#define USE_UNIX_SOCKETS 1
+#define HAVE_SSL_SET0_WBIO 1
+#define CURL_DISABLE_WEBSOCKETS 1
+#define CURL_EXTERN_SYMBOL __attribute__((__visibility__("default")))
+
+configure: exit 0
+=== File: ./wrt/build_dir/target-aarch64_cortex-a53_musl/liburing-liburing-2.14/config.log ===
+Compiling test case stringop_overflow
+ccache aarch64-openwrt-linux-musl-gcc -Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/liburing-liburing-2.14=liburing-liburing-2.14 -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs -D_GNU_SOURCE -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -include config-host.h -Werror -Wstringop-overflow=0 -o /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf.exe /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf.c -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/lib -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/lib -fuse-ld=bfd -zmax-page-size=4096 -znow -zrelro -zpack-relative-relocs
+Compiling test case array_bounds
+ccache aarch64-openwrt-linux-musl-gcc -Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/liburing-liburing-2.14=liburing-liburing-2.14 -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs -D_GNU_SOURCE -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -include config-host.h -Werror -Warray-bounds=0 -o /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf.exe /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf.c -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/lib -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/lib -fuse-ld=bfd -zmax-page-size=4096 -znow -zrelro -zpack-relative-relocs
+Compiling test case __kernel_rwf_t
+ccache aarch64-openwrt-linux-musl-gcc -Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/liburing-liburing-2.14=liburing-liburing-2.14 -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs -D_GNU_SOURCE -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -include config-host.h -o /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf.exe /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf.c -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/lib -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/lib -fuse-ld=bfd -zmax-page-size=4096 -znow -zrelro -zpack-relative-relocs
+Compiling test case __kernel_timespec
+ccache aarch64-openwrt-linux-musl-gcc -Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/liburing-liburing-2.14=liburing-liburing-2.14 -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs -D_GNU_SOURCE -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -include config-host.h -o /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf.exe /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf.c -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/lib -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/lib -fuse-ld=bfd -zmax-page-size=4096 -znow -zrelro -zpack-relative-relocs
+Compiling test case open_how
+ccache aarch64-openwrt-linux-musl-gcc -Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/liburing-liburing-2.14=liburing-liburing-2.14 -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs -D_GNU_SOURCE -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -include config-host.h -o /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf.exe /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf.c -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/lib -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/lib -fuse-ld=bfd -zmax-page-size=4096 -znow -zrelro -zpack-relative-relocs
+Compiling test case statx
+ccache aarch64-openwrt-linux-musl-gcc -Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/liburing-liburing-2.14=liburing-liburing-2.14 -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs -D_GNU_SOURCE -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -include config-host.h -o /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf.exe /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf.c -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/lib -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/lib -fuse-ld=bfd -zmax-page-size=4096 -znow -zrelro -zpack-relative-relocs
+Compiling test case glibc_statx
+ccache aarch64-openwrt-linux-musl-gcc -Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/liburing-liburing-2.14=liburing-liburing-2.14 -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs -D_GNU_SOURCE -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -include config-host.h -o /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf.exe /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf.c -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/lib -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/lib -fuse-ld=bfd -zmax-page-size=4096 -znow -zrelro -zpack-relative-relocs
+Compiling test case C++
+ccache aarch64-openwrt-linux-musl-g++ -Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/liburing-liburing-2.14=liburing-liburing-2.14 -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs -D_GNU_SOURCE -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -include config-host.h -o /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf.exe /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf-2.cpp -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/lib -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/lib -fuse-ld=bfd -zmax-page-size=4096 -znow -zrelro -zpack-relative-relocs
+Compiling test case has_ucontext
+ccache aarch64-openwrt-linux-musl-gcc -Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/liburing-liburing-2.14=liburing-liburing-2.14 -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs -D_GNU_SOURCE -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -include config-host.h -o /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf.exe /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf.c -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/lib -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/lib -fuse-ld=bfd -zmax-page-size=4096 -znow -zrelro -zpack-relative-relocs
+/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/aarch64-openwrt-linux-musl/bin/ld.bfd: /mnt/build_wrt/tmp/cce2najX.o: in function `main':
+liburing-conf.c:(.text.startup+0x14): undefined reference to `getcontext'
+/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/aarch64-openwrt-linux-musl/bin/ld.bfd: liburing-conf.c:(.text.startup+0x24): undefined reference to `makecontext'
+collect2: error: ld returned 1 exit status
+Compiling test case has_memfd_create
+ccache aarch64-openwrt-linux-musl-gcc -Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/liburing-liburing-2.14=liburing-liburing-2.14 -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs -D_GNU_SOURCE -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -include config-host.h -Werror=implicit-function-declaration -o /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf.exe /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf.c -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/lib -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/lib -fuse-ld=bfd -zmax-page-size=4096 -znow -zrelro -zpack-relative-relocs
+Compiling test case nvme uring cmd
+ccache aarch64-openwrt-linux-musl-gcc -Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/liburing-liburing-2.14=liburing-liburing-2.14 -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs -D_GNU_SOURCE -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -include config-host.h -o /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf.exe /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf.c -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/lib -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/lib -fuse-ld=bfd -zmax-page-size=4096 -znow -zrelro -zpack-relative-relocs
+Compiling test case futexv
+ccache aarch64-openwrt-linux-musl-gcc -Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/liburing-liburing-2.14=liburing-liburing-2.14 -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs -D_GNU_SOURCE -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -include config-host.h -o /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf.exe /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf.c -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/lib -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/lib -fuse-ld=bfd -zmax-page-size=4096 -znow -zrelro -zpack-relative-relocs
+Compiling test case discard command
+ccache aarch64-openwrt-linux-musl-gcc -Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/liburing-liburing-2.14=liburing-liburing-2.14 -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs -D_GNU_SOURCE -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -include config-host.h -o /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf.exe /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf.c -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/lib -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/lib -fuse-ld=bfd -zmax-page-size=4096 -znow -zrelro -zpack-relative-relocs
+Compiling test case idtype_t
+ccache aarch64-openwrt-linux-musl-gcc -Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/liburing-liburing-2.14=liburing-liburing-2.14 -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs -D_GNU_SOURCE -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -include config-host.h -o /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf.exe /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf.c -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/lib -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/lib -fuse-ld=bfd -zmax-page-size=4096 -znow -zrelro -zpack-relative-relocs
+Compiling test case fanotify
+ccache aarch64-openwrt-linux-musl-gcc -Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/liburing-liburing-2.14=liburing-liburing-2.14 -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs -D_GNU_SOURCE -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -include config-host.h -o /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf.exe /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf.c -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/lib -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/lib -fuse-ld=bfd -zmax-page-size=4096 -znow -zrelro -zpack-relative-relocs
+Compiling test case ublk_header
+ccache aarch64-openwrt-linux-musl-gcc -Os -pipe -mcpu=cortex-a53 -fno-caller-saves -fno-plt -fhonour-copts -fmacro-prefix-map=/mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/liburing-liburing-2.14=liburing-liburing-2.14 -Wl,-z,max-page-size=4096 -Wformat -Werror=format-security -fstack-protector -D_FORTIFY_SOURCE=1 -Wl,-z,now -Wl,-z,relro -Wl,-z,pack-relative-relocs -D_GNU_SOURCE -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -include config-host.h -o /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf.exe /mnt/build_wrt/tmp/tmp.kJnpjMuy4L/liburing-conf.c -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/usr/lib -L/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/lib -fuse-ld=bfd -zmax-page-size=4096 -znow -zrelro -zpack-relative-relocs
+=== File: ./wrt/build_dir/target-aarch64_cortex-a53_musl/libmnl-1.0.5/config.log ===
+OBJEXT='o'
+OTOOL64=''
+OTOOL=''
+PACKAGE='libmnl'
+PACKAGE_BUGREPORT=''
+PACKAGE_NAME='libmnl'
+PACKAGE_STRING='libmnl 1.0.5'
+PACKAGE_TARNAME='libmnl'
+PACKAGE_URL=''
+PACKAGE_VERSION='1.0.5'
+PATH_SEPARATOR=':'
+RANLIB='aarch64-openwrt-linux-musl-gcc-ranlib'
+SED='/mnt/build_wrt/staging_dir/host/bin/sed'
+SET_MAKE=''
+SHELL='/bin/bash'
+STRIP='aarch64-openwrt-linux-musl-strip'
+VERSION='1.0.5'
+ac_ct_AR=''
+ac_ct_CC=''
+ac_ct_DUMPBIN=''
+am__EXEEXT_FALSE=''
+am__EXEEXT_TRUE='#'
+am__fastdepCC_FALSE=''
+am__fastdepCC_TRUE='#'
+am__include='include'
+am__isrc=''
+am__leading_dot='.'
+am__nodep=''
+am__quote=''
+am__rm_f_notfound=''
+am__tar='tar --format=posix -chf - "$$tardir"'
+am__untar='tar -xf -'
+am__xargs_n='xargs -n'
+bindir='/usr/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='/usr/share'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+exec_prefix='/usr'
+host='aarch64-openwrt-linux-gnu'
+host_alias='aarch64-openwrt-linux'
+host_cpu='aarch64'
+host_os='linux-gnu'
+host_vendor='openwrt'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='/usr/info'
+install_sh='${SHELL} /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/libmnl-1.0.5/build-aux/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='/usr/lib'
+localedir='${datarootdir}/locale'
+localstatedir='/var'
+mandir='/usr/man'
+mkdir_p='$(MKDIR_P)'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/usr'
+program_transform_name='s&$$&&;s&^&&'
+psdir='${docdir}'
+regular_CFLAGS='-Wall -Waggregate-return -Wmissing-declarations 	-Wmissing-prototypes -Wshadow -Wstrict-prototypes 	-Wformat=2 -pipe'
+regular_CPPFLAGS='-D_FILE_OFFSET_BITS=64 -D_REENTRANT'
+runstatedir='${localstatedir}/run'
+sbindir='/usr/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='/etc'
+target_alias='aarch64-openwrt-linux'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "libmnl"
+#define PACKAGE_TARNAME "libmnl"
+#define PACKAGE_VERSION "1.0.5"
+#define PACKAGE_STRING "libmnl 1.0.5"
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define PACKAGE "libmnl"
+#define VERSION "1.0.5"
+#define HAVE_STDIO_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_UNISTD_H 1
+#define STDC_HEADERS 1
+#define HAVE_DLFCN_H 1
+#define LT_OBJDIR ".libs/"
+#define HAVE_VISIBILITY_HIDDEN 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/target-aarch64_cortex-a53_musl/dropbear-2026.92/config.log ===
+#define HAVE_NETINET_TCP_H 1
+#define HAVE_CRYPT_H 1
+#define HAVE_PTY_H 1
+#define HAVE_LIBGEN_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STROPTS_H 1
+#define HAVE_UTMP_H 1
+#define HAVE_UTMPX_H 1
+#define HAVE_LASTLOG_H 1
+#define HAVE_PATHS_H 1
+#define HAVE_NETDB_H 1
+#define HAVE_SECURITY_PAM_APPL_H 1
+#define HAVE_NETINET_IN_SYSTM_H 1
+#define HAVE_SYS_UIO_H 1
+#define HAVE_LINUX_PKT_SCHED_H 1
+#define HAVE_SYS_RANDOM_H 1
+#define HAVE_SYS_PRCTL_H 1
+#define HAVE_UINT8_T 1
+#define HAVE_U_INT8_T 1
+#define HAVE_UINT16_T 1
+#define HAVE_U_INT16_T 1
+#define HAVE_UINT32_T 1
+#define HAVE_U_INT32_T 1
+#define HAVE_STRUCT_SOCKADDR_STORAGE 1
+#define HAVE_STRUCT_SOCKADDR_IN6 1
+#define HAVE_STRUCT_IN6_ADDR 1
+#define HAVE_STRUCT_ADDRINFO 1
+#define HAVE_GAI_STRERROR 1
+#define HAVE_GAI_STRERROR 1
+#define HAVE_CONST_GAI_STRERROR_PROTO 1
+#define HAVE_STRUCT_UTMP_UT_HOST 1
+#define HAVE_STRUCT_UTMP_UT_PID 1
+#define HAVE_STRUCT_UTMP_UT_TYPE 1
+#define HAVE_STRUCT_UTMP_UT_TV 1
+#define HAVE_STRUCT_UTMP_UT_ID 1
+#define HAVE_STRUCT_UTMP_UT_ADDR 1
+#define HAVE_STRUCT_UTMP_UT_ADDR_V6 1
+#define HAVE_STRUCT_UTMP_UT_EXIT 1
+#define HAVE_STRUCT_UTMP_UT_TIME 1
+#define HAVE_STRUCT_UTMPX_UT_HOST 1
+#define HAVE_STRUCT_UTMPX_UT_TYPE 1
+#define HAVE_STRUCT_UTMPX_UT_ID 1
+#define HAVE_STRUCT_UTMPX_UT_ADDR_V6 1
+#define HAVE_STRUCT_UTMPX_UT_TV 1
+#define HAVE_STRUCT_SOCKADDR_STORAGE_SS_FAMILY 1
+#define HAVE_ENDUTENT 1
+#define HAVE_GETUTENT 1
+#define HAVE_GETUTID 1
+#define HAVE_GETUTLINE 1
+#define HAVE_PUTUTLINE 1
+#define HAVE_SETUTENT 1
+#define HAVE_UTMPNAME 1
+#define HAVE_ENDUTXENT 1
+#define HAVE_GETUTXENT 1
+#define HAVE_GETUTXID 1
+#define HAVE_GETUTXLINE 1
+#define HAVE_PUTUTXLINE 1
+#define HAVE_SETUTXENT 1
+#define HAVE_UTMPXNAME 1
+#define HAVE_UPDWTMP 1
+#define HAVE_SETRESGID 1
+#define HAVE_ENDIAN_H 1
+#define HAVE_DECL_HTOLE64 1
+#define HAVE_CLOCK_GETTIME 1
+#define HAVE_EXPLICIT_BZERO 1
+#define HAVE_GETRANDOM 1
+#define BUNDLED_LIBTOM 1
+#define DISABLE_LASTLOG 1
+#define DISABLE_UTMP 1
+#define DISABLE_UTMPX 1
+#define DISABLE_WTMP 1
+#define DISABLE_WTMPX 1
+#define DISABLE_PUTUTLINE 1
+#define DISABLE_PUTUTXLINE 1
+#define DISABLE_UTMPX 1
+#define DISABLE_WTMPX 1
+#define SELECT_TYPE_ARG1 int
+#define SELECT_TYPE_ARG234 (fd_set *)
+#define SELECT_TYPE_ARG5 (struct timeval *)
+#define HAVE_GETPASS 1
+#define HAVE_GETSPNAM 1
+#define HAVE_GETUSERSHELL 1
+#define HAVE_PUTENV 1
+#define HAVE_CLEARENV 1
+#define HAVE_STRLCPY 1
+#define HAVE_STRLCAT 1
+#define HAVE_DAEMON 1
+#define HAVE_BASENAME 1
+#define HAVE_GETADDRINFO 1
+#define HAVE_FREEADDRINFO 1
+#define HAVE_GETNAMEINFO 1
+#define HAVE_FORK 1
+#define HAVE_WRITEV 1
+#define HAVE_GETGROUPLIST 1
+#define HAVE_FEXECVE 1
+#define HAVE_BASENAME 1
+#define HAVE_STATIC_ASSERT 1
+#define HAVE_UNDERSCORE_STATIC_ASSERT 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/target-aarch64_cortex-a53_musl/compose-5.3.1/pkg/e2e/fixtures/watch/data-logs/server.log ===
+[INFO] Server started successfully on port 8080
+=== File: ./wrt/build_dir/target-aarch64_cortex-a53_musl/libnetfilter_conntrack-1.1.0/config.log ===
+OTOOL64=''
+OTOOL=''
+PACKAGE='libnetfilter_conntrack'
+PACKAGE_BUGREPORT=''
+PACKAGE_NAME='libnetfilter_conntrack'
+PACKAGE_STRING='libnetfilter_conntrack 1.1.0'
+PACKAGE_TARNAME='libnetfilter_conntrack'
+PACKAGE_URL=''
+PACKAGE_VERSION='1.1.0'
+PATH_SEPARATOR=':'
+PKG_CONFIG='/mnt/build_wrt/staging_dir/host/bin/pkg-config'
+PKG_CONFIG_LIBDIR='/mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/usr/lib/pkgconfig:/mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/usr/share/pkgconfig'
+PKG_CONFIG_PATH='/mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/usr/lib/pkgconfig:/mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/usr/share/pkgconfig'
+RANLIB='aarch64-openwrt-linux-musl-gcc-ranlib'
+SED='/mnt/build_wrt/staging_dir/host/bin/sed'
+SET_MAKE=''
+SHELL='/bin/bash'
+STRIP='aarch64-openwrt-linux-musl-strip'
+VERSION='1.1.0'
+ac_ct_AR=''
+ac_ct_CC=''
+ac_ct_DUMPBIN=''
+am__EXEEXT_FALSE=''
+am__EXEEXT_TRUE='#'
+am__fastdepCC_FALSE=''
+am__fastdepCC_TRUE='#'
+am__include='include'
+am__isrc=''
+am__leading_dot='.'
+am__nodep=''
+am__quote=''
+am__tar='tar --format=posix -chf - "$$tardir"'
+am__untar='tar -xf -'
+bindir='/usr/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='/usr/share'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+exec_prefix='/usr'
+host='aarch64-openwrt-linux-gnu'
+host_alias='aarch64-openwrt-linux'
+host_cpu='aarch64'
+host_os='linux-gnu'
+host_vendor='openwrt'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='/usr/info'
+install_sh='${SHELL} /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/libnetfilter_conntrack-1.1.0/build-aux/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='/usr/lib'
+localedir='${datarootdir}/locale'
+localstatedir='/var'
+mandir='/usr/man'
+mkdir_p='$(MKDIR_P)'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/usr'
+program_transform_name='s&$$&&;s&^&&'
+psdir='${docdir}'
+runstatedir='${localstatedir}/run'
+sbindir='/usr/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='/etc'
+target_alias='aarch64-openwrt-linux'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "libnetfilter_conntrack"
+#define PACKAGE_TARNAME "libnetfilter_conntrack"
+#define PACKAGE_VERSION "1.1.0"
+#define PACKAGE_STRING "libnetfilter_conntrack 1.1.0"
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define PACKAGE "libnetfilter_conntrack"
+#define VERSION "1.1.0"
+#define HAVE_STDIO_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_UNISTD_H 1
+#define STDC_HEADERS 1
+#define HAVE_DLFCN_H 1
+#define LT_OBJDIR ".libs/"
+#define HAVE_ARPA_INET_H 1
+#define HAVE_INET_NTOP 1
+#define HAVE_SETNS 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/target-aarch64_cortex-a53_musl/libev-4.33/config.log ===
+VERSION='4.33'
+ac_ct_AR=''
+ac_ct_CC=''
+ac_ct_DUMPBIN=''
+am__EXEEXT_FALSE=''
+am__EXEEXT_TRUE='#'
+am__fastdepCC_FALSE=''
+am__fastdepCC_TRUE='#'
+am__include='include'
+am__isrc=''
+am__leading_dot='.'
+am__nodep=''
+am__quote=''
+am__rm_f_notfound=''
+am__tar='tar --format=ustar -chf - "$$tardir"'
+am__untar='tar -xf -'
+am__xargs_n='xargs -n'
+bindir='/usr/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='/usr/share'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+exec_prefix='/usr'
+host='aarch64-openwrt-linux-gnu'
+host_alias='aarch64-openwrt-linux'
+host_cpu='aarch64'
+host_os='linux-gnu'
+host_vendor='openwrt'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='/usr/info'
+install_sh='${SHELL} /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/libev-4.33/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='/usr/lib'
+localedir='${datarootdir}/locale'
+localstatedir='/var'
+mandir='/usr/man'
+mkdir_p='$(MKDIR_P)'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/usr'
+program_transform_name='s&$$&&;s&^&&'
+psdir='${docdir}'
+runstatedir='${localstatedir}/run'
+sbindir='/usr/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='/etc'
+target_alias='aarch64-openwrt-linux'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "libev"
+#define PACKAGE_TARNAME "libev"
+#define PACKAGE_VERSION "4.33"
+#define PACKAGE_STRING "libev 4.33"
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define PACKAGE "libev"
+#define VERSION "4.33"
+#define HAVE_STDIO_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_UNISTD_H 1
+#define STDC_HEADERS 1
+#define HAVE_DLFCN_H 1
+#define LT_OBJDIR ".libs/"
+#define HAVE_SYS_INOTIFY_H 1
+#define HAVE_SYS_EPOLL_H 1
+#define HAVE_POLL_H 1
+#define HAVE_SYS_TIMERFD_H 1
+#define HAVE_SYS_SELECT_H 1
+#define HAVE_SYS_EVENTFD_H 1
+#define HAVE_SYS_SIGNALFD_H 1
+#define HAVE_LINUX_AIO_ABI_H 1
+#define HAVE_LINUX_FS_H 1
+#define HAVE_INOTIFY_INIT 1
+#define HAVE_EPOLL_CTL 1
+#define HAVE_POLL 1
+#define HAVE_SELECT 1
+#define HAVE_EVENTFD 1
+#define HAVE_SIGNALFD 1
+#define HAVE_CLOCK_GETTIME 1
+#define HAVE_NANOSLEEP 1
+#define HAVE_KERNEL_RWF_T 1
+#define HAVE_FLOOR 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/target-aarch64_cortex-a53_musl/libplist-2.7.0/config.log ===
+ac_ct_CC=''
+ac_ct_CXX=''
+ac_ct_DUMPBIN=''
+am__EXEEXT_FALSE=''
+am__EXEEXT_TRUE='#'
+am__fastdepCC_FALSE=''
+am__fastdepCC_TRUE='#'
+am__fastdepCXX_FALSE=''
+am__fastdepCXX_TRUE='#'
+am__include='include'
+am__isrc=''
+am__leading_dot='.'
+am__nodep=''
+am__quote=''
+am__tar='$${TAR-tar} chof - "$$tardir"'
+am__untar='$${TAR-tar} xf -'
+bindir='/usr/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='/usr/share'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+exec_prefix='/usr'
+host='aarch64-openwrt-linux-gnu'
+host_alias='aarch64-openwrt-linux'
+host_cpu='aarch64'
+host_os='linux-gnu'
+host_vendor='openwrt'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='/usr/info'
+install_sh='${SHELL} /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/libplist-2.7.0/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='/usr/lib'
+localedir='${datarootdir}/locale'
+localstatedir='/var'
+mandir='/usr/man'
+mkdir_p='$(MKDIR_P)'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+pkgpyexecdir=''
+pkgpythondir=''
+prefix='/usr'
+program_transform_name='s&$$&&;s&^&&'
+psdir='${docdir}'
+pyexecdir=''
+pythondir=''
+runstatedir='${localstatedir}/run'
+sbindir='/usr/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='/etc'
+target_alias='aarch64-openwrt-linux'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "libplist"
+#define PACKAGE_TARNAME "libplist"
+#define PACKAGE_VERSION "2.7.0"
+#define PACKAGE_STRING "libplist 2.7.0"
+#define PACKAGE_BUGREPORT "https://github.com/libimobiledevice/libplist/issues"
+#define PACKAGE_URL "https://libimobiledevice.org"
+#define PACKAGE "libplist"
+#define VERSION "2.7.0"
+#define HAVE_STDIO_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_UNISTD_H 1
+#define STDC_HEADERS 1
+#define HAVE_DLFCN_H 1
+#define LT_OBJDIR ".libs/"
+#define HAVE_STDINT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_STRDUP 1
+#define HAVE_STRNDUP 1
+#define HAVE_STRERROR 1
+#define HAVE_GMTIME_R 1
+#define HAVE_LOCALTIME_R 1
+#define HAVE_TIMEGM 1
+#define HAVE_STRPTIME 1
+#define HAVE_MEMMEM 1
+#define __LITTLE_ENDIAN__ 1
+#define HAVE_TM_TM_GMTOFF 1
+#define HAVE_TM_TM_ZONE 1
+#define BUILD_TOOLS 1
+#define HAVE_FVISIBILITY 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/target-aarch64_cortex-a53_musl/bash-5.3/config.log ===
+#define HAVE_WCSDUP 1
+#define HAVE_WCWIDTH 1
+#define HAVE_WCTYPE 1
+#define HAVE_WCSNRTOMBS 1
+#define HAVE_WCSWIDTH 1
+#define HAVE_MBRTOWC 1
+#define HAVE_MBSTATE_T 1
+#define HAVE_ISWLOWER 1
+#define HAVE_ISWUPPER 1
+#define HAVE_TOWLOWER 1
+#define HAVE_TOWUPPER 1
+#define HAVE_ISWCTYPE 1
+#define HAVE_WCHAR_T 1
+#define HAVE_WCTYPE_T 1
+#define HAVE_WINT_T 1
+#define SIZEOF_WCHAR_T 4
+#define HAVE_LIBDL 1
+#define HAVE_DLOPEN 1
+#define HAVE_DLCLOSE 1
+#define HAVE_DLSYM 1
+#define GETGROUPS_T gid_t
+#define HAVE_INTPTR_T 1
+#define HAVE_UINTPTR_T 1
+#define HAVE_LONG_LONG_INT 1
+#define HAVE_UNSIGNED_LONG_LONG_INT 1
+#define SIZEOF_CHAR 1
+#define SIZEOF_SHORT 2
+#define SIZEOF_INT 4
+#define SIZEOF_LONG 8
+#define SIZEOF_CHAR_P 8
+#define SIZEOF_SIZE_T 8
+#define SIZEOF_DOUBLE 8
+#define SIZEOF_LONG_LONG 8
+#define bits16_t short
+#define u_bits16_t unsigned short
+#define bits32_t int
+#define u_bits32_t unsigned int
+#define bits64_t char *
+#define HAVE_HASH_BANG_EXEC 1
+#define HAVE_POSIX_SIGNALS 1
+#define HAVE_SYS_ERRLIST 1
+#define HAVE_DECL_SYS_SIGLIST 0
+#define HAVE_SOCKLEN_T 1
+#define HAVE_QUAD_T 1
+#define RLIMTYPE rlim_t
+#define HAVE_INTMAX_T 1
+#define HAVE_UINTMAX_T 1
+#define SIZEOF_INTMAX_T 8
+#define TERMIOS_LDISC 1
+#define HAVE_STRUCT_DIRENT_D_INO 1
+#define HAVE_STRUCT_DIRENT_D_FILENO 1
+#define HAVE_STRUCT_DIRENT_D_TYPE 1
+#define STRUCT_WINSIZE_IN_SYS_IOCTL 1
+#define HAVE_TIMEVAL 1
+#define HAVE_STRUCT_STAT_ST_BLOCKS 1
+#define HAVE_STRUCT_TM_TM_ZONE 1
+#define HAVE_TM_ZONE 1
+#define HAVE_STRUCT_TIMEZONE 1
+#define WEXITSTATUS_OFFSET 0
+#define HAVE_STRUCT_TIMESPEC 1
+#define TIME_H_DEFINES_STRUCT_TIMESPEC 1
+#define HAVE_STRUCT_STAT_ST_ATIM_TV_NSEC 1
+#define TYPEOF_STRUCT_STAT_ST_ATIM_IS_STRUCT_TIMESPEC 1
+#define HAVE_SBRK 1
+#define HAVE_STRSIGNAL 1
+#define HAVE_DECL_FPURGE 0
+#define CAN_REDEFINE_GETENV 1
+#define HAVE_GETCWD 1
+#define HAVE_POSIX_SIGSETJMP 1
+#define HAVE_STRTOIMAX 1
+#define HAVE_DECL_STRTOIMAX 1
+#define HAVE_DECL_CLEARERR_UNLOCKED 1
+#define HAVE_DECL_FEOF_UNLOCKED 1
+#define HAVE_DECL_FERROR_UNLOCKED 1
+#define HAVE_DECL_FFLUSH_UNLOCKED 1
+#define HAVE_DECL_FGETS_UNLOCKED 1
+#define HAVE_DECL_FPUTC_UNLOCKED 1
+#define HAVE_DECL_FPUTS_UNLOCKED 1
+#define HAVE_DECL_FREAD_UNLOCKED 1
+#define HAVE_DECL_FWRITE_UNLOCKED 1
+#define HAVE_DECL_GETC_UNLOCKED 1
+#define HAVE_DECL_GETCHAR_UNLOCKED 1
+#define HAVE_DECL_PUTC_UNLOCKED 1
+#define HAVE_DECL_PUTCHAR_UNLOCKED 1
+#define HAVE_STD_PUTENV 1
+#define HAVE_STD_UNSETENV 1
+#define HAVE_PRINTF_A_FORMAT 1
+#define FNMATCH_EQUIV_FALLBACK 0
+#define GWINSZ_IN_SYS_IOCTL 1
+#define FIONREAD_IN_SYS_IOCTL 1
+#define HAVE_GETPW_DECLS 1
+#define UNUSABLE_RT_SIGNALS 1
+#define HAVE_DEV_FD 1
+#define DEV_FD_PREFIX "/proc/self/fd/"
+#define HAVE_DEV_STDIN 1
+#define DEFAULT_MAIL_DIRECTORY "/var/mail"
+#define JOB_CONTROL 1
+#define PGRP_PIPE 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/target-aarch64_cortex-a53_musl/iperf-nossl/iperf-3.21/config.log ===
+am__nodep=''
+am__quote=''
+am__rm_f_notfound=''
+am__tar='tar --format=ustar -chf - "$$tardir"'
+am__untar='tar -xf -'
+am__xargs_n='xargs -n'
+ax_pthread_config=''
+bindir='/usr/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='/usr/share'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+exec_prefix='/usr'
+host='aarch64-openwrt-linux-gnu'
+host_alias='aarch64-openwrt-linux'
+host_cpu='aarch64'
+host_os='linux-gnu'
+host_vendor='openwrt'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='/usr/info'
+install_sh='${SHELL} /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/iperf-nossl/iperf-3.21/config/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='/usr/lib'
+localedir='${datarootdir}/locale'
+localstatedir='/var'
+mandir='/usr/man'
+mkdir_p='$(MKDIR_P)'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/usr'
+program_transform_name='s&$$&&;s&^&&'
+psdir='${docdir}'
+runstatedir='${localstatedir}/run'
+sbindir='/usr/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='/etc'
+target_alias='aarch64-openwrt-linux'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "iperf"
+#define PACKAGE_TARNAME "iperf"
+#define PACKAGE_VERSION "3.21"
+#define PACKAGE_STRING "iperf 3.21"
+#define PACKAGE_BUGREPORT "https://github.com/esnet/iperf"
+#define PACKAGE_URL "https://software.es.net/iperf/"
+#define PACKAGE "iperf"
+#define VERSION "3.21"
+#define HAVE_STDIO_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_UNISTD_H 1
+#define STDC_HEADERS 1
+#define HAVE_DLFCN_H 1
+#define LT_OBJDIR ".libs/"
+#define HAVE_PTHREAD_PRIO_INHERIT 1
+#define HAVE_PTHREAD 1
+#define HAVE_STDATOMIC_H 1
+#define HAVE_POLL_H 1
+#define HAVE_LINUX_TCP_H 1
+#define HAVE_ENDIAN_H 1
+#define HAVE_TCP_CONGESTION 1
+#define HAVE_TCP_USER_TIMEOUT 1
+#define HAVE_TCP_KEEPALIVE 1
+#define HAVE_FLOWLABEL 1
+#define HAVE_SCHED_SETAFFINITY 1
+#define HAVE_CPU_AFFINITY 1
+#define HAVE_DAEMON 1
+#define HAVE_SENDFILE 1
+#define HAVE_GETLINE 1
+#define HAVE_SO_MAX_PACING_RATE 1
+#define HAVE_SO_BINDTODEVICE 1
+#define CAN_BIND_TO_DEVICE 1
+#define HAVE_IP_MTU_DISCOVER 1
+#define HAVE_DONT_FRAGMENT 1
+#define HAVE_TCP_INFO_SND_WND 1
+#define HAVE_MSG_TRUNC 1
+#define HAVE_IPPROTO_MPTCP 1
+#define HAVE_UDP_SEGMENT 1
+#define HAVE_UDP_GRO 1
+#define HAVE_SOCKET_SHUTDOWN_SHUT_WR 1
+#define HAVE_CLOCK_GETTIME 1
+#define HAVE_NANOSLEEP 1
+#define HAVE_CLOCK_NANOSLEEP 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/target-aarch64_cortex-a53_musl/libffi-3.4.7/aarch64-openwrt-linux-gnu/config.log ===
+MAINTAINER_MODE_TRUE=''
+MAKEINFO=''
+MANIFEST_TOOL=''
+MKDIR_P=''
+NM='aarch64-openwrt-linux-musl-gcc-nm'
+NMEDIT=''
+OBJDUMP='aarch64-openwrt-linux-musl-objdump'
+OBJEXT=''
+OPT_LDFLAGS=''
+OTOOL64=''
+OTOOL=''
+PACKAGE=''
+PACKAGE_BUGREPORT='http://github.com/libffi/libffi/issues'
+PACKAGE_NAME='libffi'
+PACKAGE_STRING='libffi 3.4.7'
+PACKAGE_TARNAME='libffi'
+PACKAGE_URL=''
+PACKAGE_VERSION='3.4.7'
+PATH_SEPARATOR=':'
+PRTDIAG=''
+RANLIB='aarch64-openwrt-linux-musl-gcc-ranlib'
+READELF=''
+SECTION_LDFLAGS=''
+SED=''
+SET_MAKE=''
+SHELL='/bin/bash'
+STRIP='aarch64-openwrt-linux-musl-strip'
+TARGET='aarch64-openwrt-linux-gnu'
+TARGETDIR=''
+TARGET_OBJ=''
+TESTSUBDIR_FALSE=''
+TESTSUBDIR_TRUE=''
+VERSION=''
+ac_ct_AR=''
+ac_ct_CC=''
+ac_ct_CXX=''
+ac_ct_DUMPBIN=''
+ac_ct_READELF=''
+am__EXEEXT_FALSE=''
+am__EXEEXT_TRUE=''
+am__fastdepCCAS_FALSE=''
+am__fastdepCCAS_TRUE=''
+am__fastdepCC_FALSE=''
+am__fastdepCC_TRUE=''
+am__fastdepCXX_FALSE=''
+am__fastdepCXX_TRUE=''
+am__include=''
+am__isrc=''
+am__leading_dot=''
+am__nodep=''
+am__quote=''
+am__tar=''
+am__untar=''
+ax_enable_builddir_sed=''
+bindir='/usr/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='/usr/share'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+exec_prefix='/usr'
+host='aarch64-openwrt-linux-gnu'
+host_alias='aarch64-openwrt-linux'
+host_cpu='aarch64'
+host_os='linux-gnu'
+host_vendor='openwrt'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='/usr/info'
+install_sh=''
+libdir='${exec_prefix}/lib'
+libexecdir='/usr/lib'
+localedir='${datarootdir}/locale'
+localstatedir='/var'
+mandir='/usr/man'
+mkdir_p=''
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/usr'
+program_transform_name='s,x,x,'
+psdir='${docdir}'
+runstatedir='${localstatedir}/run'
+sbindir='/usr/sbin'
+sharedstatedir='${prefix}/com'
+sys_symbol_underscore=''
+sysconfdir='/etc'
+target='aarch64-openwrt-linux-gnu'
+target_alias='aarch64-openwrt-linux'
+target_cpu='aarch64'
+target_os='linux-gnu'
+target_vendor='openwrt'
+tmake_file=''
+toolexecdir=''
+toolexeclibdir=''
+
+configure: exit 0
+=== File: ./wrt/build_dir/target-aarch64_cortex-a53_musl/elfutils-0.195/config.log ===
+host='aarch64-openwrt-linux-gnu'
+host_alias='aarch64-openwrt-linux'
+host_cpu='aarch64'
+host_os='linux-gnu'
+host_vendor='openwrt'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='/usr/info'
+install_sh='${SHELL} /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/elfutils-0.195/config/install-sh'
+intl_LDFLAGS=''
+jsonc_CFLAGS='-I/mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/usr/include -I/mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/usr/include/json-c'
+jsonc_LIBS='-L/mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/usr/lib -ljson-c'
+libarchive_CFLAGS=''
+libarchive_LIBS=''
+libcurl_CFLAGS='-I/mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/usr/include'
+libcurl_LIBS='-L/mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/usr/lib -lcurl'
+libdir='${exec_prefix}/lib'
+libexecdir='/usr/lib'
+libmicrohttpd_CFLAGS=''
+libmicrohttpd_LIBS=''
+localedir='${datarootdir}/locale'
+localedir_c='"/usr/share/locale"'
+localedir_c_make='\"$(localedir)\"'
+localstatedir='/var'
+lzma_LIBS=''
+mandir='/usr/man'
+mkdir_p='$(MKDIR_P)'
+obstack_LIBS=''
+oldincludedir='/usr/include'
+oldlibmicrohttpd_CFLAGS=''
+oldlibmicrohttpd_LIBS=''
+pdfdir='${docdir}'
+prefix='/usr'
+program_transform_name='s&$$&&;s&^&eu-&'
+psdir='${docdir}'
+rpm_LIBS=''
+runstatedir='${localstatedir}/run'
+sbindir='/usr/sbin'
+sharedstatedir='${prefix}/com'
+sqlite3_CFLAGS='-I/mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/usr/include'
+sqlite3_LIBS='-L/mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/usr/lib -lsqlite3'
+sysconfdir='/etc'
+target_alias='aarch64-openwrt-linux'
+zip_LIBS=' '
+zstd_LIBS=' '
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "elfutils"
+#define PACKAGE_TARNAME "elfutils"
+#define PACKAGE_VERSION "0.195"
+#define PACKAGE_STRING "elfutils 0.195"
+#define PACKAGE_BUGREPORT "https://sourceware.org/bugzilla"
+#define PACKAGE_URL "http://elfutils.org/"
+#define PACKAGE "elfutils"
+#define VERSION "0.195"
+#define DEFAULT_AR_DETERMINISTIC false
+#define YYTEXT_POINTER 1
+#define HAVE_VISIBILITY 1
+#define HAVE_STDIO_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_UNISTD_H 1
+#define STDC_HEADERS 1
+#define HAVE_STDATOMIC_H 1
+#define HAVE_OPENAT2_RESOLVE_IN_ROOT 1
+#define CHECK_UNDEFINED 0
+#define USE_ZLIB 1
+#define HAVE_DECL_MEMRCHR 1
+#define HAVE_DECL_RAWMEMCHR 0
+#define HAVE_DECL_POWEROF2 1
+#define HAVE_DECL_MEMPCPY 1
+#define HAVE_DECL_REALLOCARRAY 1
+#define HAVE_PROCESS_VM_READV 1
+#define HAVE_MREMAP 1
+#define HAVE_ERR_H 1
+#define HAVE_SCHED_H 1
+#define HAVE_SCHED_GETAFFINITY 1
+#define HAVE_SYS_RESOURCE_H 1
+#define HAVE_GETRLIMIT 1
+#define HAVE_MALLOC_H 1
+#define HAVE_DECL_STRERROR_R 1
+#define HAVE_STRERROR_R 1
+#define USE_DEMANGLE 1
+#define HAVE_FALLTHROUGH 1
+#define SIZEOF_LONG 8
+#define HAVE_SYS_USER_REGS 1
+#define HAVE_USER_PACK_MASK 1
+#define HAVE_CXX11 1
+#define HAVE_PTHREAD_SETNAME_NP 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/target-aarch64_cortex-a53_musl/Python-3.14.5/config.log ===
+#define HAVE_FSEEKO 1
+#define HAVE_FSTATVFS 1
+#define HAVE_FTELLO 1
+#define HAVE_STATVFS 1
+#define HAVE_DUP2 1
+#define HAVE_GETPGRP 1
+#define HAVE_SETPGRP 1
+#define HAVE_SETNS 1
+#define HAVE_UNSHARE 1
+#define HAVE_CLOCK_GETTIME 1
+#define HAVE_CLOCK_GETRES 1
+#define HAVE_CLOCK_SETTIME 1
+#define HAVE_CLOCK_NANOSLEEP 1
+#define HAVE_NANOSLEEP 1
+#define HAVE_DEVICE_MACROS 1
+#define SYS_SELECT_WITH_SYS_TIME 1
+#define HAVE_GETADDRINFO 1
+#define HAVE_GETNAMEINFO 1
+#define HAVE_STRUCT_TM_TM_ZONE 1
+#define HAVE_TM_ZONE 1
+#define HAVE_STRUCT_STAT_ST_RDEV 1
+#define HAVE_STRUCT_STAT_ST_BLKSIZE 1
+#define HAVE_STRUCT_STAT_ST_BLOCKS 1
+#define HAVE_STRUCT_PASSWD_PW_GECOS 1
+#define HAVE_STRUCT_PASSWD_PW_PASSWD 1
+#define HAVE_SIGINFO_T_SI_BAND 1
+#define HAVE_ADDRINFO 1
+#define HAVE_SOCKADDR_STORAGE 1
+#define HAVE_SOCKADDR_ALG 1
+#define HAVE_PROTOTYPES 1
+#define HAVE_SOCKETPAIR 1
+#define HAVE_GETHOSTBYNAME_R 1
+#define HAVE_GETHOSTBYNAME_R 1
+#define HAVE_GETHOSTBYNAME_R_6_ARG 1
+#define DOUBLE_IS_LITTLE_ENDIAN_IEEE754 1
+#define HAVE_ACOSH 1
+#define HAVE_ASINH 1
+#define HAVE_ATANH 1
+#define HAVE_ERF 1
+#define HAVE_ERFC 1
+#define HAVE_EXPM1 1
+#define HAVE_LOG1P 1
+#define HAVE_LOG2 1
+#define HAVE_BROKEN_SEM_GETVALUE 1
+#define HAVE_DECL_RTLD_LAZY 1
+#define HAVE_DECL_RTLD_NOW 1
+#define HAVE_DECL_RTLD_GLOBAL 1
+#define HAVE_DECL_RTLD_LOCAL 1
+#define HAVE_DECL_RTLD_NODELETE 1
+#define HAVE_DECL_RTLD_NOLOAD 1
+#define HAVE_DECL_RTLD_DEEPBIND 0
+#define HAVE_DECL_RTLD_MEMBER 0
+#define HAVE_WCHAR_H 1
+#define SIZEOF_WCHAR_T 4
+#define HAVE_GETC_UNLOCKED 1
+#define HAVE_RL_COMPLETION_APPEND_CHARACTER 1
+#define HAVE_RL_COMPLETION_SUPPRESS_APPEND 1
+#define HAVE_RL_PRE_INPUT_HOOK 1
+#define HAVE_RL_COMPLETION_DISPLAY_MATCHES_HOOK 1
+#define HAVE_RL_RESIZE_TERMINAL 1
+#define HAVE_RL_COMPLETION_MATCHES 1
+#define HAVE_RL_CATCH_SIGNAL 1
+#define HAVE_RL_APPEND_HISTORY 1
+#define HAVE_RL_COMPDISP_FUNC_T 1
+#define HAVE_STAT_TV_NSEC 1
+#define HAVE_NCURSESW 1
+#define HAVE_PANELW 1
+#define HAVE_NCURSESW_CURSES_H 1
+#define HAVE_NCURSESW_NCURSES_H 1
+#define HAVE_NCURSESW_PANEL_H 1
+#define HAVE_CURSES_H 1
+#define HAVE_NCURSES_H 1
+#define HAVE_PANEL_H 1
+#define HAVE_TERM_H 1
+#define MVWDELCH_IS_EXPRESSION 1
+#define WINDOW_HAS_FLAGS 1
+#define HAVE_CURSES_IS_PAD 1
+#define HAVE_CURSES_IS_TERM_RESIZED 1
+#define HAVE_CURSES_RESIZE_TERM 1
+#define HAVE_CURSES_RESIZETERM 1
+#define HAVE_CURSES_IMMEDOK 1
+#define HAVE_CURSES_SYNCOK 1
+#define HAVE_CURSES_WCHGAT 1
+#define HAVE_CURSES_FILTER 1
+#define HAVE_CURSES_HAS_KEY 1
+#define HAVE_CURSES_TYPEAHEAD 1
+#define HAVE_CURSES_USE_ENV 1
+#define HAVE_DEV_PTMX 1
+#define HAVE_SOCKLEN_T 1
+#define Py_REMOTE_DEBUG 1
+#define HAVE_DIRENT_D_TYPE 1
+#define HAVE_GETRANDOM_SYSCALL 1
+#define HAVE_GETRANDOM 1
+#define HAVE_SHM_OPEN 1
+#define HAVE_SHM_UNLINK 1
+#define PY_SSL_DEFAULT_CIPHERS 1
+#define PY_BUILTIN_HASHLIB_HASHES "md5,sha1,sha2,sha3,blake2"
+#define _PYTHREAD_NAME_MAXLEN 15
+
+configure: exit 0
+=== File: ./wrt/build_dir/target-aarch64_cortex-a53_musl/parted-3.6/config.log ===
+#define GNULIB_TEST_FREAD 1
+#define GNULIB_TEST_FPRINTF 1
+#define GNULIB_TEST_PRINTF 1
+#define GNULIB_TEST_VFPRINTF 1
+#define GNULIB_TEST_VPRINTF 1
+#define GNULIB_TEST_FPUTC 1
+#define GNULIB_TEST_PUTC 1
+#define GNULIB_TEST_PUTCHAR 1
+#define GNULIB_TEST_FPUTS 1
+#define GNULIB_TEST_PUTS 1
+#define GNULIB_TEST_FWRITE 1
+#define GNULIB_TEST_STRDUP 1
+#define GNULIB_STRERROR 1
+#define GNULIB_TEST_STRERROR 1
+#define HAVE_STRTOLL 1
+#define GNULIB_TEST_STRTOLL 1
+#define HAVE_STRTOULL 1
+#define GNULIB_TEST_STRTOULL 1
+#define GNULIB_TEMPNAME 1
+#define GNULIB_TEST_UNLINK 1
+#define GNULIB_TEST_USLEEP 1
+#define HAVE_C_VARARRAYS 1
+#define GNULIB_TEST_WCRTOMB 1
+#define GNULIB_XALLOC 1
+#define GNULIB_XALLOC_DIE 1
+#define GNULIB_TEST_ACCEPT 1
+#define GNULIB_TEST_BIND 1
+#define GNULIB_TEST_CONNECT 1
+#define GNULIB_TEST_ENVIRON 1
+#define GNULIB_TEST_FDOPEN 1
+#define FLEXIBLE_ARRAY_MEMBER /**/
+#define HAVE_FTRUNCATE 1
+#define GNULIB_TEST_FTRUNCATE 1
+#define GNULIB_TEST_GETCWD 1
+#define GNULIB_TEST_GETPAGESIZE 1
+#define GETTIMEOFDAY_TIMEZONE void
+#define GNULIB_TEST_GETTIMEOFDAY 1
+#define HAVE_DUPLOCALE 1
+#define HAVE_DECL_INET_PTON 1
+#define HAVE_IOCTL 1
+#define GNULIB_TEST_IOCTL 1
+#define GNULIB_ISBLANK IN_PARTED_GNULIB_TESTS
+#define GNULIB_TEST_LISTEN 1
+#define HAVE_NEWLOCALE 1
+#define HAVE_NEWLOCALE 1
+#define HAVE_DUPLOCALE 1
+#define HAVE_FREELOCALE 1
+#define GNULIB_TEST_LOCALENAME 1
+#define HAVE_NEWLOCALE 1
+#define GNULIB_TEST_MEMCHR 1
+#define HAVE_BUG_BIG_NANOSLEEP 1
+#define GNULIB_TEST_NANOSLEEP 1
+#define HAVE_USELOCALE 1
+#define HAVE_WORKING_USELOCALE 1
+#define GNULIB_TEST_PERROR 1
+#define GNULIB_TEST_PIPE 1
+#define GNULIB_TEST_PSELECT 1
+#define GNULIB_TEST_PTHREAD_THREAD 1
+#define GNULIB_TEST_PTHREAD_SIGMASK 1
+#define GNULIB_TEST_PUTENV 1
+#define HAVE_RAISE 1
+#define GNULIB_TEST_RAISE 1
+#define GNULIB_TEST_SCHED_YIELD 1
+#define GNULIB_TEST_SELECT 1
+#define GNULIB_TEST_SETENV 1
+#define NEED_SETLOCALE_IMPROVED 0
+#define NEED_SETLOCALE_MTSAFE 0
+#define GNULIB_TEST_SETLOCALE 1
+#define GNULIB_TEST_SETSOCKOPT 1
+#define GNULIB_TEST_SIGPROCMASK 1
+#define GNULIB_TEST_SOCKET 1
+#define GNULIB_TEST_STRERROR_R 1
+#define GNULIB_STRERROR_R_POSIX IN_PARTED_GNULIB_TESTS
+#define GNULIB_TEST_SYMLINK 1
+#define HAVE_PTHREAD_ATFORK 1
+#define GNULIB_TEST_TIME 1
+#define UNLINK_CANNOT_UNLINK_DIR 1
+#define HAVE_UNSETENV 1
+#define GNULIB_TEST_UNSETENV 1
+#define HAVE_DECL_WCTOB 1
+#define GNULIB_TEST_WCTOB 1
+#define GNULIB_TEST_WCTOMB 1
+#define SIZEOF_OFF_T 8
+#define HAVE_DLFCN_H 1
+#define LT_OBJDIR ".libs/"
+#define HAVE_ICONV 1
+#define ICONV_CONST 
+#define HAVE_LIBREADLINE 1
+#define HAVE_LIBREADLINE 1
+#define HAVE_GETOPT_H 1
+#define HAVE_READLINE_READLINE_H 1
+#define HAVE_READLINE_HISTORY_H 1
+#define HAVE_TERMCAP_H 1
+#define restrict __restrict__
+#define HAVE_SIGACTION 1
+#define HAVE_GETUID 1
+#define HAVE_RL_COMPLETION_MATCHES 1
+#define USE_BLKID 1
+
+configure: exit 0
