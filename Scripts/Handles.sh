@@ -278,7 +278,34 @@ if [ -f "$DAE_PKG_MAKEFILE" ] && grep -q "PLACEHOLDER_DAE_VERSION" "$DAE_PKG_MAK
 	else
 		echo "[Handles.sh] WARNING: failed to fetch dae version after 3 retries!"
 	fi
-else
-	echo "[Handles.sh] dae Makefile not found or no placeholder to replace"
 fi
+
+# 修复 ipq6000-gl-ax1800.dts 中缺失 macaddr_lan 节点引发的 DTB 编译报错
+for GL_DTS in "../target/linux/qualcommax/dts/ipq6000-gl-ax1800.dts" "./target/linux/qualcommax/dts/ipq6000-gl-ax1800.dts" $(find "$(pwd)/.." -name "ipq6000-gl-ax1800.dts" 2>/dev/null); do
+	if [ -f "$GL_DTS" ]; then
+		echo " "
+		echo "Patching macaddr_lan for $GL_DTS..."
+		sed -i 's/&macaddr_lan/\&macaddr_wan/g' "$GL_DTS"
+		echo "ipq6000-gl-ax1800.dts patched successfully!"
+	fi
+done
+
+# 强制还原原厂 U-Boot 唯一支持的 FitImage (GZIP) 解压，替换上游源码默认的 FitImageLzma
+for IPQ60XX_MK in "../target/linux/qualcommax/image/ipq60xx.mk" "./target/linux/qualcommax/image/ipq60xx.mk" $(find "$(pwd)/.." -name "ipq60xx.mk" 2>/dev/null); do
+	if [ -f "$IPQ60XX_MK" ]; then
+		echo " "
+		echo "Restoring stock U-Boot FitImage (GZIP) for all jdcloud devices in $IPQ60XX_MK..."
+		sed -i -E 's/Device\/FitImageLzma/Device\/FitImage/g' "$IPQ60XX_MK"
+		echo "ipq60xx.mk FitImage (GZIP) patch applied to $IPQ60XX_MK!"
+	fi
+done
+
+for QCA_IMAGE_MK in "../target/linux/qualcommax/image/Makefile" "./target/linux/qualcommax/image/Makefile" $(find "$(pwd)/.." -name "Makefile" 2>/dev/null | grep "qualcommax/image"); do
+	if [ -f "$QCA_IMAGE_MK" ]; then
+		echo " "
+		echo "Restoring stock U-Boot GZIP compression in $QCA_IMAGE_MK..."
+		sed -i -E 's/lzma[[:space:]]*\|[[:space:]]*fit[[:space:]]+lzma/libdeflate-gzip | fit gzip/g' "$QCA_IMAGE_MK"
+		echo "qualcommax image Makefile GZIP patch applied to $QCA_IMAGE_MK!"
+	fi
+done
 
