@@ -280,12 +280,12 @@ if [ -f "$DAE_PKG_MAKEFILE" ] && grep -q "PLACEHOLDER_DAE_VERSION" "$DAE_PKG_MAK
 	fi
 fi
 
-# 修复上游 VIKINGYFY/immortalwrt 源码中 ipq6000-gl-ax1800.dts 缺失 macaddr_lan 节点引发的 IPQ60XX 编译报错
+# 修复上游 VIKINGYFY/immortalwrt 源码中 ipq6000-gl-ax1800.dts 缺失 macaddr 节点引发的 IPQ60XX DTB 编译报错
 for GL_DTS in "../target/linux/qualcommax/dts/ipq6000-gl-ax1800.dts" "./target/linux/qualcommax/dts/ipq6000-gl-ax1800.dts" $(find "$(pwd)/.." -name "ipq6000-gl-ax1800.dts" 2>/dev/null); do
 	if [ -f "$GL_DTS" ]; then
 		echo " "
-		echo "Patching macaddr_lan for $GL_DTS..."
-		sed -i 's/&macaddr_lan/\&macaddr_wan/g' "$GL_DTS"
+		echo "Removing invalid macaddr nvmem-cells references from $GL_DTS..."
+		sed -i '/nvmem-cells = <&macaddr_/d' "$GL_DTS"
 		echo "ipq6000-gl-ax1800.dts patched successfully!"
 	fi
 done
