@@ -280,15 +280,6 @@ if [ -f "$DAE_PKG_MAKEFILE" ] && grep -q "PLACEHOLDER_DAE_VERSION" "$DAE_PKG_MAK
 	fi
 fi
 
-# 修复 ipq6000-gl-ax1800.dts 中缺失 macaddr_lan 节点引发的 DTB 编译报错
-for GL_DTS in "../target/linux/qualcommax/dts/ipq6000-gl-ax1800.dts" "./target/linux/qualcommax/dts/ipq6000-gl-ax1800.dts" $(find "$(pwd)/.." -name "ipq6000-gl-ax1800.dts" 2>/dev/null); do
-	if [ -f "$GL_DTS" ]; then
-		echo " "
-		echo "Patching macaddr_lan for $GL_DTS..."
-		sed -i 's/&macaddr_lan/\&macaddr_wan/g' "$GL_DTS"
-		echo "ipq6000-gl-ax1800.dts patched successfully!"
-	fi
-done
 
 # 强制还原原厂 U-Boot 唯一支持的 FitImage (GZIP) 解压，替换上游源码默认的 FitImageLzma
 for IPQ60XX_MK in "../target/linux/qualcommax/image/ipq60xx.mk" "./target/linux/qualcommax/image/ipq60xx.mk" $(find "$(pwd)/.." -name "ipq60xx.mk" 2>/dev/null); do
