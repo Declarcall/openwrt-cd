@@ -280,13 +280,21 @@ if [ -f "$DAE_PKG_MAKEFILE" ] && grep -q "PLACEHOLDER_DAE_VERSION" "$DAE_PKG_MAK
 	fi
 fi
 
-# 彻底隔离第三方设备：锁定高通内核 DTS 编译清单仅编译雅典娜 (ipq6010-re-cs-02) 设备树
-find "$(pwd)/.." -type f -path "*/boot/dts/qcom/Makefile" 2>/dev/null | while read -r QCOM_DTS_MK; do
-	if [ -f "$QCOM_DTS_MK" ]; then
+# 彻底隔离第三方设备：清空 ipq60xx.mk 中所有的无关设备目标，只保留雅典娜 (jdcloud_re-cs-02)
+for IPQ60XX_MK in "../target/linux/qualcommax/image/ipq60xx.mk" "./target/linux/qualcommax/image/ipq60xx.mk" $(find "$(pwd)/.." -name "ipq60xx.mk" 2>/dev/null); do
+	if [ -f "$IPQ60XX_MK" ]; then
 		echo " "
-		echo "Locking DTS build strictly to Athena in $QCOM_DTS_MK..."
-		sed -i -E 's/dtb-\$\(CONFIG_ARCH_QCOM\)[[:space:]]*\+=.*/dtb-$(CONFIG_ARCH_QCOM) += ipq6010-re-cs-02.dtb/g' "$QCOM_DTS_MK"
-		echo "DTS Makefile locked to Athena successfully!"
+		echo "Locking TARGET_DEVICES strictly to jdcloud_re-cs-02 in $IPQ60XX_MK..."
+		sed -i '/TARGET_DEVICES +=/d' "$IPQ60XX_MK"
+		echo "TARGET_DEVICES += jdcloud_re-cs-02" >> "$IPQ60XX_MK"
+		echo "ipq60xx.mk TARGET_DEVICES locked to jdcloud_re-cs-02 successfully!"
+	fi
+done
+
+# 彻底抹除所有 ipq6000-gl*.dts 中缺失的 macaddr nvmem-cells 节点
+for GL_DTS in $(find "$(pwd)/.." -name "ipq6000-gl*.dts" 2>/dev/null); do
+	if [ -f "$GL_DTS" ]; then
+		sed -i '/nvmem-cells = <&macaddr_/d' "$GL_DTS"
 	fi
 done
 
