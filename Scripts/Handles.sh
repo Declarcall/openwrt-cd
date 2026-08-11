@@ -280,13 +280,13 @@ if [ -f "$DAE_PKG_MAKEFILE" ] && grep -q "PLACEHOLDER_DAE_VERSION" "$DAE_PKG_MAK
 	fi
 fi
 
-# 修复上游 VIKINGYFY/immortalwrt 源码中所有 ipq6000-gl*.dts 缺失 macaddr 节点引发的 IPQ60XX DTB 编译报错
-for GL_DTS in $(find "$(pwd)/.." -name "ipq6000-gl*.dts" 2>/dev/null); do
-	if [ -f "$GL_DTS" ]; then
+# 彻底隔离第三方设备：锁定高通内核 DTS 编译清单仅编译雅典娜 (ipq6010-re-cs-02) 设备树
+find "$(pwd)/.." -type f -path "*/boot/dts/qcom/Makefile" 2>/dev/null | while read -r QCOM_DTS_MK; do
+	if [ -f "$QCOM_DTS_MK" ]; then
 		echo " "
-		echo "Removing invalid macaddr nvmem-cells references from $GL_DTS..."
-		sed -i '/nvmem-cells = <&macaddr_/d' "$GL_DTS"
-		echo "$GL_DTS patched successfully!"
+		echo "Locking DTS build strictly to Athena in $QCOM_DTS_MK..."
+		sed -i -E 's/dtb-\$\(CONFIG_ARCH_QCOM\)[[:space:]]*\+=.*/dtb-$(CONFIG_ARCH_QCOM) += ipq6010-re-cs-02.dtb/g' "$QCOM_DTS_MK"
+		echo "DTS Makefile locked to Athena successfully!"
 	fi
 done
 
