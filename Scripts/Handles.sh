@@ -258,7 +258,7 @@ if [ -f "$RUST_FILE" ]; then
 fi
 
 
-#预获取dae的PKG_SOURCE_VERSION (从Shell阶段发起网络请求，避免make解析阶段$(shell)不稳定)
+# 预获取dae的PKG_SOURCE_VERSION (从Shell阶段发起网络请求，避免make解析阶段$(shell)不稳定)
 DAE_PKG_MAKEFILE="$PKG_PATH/dae/Makefile"
 echo "[Handles.sh] Checking for dae Makefile at: $DAE_PKG_MAKEFILE"
 if [ -f "$DAE_PKG_MAKEFILE" ] && grep -q "PLACEHOLDER_DAE_VERSION" "$DAE_PKG_MAKEFILE"; then
@@ -280,46 +280,5 @@ if [ -f "$DAE_PKG_MAKEFILE" ] && grep -q "PLACEHOLDER_DAE_VERSION" "$DAE_PKG_MAK
 	fi
 fi
 
-# 彻底隔离第三方设备：清空 ipq60xx.mk 中所有的无关设备目标，只保留雅典娜 (jdcloud_re-cs-02)
-for IPQ60XX_MK in "../target/linux/qualcommax/image/ipq60xx.mk" "./target/linux/qualcommax/image/ipq60xx.mk" $(find "$(pwd)/.." -name "ipq60xx.mk" 2>/dev/null); do
-	if [ -f "$IPQ60XX_MK" ]; then
-		echo " "
-		echo "Locking TARGET_DEVICES strictly to jdcloud_re-cs-02 in $IPQ60XX_MK..."
-		sed -i '/TARGET_DEVICES +=/d' "$IPQ60XX_MK"
-		echo "TARGET_DEVICES += jdcloud_re-cs-02" >> "$IPQ60XX_MK"
-		echo "ipq60xx.mk TARGET_DEVICES locked to jdcloud_re-cs-02 successfully!"
-
-		if ! sed -n "/define Device\/jdcloud_re-cs-02/,/endef/p" "$IPQ60XX_MK" | grep -q "IMAGE/factory.bin"; then
-			echo "Restoring factory.bin image rules for Athena in $IPQ60XX_MK..."
-			sed -i '/define Device\/jdcloud_re-cs-02/a \	$(call Device/EmmcImage)\n	IMAGE/factory.bin := append-kernel | pad-to $$(KERNEL_SIZE) | append-rootfs | append-metadata' "$IPQ60XX_MK"
-			echo "Athena factory.bin image rules restored successfully!"
-		fi
-	fi
-done
-
-# 彻底抹除所有 ipq6000-gl*.dts 中缺失的 macaddr nvmem-cells 节点
-for GL_DTS in $(find "$(pwd)/.." -name "ipq6000-gl*.dts" 2>/dev/null); do
-	if [ -f "$GL_DTS" ]; then
-		sed -i '/nvmem-cells = <&macaddr_/d' "$GL_DTS"
-	fi
-done
-
-# 强制还原原厂 U-Boot 唯一支持的 FitImage (GZIP) 解压，替换上游源码默认的 FitImageLzma
-for IPQ60XX_MK in "../target/linux/qualcommax/image/ipq60xx.mk" "./target/linux/qualcommax/image/ipq60xx.mk" $(find "$(pwd)/.." -name "ipq60xx.mk" 2>/dev/null); do
-	if [ -f "$IPQ60XX_MK" ]; then
-		echo " "
-		echo "Restoring stock U-Boot FitImage (GZIP) for all jdcloud devices in $IPQ60XX_MK..."
-		sed -i -E 's/Device\/FitImageLzma/Device\/FitImage/g' "$IPQ60XX_MK"
-		echo "ipq60xx.mk FitImage (GZIP) patch applied to $IPQ60XX_MK!"
-	fi
-done
-
-for QCA_IMAGE_MK in "../target/linux/qualcommax/image/Makefile" "./target/linux/qualcommax/image/Makefile" $(find "$(pwd)/.." -name "Makefile" 2>/dev/null | grep "qualcommax/image"); do
-	if [ -f "$QCA_IMAGE_MK" ]; then
-		echo " "
-		echo "Restoring stock U-Boot GZIP compression in $QCA_IMAGE_MK..."
-		sed -i -E 's/lzma[[:space:]]*\|[[:space:]]*fit[[:space:]]+lzma/libdeflate-gzip | fit gzip/g' "$QCA_IMAGE_MK"
-		echo "qualcommax image Makefile GZIP patch applied to $QCA_IMAGE_MK!"
-	fi
-done
+# 遵从 VIKINGYFY 上游标杆，完美保持 ipq60xx.mk 设备的原生架构与对齐定义
 
