@@ -289,7 +289,7 @@ for IPQ60XX_MK in "../target/linux/qualcommax/image/ipq60xx.mk" "./target/linux/
 		echo "TARGET_DEVICES += jdcloud_re-cs-02" >> "$IPQ60XX_MK"
 		echo "ipq60xx.mk TARGET_DEVICES locked to jdcloud_re-cs-02 successfully!"
 
-		if ! grep -q "IMAGE/factory.bin" "$IPQ60XX_MK"; then
+		if ! sed -n "/define Device\/jdcloud_re-cs-02/,/endef/p" "$IPQ60XX_MK" | grep -q "IMAGE/factory.bin"; then
 			echo "Restoring factory.bin image rules for Athena in $IPQ60XX_MK..."
 			sed -i '/define Device\/jdcloud_re-cs-02/a \	$(call Device/EmmcImage)\n	IMAGE/factory.bin := append-kernel | pad-to $$(KERNEL_SIZE) | append-rootfs | append-metadata' "$IPQ60XX_MK"
 			echo "Athena factory.bin image rules restored successfully!"
