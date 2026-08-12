@@ -257,6 +257,17 @@ if [ -f "$RUST_FILE" ]; then
 	fi
 fi
 
+# 修复 mac80211 在 6.18 内核下遗漏 ath11k_pcic.ko 导致的 PCI/AHB 无线驱动符号丢失崩溃
+ATH_MK="$(find ./package/kernel/mac80211/ -type f -name 'ath.mk' -print -quit 2>/dev/null)"
+if [ -f "$ATH_MK" ]; then
+	echo " "
+	if sed -i 's|\(FILES:=\$(PKG_BUILD_DIR)/drivers/net/wireless/ath/ath11k/ath11k\.ko\)|\1 \\\n\t$(PKG_BUILD_DIR)/drivers/net/wireless/ath/ath11k/ath11k_pcic.ko|g' "$ATH_MK"; then
+		echo "ath11k_pcic.ko fix has been applied to mac80211 ath.mk!"
+	else
+		echo "ath11k_pcic.ko fix failed; continuing!"
+	fi
+fi
+
 
 # 预获取dae的PKG_SOURCE_VERSION (从Shell阶段发起网络请求，避免make解析阶段$(shell)不稳定)
 DAE_PKG_MAKEFILE="$PKG_PATH/dae/Makefile"
