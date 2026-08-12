@@ -4,11 +4,11 @@ CONFIG_TARGET_qualcommax_ipq60xx=y
 # 仅编译京东云雅典娜 (RE-CS-02) 固件，禁用其他所有无关设备
 CONFIG_TARGET_DEVICE_qualcommax_ipq60xx_DEVICE_jdcloud_re-cs-02=y
 
-# 显式打包雅典娜 BDF 校准文件与 5G QCN9074 固件进 /lib/firmware/ (严禁降级为 =m)
+# 显式打包雅典娜 BDF 校准文件与 5G QCN9074 固件进 /lib/firmware/ (禁用同名覆盖冲突的 stock 固件包)
 CONFIG_PACKAGE_ipq-wifi-jdcloud_re-cs-02=y
 CONFIG_PACKAGE_ath11k-firmware-qcn9074-ddwrt=y
-CONFIG_PACKAGE_ath11k-firmware-qcn9074=y
-CONFIG_PACKAGE_ath11k-firmware-ipq6018=y
+# CONFIG_PACKAGE_ath11k-firmware-qcn9074 is not set
+# CONFIG_PACKAGE_ath11k-firmware-ipq6018 is not set
 CONFIG_PACKAGE_kmod-ath11k=y
 CONFIG_PACKAGE_kmod-ath11k-ahb=y
 CONFIG_PACKAGE_kmod-ath11k-pci=y
