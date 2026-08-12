@@ -1,0 +1,2552 @@
+Build Failure Diagnostic Report - 2026-08-12_09-20-36
+Target Config: IPQ60XX-WIFI-YES
+Commit SHA: 61f817a71701141818556116ded72b423226cc43
+=========================================================
+--- 🚨 CRITICAL ERROR SUMMARY (罪魁祸首摘要表) 🚨 ---
+grep: /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/base-files/ipkg-aarch64_cortex-a53/base-files/CONTROL/conffiles: No such file or directory
+grep: /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/base-files/.pkgdir/base-files/CONTROL/conffiles: No such file or directory
+grep: /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/fullconenat-nft-2023.05.17~07d93b62/./Module.symvers: No such file or directory
+sed: can't read /mnt/build_wrt/build_dir/target-aarch64_cortex-a53_musl/linux-qualcommax_ipq60xx/fullconenat-nft-2023.05.17~07d93b62/./modules.order: No such file or directory
+make[4]: [Makefile:430: check-config] Error 126 (ignored)
+ls: cannot access 'usr/lib/ruby/gems/4.0/gems/bigdecimal-*/Rakefile': No such file or directory
+ls: cannot access 'usr/lib/ruby/4.0/*/bigdecimal.so': No such file or directory
+ls: cannot access 'usr/lib/ruby/4.0/bigdecimal/': No such file or directory
+ls: cannot access 'usr/lib/ruby/4.0/bigdecimal.rb': No such file or directory
+ls: cannot access 'usr/lib/ruby/gems/4.0/specifications/default/bigdecimal-*.gemspec': No such file or directory
+ls: cannot access 'usr/lib/ruby/4.0/pstore.rb': No such file or directory
+ls: cannot access 'usr/lib/ruby/4.0/pstore/': No such file or directory
+ls: cannot access 'usr/lib/ruby/gems/4.0/gems/bigdecimal-*/Rakefile': No such file or directory
+ls: cannot access 'usr/lib/ruby/4.0/*/bigdecimal.so': No such file or directory
+ls: cannot access 'usr/lib/ruby/4.0/bigdecimal/': No such file or directory
+ls: cannot access 'usr/lib/ruby/4.0/bigdecimal.rb': No such file or directory
+ls: cannot access 'usr/lib/ruby/gems/4.0/specifications/default/bigdecimal-*.gemspec': No such file or directory
+ls: cannot access 'usr/lib/ruby/4.0/pstore.rb': No such file or directory
+ls: cannot access 'usr/lib/ruby/4.0/pstore/': No such file or directory
+make[2]: *** [package/Makefile:100: package/install] Error 2
+make[1]: *** [package/Makefile:193: /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/stamp/.package_install] Error 2
+make: *** [/mnt/build_wrt/include/toplevel.mk:233: world] Error 2
+=========================================================
+
+--- VERBOSE BUILD OUTPUT (LAST 500 LINES) ---
+(101/594) Installing kmod-fs-btrfs (6.18.41-r1)
+(102/594) Installing liblzo2 (2.10-r5)
+(103/594) Installing libmount1 (2.42.2-r1)
+(104/594) Installing btrfs-progs (6.11-r3)
+(105/594) Installing libbz2-1.0 (1.0.8-r1)
+(106/594) Installing bzip2 (1.0.8-r1)
+(107/594) Installing ca-bundle (20260601-r1)
+(108/594) Installing ca-certificates (20260601-r1)
+(109/594) Installing libfdisk1 (2.42.2-r1)
+(110/594) Installing libsmartcols1 (2.42.2-r1)
+(111/594) Installing cfdisk (2.42.2-r1)
+(112/594) Installing libstdcpp6 (14.4.0-r5)
+(113/594) Installing cgdisk (1.0.10-r1)
+(114/594) Installing cgi-io (2026.07.21~31cb3c89-r1)
+(115/594) Installing chinadns-ng (2025.08.09-r1)
+(116/594) Installing libseccomp (2.5.5-r1)
+(117/594) Installing runc (1.3.6-r1)
+(118/594) Installing containerd (2.2.5-r1)
+(119/594) Installing coremark (2025.05.01~1f483d5b-r1)
+(120/594) Installing coreutils (9.11-r1)
+(121/594) Installing coreutils-base64 (9.11-r1)
+(122/594) Installing coreutils-nohup (9.11-r1)
+(123/594) Installing coreutils-stty (9.11-r1)
+(124/594) Installing coreutils-timeout (9.11-r1)
+(125/594) Installing cpufreq (1)
+(126/594) Installing libnghttp2-14 (1.66.0-r1)
+(127/594) Installing libcurl4 (8.21.0-r1)
+(128/594) Installing curl (8.21.0-r1)
+(129/594) Installing kmod-sched-bpf (6.18.41-r1)
+(130/594) Installing kmod-sched-core (6.18.41-r1)
+(131/594) Installing kmod-veth (6.18.41-r1)
+(132/594) Installing kmod-xdp-sockets-diag (6.18.41-r1)
+(133/594) Installing v2ray-geoip (2026.08.12-r1)
+(134/594) Installing v2ray-geosite (2026.08.12-r1)
+(135/594) Installing dae (2026.08.12-r1)
+(136/594) Installing ddns-go (6.17.1-r1)
+(137/594) Installing dmesg (2.42.2-r1)
+(138/594) Installing dns2socks (2.1-r2)
+(139/594) Installing kmod-nf-conntrack (6.18.41-r1)
+(140/594) Installing kmod-nfnetlink (6.18.41-r1)
+(141/594) Installing kmod-nf-conntrack-netlink (6.18.41-r1)
+(142/594) Installing libmnl0 (1.0.5-r2)
+(143/594) Installing libnfnetlink0 (1.0.2-r1)
+(144/594) Installing libnetfilter-conntrack3 (1.1.0-r1)
+(145/594) Installing libgmp10 (6.3.0-r2)
+(146/594) Installing libnettle8 (3.10.2-r1)
+(147/594) Installing jansson4 (2.15.0-r1)
+(148/594) Installing kmod-nf-log (6.18.41-r1)
+(149/594) Installing kmod-nf-log6 (6.18.41-r1)
+(150/594) Installing kmod-nf-nat (6.18.41-r1)
+(151/594) Installing kmod-nf-reject (6.18.41-r1)
+(152/594) Installing kmod-nf-reject6 (6.18.41-r1)
+(153/594) Installing kmod-nft-core (6.18.41-r1)
+(154/594) Installing libnftnl11 (1.3.1-r1)
+(155/594) Installing nftables-json (1.1.6-r4)
+(156/594) Installing dnsmasq-full (2.93-r2)
+(157/594) Installing docker (29.6.1-r1)
+(158/594) Installing docker-compose (5.3.1-r1)
+(159/594) Installing kmod-iptables (6.18.41-r1)
+(160/594) Installing kmod-nf-ipt (6.18.41-r1)
+(161/594) Installing kmod-ipt-core (6.18.41-r1)
+(162/594) Installing kmod-nf-ipt6 (6.18.41-r1)
+(163/594) Installing kmod-ip6tables (6.18.41-r1)
+(164/594) Installing kmod-nft-compat (6.18.41-r1)
+(165/594) Installing libxtables12 (1.8.10-r3)
+(166/594) Installing libiptext-nft0 (1.8.10-r3)
+(167/594) Installing libiptext0 (1.8.10-r3)
+(168/594) Installing libiptext6-0 (1.8.10-r3)
+(169/594) Installing xtables-nft (1.8.10-r3)
+(170/594) Installing ip6tables-nft (1.8.10-r3)
+(171/594) Installing iptables-nft (1.8.10-r3)
+(172/594) Installing kmod-ipt-extra (6.18.41-r1)
+(173/594) Installing iptables-mod-extra (1.8.10-r3)
+(174/594) Installing kmod-ipt-nat (6.18.41-r1)
+(175/594) Installing kmod-ipt-conntrack (6.18.41-r1)
+(176/594) Installing kmod-nf-nat6 (6.18.41-r1)
+(177/594) Installing kmod-ipt-nat6 (6.18.41-r1)
+(178/594) Installing kmod-br-netfilter (6.18.41-r1)
+(179/594) Installing kmod-ipt-physdev (6.18.41-r1)
+(180/594) Installing kmod-nf-ipvs (6.18.41-r1)
+(181/594) Installing tini (0.19.0-r4)
+(182/594) Installing kmod-nft-fib (6.18.41-r1)
+(183/594) Installing kmod-nft-nat (6.18.41-r1)
+(184/594) Installing kmod-nft-fullcone (6.18.41.2023.05.17~07d93b62-r3)
+(185/594) Installing kmod-nf-flow (6.18.41-r1)
+(186/594) Installing kmod-nft-offload (6.18.41-r1)
+(187/594) Installing firewall4 (2025.03.17~b6e51575-r2)
+(188/594) Installing dockerd (29.6.1-r1)
+(189/594) Installing dropbear (2026.94-r1)
+(190/594) Installing etherwake (1.09-r5)
+(191/594) Installing ethtool (7.1-r1)
+(192/594) Installing musl-fts (1.2.7-r1)
+(193/594) Installing exfat-fsck (1.4.1-r2)
+(194/594) Installing exfat-mkfs (1.4.1-r2)
+(195/594) Installing libf2fs6 (1.16.0-r4)
+(196/594) Installing f2fsck (1.16.0-r4)
+(197/594) Installing mkf2fs (1.16.0-r4)
+(198/594) Installing f2fs-tools (1.16.0-r4)
+(199/594) Installing fdisk (2.42.2-r1)
+(200/594) Installing gdisk (1.0.10-r1)
+(201/594) Installing gecoosac (2.2.20251015-r1)
+(202/594) Installing geoview (0.2.6-r1)
+(203/594) Installing getrandom (2025.10.30~6f78fa49-r1)
+(204/594) Installing libatomic1 (14.4.0-r5)
+(205/594) Installing libltdl7 (2.5.4-r1)
+(206/594) Installing liblua5.4-5.4 (5.4.7-r1)
+(207/594) Installing libpcre2 (10.47-r1)
+(208/594) Installing haproxy (3.4.2-r1)
+(209/594) Installing ucode-mod-nl80211 (2026.07.09~b885dd0f-r1)
+(210/594) Installing ucode-mod-rtnl (2026.07.09~b885dd0f-r1)
+(211/594) Installing wifi-scripts (1.0-r1)
+(212/594) Installing hostapd-common (2026.07.09~f08f2749-r1)
+(213/594) Installing htop (3.5.1-r1)
+(214/594) Installing libelf1 (0.195-r2)
+(215/594) Installing libbpf1 (1.7.0-r1)
+(216/594) Installing ip-full (6.18.0-r2)
+(217/594) Installing libiperf3 (3.21-r2)
+(218/594) Installing iperf3 (3.21-r2)
+(219/594) Installing ipq-wifi-jdcloud_re-cs-02 (2026.05.18~e20f4c6f-r1)
+(220/594) Installing ipt2socks (1.1.4-r2)
+(221/594) Installing kmod-ipt-ipopt (6.18.41-r1)
+(222/594) Installing iptables-mod-ipopt (1.8.10-r3)
+(223/594) Installing iw (6.17-r1)
+(224/594) Installing kmod-asn1-decoder (6.18.41-r1)
+(225/594) Installing kmod-ata-core (6.18.41-r1)
+(226/594) Installing kmod-ata-ahci (6.18.41-r1)
+(227/594) Installing wireless-regdb (2026.05.30-r1)
+(228/594) Installing kmod-cfg80211 (6.18.41.6.18.39-r3)
+(229/594) Installing kmod-crypto-null (6.18.41-r1)
+(230/594) Installing kmod-crypto-aead (6.18.41-r1)
+(231/594) Installing kmod-crypto-manager (6.18.41-r1)
+(232/594) Installing kmod-crypto-hmac (6.18.41-r1)
+(233/594) Installing kmod-crypto-sha3 (6.18.41-r1)
+(234/594) Installing kmod-crypto-sha512 (6.18.41-r1)
+(235/594) Installing kmod-crypto-rng (6.18.41-r1)
+(236/594) Installing kmod-crypto-geniv (6.18.41-r1)
+(237/594) Installing kmod-crypto-seqiv (6.18.41-r1)
+(238/594) Installing kmod-crypto-ctr (6.18.41-r1)
+(239/594) Installing kmod-crypto-ccm (6.18.41-r1)
+(240/594) Installing kmod-crypto-cmac (6.18.41-r1)
+(241/594) Installing kmod-crypto-gf128 (6.18.41-r1)
+(242/594) Installing kmod-crypto-ghash (6.18.41-r1)
+(243/594) Installing kmod-crypto-gcm (6.18.41-r1)
+(244/594) Installing kmod-mac80211 (6.18.41.6.18.39-r3)
+(245/594) Installing kmod-ath (6.18.41.6.18.39-r3)
+(246/594) Installing kmod-crypto-michael-mic (6.18.41-r1)
+(247/594) Installing kmod-i2c-core (6.18.41-r1)
+(248/594) Installing kmod-hwmon-core (6.18.41-r1)
+(249/594) Installing kmod-libphy (6.18.41-r1)
+(250/594) Installing kmod-mdio-devres (6.18.41-r1)
+(251/594) Installing kmod-net-selftests (6.18.41-r1)
+(252/594) Installing kmod-phylink (6.18.41-r1)
+(253/594) Installing kmod-dsa (6.18.41-r1)
+(254/594) Installing kmod-qca-ssdk (6.18.41.2025.11.14~d9a19649-r1)
+(255/594) Installing kmod-qca-nss-dp (6.18.41.2026.01.19~d8f802f0-r1)
+(256/594) Installing nss-firmware (2025.05.01-r1)
+(257/594) Installing kmod-qca-nss-drv (6.18.41.13.1.2026.01.12~6aa14c7-r18)
+(258/594) Installing kmod-qca-nss-drv-wifi-meshmgr (6.18.41.12.5.5.2024.09.12~51be82d-r13)
+(259/594) Installing kmod-qcom-qmi-helpers (6.18.41.6.18.39-r3)
+(260/594) Installing kmod-thermal (6.18.41-r1)
+(261/594) Installing kmod-ath11k (6.18.41.6.18.39-r3)
+(262/594) Installing kmod-qrtr (6.18.41-r1)
+(263/594) Installing kmod-qrtr-smd (6.18.41-r1)
+(264/594) Installing kmod-ath11k-ahb (6.18.41.6.18.39-r3)
+(265/594) Installing kmod-mhi-bus (6.18.41-r1)
+(266/594) Installing kmod-qrtr-mhi (6.18.41-r1)
+(267/594) Installing kmod-ath11k-pci (6.18.41.6.18.39-r3)
+(268/594) Installing kmod-bonding (6.18.41-r1)
+(269/594) Installing kmod-crypto-lib-poly1305 (6.18.41-r1)
+(270/594) Installing kmod-crypto-chacha20poly1305 (6.18.41-r1)
+(271/594) Installing kmod-crypto-crc32 (6.18.41-r1)
+(272/594) Installing kmod-crypto-des (6.18.41-r1)
+(273/594) Installing kmod-crypto-ecb (6.18.41-r1)
+(274/594) Installing kmod-crypto-kpp (6.18.41-r1)
+(275/594) Installing kmod-crypto-lib-chacha20 (6.18.41-r1)
+(276/594) Installing kmod-crypto-lib-chacha20poly1305 (6.18.41-r1)
+(277/594) Installing kmod-crypto-lib-curve25519 (6.18.41-r1)
+(278/594) Installing kmod-crypto-md5 (6.18.41-r1)
+(279/594) Installing kmod-crypto-sha1 (6.18.41-r1)
+(280/594) Installing kmod-crypto-sha256 (6.18.41-r1)
+(281/594) Installing kmod-regmap-core (6.18.41-r1)
+(282/594) Installing kmod-dsa-qca8k (6.18.41-r1)
+(283/594) Installing kmod-dummy (6.18.41-r1)
+(284/594) Installing kmod-fs-f2fs (6.18.41-r1)
+(285/594) Installing kmod-fs-netfs (6.18.41-r1)
+(286/594) Installing kmod-nls-ucs2-utils (6.18.41-r1)
+(287/594) Installing kmod-fs-smbfs-common (6.18.41-r1)
+(288/594) Installing kmod-oid-registry (6.18.41-r1)
+(289/594) Installing kmod-fs-ksmbd (6.18.41-r1)
+(290/594) Installing kmod-fuse (6.18.41-r1)
+(291/594) Installing kmod-gpio-button-hotplug (6.18.41-r6)
+(292/594) Installing kmod-gre (6.18.41-r1)
+(293/594) Installing kmod-iptunnel6 (6.18.41-r1)
+(294/594) Installing kmod-ip6-tunnel (6.18.41-r1)
+(295/594) Installing kmod-gre6 (6.18.41-r1)
+(296/594) Installing kmod-ifb (6.18.41-r1)
+(297/594) Installing kmod-ikconfig (6.18.41-r1)
+(298/594) Installing kmod-inet-diag (6.18.41-r1)
+(299/594) Installing kmod-inet-mptcp-diag (6.18.41-r1)
+(300/594) Installing kmod-input-core (6.18.41-r1)
+(301/594) Installing kmod-udptunnel4 (6.18.41-r1)
+(302/594) Installing kmod-udptunnel6 (6.18.41-r1)
+(303/594) Installing kmod-l2tp (6.18.41-r1)
+(304/594) Installing kmod-leds-gpio (6.18.41-r1)
+(305/594) Installing kmod-leds-pwm (6.18.41-r1)
+(306/594) Installing kmod-lib-crc-ccitt (6.18.41-r1)
+(307/594) Installing kmod-lib-crc-itu-t (6.18.41-r1)
+(308/594) Installing kmod-loop (6.18.41-r1)
+(309/594) Installing kmod-macvlan (6.18.41-r1)
+(310/594) Installing kmod-media-controller (6.18.41-r1)
+(311/594) Installing kmod-mii (6.18.41-r1)
+(312/594) Installing kmod-slhc (6.18.41-r1)
+(313/594) Installing kmod-ppp (6.18.41-r1)
+(314/594) Installing kmod-mppe (6.18.41-r1)
+(315/594) Installing kmod-mtd-rw (6.18.41.2021.02.28~e8776739-r1)
+(316/594) Installing kmod-nat46 (6.18.41.2025.11.04~adb2f72e-r1)
+(317/594) Installing kmod-netlink-diag (6.18.41-r1)
+(318/594) Installing kmod-nf-conncount (6.18.41-r1)
+(319/594) Installing kmod-nf-dup-inet (6.18.41-r1)
+(320/594) Installing kmod-nf-socket (6.18.41-r1)
+(321/594) Installing kmod-nf-tproxy (6.18.41-r1)
+(322/594) Installing kmod-nfnetlink-queue (6.18.41-r1)
+(323/594) Installing kmod-nft-arp (6.18.41-r1)
+(324/594) Installing kmod-nft-bridge (6.18.41-r1)
+(325/594) Installing kmod-nft-connlimit (6.18.41-r1)
+(326/594) Installing kmod-nft-dup-inet (6.18.41-r1)
+(327/594) Installing kmod-nft-netdev (6.18.41-r1)
+(328/594) Installing kmod-nft-queue (6.18.41-r1)
+(329/594) Installing kmod-nft-socket (6.18.41-r1)
+(330/594) Installing kmod-nft-tproxy (6.18.41-r1)
+(331/594) Installing kmod-nft-xfrm (6.18.41-r1)
+(332/594) Installing kmod-nvme (6.18.41-r1)
+(333/594) Installing kmod-ovpn-backports (6.18.41.7.1.0.2026070800-r2)
+(334/594) Installing kmod-phy-aquantia (6.18.41-r1)
+(335/594) Installing kmod-phy-ax88796b (6.18.41-r1)
+(336/594) Installing kmod-phylib-qcom (6.18.41-r1)
+(337/594) Installing kmod-phy-qca83xx (6.18.41-r1)
+(338/594) Installing kmod-pppox (6.18.41-r1)
+(339/594) Installing kmod-pppoe (6.18.41-r1)
+(340/594) Installing kmod-pptp (6.18.41-r1)
+(341/594) Installing nss-eip-firmware (2.5.7-r1)
+(342/594) Installing kmod-qca-nss-crypto (6.18.41.13.1.2024.09.16~60e27b9-r1)
+(343/594) Installing kmod-qca-nss-drv-vlan-mgr (6.18.41.12.5.5.2024.09.12~51be82d-r13)
+(344/594) Installing kmod-qca-nss-drv-bridge-mgr (6.18.41.12.5.5.2024.09.12~51be82d-r13)
+(345/594) Installing kmod-qca-nss-drv-gre (6.18.41.12.5.5.2024.09.12~51be82d-r13)
+(346/594) Installing kmod-qca-nss-drv-eogremgr (6.18.41.12.5.5.2024.09.12~51be82d-r13)
+(347/594) Installing kmod-qca-nss-drv-qdisc (6.18.41.12.5.5.2024.09.12~51be82d-r13)
+(348/594) Installing kmod-qca-nss-drv-igs (6.18.41.12.5.5.2024.09.12~51be82d-r13)
+(349/594) Installing kmod-qca-nss-drv-l2tpv2 (6.18.41.12.5.5.2024.09.12~51be82d-r13)
+(350/594) Installing kmod-qca-nss-drv-lag-mgr (6.18.41.12.5.5.2024.09.12~51be82d-r13)
+(351/594) Installing kmod-qca-nss-drv-map-t (6.18.41.12.5.5.2024.09.12~51be82d-r13)
+(352/594) Installing kmod-qca-nss-drv-match (6.18.41.12.5.5.2024.09.12~51be82d-r13)
+(353/594) Installing kmod-qca-nss-drv-mirror (6.18.41.12.5.5.2024.09.12~51be82d-r13)
+(354/594) Installing kmod-qca-nss-drv-pppoe (6.18.41.12.5.5.2024.09.12~51be82d-r13)
+(355/594) Installing kmod-qca-nss-drv-pptp (6.18.41.12.5.5.2024.09.12~51be82d-r13)
+(356/594) Installing kmod-qca-nss-drv-tun6rd (6.18.41.12.5.5.2024.09.12~51be82d-r13)
+(357/594) Installing kmod-qca-nss-drv-tunipip6 (6.18.41.12.5.5.2024.09.12~51be82d-r13)
+(358/594) Installing kmod-vxlan (6.18.41-r1)
+(359/594) Installing kmod-qca-nss-drv-vxlanmgr (6.18.41.12.5.5.2024.09.12~51be82d-r13)
+(360/594) Installing kmod-qca-nss-drv-netlink (6.18.41.12.5.5.2024.09.12~51be82d-r13)
+(361/594) Installing kmod-qca-nss-ecm (6.18.41.13.1.2026.04.03~8c7355b-r8)
+(362/594) Installing kmod-sched-cake (6.18.41-r1)
+(363/594) Installing kmod-sound-core (6.18.41-r1)
+(364/594) Installing kmod-tun (6.18.41-r1)
+(365/594) Installing kmod-usb-acm (6.18.41-r1)
+(366/594) Installing kmod-usb-audio (6.18.41-r1)
+(367/594) Installing kmod-usb-roles (6.18.41-r1)
+(368/594) Installing kmod-usb-dwc3 (6.18.41-r1)
+(369/594) Installing kmod-usb-dwc3-qcom (6.18.41-r1)
+(370/594) Installing kmod-usb-ehci (6.18.41-r1)
+(371/594) Installing kmod-usb-net (6.18.41-r1)
+(372/594) Installing kmod-usb-net-asix (6.18.41-r1)
+(373/594) Installing kmod-usb-net-asix-ax88179 (6.18.41-r1)
+(374/594) Installing kmod-usb-net-cdc-eem (6.18.41-r1)
+(375/594) Installing kmod-usb-net-cdc-ether (6.18.41-r1)
+(376/594) Installing kmod-usb-net-cdc-ncm (6.18.41-r1)
+(377/594) Installing kmod-usb-wdm (6.18.41-r1)
+(378/594) Installing kmod-usb-net-cdc-mbim (6.18.41-r1)
+(379/594) Installing kmod-usb-net-cdc-subset (6.18.41-r1)
+(380/594) Installing kmod-usb-net-huawei-cdc-ncm (6.18.41-r1)
+(381/594) Installing kmod-usb-net-ipheth (6.18.41-r1)
+(382/594) Installing kmod-usb-net-qmi-wwan (6.18.41-r1)
+(383/594) Installing kmod-usb-net-qmi-wwan-fibocom (6.18.41.1.0.5-r5)
+(384/594) Installing kmod-usb-net-qmi-wwan-quectel (6.18.41.1.2.9-r3)
+(385/594) Installing kmod-usb-net-rndis (6.18.41-r1)
+(386/594) Installing kmod-usb-net-rtl8150 (6.18.41-r1)
+(387/594) Installing r8152-firmware (20260622-r2)
+(388/594) Installing kmod-usb-net-rtl8152 (6.18.41-r1)
+(389/594) Installing kmod-usb-net-sierrawireless (6.18.41-r1)
+(390/594) Installing kmod-usb-ohci (6.18.41-r1)
+(391/594) Installing kmod-usb-serial (6.18.41-r1)
+(392/594) Installing kmod-usb-serial-wwan (6.18.41-r1)
+(393/594) Installing kmod-usb-serial-qualcomm (6.18.41-r1)
+(394/594) Installing kmod-usb-uhci (6.18.41-r1)
+(395/594) Installing kmod-usb-xhci-hcd (6.18.41-r1)
+(396/594) Installing kmod-usb2 (6.18.41-r1)
+(397/594) Installing kmod-usb3 (6.18.41-r1)
+(398/594) Installing kmod-wireguard (6.18.41-r1)
+(399/594) Installing libacl (2.3.2-r2)
+(400/594) Installing libavahi-client (0.9_rc5-r1)
+(401/594) Installing libcap (2.69-r1)
+(402/594) Installing libcap-ng (0.8.4-r2)
+(403/594) Installing libev (4.33-r3)
+(404/594) Installing libevdev (1.13.6-r1)
+(405/594) Installing libgnutls (3.8.10-r1)
+(406/594) Installing libxml2-16 (2.15.3-r1)
+(407/594) Installing libplist (2.7.0-r1)
+(408/594) Installing libimobiledevice-glue (1.3.2-r1)
+(409/594) Installing libusbmuxd (2.1.1-r1)
+(410/594) Installing libimobiledevice (2025.07.29~c269d7e3-r2)
+(411/594) Installing libiwinfo-data (2026.05.26~66bdd1a0-r1)
+(412/594) Installing libiwinfo20230701 (2026.05.26~66bdd1a0-r1)
+(413/594) Installing liblua5.1.5 (5.1.5-r11)
+(414/594) Installing liblucihttp0 (2023.03.15~9b5b683f-r1)
+(415/594) Installing liblucihttp-lua (2023.03.15~9b5b683f-r1)
+(416/594) Installing liblucihttp-ucode (2023.03.15~9b5b683f-r1)
+(417/594) Installing liblzma (5.8.3-r1)
+(418/594) Installing libminiupnpc (2.3.3-r1)
+(419/594) Installing libnatpmp1 (20230423-r2)
+(420/594) Installing liburing (2.14-r1)
+(421/594) Installing libnvme (1.15-r1)
+(422/594) Installing libopenssl-conf (3.5.7-r1)
+(423/594) Installing libopenssl-legacy (3.5.7-r1)
+(424/594) Installing libparted (3.6-r2)
+(425/594) Installing libpopt0 (1.19-r1)
+(426/594) Installing libruby4.0 (4.0.2-r1)
+(427/594) Installing libtasn1 (4.19.0-r2)
+(428/594) Installing libtirpc (1.3.7-r2)
+(429/594) Installing libubus-lua (2026.06.28~24864e78-r1)
+(430/594) Installing libuci-lua (2025.12.02~66127cd7-r1)
+(431/594) Installing libudev-zero (1.0.4-r1)
+(432/594) Installing libusb-1.0-0 (1.0.29-r1)
+(433/594) Installing libustream-openssl20201210 (2026.03.01~99f1c0db-r1)
+(434/594) Installing libuv1 (1.48.0-r1)
+(435/594) Installing libwebsockets-full (4.5.8-r1)
+(436/594) Installing libyaml (0.2.5-r2)
+(437/594) Installing libzstd (1.5.7-r1)
+(438/594) Installing logd (2025.10.30~6f78fa49-r1)
+(439/594) Installing losetup (2.42.2-r1)
+(440/594) Installing lsblk (2.42.2-r1)
+(441/594) Installing lua (5.1.5-r11)
+(442/594) Installing rpcd (2026.07.19~e37ed9d8-r1)
+(443/594) Installing rpcd-mod-file (2026.07.19~e37ed9d8-r1)
+(444/594) Installing rpcd-mod-luci (20240305-r1)
+(445/594) Installing rpcd-mod-ucode (2026.07.19~e37ed9d8-r1)
+(446/594) Installing ucode-mod-html (1)
+(447/594) Installing ucode-mod-log (2026.07.09~b885dd0f-r1)
+(448/594) Installing luci-base (26.223.24468~39dca4a)
+(449/594) Installing luci-app-package-manager (26.223.24468~39dca4a)
+(450/594) Installing luci-app-firewall (26.223.24468~39dca4a)
+(451/594) Installing luci-lib-uqr (26.223.24468~39dca4a)
+(452/594) Installing rpcd-mod-iwinfo (2026.07.19~e37ed9d8-r1)
+(453/594) Installing luci-mod-network (26.223.24468~39dca4a)
+(454/594) Installing luci-mod-status (26.223.24468~39dca4a)
+(455/594) Installing luci-mod-system (26.223.24468~39dca4a)
+(456/594) Installing luci-mod-admin-full (26.223.24468~39dca4a)
+(457/594) Installing luci-proto-ipv6 (26.223.24468~39dca4a)
+(458/594) Installing luci-proto-ppp (26.223.24468~39dca4a)
+(459/594) Installing luci-theme-aurora (1.2.0-r20260808)
+(460/594) Installing rpcd-mod-rrdns (20170710)
+(461/594) Installing uhttpd (2026.06.16~7b1bec45-r1)
+(462/594) Installing uhttpd-mod-ubus (2026.06.16~7b1bec45-r1)
+(463/594) Installing luci-light (26.223.24468~39dca4a)
+(464/594) Installing luci (26.223.24468~39dca4a)
+(465/594) Installing luci-theme-argon (2.4.2-r20260210)
+(466/594) Installing luci-app-argon-config (1.0-r20230608)
+(467/594) Installing luci-app-aurora-config (1.2.0-r20260808)
+(468/594) Installing luci-app-autoreboot (26.223.24468~39dca4a)
+(469/594) Installing luci-app-cpufreq (26.223.24468~39dca4a)
+(470/594) Installing luci-lib-ip (26.223.24468~39dca4a)
+(471/594) Installing luci-lib-jsonc (26.223.24468~39dca4a)
+(472/594) Installing luci-lib-nixio (26.223.24468~39dca4a)
+(473/594) Installing luci-lib-base (26.223.24468~39dca4a)
+(474/594) Installing ucode-mod-lua (1)
+(475/594) Installing luci-lua-runtime (26.223.24468~39dca4a)
+(476/594) Installing luci-compat (26.223.24468~39dca4a)
+(477/594) Installing luci-app-dae (1.1.0-r22)
+(478/594) Installing luci-app-ddns-go (1.6.8-r20260323)
+(479/594) Installing ttyd (1.7.7-r1)
+(480/594) Installing ucode-mod-socket (2026.07.09~b885dd0f-r1)
+(481/594) Installing luci-app-dockerman (26.223.24468~39dca4a)
+(482/594) Installing luci-app-gecoosac (20260802-r1)
+(483/594) Installing sing-box (1.14.0_beta14-r1)
+(484/594) Installing unzip (6.0-r9)
+(485/594) Installing luci-app-homeproxy (20260809-r1)
+(486/594) Installing luci-app-kucat-config (2.2.1-r20260312)
+(487/594) Installing parted (3.6-r2)
+(488/594) Installing luci-app-mini-diskmanager (1.0.29-r20260215)
+(489/594) Installing luci-app-netwizard (2.1.5-r20260312)
+(490/594) Installing ruby (4.0.2-r1)
+(491/594) Installing ruby-digest (4.0.2-r1)
+(492/594) Installing ruby-enc (4.0.2-r1)
+(493/594) Installing ruby-pstore (4.0.2-r1)
+(494/594) Installing ruby-bigdecimal (4.0.2-r1)
+(495/594) Installing ruby-date (4.0.2-r1)
+(496/594) Installing ruby-stringio (4.0.2-r1)
+(497/594) Installing ruby-psych (4.0.2-r1)
+(498/594) Installing ruby-yaml (4.0.2-r1)
+(499/594) Installing luci-app-openclash (0.47.156)
+(500/594) Installing resize2fs (1.47.4-r1)
+(501/594) Installing luci-app-partexp (2.0.5-r20260318)
+(502/594) Installing lyaml (6.2.7-r2)
+(503/594) Installing microsocks (1.0.5-r2)
+(504/594) Installing resolveip (2)
+(505/594) Installing tcping (2020.07.04~db910183-r1)
+(506/594) Installing luci-app-passwall (26.8.11-r1)
+(507/594) Installing samba4-libs (4.22.7-r3)
+(508/594) Installing samba4-server (4.22.7-r3)
+(509/594) Installing luci-app-samba4 (26.223.24468~39dca4a)
+(510/594) Installing tc-tiny (6.18.0-r2)
+(511/594) Installing sqm-scripts (1.7.2-r1)
+(512/594) Installing luci-app-sqm (26.223.24468~39dca4a)
+(513/594) Installing luci-lib-xterm (4.18.0)
+(514/594) Installing script-utils (2.42.2-r1)
+(515/594) Installing taskd (1.0.3-r2)
+(516/594) Installing luci-lib-taskd (1.0.25)
+(517/594) Installing mount-utils (2.42.2-r1)
+(518/594) Installing xz-utils (5.8.3-r1)
+(519/594) Installing xz (5.8.3-r1)
+(520/594) Installing tar (1.35-r1)
+(521/594) Installing luci-app-store (0.2.0-r3)
+(522/594) Installing luci-app-ttyd (26.223.24468~39dca4a)
+(523/594) Installing miniupnpd-nftables (2.3.9-r3)
+(524/594) Installing luci-app-upnp (26.223.24468~39dca4a)
+(525/594) Installing vlmcsd (2020.03.30~e5990804-r8)
+(526/594) Installing luci-app-vlmcsd (26.223.24468~39dca4a)
+(527/594) Installing luci-app-wolultra (20260802-r1)
+(528/594) Installing zerotier (1.16.2-r1)
+(529/594) Installing luci-app-zerotier (26.223.24468~39dca4a)
+(530/594) Installing luci-i18n-argon-config-zh-cn (26.139.79646~29d7c57)
+(531/594) Installing luci-i18n-aurora-config-zh-cn (26.220.29449~110aeca)
+(532/594) Installing luci-i18n-autoreboot-zh-cn (26.223.24468~39dca4a)
+(533/594) Installing luci-i18n-base-zh-cn (26.223.24468~39dca4a)
+(534/594) Installing luci-i18n-cpufreq-zh-cn (26.223.24468~39dca4a)
+(535/594) Installing luci-i18n-dae-zh-cn (26.198.07003~1197ca6)
+(536/594) Installing luci-i18n-ddns-go-zh-cn (26.174.43440~7092e6d)
+(537/594) Installing luci-i18n-dockerman-zh-cn (26.223.24468~39dca4a)
+(538/594) Installing luci-i18n-firewall-zh-cn (26.223.24468~39dca4a)
+(539/594) Installing luci-i18n-gecoosac-zh-cn (20260802-r1)
+(540/594) Installing luci-i18n-homeproxy-zh-cn (20260809-r1)
+(541/594) Installing luci-i18n-kucat-config-zh-cn (26.071.61416~e51de5e)
+(542/594) Installing luci-i18n-mini-diskmanager-zh-cn (26.055.40085~4b2b733)
+(543/594) Installing luci-i18n-netwizard-zh-cn (26.071.50141~7867a28)
+(544/594) Installing wget-ssl (1.25.0-r5)
+(545/594) Installing luci-theme-noobwrt (1.1.7-r20260407)
+(546/594) Installing luci-i18n-noobwrt-zh-cn (26.181.40042~f227ad6)
+(547/594) Installing luci-i18n-package-manager-zh-cn (26.223.24468~39dca4a)
+(548/594) Installing luci-i18n-partexp-zh-cn (26.088.58914~236187c)
+(549/594) Installing luci-i18n-passwall-zh-cn (26.8.11)
+(550/594) Installing luci-i18n-samba4-zh-cn (26.223.24468~39dca4a)
+(551/594) Installing luci-i18n-sqm-zh-cn (26.223.24468~39dca4a)
+(552/594) Installing luci-i18n-ttyd-zh-cn (26.223.24468~39dca4a)
+(553/594) Installing luci-i18n-upnp-zh-cn (26.223.24468~39dca4a)
+(554/594) Installing luci-i18n-vlmcsd-zh-cn (26.223.24468~39dca4a)
+(555/594) Installing luci-i18n-wolultra-zh-cn (20260802-r1)
+(556/594) Installing luci-i18n-zerotier-zh-cn (26.223.24468~39dca4a)
+(557/594) Installing luci-lib-ipkg (26.223.24468~39dca4a)
+(558/594) Installing relayd (2025.10.04~708a76fa-r1)
+(559/594) Installing luci-proto-relay (26.223.24468~39dca4a)
+(560/594) Installing wireguard-tools (1.0.20260223-r1)
+(561/594) Installing luci-proto-wireguard (26.223.24468~39dca4a)
+(562/594) Installing luci-theme-kucat (3.3.2-r20260329)
+(563/594) Installing mmc-utils (2025.12.21~8f41ccbb-r1)
+(564/594) Installing mtd (28)
+(565/594) Installing nand-utils (2.3.1-r1)
+(566/594) Installing nvme-cli (2.15-r1)
+(567/594) Installing odhcp6c (2026.06.27~10a52220-r3)
+(568/594) Installing odhcpd-ipv6only (2026.06.28~68f38269-r1)
+(569/594) Installing openssh-keygen (10.4_p1-r1)
+(570/594) Installing openssh-sftp-server (10.4_p1-r1)
+(571/594) Installing openssl-util (3.5.7-r1)
+(572/594) Installing shellsync (0.2-r2)
+(573/594) Installing ppp (2.5.3-r2)
+(574/594) Installing ppp-mod-pppoe (2.5.3-r2)
+(575/594) Installing procd-ujail (2026.06.17~60fdbf00-r1)
+(576/594) Installing proto-bonding (2021.04.09-r1)
+(577/594) Installing sfdisk (2.42.2-r1)
+(578/594) Installing sgdisk (1.0.10-r1)
+(579/594) Installing shadowsocks-rust-sslocal (1.24.0-r1)
+(580/594) Installing simple-obfs-client (0.0.5-r2)
+(581/594) Installing smartmontools (7.5-r1)
+(582/594) Installing smartmontools-drivedb (7.5-r1)
+(583/594) Installing uboot-envtools (2026.07-r1)
+(584/594) Installing uci (2025.12.02~66127cd7-r1)
+(585/594) Installing urandom-seed (3)
+(586/594) Installing urngd (2025.10.03~f17e33d9-r1)
+(587/594) Installing usb-modeswitch (2025.10.04~9b4d0a6e-r1)
+(588/594) Installing usbids (0.407-r1)
+(589/594) Installing usbutils (019-r1)
+(590/594) Installing usbmuxd (2025.02.01~523f7004-r1)
+(591/594) Installing v2ray-plugin (5.49.0-r1)
+(592/594) Installing wpad-openssl (2026.07.09~f08f2749-r1)
+(593/594) Installing wsdd2 (2023.12.21~b676d8ac-r2)
+(594/594) Installing xray-core (26.3.27-r1)
+2 errors; 604.0 MiB in 594 packages
+make[2]: *** [package/Makefile:100: package/install] Error 2
+make[2]: Leaving directory '/mnt/build_wrt'
+make[1]: *** [package/Makefile:193: /mnt/build_wrt/staging_dir/target-aarch64_cortex-a53_musl/stamp/.package_install] Error 2
+make[1]: Leaving directory '/mnt/build_wrt'
+make: *** [/mnt/build_wrt/include/toplevel.mk:233: world] Error 2
+
+--- RECENT ERROR LOGS IN BUILD DIR ---
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/aarch64-openwrt-linux-musl/libgcc/config.log ===
+build_os='linux-gnu'
+build_subdir='build-x86_64-pc-linux-gnu'
+build_vendor='pc'
+cpu_type='aarch64'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+decimal_float='no'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+double_type_size='64'
+dvidir='${docdir}'
+enable_decimal_float='no'
+enable_execute_stack='enable-execute-stack-empty.c'
+enable_gcov='yes'
+enable_shared='yes'
+enable_vtable_verify='no'
+exec_prefix='${prefix}'
+extra_parts='crtbegin.o crtbeginS.o crtbeginT.o crtend.o crtendS.o crtfastmath.o'
+fixed_point='no'
+force_explicit_eh_registry=''
+get_gcc_base_ver='cat'
+host='aarch64-openwrt-linux-musl'
+host_alias='aarch64-openwrt-linux-musl'
+host_cpu='aarch64'
+host_noncanonical='aarch64-openwrt-linux-musl'
+host_os='linux-musl'
+host_subdir='.'
+host_vendor='openwrt'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+libgcc_topdir='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/libgcc/..'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+long_double_type_size='128'
+mandir='${datarootdir}/man'
+md_unwind_header='aarch64/linux-unwind.h'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+real_host_noncanonical='aarch64-openwrt-linux-musl'
+sbindir='${exec_prefix}/sbin'
+set_have_cc_tls='-DHAVE_CC_TLS'
+set_use_emutls=''
+sfp_machine_header='aarch64/sfp-machine.h'
+sharedstatedir='${prefix}/com'
+slibdir='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/lib'
+solaris_ld_v2_maps=''
+sysconfdir='${prefix}/etc'
+target_alias='aarch64-openwrt-linux-musl'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_subdir='aarch64-openwrt-linux-musl'
+thread_header='gthr-posix.h'
+tm_defines=''
+tm_file=' $(srcdir)/config/aarch64/value-unwind.h'
+tmake_file=' $(srcdir)/config/t-crtstuff-pic $(srcdir)/config/t-libgcc-pic $(srcdir)/config/t-eh-dw2-dip $(srcdir)/config/t-slibgcc $(srcdir)/config/t-slibgcc-gld $(srcdir)/config/t-slibgcc-elf-ver $(srcdir)/config/t-linux $(srcdir)/config/aarch64/t-aarch64 $(srcdir)/config/aarch64/t-lse $(srcdir)/config/t-slibgcc-libgcc $(srcdir)/config/aarch64/t-softfp $(srcdir)/config/t-softfp $(srcdir)/config/t-crtfm $(srcdir)/config/t-dfprules $(srcdir)/config/aarch64/t-heap-trampoline $(srcdir)/config/t-gthr-noweak'
+toolexecdir='$(exec_prefix)/$(target_noncanonical)'
+toolexeclibdir='$(toolexecdir)/lib'
+unwind_header='unwind-generic.h'
+use_tm_clone_registry='-DUSE_TM_CLONE_REGISTRY=0'
+vis_hide='-fvisibility=hidden -DHIDE_EXPORTS'
+with_aix_soname='aix'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "GNU C Runtime Library"
+#define PACKAGE_TARNAME "libgcc"
+#define PACKAGE_VERSION "1.0"
+#define PACKAGE_STRING "GNU C Runtime Library 1.0"
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL "http://www.gnu.org/software/libgcc/"
+#define SIZEOF_DOUBLE 8
+#define SIZEOF_LONG_DOUBLE 16
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_FTW_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_STRING_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_SYS_AUXV_H 1
+#define HAVE_SYS_MMAN_H 1
+#define STDC_HEADERS 1
+#define HAVE_GETIPINFO 1
+#define AS_HIDDEN_DIRECTIVE .hidden
+#define HAVE_AS_CFI_SECTIONS 1
+#define HAVE_AS_LSE 1
+#define HAVE_AS_VARIANT_PCS 1
+#define HAVE_INIT_PRIORITY 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/aarch64-openwrt-linux-musl/libvtv/config.log ===
+ac_ct_DUMPBIN=''
+am__EXEEXT_FALSE=''
+am__EXEEXT_TRUE='#'
+am__fastdepCC_FALSE='#'
+am__fastdepCC_TRUE=''
+am__fastdepCXX_FALSE='#'
+am__fastdepCXX_TRUE=''
+am__include='include'
+am__isrc=' -I$(srcdir)'
+am__leading_dot='.'
+am__nodep='_no'
+am__quote=''
+am__tar='$${TAR-tar} chof - "$$tardir"'
+am__untar='$${TAR-tar} xf -'
+bindir='${exec_prefix}/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+enable_shared='yes'
+enable_static='yes'
+exec_prefix='${prefix}'
+get_gcc_base_ver='cat'
+host='aarch64-openwrt-linux-musl'
+host_alias='aarch64-openwrt-linux-musl'
+host_cpu='aarch64'
+host_os='linux-musl'
+host_vendor='openwrt'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+install_sh='${SHELL} /mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+libtool_VERSION='1:0:0'
+libvtv_builddir='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/aarch64-openwrt-linux-musl/libvtv'
+libvtv_srcdir='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/libvtv'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+lt_host_flags=''
+mandir='${datarootdir}/man'
+mkdir_p='$(MKDIR_P)'
+multi_basedir='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/libvtv/..'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_os='linux-musl'
+target_vendor='openwrt'
+toolexecdir='$(exec_prefix)/$(target_alias)'
+toolexeclibdir='$(toolexecdir)/lib'
+toplevel_builddir='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/aarch64-openwrt-linux-musl/libvtv/..'
+toplevel_srcdir='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/libvtv/..'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "GNU Vtable Verification Runtime Library"
+#define PACKAGE_TARNAME "libvtv"
+#define PACKAGE_VERSION "1.0"
+#define PACKAGE_STRING "GNU Vtable Verification Runtime Library 1.0"
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL "http://www.gnu.org/software/libvtv/"
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define PACKAGE "libvtv"
+#define VERSION "1.0"
+#define HAVE_SECURE_GETENV 1
+#define HAVE_DLFCN_H 1
+#define LT_OBJDIR ".libs/"
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/build-x86_64-pc-linux-gnu/libiberty/config.log ===
+#define HAVE_BCOPY 1
+#define HAVE_BSEARCH 1
+#define HAVE_BZERO 1
+#define HAVE_CALLOC 1
+#define HAVE_CLOCK 1
+#define HAVE_FFS 1
+#define HAVE_GETCWD 1
+#define HAVE_GETPAGESIZE 1
+#define HAVE_GETTIMEOFDAY 1
+#define HAVE_INDEX 1
+#define HAVE_INSQUE 1
+#define HAVE_MEMCHR 1
+#define HAVE_MEMCMP 1
+#define HAVE_MEMCPY 1
+#define HAVE_MEMMEM 1
+#define HAVE_MEMMOVE 1
+#define HAVE_MEMPCPY 1
+#define HAVE_MEMSET 1
+#define HAVE_MKSTEMPS 1
+#define HAVE_PUTENV 1
+#define HAVE_RANDOM 1
+#define HAVE_RENAME 1
+#define HAVE_RINDEX 1
+#define HAVE_SETENV 1
+#define HAVE_SNPRINTF 1
+#define HAVE_SIGSETMASK 1
+#define HAVE_STPCPY 1
+#define HAVE_STPNCPY 1
+#define HAVE_STRCASECMP 1
+#define HAVE_STRCHR 1
+#define HAVE_STRDUP 1
+#define HAVE_STRNCASECMP 1
+#define HAVE_STRNDUP 1
+#define HAVE_STRNLEN 1
+#define HAVE_STRRCHR 1
+#define HAVE_STRSTR 1
+#define HAVE_STRTOD 1
+#define HAVE_STRTOL 1
+#define HAVE_STRTOUL 1
+#define HAVE_STRTOLL 1
+#define HAVE_STRTOULL 1
+#define HAVE_STRVERSCMP 1
+#define HAVE_TMPNAM 1
+#define HAVE_VASPRINTF 1
+#define HAVE_VFPRINTF 1
+#define HAVE_VPRINTF 1
+#define HAVE_VSNPRINTF 1
+#define HAVE_VSPRINTF 1
+#define HAVE_WAITPID 1
+#define STACK_DIRECTION 1
+#define HAVE_FORK 1
+#define HAVE_VFORK 1
+#define HAVE_WORKING_VFORK 1
+#define HAVE_WORKING_FORK 1
+#define HAVE___FSETLOCKING 1
+#define HAVE_CANONICALIZE_FILE_NAME 1
+#define HAVE_DUP3 1
+#define HAVE_GETRLIMIT 1
+#define HAVE_GETRUSAGE 1
+#define HAVE_GETTIMEOFDAY 1
+#define HAVE_ON_EXIT 1
+#define HAVE_PIPE2 1
+#define HAVE_POSIX_SPAWN 1
+#define HAVE_POSIX_SPAWNP 1
+#define HAVE_PSIGNAL 1
+#define HAVE_REALPATH 1
+#define HAVE_SETRLIMIT 1
+#define HAVE_STRERROR 1
+#define HAVE_STRSIGNAL 1
+#define HAVE_SYSCONF 1
+#define HAVE_TIMES 1
+#define HAVE_WAIT3 1
+#define HAVE_WAIT4 1
+#define HAVE_SBRK 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_FFS 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_SNPRINTF 1
+#define HAVE_DECL_VSNPRINTF 1
+#define HAVE_DECL_CALLOC 1
+#define HAVE_DECL_GETENV 1
+#define HAVE_DECL_GETOPT 1
+#define HAVE_DECL_MALLOC 1
+#define HAVE_DECL_REALLOC 1
+#define HAVE_DECL_SBRK 1
+#define HAVE_DECL_STRTOL 1
+#define HAVE_DECL_STRTOUL 1
+#define HAVE_DECL_STRTOLL 1
+#define HAVE_DECL_STRTOULL 1
+#define HAVE_DECL_STRVERSCMP 1
+#define HAVE_DECL_STRNLEN 1
+#define HAVE_X86_SHA1_HW_SUPPORT 1
+#define HAVE_STDLIB_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_SYS_PARAM_H 1
+#define HAVE_GETPAGESIZE 1
+#define HAVE_MMAP 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/build-x86_64-pc-linux-gnu/libcpp/config.log ===
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_os='linux-musl'
+target_vendor='openwrt'
+warn='-W -Wall -Wno-narrowing -Wwrite-strings -Wmissing-format-attribute'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "cpplib"
+#define PACKAGE_TARNAME "cpplib"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "cpplib  "
+#define PACKAGE_BUGREPORT "gcc-bugs@gcc.gnu.org"
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define TIME_WITH_SYS_TIME 1
+#define STRING_WITH_STRINGS 1
+#define HAVE_LOCALE_H 1
+#define HAVE_FCNTL_H 1
+#define HAVE_LIMITS_H 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_STRING_H 1
+#define HAVE_SYS_FILE_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_OBSTACK 1
+#define HAVE_UINTPTR_T 1
+#define SIZEOF_INT 4
+#define SIZEOF_LONG 8
+#define HAVE_CLEARERR_UNLOCKED 1
+#define HAVE_FEOF_UNLOCKED 1
+#define HAVE_FERROR_UNLOCKED 1
+#define HAVE_FFLUSH_UNLOCKED 1
+#define HAVE_FGETC_UNLOCKED 1
+#define HAVE_FGETS_UNLOCKED 1
+#define HAVE_FILENO_UNLOCKED 1
+#define HAVE_FPUTC_UNLOCKED 1
+#define HAVE_FPUTS_UNLOCKED 1
+#define HAVE_FREAD_UNLOCKED 1
+#define HAVE_FWRITE_UNLOCKED 1
+#define HAVE_GETCHAR_UNLOCKED 1
+#define HAVE_GETC_UNLOCKED 1
+#define HAVE_PUTCHAR_UNLOCKED 1
+#define HAVE_PUTC_UNLOCKED 1
+#define HAVE_SETLOCALE 1
+#define HAVE_DECL_ABORT 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_ERRNO 0
+#define HAVE_DECL_GETOPT 1
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_CLEARERR_UNLOCKED 1
+#define HAVE_DECL_FEOF_UNLOCKED 1
+#define HAVE_DECL_FERROR_UNLOCKED 1
+#define HAVE_DECL_FFLUSH_UNLOCKED 1
+#define HAVE_DECL_FGETC_UNLOCKED 1
+#define HAVE_DECL_FGETS_UNLOCKED 1
+#define HAVE_DECL_FILENO_UNLOCKED 1
+#define HAVE_DECL_FPRINTF_UNLOCKED 0
+#define HAVE_DECL_FPUTC_UNLOCKED 1
+#define HAVE_DECL_FPUTS_UNLOCKED 1
+#define HAVE_DECL_FREAD_UNLOCKED 1
+#define HAVE_DECL_FWRITE_UNLOCKED 1
+#define HAVE_DECL_GETCHAR_UNLOCKED 1
+#define HAVE_DECL_GETC_UNLOCKED 1
+#define HAVE_DECL_PUTCHAR_UNLOCKED 1
+#define HAVE_DECL_PUTC_UNLOCKED 1
+#define HAVE_ALLOCA_H 1
+#define HAVE_ALLOCA 1
+#define STDC_HEADERS 1
+#define HAVE_LANGINFO_CODESET 1
+#define SIZEOF_INO_T 8
+#define SIZEOF_DEV_T 8
+#define ICONV_CONST 
+#define PACKAGE "cpplib"
+#define CHECKING_P 0
+#define ENABLE_ASSERT_CHECKING 1
+#define ENABLE_CANONICAL_SYSTEM_HEADERS 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/build-x86_64-pc-linux-gnu/fixincludes/config.log ===
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_os='linux-musl'
+target_vendor='openwrt'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "fixincludes"
+#define PACKAGE_TARNAME "fixincludes"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "fixincludes  "
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define EXE_EXT ""
+#define STDC_HEADERS 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_FCNTL_H 1
+#define HAVE_SYS_FILE_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_CLEARERR_UNLOCKED 1
+#define HAVE_FEOF_UNLOCKED 1
+#define HAVE_FERROR_UNLOCKED 1
+#define HAVE_FFLUSH_UNLOCKED 1
+#define HAVE_FGETC_UNLOCKED 1
+#define HAVE_FGETS_UNLOCKED 1
+#define HAVE_FILENO_UNLOCKED 1
+#define HAVE_FPUTC_UNLOCKED 1
+#define HAVE_FPUTS_UNLOCKED 1
+#define HAVE_FREAD_UNLOCKED 1
+#define HAVE_FWRITE_UNLOCKED 1
+#define HAVE_GETCHAR_UNLOCKED 1
+#define HAVE_GETC_UNLOCKED 1
+#define HAVE_PUTCHAR_UNLOCKED 1
+#define HAVE_PUTC_UNLOCKED 1
+#define HAVE_DECL_ABORT 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_ERRNO 0
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_MEMMEM 1
+#define HAVE_DECL_CLEARERR_UNLOCKED 1
+#define HAVE_DECL_FEOF_UNLOCKED 1
+#define HAVE_DECL_FERROR_UNLOCKED 1
+#define HAVE_DECL_FFLUSH_UNLOCKED 1
+#define HAVE_DECL_FGETC_UNLOCKED 1
+#define HAVE_DECL_FGETS_UNLOCKED 1
+#define HAVE_DECL_FILENO_UNLOCKED 1
+#define HAVE_DECL_FPRINTF_UNLOCKED 0
+#define HAVE_DECL_FPUTC_UNLOCKED 1
+#define HAVE_DECL_FPUTS_UNLOCKED 1
+#define HAVE_DECL_FREAD_UNLOCKED 1
+#define HAVE_DECL_FWRITE_UNLOCKED 1
+#define HAVE_DECL_GETCHAR_UNLOCKED 1
+#define HAVE_DECL_GETC_UNLOCKED 1
+#define HAVE_DECL_PUTCHAR_UNLOCKED 1
+#define HAVE_DECL_PUTC_UNLOCKED 1
+#define HAVE_MMAP_FILE 1
+#define HAVE_MMAP_DEV_ZERO 1
+#define HAVE_MMAP_ANON 1
+#define SED_PROGRAM "/mnt/build_wrt/staging_dir/host/bin/sed"
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-final/fixincludes/config.log ===
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_os='linux-musl'
+target_vendor='openwrt'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "fixincludes"
+#define PACKAGE_TARNAME "fixincludes"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "fixincludes  "
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define EXE_EXT ""
+#define STDC_HEADERS 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_FCNTL_H 1
+#define HAVE_SYS_FILE_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_CLEARERR_UNLOCKED 1
+#define HAVE_FEOF_UNLOCKED 1
+#define HAVE_FERROR_UNLOCKED 1
+#define HAVE_FFLUSH_UNLOCKED 1
+#define HAVE_FGETC_UNLOCKED 1
+#define HAVE_FGETS_UNLOCKED 1
+#define HAVE_FILENO_UNLOCKED 1
+#define HAVE_FPUTC_UNLOCKED 1
+#define HAVE_FPUTS_UNLOCKED 1
+#define HAVE_FREAD_UNLOCKED 1
+#define HAVE_FWRITE_UNLOCKED 1
+#define HAVE_GETCHAR_UNLOCKED 1
+#define HAVE_GETC_UNLOCKED 1
+#define HAVE_PUTCHAR_UNLOCKED 1
+#define HAVE_PUTC_UNLOCKED 1
+#define HAVE_DECL_ABORT 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_ERRNO 0
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_MEMMEM 1
+#define HAVE_DECL_CLEARERR_UNLOCKED 1
+#define HAVE_DECL_FEOF_UNLOCKED 1
+#define HAVE_DECL_FERROR_UNLOCKED 1
+#define HAVE_DECL_FFLUSH_UNLOCKED 1
+#define HAVE_DECL_FGETC_UNLOCKED 1
+#define HAVE_DECL_FGETS_UNLOCKED 1
+#define HAVE_DECL_FILENO_UNLOCKED 1
+#define HAVE_DECL_FPRINTF_UNLOCKED 0
+#define HAVE_DECL_FPUTC_UNLOCKED 1
+#define HAVE_DECL_FPUTS_UNLOCKED 1
+#define HAVE_DECL_FREAD_UNLOCKED 1
+#define HAVE_DECL_FWRITE_UNLOCKED 1
+#define HAVE_DECL_GETCHAR_UNLOCKED 1
+#define HAVE_DECL_GETC_UNLOCKED 1
+#define HAVE_DECL_PUTCHAR_UNLOCKED 1
+#define HAVE_DECL_PUTC_UNLOCKED 1
+#define HAVE_MMAP_FILE 1
+#define HAVE_MMAP_DEV_ZERO 1
+#define HAVE_MMAP_ANON 1
+#define SED_PROGRAM "/mnt/build_wrt/staging_dir/host/bin/sed"
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/gcc/config.log ===
+#define HAVE_DECL_MALLINFO2 1
+#define HAVE_DECL_LDGETNAME 0
+#define HAVE_DECL_TIMES 1
+#define HAVE_DECL_SIGALTSTACK 1
+#define HAVE_STRUCT_TMS 1
+#define HAVE_CLOCK_T 1
+#define HOST_HAS_F_SETLKW 1
+#define HOST_HAS_O_CLOEXEC 1
+#define HAVE_FCNTL_H 1
+#define HOST_HAS_O_NONBLOCK 1
+#define HOST_HAS_PERSONALITY_ADDR_NO_RANDOMIZE 1
+#define HAVE_AF_UNIX 1
+#define HAVE_AF_INET6 1
+#define HAVE_GNU_LD 1
+#define HAVE_GNU_AS 1
+#define DEFAULT_USE_CXA_ATEXIT 2
+#define EXTRA_MODES_FILE "config/aarch64/aarch64-modes.def"
+#define LTOPLUGINSONAME "liblto_plugin.so"
+#define HAVE_DLFCN_H 1
+#define LT_OBJDIR ".libs/"
+#define DARWIN_DO_EXTRA_RPATH 0
+#define DARWIN_ADD_RPATH ""
+#define PLUGIN_LD_SUFFIX "ld"
+#define HAVE_GAS_BALIGN_AND_P2ALIGN 1
+#define HAVE_GAS_MAX_SKIP_P2ALIGN 1
+#define HAVE_GAS_SUBSECTION_ORDERING 1
+#define HAVE_GAS_WEAK 1
+#define HAVE_GAS_WEAKREF 1
+#define HAVE_GNU_INDIRECT_FUNCTION 0
+#define HAVE_GAS_HIDDEN 1
+#define HAVE_LD_RO_RW_SECTION_MIXING 1
+#define HAVE_INITFINI_ARRAY_SUPPORT 1
+#define HAVE_AS_LEB128 1
+#define HAVE_GAS_CFI_DIRECTIVE 1
+#define HAVE_GAS_CFI_PERSONALITY_DIRECTIVE 1
+#define HAVE_GAS_CFI_SECTIONS_DIRECTIVE 1
+#define HAVE_GAS_SECTION_EXCLUDE 1
+#define HAVE_GAS_SHF_GNU_RETAIN 1
+#define HAVE_GAS_SECTION_LINK_ORDER 1
+#define HAVE_GAS_SHF_MERGE 1
+#define HAVE_LD_ALIGNED_SHF_MERGE 1
+#define HAVE_COMDAT_GROUP 1
+#define HAVE_GAS_LOC_STMT 1
+#define HAVE_GAS_DISCRIMINATOR 1
+#define HAVE_AS_TLS 1
+#define HAVE_LD_STATIC_DYNAMIC 1
+#define LD_STATIC_OPTION "-Bstatic"
+#define LD_DYNAMIC_OPTION "-Bdynamic"
+#define HAVE_LD_DEMANGLE 1
+#define HAVE_LTO_PLUGIN 2
+#define HAVE_AS_MABI_OPTION 1
+#define HAVE_AS_SMALL_PIC_RELOCS 1
+#define HAVE_AS_DWARF2_DEBUG_LINE 1
+#define HAVE_AS_DWARF2_DEBUG_VIEW 1
+#define HAVE_AS_GDWARF2_DEBUG_FLAG 1
+#define HAVE_AS_GDWARF_5_DEBUG_FLAG 1
+#define HAVE_AS_WORKING_DWARF_N_FLAG 1
+#define HAVE_AS_DEBUG_PREFIX_MAP 1
+#define HAVE_AS_COMPRESS_DEBUG 2
+#define AS_COMPRESS_DEBUG_OPTION "--compress-debug-sections"
+#define AS_NO_COMPRESS_DEBUG_OPTION "--nocompress-debug-sections"
+#define TARGET_GLIBC_MAJOR 0
+#define TARGET_GLIBC_MINOR 0
+#define HAVE_AS_LINE_ZERO 1
+#define HAVE_LD_EH_FRAME_HDR 1
+#define HAVE_LD_EH_FRAME_CIEV3 1
+#define HAVE_LD_PIE 1
+#define HAVE_LD_PIE_COPYRELOC 0
+#define HAVE_LD_EH_GC_SECTIONS 1
+#define HAVE_LD_COMPRESS_DEBUG 2
+#define LD_COMPRESS_DEBUG_OPTION "--compress-debug-sections"
+#define HAVE_LD_AS_NEEDED 1
+#define LD_AS_NEEDED_OPTION "--push-state --as-needed"
+#define LD_NO_AS_NEEDED_OPTION "--pop-state"
+#define HAVE_LD_BUILDID 1
+#define HAVE_LD_SYSROOT 1
+#define TARGET_LIBC_PROVIDES_SSP 1
+#define TARGET_DL_ITERATE_PHDR 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_LTO 1
+#define ENABLE_PLUGIN 1
+#define ENABLE_LIBQUADMATH_SUPPORT 1
+#define DIAGNOSTICS_COLOR_DEFAULT -1
+#define DIAGNOSTICS_URLS_DEFAULT DIAGNOSTICS_URL_AUTO
+#define HAVE_LD_PUSHPOPSTATE_SUPPORT 1
+#define HAVE_LD_NOW_SUPPORT 1
+#define HAVE_LD_RELRO_SUPPORT 1
+#define HAVE_FHARDENED_SUPPORT 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/lto-plugin/config.log ===
+ac_lto_plugin_extra_ldflags='-pthread'
+ac_lto_plugin_ldflags='-Wc,-static-libgcc'
+ac_lto_plugin_warn_cflags='-Wall'
+accel_dir_suffix=''
+am__EXEEXT_FALSE=''
+am__EXEEXT_TRUE='#'
+am__fastdepCC_FALSE='#'
+am__fastdepCC_TRUE=''
+am__include='include'
+am__isrc=' -I$(srcdir)'
+am__leading_dot='.'
+am__nodep='_no'
+am__quote=''
+am__tar='$${TAR-tar} chof - "$$tardir"'
+am__untar='$${TAR-tar} xf -'
+bindir='${exec_prefix}/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_libsubdir='build-x86_64-pc-linux-gnu'
+build_os='linux-gnu'
+build_subdir='build-x86_64-pc-linux-gnu'
+build_vendor='pc'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+enable_host_bind_now=''
+exec_prefix='${prefix}'
+gcc_build_dir='../gcc'
+get_gcc_base_ver='cat'
+host='x86_64-pc-linux-gnu'
+host_alias='x86_64-pc-linux-gnu'
+host_cpu='x86_64'
+host_os='linux-gnu'
+host_subdir='.'
+host_vendor='pc'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+install_sh='${SHELL} /mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+lt_host_flags=''
+mandir='${datarootdir}/man'
+mkdir_p='$(MKDIR_P)'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+real_target_noncanonical='aarch64-openwrt-linux-musl'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_os='linux-musl'
+target_subdir='aarch64-openwrt-linux-musl'
+target_vendor='openwrt'
+with_libiberty='../libiberty'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "LTO plugin for ld"
+#define PACKAGE_TARNAME "lto-plugin"
+#define PACKAGE_VERSION "0.1"
+#define PACKAGE_STRING "LTO plugin for ld 0.1"
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define PACKAGE "lto-plugin"
+#define VERSION "0.1"
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define HAVE_PTHREAD_LOCKING 1
+#define HAVE_DLFCN_H 1
+#define LT_OBJDIR ".libs/"
+#define HAVE_SYS_WAIT_H 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/libdecnumber/config.log ===
+DEFS='-DHAVE_CONFIG_H'
+ECHO_C=''
+ECHO_N='-n'
+ECHO_T=''
+EGREP='/mnt/build_wrt/staging_dir/host/bin/grep -E'
+EXEEXT=''
+GREP='/mnt/build_wrt/staging_dir/host/bin/grep'
+LDFLAGS='-static-libstdc++ -static-libgcc '
+LIBOBJS=''
+LIBS=''
+LTLIBOBJS=''
+MAINT='#'
+OBJEXT='o'
+PACKAGE_BUGREPORT='gcc-bugs@gcc.gnu.org'
+PACKAGE_NAME='libdecnumber'
+PACKAGE_STRING='libdecnumber  '
+PACKAGE_TARNAME='libdecnumber'
+PACKAGE_URL=''
+PACKAGE_VERSION=' '
+PATH_SEPARATOR=':'
+PICFLAG=''
+RANLIB='ranlib --plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so'
+SET_MAKE=''
+SHELL='/bin/bash'
+WARN_CFLAGS='-W -Wall -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wold-style-definition -Wmissing-format-attribute -Wcast-qual'
+WARN_PEDANTIC='-pedantic -Wno-long-long'
+WERROR=''
+ac_ct_CC=''
+bindir='${exec_prefix}/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+enable_decimal_float='dpd'
+enable_host_pie=''
+enable_host_shared=''
+exec_prefix='${prefix}'
+host='x86_64-pc-linux-gnu'
+host_alias='x86_64-pc-linux-gnu'
+host_cpu='x86_64'
+host_os='linux-gnu'
+host_vendor='pc'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+nolto_flags='-fno-lto'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_os='linux-musl'
+target_vendor='openwrt'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "libdecnumber"
+#define PACKAGE_TARNAME "libdecnumber"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "libdecnumber  "
+#define PACKAGE_BUGREPORT "gcc-bugs@gcc.gnu.org"
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_CTYPE_H 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STRING_H 1
+#define HAVE_STDIO_H 1
+#define SIZEOF_INT 4
+#define SIZEOF_LONG 8
+#define STDC_HEADERS 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/libbacktrace/config.log ===
+VIEW_FILE='mmapio.lo'
+WARN_FLAGS='-W -Wall -Wwrite-strings -Wstrict-prototypes -Wmissing-prototypes -Wold-style-definition -Wmissing-format-attribute -Wcast-qual'
+XZ='xz'
+ac_ct_CC=''
+ac_ct_DUMPBIN=''
+am__EXEEXT_FALSE=''
+am__EXEEXT_TRUE='#'
+am__isrc=' -I$(srcdir)'
+am__leading_dot='.'
+am__tar='$${TAR-tar} chof - "$$tardir"'
+am__untar='$${TAR-tar} xf -'
+bindir='${exec_prefix}/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+exec_prefix='${prefix}'
+host='x86_64-pc-linux-gnu'
+host_alias='x86_64-pc-linux-gnu'
+host_cpu='x86_64'
+host_os='linux-gnu'
+host_vendor='pc'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+install_sh='${SHELL} /mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+libtool_VERSION='1:0:0'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+mkdir_p='$(MKDIR_P)'
+multi_basedir=''
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_os='linux-musl'
+target_vendor='openwrt'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "package-unused"
+#define PACKAGE_TARNAME "libbacktrace"
+#define PACKAGE_VERSION "version-unused"
+#define PACKAGE_STRING "package-unused version-unused"
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define HAVE_DLFCN_H 1
+#define LT_OBJDIR ".libs/"
+#define HAVE_GETIPINFO 1
+#define HAVE_SYNC_FUNCTIONS 1
+#define HAVE_ATOMIC_FUNCTIONS 1
+#define BACKTRACE_ELF_SIZE 64
+#define BACKTRACE_XCOFF_SIZE unused
+#define HAVE_SYS_MMAN_H 1
+#define HAVE_LINK_H 1
+#define HAVE_DL_ITERATE_PHDR 1
+#define HAVE_FCNTL 1
+#define HAVE_DECL_STRNLEN 1
+#define HAVE_DECL_GETPAGESIZE 1
+#define HAVE_LSTAT 1
+#define HAVE_READLINK 1
+#define HAVE_DECL__PGMPTR 0
+#define HAVE_CLOCK_GETTIME 1
+#define HAVE_ZLIB 1
+#define HAVE_ZSTD 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/libiberty/config.log ===
+#define HAVE_BCOPY 1
+#define HAVE_BSEARCH 1
+#define HAVE_BZERO 1
+#define HAVE_CALLOC 1
+#define HAVE_CLOCK 1
+#define HAVE_FFS 1
+#define HAVE_GETCWD 1
+#define HAVE_GETPAGESIZE 1
+#define HAVE_GETTIMEOFDAY 1
+#define HAVE_INDEX 1
+#define HAVE_INSQUE 1
+#define HAVE_MEMCHR 1
+#define HAVE_MEMCMP 1
+#define HAVE_MEMCPY 1
+#define HAVE_MEMMEM 1
+#define HAVE_MEMMOVE 1
+#define HAVE_MEMPCPY 1
+#define HAVE_MEMSET 1
+#define HAVE_MKSTEMPS 1
+#define HAVE_PUTENV 1
+#define HAVE_RANDOM 1
+#define HAVE_RENAME 1
+#define HAVE_RINDEX 1
+#define HAVE_SETENV 1
+#define HAVE_SNPRINTF 1
+#define HAVE_SIGSETMASK 1
+#define HAVE_STPCPY 1
+#define HAVE_STPNCPY 1
+#define HAVE_STRCASECMP 1
+#define HAVE_STRCHR 1
+#define HAVE_STRDUP 1
+#define HAVE_STRNCASECMP 1
+#define HAVE_STRNDUP 1
+#define HAVE_STRNLEN 1
+#define HAVE_STRRCHR 1
+#define HAVE_STRSTR 1
+#define HAVE_STRTOD 1
+#define HAVE_STRTOL 1
+#define HAVE_STRTOUL 1
+#define HAVE_STRTOLL 1
+#define HAVE_STRTOULL 1
+#define HAVE_STRVERSCMP 1
+#define HAVE_TMPNAM 1
+#define HAVE_VASPRINTF 1
+#define HAVE_VFPRINTF 1
+#define HAVE_VPRINTF 1
+#define HAVE_VSNPRINTF 1
+#define HAVE_VSPRINTF 1
+#define HAVE_WAITPID 1
+#define STACK_DIRECTION 1
+#define HAVE_FORK 1
+#define HAVE_VFORK 1
+#define HAVE_WORKING_VFORK 1
+#define HAVE_WORKING_FORK 1
+#define HAVE___FSETLOCKING 1
+#define HAVE_CANONICALIZE_FILE_NAME 1
+#define HAVE_DUP3 1
+#define HAVE_GETRLIMIT 1
+#define HAVE_GETRUSAGE 1
+#define HAVE_GETTIMEOFDAY 1
+#define HAVE_ON_EXIT 1
+#define HAVE_PIPE2 1
+#define HAVE_POSIX_SPAWN 1
+#define HAVE_POSIX_SPAWNP 1
+#define HAVE_PSIGNAL 1
+#define HAVE_REALPATH 1
+#define HAVE_SETRLIMIT 1
+#define HAVE_STRERROR 1
+#define HAVE_STRSIGNAL 1
+#define HAVE_SYSCONF 1
+#define HAVE_TIMES 1
+#define HAVE_WAIT3 1
+#define HAVE_WAIT4 1
+#define HAVE_SBRK 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_FFS 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_SNPRINTF 1
+#define HAVE_DECL_VSNPRINTF 1
+#define HAVE_DECL_CALLOC 1
+#define HAVE_DECL_GETENV 1
+#define HAVE_DECL_GETOPT 1
+#define HAVE_DECL_MALLOC 1
+#define HAVE_DECL_REALLOC 1
+#define HAVE_DECL_SBRK 1
+#define HAVE_DECL_STRTOL 1
+#define HAVE_DECL_STRTOUL 1
+#define HAVE_DECL_STRTOLL 1
+#define HAVE_DECL_STRTOULL 1
+#define HAVE_DECL_STRVERSCMP 1
+#define HAVE_DECL_STRNLEN 1
+#define HAVE_X86_SHA1_HW_SUPPORT 1
+#define HAVE_STDLIB_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_SYS_PARAM_H 1
+#define HAVE_GETPAGESIZE 1
+#define HAVE_MMAP 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/libcody/config.log ===
+ac_cv_env_LDFLAGS_value='-static-libstdc++ -static-libgcc '
+ac_cv_env_LIBS_set=
+ac_cv_env_LIBS_value=
+ac_cv_env_build_alias_set=set
+ac_cv_env_build_alias_value=x86_64-pc-linux-gnu
+ac_cv_env_host_alias_set=set
+ac_cv_env_host_alias_value=x86_64-pc-linux-gnu
+ac_cv_env_target_alias_set=set
+ac_cv_env_target_alias_value=aarch64-openwrt-linux-musl
+ac_cv_host=x86_64-pc-linux-gnu
+ac_cv_objext=o
+ac_cv_prog_AR='ar --plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so'
+ac_cv_prog_RANLIB='ranlib --plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so'
+ac_cv_prog_cxx_g=yes
+ac_cv_search_ZSTD_compress='/mnt/build_wrt/staging_dir/host/lib/libzstd.a -pthread'
+libgcc_cv_fixed_point=no
+
+## ----------------- ##
+## Output variables. ##
+## ----------------- ##
+
+AR='ar --plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so'
+CPPFLAGS=''
+CXX='g++ -std=c++11'
+CXXFLAGS='-O2 -I/mnt/build_wrt/staging_dir/host/include -pipe  '
+DEFS='-DHAVE_CONFIG_H'
+ECHO_C=''
+ECHO_N='-n'
+ECHO_T=''
+EXCEPTIONS=''
+EXEEXT=''
+LDFLAGS='-static-libstdc++ -static-libgcc  -Wl,--no-undefined'
+LD_PICFLAG=''
+LIBOBJS=''
+LIBS=''
+LTLIBOBJS=''
+MAINTAINER=''
+OBJEXT='o'
+PACKAGE_BUGREPORT='github.com/urnathan/libcody'
+PACKAGE_NAME='codylib'
+PACKAGE_STRING='codylib 0.0'
+PACKAGE_TARNAME='codylib'
+PACKAGE_URL=''
+PACKAGE_VERSION='0.0'
+PATH_SEPARATOR=':'
+PICFLAG=''
+RANLIB='ranlib --plugin /usr/libexec/gcc/x86_64-linux-gnu/13/liblto_plugin.so'
+SHELL='/bin/bash'
+ac_ct_CXX=''
+bindir='${exec_prefix}/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_os='linux-gnu'
+build_vendor='pc'
+configure_args=' '\''--srcdir=/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/libcody'\'' '\''--cache-file=./config.cache'\'' '\''--with-bugurl=http://bugs.openwrt.org/'\'' '\''--with-pkgversion=OpenWrt GCC 14.4.0 r0-de810bc'\'' '\''--prefix=/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'\'' '\''--with-gnu-ld'\'' '\''--enable-target-optspace'\'' '\''--disable-libgomp'\'' '\''--disable-libmudflap'\'' '\''--disable-multilib'\'' '\''--disable-libmpx'\'' '\''--disable-nls'\'' '\''--disable-libssp'\'' '\''--disable-tm-clone-registry'\'' '\''--without-isl'\'' '\''--without-cloog'\'' '\''--with-host-libstdcxx=-lstdc++'\'' '\''--with-system-zlib=/mnt/build_wrt/staging_dir/host'\'' '\''--with-zstd=/mnt/build_wrt/staging_dir/host'\'' '\''--with-gmp=/mnt/build_wrt/staging_dir/host'\'' '\''--with-mpfr=/mnt/build_wrt/staging_dir/host'\'' '\''--with-mpc=/mnt/build_wrt/staging_dir/host'\'' '\''--disable-decimal-float'\'' '\''--with-diagnostics-color=auto-if-env'\'' '\''--enable-__cxa_atexit'\'' '\''--enable-libstdcxx-dual-abi'\'' '\''--with-default-libstdcxx-abi=new'\'' '\''--with-newlib'\'' '\''--with-sysroot=/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'\'' '\''--disable-shared'\'' '\''--disable-threads'\'' '\''--enable-languages=c,lto'\'' '\''--program-transform-name=s&^&aarch64-openwrt-linux-musl-&'\'' '\''--disable-option-checking'\'' '\''--build=x86_64-pc-linux-gnu'\'' '\''--host=x86_64-pc-linux-gnu'\'' '\''--target=aarch64-openwrt-linux-musl'\'' '\''build_alias=x86_64-pc-linux-gnu'\'' '\''host_alias=x86_64-pc-linux-gnu'\'' '\''target_alias=aarch64-openwrt-linux-musl'\'' '\''CXX=g++'\'' '\''CXXFLAGS=-O2 -I/mnt/build_wrt/staging_dir/host/include -pipe  '\'' '\''LDFLAGS=-static-libstdc++ -static-libgcc '\'''
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+enable_host_pie=''
+enable_host_shared=''
+exec_prefix='${prefix}'
+host='x86_64-pc-linux-gnu'
+host_alias='x86_64-pc-linux-gnu'
+host_cpu='x86_64'
+host_os='linux-gnu'
+host_vendor='pc'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target_alias='aarch64-openwrt-linux-musl'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "codylib"
+#define PACKAGE_TARNAME "codylib"
+#define PACKAGE_VERSION "0.0"
+#define PACKAGE_STRING "codylib 0.0"
+#define PACKAGE_BUGREPORT "github.com/urnathan/libcody"
+#define PACKAGE_URL ""
+#define NMS_CHECKING 0
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/config.log ===
+build_cpu='x86_64'
+build_libsubdir='build-x86_64-pc-linux-gnu'
+build_noncanonical='x86_64-pc-linux-gnu'
+build_os='linux-gnu'
+build_subdir='build-x86_64-pc-linux-gnu'
+build_tooldir='${exec_prefix}/aarch64-openwrt-linux-musl'
+build_vendor='pc'
+compare_exclusions='gcc/cc*-checksum$(objext) | gcc/ada/*tools/* | gcc/m2/gm2-compiler-boot/M2Version* | gcc/m2/gm2-compiler-boot/SYSTEM* | gcc/m2/gm2version*'
+configdirs=' libiberty zlib libbacktrace libcpp libcody libdecnumber fixincludes gcc libcc1 c++tools lto-plugin'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+do_compare='cmp --ignore-initial=16 $$f1 $$f2'
+docdir='${datarootdir}/doc/${PACKAGE}'
+dvidir='${docdir}'
+exec_prefix='${prefix}'
+extra_host_libiberty_configure_flags='--enable-shared'
+extra_host_zlib_configure_flags=''
+extra_isl_gmp_configure_flags=''
+extra_linker_plugin_configure_flags=''
+extra_linker_plugin_flags=''
+extra_mpc_gmp_configure_flags=''
+extra_mpc_mpfr_configure_flags=''
+extra_mpfr_configure_flags=''
+gcc_host_pie=''
+get_gcc_base_ver='cat'
+gmpinc='-I/mnt/build_wrt/staging_dir/host/include -I/mnt/build_wrt/staging_dir/host/include -I/mnt/build_wrt/staging_dir/host/include '
+gmplibs='-L/mnt/build_wrt/staging_dir/host/lib -L/mnt/build_wrt/staging_dir/host/lib -L/mnt/build_wrt/staging_dir/host/lib -lmpc -lmpfr -lgmp'
+host='x86_64-pc-linux-gnu'
+host_alias='x86_64-pc-linux-gnu'
+host_configargs=' --cache-file=./config.cache  '\''--with-bugurl=http://bugs.openwrt.org/'\'' '\''--with-pkgversion=OpenWrt GCC 14.4.0 r0-de810bc'\'' '\''--prefix=/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'\'' '\''--with-gnu-ld'\'' '\''--enable-target-optspace'\'' '\''--disable-libgomp'\'' '\''--disable-libmudflap'\'' '\''--disable-multilib'\'' '\''--disable-libmpx'\'' '\''--disable-nls'\'' '\''--disable-libssp'\'' '\''--disable-tm-clone-registry'\'' '\''--without-isl'\'' '\''--without-cloog'\'' '\''--with-host-libstdcxx=-lstdc++'\'' '\''--with-system-zlib=/mnt/build_wrt/staging_dir/host'\'' '\''--with-zstd=/mnt/build_wrt/staging_dir/host'\'' '\''--with-gmp=/mnt/build_wrt/staging_dir/host'\'' '\''--with-mpfr=/mnt/build_wrt/staging_dir/host'\'' '\''--with-mpc=/mnt/build_wrt/staging_dir/host'\'' '\''--disable-decimal-float'\'' '\''--with-diagnostics-color=auto-if-env'\'' '\''--enable-__cxa_atexit'\'' '\''--enable-libstdcxx-dual-abi'\'' '\''--with-default-libstdcxx-abi=new'\'' '\''--with-newlib'\'' '\''--with-sysroot=/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'\'' '\''--disable-shared'\'' '\''--disable-threads'\'' '\''--enable-languages=c,lto'\'' --program-transform-name='\''s&^&aarch64-openwrt-linux-musl-&'\'' --disable-option-checking'
+host_cpu='x86_64'
+host_libs_picflag=''
+host_noncanonical='x86_64-pc-linux-gnu'
+host_os='linux-gnu'
+host_pie='no'
+host_shared='no'
+host_subdir='.'
+host_vendor='pc'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+islinc=''
+isllibs=''
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+poststage1_ldflags='-static-libstdc++ -static-libgcc'
+poststage1_libs=''
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+stage1_cflags='-g'
+stage1_checking='--enable-checking=yes,types'
+stage1_languages='c,lto'
+stage1_ldflags='-static-libstdc++ -static-libgcc'
+stage1_libs=''
+stage2_werror_flag=''
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_configargs='--cache-file=./config.cache --with-cross-host=x86_64-pc-linux-gnu   '\''--with-bugurl=http://bugs.openwrt.org/'\'' '\''--with-pkgversion=OpenWrt GCC 14.4.0 r0-de810bc'\'' '\''--prefix=/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'\'' '\''--with-gnu-ld'\'' '\''--enable-target-optspace'\'' '\''--disable-libgomp'\'' '\''--disable-libmudflap'\'' '\''--disable-multilib'\'' '\''--disable-libmpx'\'' '\''--disable-nls'\'' '\''--disable-libssp'\'' '\''--disable-tm-clone-registry'\'' '\''--without-cloog'\'' '\''--with-host-libstdcxx=-lstdc++'\'' '\''--with-system-zlib=/mnt/build_wrt/staging_dir/host'\'' '\''--with-zstd=/mnt/build_wrt/staging_dir/host'\'' '\''--disable-decimal-float'\'' '\''--with-diagnostics-color=auto-if-env'\'' '\''--enable-__cxa_atexit'\'' '\''--enable-libstdcxx-dual-abi'\'' '\''--with-default-libstdcxx-abi=new'\'' '\''--with-newlib'\'' '\''--with-sysroot=/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'\'' '\''--disable-shared'\'' '\''--disable-threads'\'' '\''--enable-languages=c,lto'\'' --program-transform-name='\''s&^&aarch64-openwrt-linux-musl-&'\'' --disable-option-checking --disable-year2038'
+target_configdirs=' libgcc libatomic libquadmath'
+target_cpu='aarch64'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_os='linux-musl'
+target_subdir='aarch64-openwrt-linux-musl'
+target_vendor='openwrt'
+tooldir='${exec_prefix}/aarch64-openwrt-linux-musl'
+
+## ------------------- ##
+## File substitutions. ##
+## ------------------- ##
+
+alphaieee_frag='/dev/null'
+host_makefile_frag='/dev/null'
+ospace_frag='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/config/mt-ospace'
+serialization_dependencies='serdep.tmp'
+target_makefile_frag='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/config/mt-gnu'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME ""
+#define PACKAGE_TARNAME ""
+#define PACKAGE_VERSION ""
+#define PACKAGE_STRING ""
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define HAVE_CXX11 1
+#define LT_OBJDIR ".libs/"
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/libcpp/config.log ===
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_os='linux-musl'
+target_vendor='openwrt'
+warn='-W -Wall -Wno-narrowing -Wwrite-strings -Wmissing-format-attribute'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "cpplib"
+#define PACKAGE_TARNAME "cpplib"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "cpplib  "
+#define PACKAGE_BUGREPORT "gcc-bugs@gcc.gnu.org"
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define TIME_WITH_SYS_TIME 1
+#define STRING_WITH_STRINGS 1
+#define HAVE_LOCALE_H 1
+#define HAVE_FCNTL_H 1
+#define HAVE_LIMITS_H 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_STRING_H 1
+#define HAVE_SYS_FILE_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_OBSTACK 1
+#define HAVE_UINTPTR_T 1
+#define SIZEOF_INT 4
+#define SIZEOF_LONG 8
+#define HAVE_CLEARERR_UNLOCKED 1
+#define HAVE_FEOF_UNLOCKED 1
+#define HAVE_FERROR_UNLOCKED 1
+#define HAVE_FFLUSH_UNLOCKED 1
+#define HAVE_FGETC_UNLOCKED 1
+#define HAVE_FGETS_UNLOCKED 1
+#define HAVE_FILENO_UNLOCKED 1
+#define HAVE_FPUTC_UNLOCKED 1
+#define HAVE_FPUTS_UNLOCKED 1
+#define HAVE_FREAD_UNLOCKED 1
+#define HAVE_FWRITE_UNLOCKED 1
+#define HAVE_GETCHAR_UNLOCKED 1
+#define HAVE_GETC_UNLOCKED 1
+#define HAVE_PUTCHAR_UNLOCKED 1
+#define HAVE_PUTC_UNLOCKED 1
+#define HAVE_SETLOCALE 1
+#define HAVE_DECL_ABORT 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_ERRNO 0
+#define HAVE_DECL_GETOPT 1
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_CLEARERR_UNLOCKED 1
+#define HAVE_DECL_FEOF_UNLOCKED 1
+#define HAVE_DECL_FERROR_UNLOCKED 1
+#define HAVE_DECL_FFLUSH_UNLOCKED 1
+#define HAVE_DECL_FGETC_UNLOCKED 1
+#define HAVE_DECL_FGETS_UNLOCKED 1
+#define HAVE_DECL_FILENO_UNLOCKED 1
+#define HAVE_DECL_FPRINTF_UNLOCKED 0
+#define HAVE_DECL_FPUTC_UNLOCKED 1
+#define HAVE_DECL_FPUTS_UNLOCKED 1
+#define HAVE_DECL_FREAD_UNLOCKED 1
+#define HAVE_DECL_FWRITE_UNLOCKED 1
+#define HAVE_DECL_GETCHAR_UNLOCKED 1
+#define HAVE_DECL_GETC_UNLOCKED 1
+#define HAVE_DECL_PUTCHAR_UNLOCKED 1
+#define HAVE_DECL_PUTC_UNLOCKED 1
+#define HAVE_ALLOCA_H 1
+#define HAVE_ALLOCA 1
+#define STDC_HEADERS 1
+#define HAVE_LANGINFO_CODESET 1
+#define SIZEOF_INO_T 8
+#define SIZEOF_DEV_T 8
+#define HAVE_ICONV 1
+#define ICONV_CONST 
+#define PACKAGE "cpplib"
+#define CHECKING_P 0
+#define ENABLE_ASSERT_CHECKING 1
+#define ENABLE_CANONICAL_SYSTEM_HEADERS 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/zlib/config.log ===
+SET_MAKE=''
+SHELL='/bin/bash'
+STRIP='strip'
+TARGET_LIBRARY_FALSE=''
+TARGET_LIBRARY_TRUE='#'
+VERSION='1.1.4'
+ac_ct_CC=''
+ac_ct_DUMPBIN=''
+am__EXEEXT_FALSE=''
+am__EXEEXT_TRUE='#'
+am__fastdepCC_FALSE='#'
+am__fastdepCC_TRUE=''
+am__include='include'
+am__isrc=' -I$(srcdir)'
+am__leading_dot='.'
+am__nodep='_no'
+am__quote=''
+am__tar='$${TAR-tar} chof - "$$tardir"'
+am__untar='$${TAR-tar} xf -'
+bindir='${exec_prefix}/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_os='linux-gnu'
+build_vendor='pc'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+dvidir='${docdir}'
+enable_host_pie=''
+enable_host_shared=''
+exec_prefix='${prefix}'
+host='x86_64-pc-linux-gnu'
+host_alias='x86_64-pc-linux-gnu'
+host_cpu='x86_64'
+host_os='linux-gnu'
+host_vendor='pc'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+install_sh='${SHELL} /mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/install-sh'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+mkdir_p='$(MKDIR_P)'
+mkinstalldirs='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/mkinstalldirs'
+multi_basedir=''
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_os='linux-musl'
+target_vendor='openwrt'
+toolexecdir='$(libdir)/gcc-lib/$(target_alias)'
+toolexeclibdir='$(libdir)/../lib'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "zlib"
+#define PACKAGE_TARNAME "zlib"
+#define PACKAGE_VERSION "1.1.4"
+#define PACKAGE_STRING "zlib 1.1.4"
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define PACKAGE "zlib"
+#define VERSION "1.1.4"
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_DLFCN_H 1
+#define LT_OBJDIR ".libs/"
+#define HAVE_STDLIB_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_SYS_PARAM_H 1
+#define HAVE_GETPAGESIZE 1
+#define HAVE_MMAP 1
+#define HAVE_MEMCPY 1
+#define HAVE_STRERROR 1
+#define HAVE_UNISTD_H 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/aarch64-openwrt-linux-musl/libgcc/config.log ===
+PATH_SEPARATOR=':'
+PICFLAG='-fPIC'
+RANLIB='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/aarch64-openwrt-linux-musl/bin/ranlib'
+SHELL='/bin/bash'
+STRIP='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/aarch64-openwrt-linux-musl/bin/strip'
+ac_ct_CC=''
+accel_dir_suffix=''
+asm_hidden_op='.hidden'
+bindir='${exec_prefix}/bin'
+build='x86_64-pc-linux-gnu'
+build_alias='x86_64-pc-linux-gnu'
+build_cpu='x86_64'
+build_libsubdir='build-x86_64-pc-linux-gnu'
+build_os='linux-gnu'
+build_subdir='build-x86_64-pc-linux-gnu'
+build_vendor='pc'
+cpu_type='aarch64'
+datadir='${datarootdir}'
+datarootdir='${prefix}/share'
+decimal_float='no'
+docdir='${datarootdir}/doc/${PACKAGE_TARNAME}'
+double_type_size='64'
+dvidir='${docdir}'
+enable_decimal_float='no'
+enable_execute_stack='enable-execute-stack-empty.c'
+enable_gcov='yes'
+enable_shared='no'
+enable_vtable_verify='no'
+exec_prefix='${prefix}'
+extra_parts='crtbegin.o crtbeginS.o crtbeginT.o crtend.o crtendS.o crtfastmath.o'
+fixed_point='no'
+force_explicit_eh_registry=''
+get_gcc_base_ver='cat'
+host='aarch64-openwrt-linux-musl'
+host_alias='aarch64-openwrt-linux-musl'
+host_cpu='aarch64'
+host_noncanonical='aarch64-openwrt-linux-musl'
+host_os='linux-musl'
+host_subdir='.'
+host_vendor='openwrt'
+htmldir='${docdir}'
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+libgcc_topdir='/mnt/build_wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0/libgcc/..'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+long_double_type_size='128'
+mandir='${datarootdir}/man'
+md_unwind_header='aarch64/linux-unwind.h'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+real_host_noncanonical='aarch64-openwrt-linux-musl'
+sbindir='${exec_prefix}/sbin'
+set_have_cc_tls='-DHAVE_CC_TLS'
+set_use_emutls=''
+sfp_machine_header='aarch64/sfp-machine.h'
+sharedstatedir='${prefix}/com'
+slibdir='$(exec_prefix)/$(host_noncanonical)/lib'
+solaris_ld_v2_maps=''
+sysconfdir='${prefix}/etc'
+target_alias='aarch64-openwrt-linux-musl'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_subdir='aarch64-openwrt-linux-musl'
+thread_header='gthr-single.h'
+tm_defines=''
+tm_file=' $(srcdir)/config/aarch64/value-unwind.h'
+tmake_file=' $(srcdir)/config/t-crtstuff-pic $(srcdir)/config/t-libgcc-pic $(srcdir)/config/t-eh-dw2-dip $(srcdir)/config/t-slibgcc $(srcdir)/config/t-slibgcc-gld $(srcdir)/config/t-slibgcc-elf-ver $(srcdir)/config/t-linux $(srcdir)/config/aarch64/t-aarch64 $(srcdir)/config/aarch64/t-lse $(srcdir)/config/t-slibgcc-libgcc $(srcdir)/config/aarch64/t-softfp $(srcdir)/config/t-softfp $(srcdir)/config/t-crtfm $(srcdir)/config/t-dfprules $(srcdir)/config/aarch64/t-heap-trampoline $(srcdir)/config/t-gthr-noweak'
+toolexecdir='$(exec_prefix)/$(target_noncanonical)'
+toolexeclibdir='$(toolexecdir)/lib'
+unwind_header='unwind-generic.h'
+use_tm_clone_registry='-DUSE_TM_CLONE_REGISTRY=0'
+vis_hide='-fvisibility=hidden -DHIDE_EXPORTS'
+with_aix_soname='aix'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "GNU C Runtime Library"
+#define PACKAGE_TARNAME "libgcc"
+#define PACKAGE_VERSION "1.0"
+#define PACKAGE_STRING "GNU C Runtime Library 1.0"
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL "http://www.gnu.org/software/libgcc/"
+#define SIZEOF_DOUBLE 8
+#define SIZEOF_LONG_DOUBLE 16
+#define HAVE_GETIPINFO 1
+#define AS_HIDDEN_DIRECTIVE .hidden
+#define HAVE_AS_CFI_SECTIONS 1
+#define HAVE_AS_LSE 1
+#define HAVE_AS_VARIANT_PCS 1
+#define HAVE_INIT_PRIORITY 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/build-x86_64-pc-linux-gnu/libiberty/config.log ===
+#define HAVE_BCOPY 1
+#define HAVE_BSEARCH 1
+#define HAVE_BZERO 1
+#define HAVE_CALLOC 1
+#define HAVE_CLOCK 1
+#define HAVE_FFS 1
+#define HAVE_GETCWD 1
+#define HAVE_GETPAGESIZE 1
+#define HAVE_GETTIMEOFDAY 1
+#define HAVE_INDEX 1
+#define HAVE_INSQUE 1
+#define HAVE_MEMCHR 1
+#define HAVE_MEMCMP 1
+#define HAVE_MEMCPY 1
+#define HAVE_MEMMEM 1
+#define HAVE_MEMMOVE 1
+#define HAVE_MEMPCPY 1
+#define HAVE_MEMSET 1
+#define HAVE_MKSTEMPS 1
+#define HAVE_PUTENV 1
+#define HAVE_RANDOM 1
+#define HAVE_RENAME 1
+#define HAVE_RINDEX 1
+#define HAVE_SETENV 1
+#define HAVE_SNPRINTF 1
+#define HAVE_SIGSETMASK 1
+#define HAVE_STPCPY 1
+#define HAVE_STPNCPY 1
+#define HAVE_STRCASECMP 1
+#define HAVE_STRCHR 1
+#define HAVE_STRDUP 1
+#define HAVE_STRNCASECMP 1
+#define HAVE_STRNDUP 1
+#define HAVE_STRNLEN 1
+#define HAVE_STRRCHR 1
+#define HAVE_STRSTR 1
+#define HAVE_STRTOD 1
+#define HAVE_STRTOL 1
+#define HAVE_STRTOUL 1
+#define HAVE_STRTOLL 1
+#define HAVE_STRTOULL 1
+#define HAVE_STRVERSCMP 1
+#define HAVE_TMPNAM 1
+#define HAVE_VASPRINTF 1
+#define HAVE_VFPRINTF 1
+#define HAVE_VPRINTF 1
+#define HAVE_VSNPRINTF 1
+#define HAVE_VSPRINTF 1
+#define HAVE_WAITPID 1
+#define STACK_DIRECTION 1
+#define HAVE_FORK 1
+#define HAVE_VFORK 1
+#define HAVE_WORKING_VFORK 1
+#define HAVE_WORKING_FORK 1
+#define HAVE___FSETLOCKING 1
+#define HAVE_CANONICALIZE_FILE_NAME 1
+#define HAVE_DUP3 1
+#define HAVE_GETRLIMIT 1
+#define HAVE_GETRUSAGE 1
+#define HAVE_GETTIMEOFDAY 1
+#define HAVE_ON_EXIT 1
+#define HAVE_PIPE2 1
+#define HAVE_POSIX_SPAWN 1
+#define HAVE_POSIX_SPAWNP 1
+#define HAVE_PSIGNAL 1
+#define HAVE_REALPATH 1
+#define HAVE_SETRLIMIT 1
+#define HAVE_STRERROR 1
+#define HAVE_STRSIGNAL 1
+#define HAVE_SYSCONF 1
+#define HAVE_TIMES 1
+#define HAVE_WAIT3 1
+#define HAVE_WAIT4 1
+#define HAVE_SBRK 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_FFS 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_SNPRINTF 1
+#define HAVE_DECL_VSNPRINTF 1
+#define HAVE_DECL_CALLOC 1
+#define HAVE_DECL_GETENV 1
+#define HAVE_DECL_GETOPT 1
+#define HAVE_DECL_MALLOC 1
+#define HAVE_DECL_REALLOC 1
+#define HAVE_DECL_SBRK 1
+#define HAVE_DECL_STRTOL 1
+#define HAVE_DECL_STRTOUL 1
+#define HAVE_DECL_STRTOLL 1
+#define HAVE_DECL_STRTOULL 1
+#define HAVE_DECL_STRVERSCMP 1
+#define HAVE_DECL_STRNLEN 1
+#define HAVE_X86_SHA1_HW_SUPPORT 1
+#define HAVE_STDLIB_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_SYS_PARAM_H 1
+#define HAVE_GETPAGESIZE 1
+#define HAVE_MMAP 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/build-x86_64-pc-linux-gnu/libcpp/config.log ===
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_os='linux-musl'
+target_vendor='openwrt'
+warn='-W -Wall -Wno-narrowing -Wwrite-strings -Wmissing-format-attribute'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "cpplib"
+#define PACKAGE_TARNAME "cpplib"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "cpplib  "
+#define PACKAGE_BUGREPORT "gcc-bugs@gcc.gnu.org"
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define TIME_WITH_SYS_TIME 1
+#define STRING_WITH_STRINGS 1
+#define HAVE_LOCALE_H 1
+#define HAVE_FCNTL_H 1
+#define HAVE_LIMITS_H 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_STRING_H 1
+#define HAVE_SYS_FILE_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_OBSTACK 1
+#define HAVE_UINTPTR_T 1
+#define SIZEOF_INT 4
+#define SIZEOF_LONG 8
+#define HAVE_CLEARERR_UNLOCKED 1
+#define HAVE_FEOF_UNLOCKED 1
+#define HAVE_FERROR_UNLOCKED 1
+#define HAVE_FFLUSH_UNLOCKED 1
+#define HAVE_FGETC_UNLOCKED 1
+#define HAVE_FGETS_UNLOCKED 1
+#define HAVE_FILENO_UNLOCKED 1
+#define HAVE_FPUTC_UNLOCKED 1
+#define HAVE_FPUTS_UNLOCKED 1
+#define HAVE_FREAD_UNLOCKED 1
+#define HAVE_FWRITE_UNLOCKED 1
+#define HAVE_GETCHAR_UNLOCKED 1
+#define HAVE_GETC_UNLOCKED 1
+#define HAVE_PUTCHAR_UNLOCKED 1
+#define HAVE_PUTC_UNLOCKED 1
+#define HAVE_SETLOCALE 1
+#define HAVE_DECL_ABORT 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_ERRNO 0
+#define HAVE_DECL_GETOPT 1
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_CLEARERR_UNLOCKED 1
+#define HAVE_DECL_FEOF_UNLOCKED 1
+#define HAVE_DECL_FERROR_UNLOCKED 1
+#define HAVE_DECL_FFLUSH_UNLOCKED 1
+#define HAVE_DECL_FGETC_UNLOCKED 1
+#define HAVE_DECL_FGETS_UNLOCKED 1
+#define HAVE_DECL_FILENO_UNLOCKED 1
+#define HAVE_DECL_FPRINTF_UNLOCKED 0
+#define HAVE_DECL_FPUTC_UNLOCKED 1
+#define HAVE_DECL_FPUTS_UNLOCKED 1
+#define HAVE_DECL_FREAD_UNLOCKED 1
+#define HAVE_DECL_FWRITE_UNLOCKED 1
+#define HAVE_DECL_GETCHAR_UNLOCKED 1
+#define HAVE_DECL_GETC_UNLOCKED 1
+#define HAVE_DECL_PUTCHAR_UNLOCKED 1
+#define HAVE_DECL_PUTC_UNLOCKED 1
+#define HAVE_ALLOCA_H 1
+#define HAVE_ALLOCA 1
+#define STDC_HEADERS 1
+#define HAVE_LANGINFO_CODESET 1
+#define SIZEOF_INO_T 8
+#define SIZEOF_DEV_T 8
+#define ICONV_CONST 
+#define PACKAGE "cpplib"
+#define CHECKING_P 0
+#define ENABLE_ASSERT_CHECKING 1
+#define ENABLE_CANONICAL_SYSTEM_HEADERS 1
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/build-x86_64-pc-linux-gnu/fixincludes/config.log ===
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_os='linux-musl'
+target_vendor='openwrt'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "fixincludes"
+#define PACKAGE_TARNAME "fixincludes"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "fixincludes  "
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define EXE_EXT ""
+#define STDC_HEADERS 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_FCNTL_H 1
+#define HAVE_SYS_FILE_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_CLEARERR_UNLOCKED 1
+#define HAVE_FEOF_UNLOCKED 1
+#define HAVE_FERROR_UNLOCKED 1
+#define HAVE_FFLUSH_UNLOCKED 1
+#define HAVE_FGETC_UNLOCKED 1
+#define HAVE_FGETS_UNLOCKED 1
+#define HAVE_FILENO_UNLOCKED 1
+#define HAVE_FPUTC_UNLOCKED 1
+#define HAVE_FPUTS_UNLOCKED 1
+#define HAVE_FREAD_UNLOCKED 1
+#define HAVE_FWRITE_UNLOCKED 1
+#define HAVE_GETCHAR_UNLOCKED 1
+#define HAVE_GETC_UNLOCKED 1
+#define HAVE_PUTCHAR_UNLOCKED 1
+#define HAVE_PUTC_UNLOCKED 1
+#define HAVE_DECL_ABORT 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_ERRNO 0
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_MEMMEM 1
+#define HAVE_DECL_CLEARERR_UNLOCKED 1
+#define HAVE_DECL_FEOF_UNLOCKED 1
+#define HAVE_DECL_FERROR_UNLOCKED 1
+#define HAVE_DECL_FFLUSH_UNLOCKED 1
+#define HAVE_DECL_FGETC_UNLOCKED 1
+#define HAVE_DECL_FGETS_UNLOCKED 1
+#define HAVE_DECL_FILENO_UNLOCKED 1
+#define HAVE_DECL_FPRINTF_UNLOCKED 0
+#define HAVE_DECL_FPUTC_UNLOCKED 1
+#define HAVE_DECL_FPUTS_UNLOCKED 1
+#define HAVE_DECL_FREAD_UNLOCKED 1
+#define HAVE_DECL_FWRITE_UNLOCKED 1
+#define HAVE_DECL_GETCHAR_UNLOCKED 1
+#define HAVE_DECL_GETC_UNLOCKED 1
+#define HAVE_DECL_PUTCHAR_UNLOCKED 1
+#define HAVE_DECL_PUTC_UNLOCKED 1
+#define HAVE_MMAP_FILE 1
+#define HAVE_MMAP_DEV_ZERO 1
+#define HAVE_MMAP_ANON 1
+#define SED_PROGRAM "/mnt/build_wrt/staging_dir/host/bin/sed"
+
+configure: exit 0
+=== File: ./wrt/build_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl/gcc-14.4.0-initial/fixincludes/config.log ===
+includedir='${prefix}/include'
+infodir='${datarootdir}/info'
+libdir='${exec_prefix}/lib'
+libexecdir='${exec_prefix}/libexec'
+localedir='${datarootdir}/locale'
+localstatedir='${prefix}/var'
+mandir='${datarootdir}/man'
+oldincludedir='/usr/include'
+pdfdir='${docdir}'
+prefix='/mnt/build_wrt/staging_dir/toolchain-aarch64_cortex-a53_gcc-14.4.0_musl'
+program_transform_name='s&^&aarch64-openwrt-linux-musl-&'
+psdir='${docdir}'
+sbindir='${exec_prefix}/sbin'
+sharedstatedir='${prefix}/com'
+sysconfdir='${prefix}/etc'
+target='aarch64-openwrt-linux-musl'
+target_alias='aarch64-openwrt-linux-musl'
+target_cpu='aarch64'
+target_noncanonical='aarch64-openwrt-linux-musl'
+target_os='linux-musl'
+target_vendor='openwrt'
+
+## ----------- ##
+## confdefs.h. ##
+## ----------- ##
+
+/* confdefs.h */
+#define PACKAGE_NAME "fixincludes"
+#define PACKAGE_TARNAME "fixincludes"
+#define PACKAGE_VERSION " "
+#define PACKAGE_STRING "fixincludes  "
+#define PACKAGE_BUGREPORT ""
+#define PACKAGE_URL ""
+#define STDC_HEADERS 1
+#define HAVE_SYS_TYPES_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRING_H 1
+#define HAVE_MEMORY_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_INTTYPES_H 1
+#define HAVE_STDINT_H 1
+#define HAVE_UNISTD_H 1
+#define __EXTENSIONS__ 1
+#define _ALL_SOURCE 1
+#define _GNU_SOURCE 1
+#define _POSIX_PTHREAD_SEMANTICS 1
+#define _TANDEM_SOURCE 1
+#define EXE_EXT ""
+#define STDC_HEADERS 1
+#define HAVE_STDDEF_H 1
+#define HAVE_STDLIB_H 1
+#define HAVE_STRINGS_H 1
+#define HAVE_UNISTD_H 1
+#define HAVE_FCNTL_H 1
+#define HAVE_SYS_FILE_H 1
+#define HAVE_SYS_STAT_H 1
+#define HAVE_CLEARERR_UNLOCKED 1
+#define HAVE_FEOF_UNLOCKED 1
+#define HAVE_FERROR_UNLOCKED 1
+#define HAVE_FFLUSH_UNLOCKED 1
+#define HAVE_FGETC_UNLOCKED 1
+#define HAVE_FGETS_UNLOCKED 1
+#define HAVE_FILENO_UNLOCKED 1
+#define HAVE_FPUTC_UNLOCKED 1
+#define HAVE_FPUTS_UNLOCKED 1
+#define HAVE_FREAD_UNLOCKED 1
+#define HAVE_FWRITE_UNLOCKED 1
+#define HAVE_GETCHAR_UNLOCKED 1
+#define HAVE_GETC_UNLOCKED 1
+#define HAVE_PUTCHAR_UNLOCKED 1
+#define HAVE_PUTC_UNLOCKED 1
+#define HAVE_DECL_ABORT 1
+#define HAVE_DECL_ASPRINTF 1
+#define HAVE_DECL_BASENAME 1
+#define HAVE_DECL_ERRNO 0
+#define HAVE_DECL_VASPRINTF 1
+#define HAVE_DECL_MEMMEM 1
+#define HAVE_DECL_CLEARERR_UNLOCKED 1
+#define HAVE_DECL_FEOF_UNLOCKED 1
+#define HAVE_DECL_FERROR_UNLOCKED 1
+#define HAVE_DECL_FFLUSH_UNLOCKED 1
+#define HAVE_DECL_FGETC_UNLOCKED 1
+#define HAVE_DECL_FGETS_UNLOCKED 1
+#define HAVE_DECL_FILENO_UNLOCKED 1
+#define HAVE_DECL_FPRINTF_UNLOCKED 0
+#define HAVE_DECL_FPUTC_UNLOCKED 1
+#define HAVE_DECL_FPUTS_UNLOCKED 1
+#define HAVE_DECL_FREAD_UNLOCKED 1
+#define HAVE_DECL_FWRITE_UNLOCKED 1
+#define HAVE_DECL_GETCHAR_UNLOCKED 1
+#define HAVE_DECL_GETC_UNLOCKED 1
+#define HAVE_DECL_PUTCHAR_UNLOCKED 1
+#define HAVE_DECL_PUTC_UNLOCKED 1
+#define HAVE_MMAP_FILE 1
+#define HAVE_MMAP_DEV_ZERO 1
+#define HAVE_MMAP_ANON 1
+#define SED_PROGRAM "/mnt/build_wrt/staging_dir/host/bin/sed"
+
+configure: exit 0
